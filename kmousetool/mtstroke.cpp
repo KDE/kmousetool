@@ -86,7 +86,7 @@ void MTStroke::addPt(const int x, const int y)
       points.push_back(Pt(x,y));
     }
   }
-};
+}
 
 
 /*
