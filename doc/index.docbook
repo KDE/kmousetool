@@ -381,12 +381,14 @@ can use Smart Drag without the Audible Click, but it does take a fair amount of 
 </para>
 <para>
 Program copyright 2002 Jeff Roush <email>jeff@mousetool.com</email>
+and 2003 Gunnar Schmi Dt <email>gunnar@schmi-dt.de</email>
 </para>
 <para>
 Contributors:
 <itemizedlist>
-<listitem><para>Jeff Roush <email>jeff@mousetool.com</email></para>
-</listitem>
+<listitem><para>Jeff Roush <email>jeff@mousetool.com</email></para></listitem>
+<listitem><para>Gunnar Schmi Dt<email>gunnar@schmi-dt.de</email></para></listitem>
+<listitem><para>Olaf Schmidt <email>ojschmidt@kde.org</email></para></listitem>
 </itemizedlist>
 </para>
 
@@ -407,33 +409,20 @@ Documentation copyright 2002 Jeff Roush<email>jeff@mousetool.com</email>
 
 &install.intro.documentation;
 
-<para>
-&kappname; can be downloaded from the &kde; accessibility site, <ulink
-url="http://accessibility.kde.org/">http://accessibility.kde.org/</ulink>.
-or from the MouseTool site, <ulink
-url="http://www.mousetool.com/">www.mousetool.com</ulink></para>
 </sect1>
 
 <sect1 id="requirements">
 <title>Requirements</title>
 
 <para>
-In order to successfully use &kappname;, you need &kde; 2.0 or higher.
-You also need the XTest extension compiled as part of your
-&X-Window;.  This should already be installed on your system; very
-few systems won't have it.  If you <emphasis>don't</emphasis> have
-this installed, please send an email to me at
-<email>jeff@mousetool.com</email>.
+In order to successfully use &kappname;, you need the XTest extension
+compiled as part of your &X-Window;. This should already be installed
+on your system; very few systems won't have it.
 </para>
 <para>
 In order to use the Audible Click feature, you will have to have a
 sound card and speakers, and you will have to have configured the
 sound card correctly.
-</para>
-
-<para>
-You can find a list of changes at <ulink
-url="http://www.mousetool.com">http://www.mousetool.com</ulink>.
 </para>
 </sect1>
 
