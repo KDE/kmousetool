@@ -6,7 +6,5 @@ Icon=kmousetool.png
 MiniIcon=kmousetool.png
 DocPath=kmousetool/index.html
 Comment=Clicks the mouse for you, easing RSI pain
-Comment[de]=
 Terminal=0
 Name=KMouseTool
-Name[de]=KMouseTool
