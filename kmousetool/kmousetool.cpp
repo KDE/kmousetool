@@ -107,10 +107,13 @@ void KMouseTool::init_vars()
 	// SimpleSoundServer server(Reference("global:Arts_SimpleSoundServer"));
 //	sound_server(Reference("global:Arts_SimpleSoundServer"));
 
+	QDesktopWidget *d = QApplication::desktop();
+	int w = d->width();
+	int h = d->height();
 	MTStroke::setUpperLeft(0,0);
-	MTStroke::setUpperRight(1023,0);
-	MTStroke::setLowerLeft(0,767);
-	MTStroke::setLowerRight(1023,767);
+	MTStroke::setUpperRight(w-1,0);
+	MTStroke::setLowerLeft(0,h-1);
+	MTStroke::setLowerRight(w-1,h-1);
 }
 
 void KMouseTool::resetSettings()
