@@ -218,7 +218,7 @@
                                 <cstring>buttonDefault</cstring>
                             </property>
                             <property name="text">
-                                <string>&amp;Default</string>
+                                <string>&amp;Defaults</string>
                             </property>
                         </widget>
                         <widget class="KPushButton">
