@@ -69,7 +69,7 @@ int currentYPosition;
 * Gnarly X functions
 */
 void queryPointer(Window *pidRoot, Window *pidWin, int *pnRx, int *pnRy, int *pnX, int *pnY, unsigned int *puMask);
-int CursorHasMoved();
+int CursorHasMoved(int minMovement);
 void LeftClick();
 void RightClick();
 void DoubleClick();
@@ -140,7 +140,8 @@ void KMouseTool::timerEvent( QTimerEvent * )
     max_ticks = dwell_time + drag_time;
     stroke.addPt(currentXPosition, currentYPosition);
 
-    if (CursorHasMoved()) {
+    moving = moving?CursorHasMoved(1):CursorHasMoved(min_movement);
+    if (moving) {
 			if (mousetool_just_started) {
 				mousetool_just_started = false;
 				tick_count = max_ticks;
@@ -262,6 +263,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
     connect(buttonStart, SIGNAL(clicked()), this, SLOT(startButtonClicked()));
     connect(buttonApply, SIGNAL(clicked()), this, SLOT(applyButtonClicked()));
 
+    movementEdit->setValue(min_movement);
     dwellTimeEdit->setValue(dwell_time);
     dragTimeEdit->setValue(drag_time);
 
@@ -489,41 +491,32 @@ void queryPointer(Window *pidRoot, Window *pidWin, int *pnRx, int *pnRy, int *pn
 }
 
 // return 1 if cursor has moved, 0 otherwise
-int CursorHasMoved()
+int CursorHasMoved (int minMovement)
 {
     static int nOldRootX = -1;
     static int nOldRootY = -1;
-    //	static int nOldWinX = -1;
-    //	static int nOldWinY = -1;
 
     //	XEvent evButtonEvent;
     Window idRootWin, idChild;
     int nRootX, nRootY, nWinX, nWinY;
     unsigned int uintMask;
 
-    //	printf ("nRootX, nRootY", );
-    int nRes;
-    nRes = 0;
-    //	printf("querying pointer\n");
     queryPointer(&idRootWin, &idChild, &nRootX, &nRootY, &nWinX, &nWinY, &uintMask);
-    //	printf("end query pointer\n");
-    if (nRootX!=nOldRootX)
-	nRes = 1;
-    if (nRootY!=nOldRootY)
-	nRes = 1;
-    //	if (nWinX!=nOldWinX)
-    //	  nRes = 1;
-    //	if (nWinY!=nOldWinY)
-    //	  nRes = 1;
 
-    nOldRootX = nRootX;
-    nOldRootY = nRootY;
-    //	nOldWinX = nWinX;
-    //	nOldWinY = nWinY;
-    currentXPosition = nOldRootX;
-    currentYPosition = nOldRootY;
+    int nRes = 0;
+    if ((nRootX>nOldRootX?nRootX-nOldRootX:nOldRootX-nRootX) >= minMovement)
+	nRes = 1;
+    if ((nRootY>nOldRootY?nRootY-nOldRootY:nOldRootY-nRootY) >= minMovement)
+	nRes = 1;
 
-//If child is FALSE and there is a child widget at position (
+    currentXPosition = nRootX;
+    currentYPosition = nRootY;
+    
+    if (nRes) {
+       nOldRootX = nRootX;
+       nOldRootY = nRootY;
+    }
+
     return nRes;
 }
 // End mouse monitoring and event creation code
@@ -562,6 +555,7 @@ bool KMouseTool::applySettings()
     }
 
     // if we got here, we must be okay.
+    min_movement   = movementEdit->value();
     smart_drag_on  = cbDrag->isChecked();
     playSound      = cbClick->isChecked();
     strokesEnabled = cbStroke->isChecked();
@@ -592,6 +586,7 @@ void KMouseTool::loadOptions()
 
     dwell_time = kapp->config()->readNumEntry("DwellTime",5);
     drag_time = kapp->config()->readNumEntry("DragTime",3);
+    min_movement = kapp->config()->readNumEntry("Movement",5);
     strokesEnabled = kapp->config()->readBoolEntry("strokesEnabled",false);
 
     QPoint p;
@@ -627,6 +622,7 @@ void KMouseTool::saveOptions()
     kapp->config()->writeEntry("IsMinimized", isMinimized());
     kapp->config()->writeEntry("DwellTime", dwell_time);
     kapp->config()->writeEntry("DragTime", drag_time);
+    kapp->config()->writeEntry("Movement", min_movement);
     kapp->config()->writeEntry("SmartDrag", smart_drag_on);
     kapp->config()->writeEntry("AudibleClick", playSound);
     kapp->config()->writeEntry("MouseToolIsRunning", mousetool_is_running);

@@ -76,10 +76,12 @@ class KMouseTool : public KMouseToolUI
 	int dwell_time;
 	int drag_time;
 	int max_ticks;
+        int min_movement;
 	bool smart_drag_on;
 	bool playSound;
 	bool mousetool_is_running;
 	bool mousetool_just_started;
+        bool moving;
   bool strokesEnabled;
 
 	QString autostartdirname;
