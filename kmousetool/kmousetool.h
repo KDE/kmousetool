@@ -129,6 +129,7 @@ class KMouseTool : public KMouseToolUI
 	public slots:
 
 	void aboutSelected();
+	void helpSelected();
 
 	    /**
 	     *
@@ -177,5 +178,6 @@ public:
    ~KMouseToolTray();
 signals:
    void aboutSelected();
+   void helpSelected();
 };
 #endif

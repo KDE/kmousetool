@@ -264,6 +264,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
 
     connect(buttonStart, SIGNAL(clicked()), this, SLOT(startButtonClicked()));
     connect(buttonApply, SIGNAL(clicked()), this, SLOT(applyButtonClicked()));
+    connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
 
     movementEdit->setValue(min_movement);
     dwellTimeEdit->setValue(dwell_time);
@@ -280,6 +281,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
     trayIcon->show();
     //trayIcon->contextMenu()->insertItem (i18n("About KMouseTool"), this, SLOT(aboutSelected()));
     connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
+    connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
     
     aboutDlg = new KAboutApplication (this, "KMouseToolDlg", false);
 }
@@ -666,6 +668,11 @@ void KMouseTool::aboutSelected()
   aboutDlg->show();
 }
 
+void KMouseTool::helpSelected()
+{
+  kapp->invokeHelp();
+}
+
 void KMouseTool::closeEvent(QCloseEvent *e)
 {
     saveOptions();
@@ -677,6 +684,7 @@ KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name)
  : KSystemTray (parent, name)
 {
    contextMenu()->insertItem (i18n("About KMouseTool"), this, SIGNAL(aboutSelected()));
+   contextMenu()->insertItem (i18n("Help"), this, SIGNAL(helpSelected()));
 }
 
 KMouseToolTray::~KMouseToolTray() {
