@@ -10,8 +10,8 @@ EXTRA_DIST = main.cpp version.h kmousetool.cpp kmousetool.h kmousetool.desktop m
 kmousetooldir = $(kde_appsdir)/Applications
 kmousetool_DATA = kmousetool.desktop
 
-datadir = $(kde_datadir)/kmousetool/sounds
-data_DATA = mousetool_tap.wav
+sounddatadir = $(kde_datadir)/kmousetool/sounds
+sounddata_DATA = mousetool_tap.wav
 
 # set the include path for X, qt and KDE
 INCLUDES= $(all_includes)
