@@ -61,7 +61,7 @@ KAboutMouseTool::KAboutMouseTool( QWidget *parent)
 
   setHelp( QString::fromLatin1("khelpcenter/main.html"), QString::null );
   setTitle(i18n("KMouseTool Version %1").
-	   arg(QString::fromLatin1(VERSION)) );
+	   arg(QString::fromLatin1(KMOUSETOOL_VERSION)) );
   addTextPage( i18n("About KMouseTool","&About"), text1, true );
   addTextPage( i18n("&Report Bugs or Wishes"), text2, true );
   addTextPage( i18n("&License Agreement"), text3, true );
