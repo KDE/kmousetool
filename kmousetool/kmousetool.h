@@ -28,6 +28,7 @@
 #include "version.h"
 
 #include <kapplication.h>
+#include <ksystemtray.h> 
 #include <qwidget.h>
 #include "mtstroke.h"
 #include "kmousetoolui.h"
@@ -37,6 +38,7 @@ class QLabel;
 class QCheckBox;
 class QPushButton;
 class KAudioPlayer;
+class KAboutApplication;
 
 // #define DEBUG_MOUSETOOL
 
@@ -89,6 +91,8 @@ class KMouseTool : public KMouseToolUI
 	QString appfilename;
 	QString	mSoundFileName;
 	KAudioPlayer *mplayer;
+        
+        KAboutApplication *aboutDlg;
 
 	void closeEvent(QCloseEvent *e);
 
@@ -123,6 +127,8 @@ class KMouseTool : public KMouseToolUI
         void setAutostart (bool start);
 
 	public slots:
+
+	void aboutSelected();
 
 	    /**
 	     *
@@ -164,4 +170,12 @@ class KMouseTool : public KMouseToolUI
 	~KMouseTool();
 };
 
+class KMouseToolTray : public KSystemTray {
+Q_OBJECT
+public:
+   KMouseToolTray (QWidget *parent=0, const char *name=0);
+   ~KMouseToolTray();
+signals:
+   void aboutSelected();
+};
 #endif

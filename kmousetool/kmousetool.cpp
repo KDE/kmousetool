@@ -45,6 +45,8 @@
 #include <kiconloader.h>
 #include <kpushbutton.h>
 #include <knuminput.h>
+#include <kpopupmenu.h>
+#include <kaboutapplication.h>
 
 #include <arts/soundserver.h>
 #include <kwin.h>		// for kwin::info
@@ -273,9 +275,13 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
 
     startTimer(100);
     QPixmap icon = KGlobal::iconLoader()->loadIcon("kmousetool", KIcon::Small);
-    KSystemTray *trayIcon = new KSystemTray (this, "systemTrayIcon");
+    KMouseToolTray *trayIcon = new KMouseToolTray (this, "systemTrayIcon");
     trayIcon->setPixmap (icon);
     trayIcon->show();
+    //trayIcon->contextMenu()->insertItem (i18n("About KMouseTool"), this, SLOT(aboutSelected()));
+    connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
+    
+    aboutDlg = new KAboutApplication (this, "KMouseToolDlg", false);
 }
 
 KMouseTool::~KMouseTool()
@@ -655,6 +661,11 @@ void KMouseTool::startButtonClicked()
    }
 }
 
+void KMouseTool::aboutSelected()
+{
+  aboutDlg->show();
+}
+
 void KMouseTool::closeEvent(QCloseEvent *e)
 {
     saveOptions();
@@ -662,3 +673,11 @@ void KMouseTool::closeEvent(QCloseEvent *e)
 }
 
 
+KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name)
+ : KSystemTray (parent, name)
+{
+   contextMenu()->insertItem (i18n("About KMouseTool"), this, SIGNAL(aboutSelected()));
+}
+
+KMouseToolTray::~KMouseToolTray() {
+}

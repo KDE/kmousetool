@@ -38,8 +38,11 @@ int main(int argc, char *argv[])
 {
   KAboutData aboutData( "kmousetool", I18N_NOOP("KMouseTool"),
     KMOUSETOOL_VERSION, description, KAboutData::License_GPL,
-    "(c) 2002, Jeff Roush", 0, "http://www.mousetool.com", "jeff@mousetool.com");
-  aboutData.addAuthor("Jeff Roush", "jeff@mousetool.com", "http://www.mousetool.com");
+    "(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt", 0, "http://www.mousetool.com", "gunnar@schmi-dt.de");
+
+  aboutData.addAuthor("Gunnar Schmi Dt", I18N_NOOP("Current Author"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
+  aboutData.addAuthor("Jeff Roush", I18N_NOOP("Original Author"), "jeff@mousetool.com", "http://www.mousetool.com");
+
   aboutData.addCredit("Joe Betts");
   KCmdLineArgs::init( argc, argv, &aboutData );
   KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.

@@ -1,11 +1,11 @@
 bin_PROGRAMS = kmousetool
 
-kmousetool_SOURCES = kmousetoolui.ui kaboutmousetool.cpp mtstroke.cpp kmousetool.cpp main.cpp 
+kmousetool_SOURCES = kmousetoolui.ui mtstroke.cpp kmousetool.cpp main.cpp 
 kmousetool_LDADD   = -lXtst $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT) -lXext -lX11 $(LIBSOCKET)
 
 SUBDIRS = pics 
 
-EXTRA_DIST = main.cpp version.h kmousetool.cpp kmousetool.h kmousetool.desktop mtstroke.cpp mtstroke.h kaboutmousetool.cpp kaboutmousetool.h mousetool_tap.wav 
+EXTRA_DIST = main.cpp version.h kmousetool.cpp kmousetool.h kmousetool.desktop mtstroke.cpp mtstroke.h mousetool_tap.wav 
 
 kmousetooldir = $(kde_appsdir)/Applications
 kmousetool_DATA = kmousetool.desktop
