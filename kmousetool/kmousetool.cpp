@@ -42,6 +42,7 @@
 #include <ksystemtray.h>
 #include <kiconloader.h>
 #include <kpushbutton.h>
+#include <kstdguiitem.h>
 #include <knuminput.h>
 #include <kpopupmenu.h>
 #include <kaboutapplication.h>
@@ -65,7 +66,7 @@ int currentYPosition;
 /**
 * Gnarly X functions
 */
-void queryPointer(Window *pidRoot, Window *pidWin, int *pnRx, int *pnRy, int *pnX, int *pnY, unsigned int *puMask);
+void queryPointer(Window *pidRoot, int *pnRx, int *pnRy, int *pnX, int *pnY, unsigned int *puMask);
 int CursorHasMoved(int minMovement);
 void LeftClick();
 void RightClick();
@@ -247,11 +248,18 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
 	resetValues();
 
 	connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
+	buttonDefault->setGuiItem(KStdGuiItem::defaults());
 	connect(buttonDefault, SIGNAL(clicked()), this, SLOT(defaultSelected()));
 	connect(buttonReset, SIGNAL(clicked()), this, SLOT(resetSelected()));
+	buttonApply->setGuiItem(KStdGuiItem::apply());
 	connect(buttonApply, SIGNAL(clicked()), this, SLOT(applySelected()));
+	buttonHelp->setGuiItem(KStdGuiItem::help());
 	connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
+	buttonClose->setGuiItem(KStdGuiItem::close());
 	connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
+#if KDE_VERSION >= KDE_MAKE_VERSION (3,1,90)
+	buttonQuit->setGuiItem(KStdGuiItem::quit());
+#endif // KDE 3.2
 	connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
 
 	// When we first start, it's nice to not click immediately.
@@ -311,7 +319,7 @@ void LeftUp()
 }
 
 
-void queryPointer(Window *pidRoot, Window *pidWin, int *pnRx, int *pnRy, int *pnX, int *pnY, unsigned int *puMask)
+void queryPointer(Window *pidRoot, int *pnRx, int *pnRy, int *pnX, int *pnY, unsigned int *puMask)
 {
 	Window id2, idRoot;
 	int screen_num;
@@ -330,11 +338,11 @@ int CursorHasMoved (int minMovement)
 	static int nOldRootY = -1;
 
 //	XEvent evButtonEvent;
-	Window idRootWin, idChild;
+	Window idRootWin;
 	int nRootX, nRootY, nWinX, nWinY;
 	unsigned int uintMask;
 
-	queryPointer(&idRootWin, &idChild, &nRootX, &nRootY, &nWinX, &nWinY, &uintMask);
+	queryPointer(&idRootWin, &nRootX, &nRootY, &nWinX, &nWinY, &uintMask);
 
 	int nRes = 0;
 	if ((nRootX>nOldRootX?nRootX-nOldRootX:nOldRootX-nRootX) >= minMovement)
@@ -464,12 +472,6 @@ void KMouseTool::updateStartStopText()
 	else
 		buttonStartStop->setText(i18n("&Start"));
 	trayIcon->updateStartStopText(mousetool_is_running);
-}
-
-void KMouseTool::closeEvent(QCloseEvent *e)
-{
-	hide();
-	e->accept();
 }
 
 /******** SLOTS **********/

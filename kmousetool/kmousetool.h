@@ -80,8 +80,6 @@ private:
 
 	KAboutApplication *aboutDlg;
 
-	void closeEvent(QCloseEvent *e);
-
 	/**
 	 * Initialize all variables
 	 */
