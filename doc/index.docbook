@@ -1,48 +1,16 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.0//EN" "dtd/kdex.dtd" [
-  <!ENTITY kappname '<application>KMouseTool</application>'>
-  <!ENTITY kapp "&kappname;">
+  <!ENTITY kmousetool '<application>KMouseTool</application>'>
+  <!ENTITY kappname "&kmousetool;">
   <!ENTITY package "kdeaccessibility">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
-
-
-  <!-- Do not define any other entities; instead, use the entities
-       from kde-genent.entities and $LANG/user.entities. -->
 ]>
-<!-- kdoctemplate v0.8 October 1 1999
-     Minor update to "Credits and Licenses" section on August 24, 2000
-     Removed "Revision history" section on 22 January 2001   -->
-
-<!--
-This template was designed by: David Rugge davidrugge@mindspring.com
-with lots of help from: Eric Bischoff ebisch@cybercable.tm.fr
-and Frederik Fouvry fouvry@sfs.nphil.uni-tuebingen.de
-of the KDE DocBook team.
-
-You may freely use this template for writing any sort of KDE documentation.
-If you have any changes or improvements, please let us know.
-
-In the future, we may want to change from SGML-based DocBook to XML-based
-DocBook. To make this change easier, please be careful :
-- in XML, the case of the <tags> and attributes is relevant ;
-- also, quote all attributes.
-
-Please don't forget to remove all these comments in your final documentation,
-thanks ;-).
--->
-
-<!-- ................................................................ -->
-
-<!-- The language must NOT be changed here. -->
 
 <book lang="&language;">
 
-<!-- This header contains all of the meta-information for the document such
-as Authors, publish date, the abstract, and Keywords -->
-
 <bookinfo>
-<title>The &kapp; Handbook</title>
+<title>The &kmousetool; Handbook</title>
 
 <authorgroup>
 <author>
@@ -50,7 +18,7 @@ as Authors, publish date, the abstract, and Keywords -->
 <othername></othername>
 <surname>Roush</surname>
 <affiliation>
-<address><email>jeff@&kapp;.com</email></address>
+<address><email>jeff@kmousetool.com</email></address>
 </affiliation>
 </author>
 </authorgroup>
@@ -61,32 +29,20 @@ as Authors, publish date, the abstract, and Keywords -->
 <year>2002</year>
 <holder>Jeff Roush</holder>
 </copyright>
-<!-- Translators: put here the copyright notice of the translation -->
-<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
-     and in the FDL itself on how to use it. -->
+
 <legalnotice>&FDLNotice;</legalnotice>
 
-<!-- Date and version information of the documentation
-Don't forget to include this last date and this last revision number, we
-need them for translation coordination !
-Please respect the format of the date (DD/MM/YYYY) and of the version
-(V.MM.LL), it could be used by automation scripts.
-Do NOT change these in the translation. -->
 
 <date>2002-06-23</date>
 <releaseinfo>1.01.00</releaseinfo>
 
-<!-- Abstract about this handbook -->
-
 <abstract>
 <para>
-&kapp; clicks the mouse for you, reducing RSI pain.
+&kmousetool; clicks the mouse whenever the mouse cursor pauses briefly.  It
+was designed to help those with repetitive strain injuries, for whom
+pressing buttons hurts. 
 </para>
 </abstract>
-
-<!-- This is a set of Keywords for indexing by search engines.
-Please at least include KDE, the KDE package it is in, the name
- of your application, and a few relevant keywords. -->
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -103,19 +59,19 @@ Please at least include KDE, the KDE package it is in, the name
 <title>Introduction</title>
 
 <para>
-&kapp; clicks the mouse whenever the mouse cursor pauses briefly.  It was designed to help those
+&kmousetool; clicks the mouse whenever the mouse cursor pauses briefly.  It was designed to help those
 with repetitive strain injuries, for whom pressing buttons hurts.
 It can also drag the mouse, although this takes a bit more practice.
 </para>
 
 <para>
-&kapp; can eliminate the pain caused by clicking the mouse, and helps many
+&kmousetool; can eliminate the pain caused by clicking the mouse, and helps many
 people to use the computer without pain.  Unfortunately, some pain can also
 be caused by simply moving the mouse around the table.  If you are experiencing
 computer-related pain and haven't yet seen a doctor, please do so.
 </para>
 <para>
-Just to make it absolutely clear: while &kapp; can help reduce the pain
+Just to make it absolutely clear: while &kmousetool; can help reduce the pain
 caused by <emphasis>clicking</emphasis> the mouse, it can not help any pain
 caused by <emphasis>moving</emphasis> the mouse.  And, like all ergonomic tools,
 your mileage may vary.
@@ -125,18 +81,18 @@ your mileage may vary.
 
 
 <chapter id="using-kmousetool">
-<title>Using &kapp;</title>
+<title>Using &kmousetool;</title>
 <para>
-Using &kapp; is simple: &kapp; watches as you move the mouse, and
+Using &kmousetool; is simple: &kmousetool; watches as you move the mouse, and
 when you pause briefly, it clicks.
 </para>
 
 <para>
-&kapp;'s Smart Drag mode allows you to drag the mouse.
+&kmousetool;'s Smart Drag mode allows you to drag the mouse.
 </para>
 
 <para>
-When Smart Drag is enabled, &kapp; pauses after it clicks down; if you
+When Smart Drag is enabled, &kmousetool; pauses after it clicks down; if you
 move the mouse, it waits until you stop moving before it clicks up. This
 way, you can both click and drag the mouse. Smart Drag takes a bit more
 practice, but becomes natural once you get used to it.
@@ -148,106 +104,103 @@ practice, but becomes natural once you get used to it.
 <chapter id="commands">
 <title>Command Reference</title>
 
-<!-- (OPTIONAL, BUT RECOMMENDED) This chapter should list all of the
-application windows and their menubar and toolbar commands for easy reference.
-Also include any keys that have a special function but have no equivalent in the
-menus or toolbars. This may not be necessary for small apps or apps with no tool
-or menu bars. -->
-
 <sect1 id="kmousetool-mainwindow">
-<title>The main &kapp; window</title>
-<para></para>
+<title>The main &kmousetool; window</title>
 
-    <para>&kapp;'s
+    <para>&kmousetool;'s
     options are accessed mostly via the mouse.</para>
 
 
     <variablelist>
       <varlistentry>
-        <term><option>Smart Drag</option>
+        <term><guilabel>Smart Drag</guilabel>
         </term>
         <listitem>
           <para>Enables or disables Smart Drag.  Disabled use is easier, so this is the default.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><option>Audible Click</option>
+        <term><guilabel>Audible Click</guilabel>
         </term>
         <listitem>
           <para>
-	 Plays a sound when &kapp; clicks down.  This helps, especially
+	 Plays a sound when &kmousetool; clicks down.  This helps, especially
          with Smart Drag.
 	  </para>
 	  <para>
-	 If the sound seems delayed, you can have KDE speed it up.  To do this
-	 open the KDE Control Center, click on "Sound", then on "Sound Server", and then
-	 select the Sound I/O tab on the right side of the screen.  At the bottom
-	 of the tab, there is an "Audio buffer size (response time)" adjustment;
-	 slide this to the left to speed up the audio response time.
-
-	  </para>
+	 If the sound seems delayed, you can have &kde; speed it up.
+	 To do this open the &kcontrolcenter;, click on
+	 <guimenuitem>Sound</guimenuitem>, then on <guimenuitem>Sound
+	 Server</guimenuitem>, and then select the <guilabel>Sound
+	 I/O</guilabel> tab.  At the bottom
+	 of the tab, there is an <guilabel>Audio buffer size (response
+	 time)</guilabel> adjustment; 
+	 slide this towards the lower number to speed up the audio
+	 response time.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><option>Start with KDE</option>
+        <term><guilabel>Start with KDE</guilabel>
         </term>
         <listitem>
-          <para>When this is enabled, &kapp; will start each time KDE starts.
-	  At the moment, this only works under kDE.  Under Gnome or other Window Managers,
-	  see the documentation for the Window Manager itself to see how to start a
-	  program automatically when you start the windowing system.</para>
+          <para>When this is enabled, &kmousetool; will start each
+	  time &kde; starts. At the moment, this only works under
+	  &kde;.  Under GNOME or other Window Managers, see the
+	  documentation for the Window Manager itself to see how to
+	  start a program automatically when you start the windowing
+	  system.</para> 
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><option>Dwell Time</option>
+        <term><guilabel>Dwell Time</guilabel>
         </term>
         <listitem>
-          <para>The time the mouse has to pause before &kapp; clicks.
+          <para>The time the mouse has to pause before &kmousetool; clicks.
 	  Try increasing this time if
-	  it is hard getting used to &kapp; </para>
+	  it is hard getting used to &kmousetool; </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><option>Drag Time</option>
+        <term><guilabel>Drag Time</guilabel>
         </term>
         <listitem>
-          <para>
-	 (When Smart Drag is enabled) the time &kapp; waits, after it clicks
-                        down, before it clicks back up if you don't move the mouse.
+          <para>(When Smart Drag is enabled) the time &kmousetool;
+                        waits, after it clicks down, before it clicks
+                        back up if you don't move the mouse. 
 
 	  </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><option>Apply Times Button</option>
+        <term><guibutton>Apply Times Button</guibutton>
         </term>
         <listitem>
           <para>After changing either time, you must click this button.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><option>Start Button</option>
+        <term><guibutton>Start Button</guibutton>
         </term>
         <listitem>
-          <para>Starts (or stops) &kapp;.</para>
+          <para>Starts (or stops) &kmousetool;.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><option>Strokes</option>
+        <term><guilabel>Enable Strokes</guilabel>
         </term>
         <listitem>
           <para>
-As of version 1.1, &kapp; now supports strokes.  When you enable strokes, a slow move to the
-  right and back, followed by a pause, will generate a right-click.  A slow move
-  left and back will generate a double click.  (Strokes are specified in
-  ~/.kde3/share/config/kmousetool_strokes.txt.  This file is generated by &kapp; 
-  the first time it is run, but can be modified afterwards.)
-
+As of version 1.1, &kmousetool; now supports strokes.  When you enable
+strokes, a slow move to the right and back, followed by a pause, will
+generate a right-click.  A slow move left and back will generate a
+double click.  (Strokes are specified in
+<filename>$<envar>KDEHOME</envar>/share/config/kmousetool_strokes.txt</filename>.
+This file is generated by &kmousetool; the first time it is run, but
+can be modified afterwards.)
 	  </para>
         </listitem>
       </varlistentry>
     </variablelist>
-
 
 </sect1>
 </chapter>
@@ -256,17 +209,18 @@ As of version 1.1, &kapp; now supports strokes.  When you enable strokes, a slow
 <title>Tips</title>
 
 <para>
-These tips can help shorten &kapp;'s learning curve a bit.
+These tips can help shorten &kmousetool;'s learning curve a bit.
+
 <itemizedlist>
-<listitem><para>You can modify the time delays &kapp; waits, for both clicking and for dragging.</para>
+<listitem><para>You can modify the time delays &kmousetool; waits, for both clicking and for dragging.</para>
 </listitem>
-<listitem><para>It's best to practice clicking with &kapp; using its defaults first.
+<listitem><para>It's best to practice clicking with &kmousetool; using its defaults first.
 You may especially want to leave Smart Drag disabled at first.
 Then, once you are comfortable clicking, move on to practicing Smart Drag.</para>
 </listitem>
 <listitem><para>When using Smart Drag, it may help to enable the Audible Click</para>
 </listitem>
-<listitem><para>When using the Audible Click, you may need to speed up KDE's audio response.</para>
+<listitem><para>When using the Audible Click, you may need to speed up &kde;'s audio response.</para>
 </listitem>
 </itemizedlist>
 </para>
@@ -276,31 +230,21 @@ Then, once you are comfortable clicking, move on to practicing Smart Drag.</para
 <chapter id="faq">
 <title>Questions and Answers</title>
 
-<!-- (OPTIONAL but recommended) This chapter should include all of the silly
-(and not-so-silly) newbie questions that fill up your mailbox. This chapter
-should be reserved for BRIEF questions and answers! If one question uses more
-than a page or so then it should probably be part of the
-"Using this Application" chapter instead. You should use links to
-cross-reference questions to the parts of your documentation that answer them.
-This is also a great place to provide pointers to other FAQ's if your users
-must do some complicated configuration on other programs in order for your
-application work. -->
-
 &reporting.bugs;
 &updating.documentation;
 
 <qandaset id="faqlist">
 <qandaentry>
 <question>
-<para>Help!  &kapp; keeps dropping spurious clicks all over the screen!</para>
+<para>Help!  &kmousetool; keeps dropping spurious clicks all over the screen!</para>
 </question>
 <answer>
 <para>
-When you are using &kapp;, you do have to learn new mousing habits.
+When you are using &kmousetool;, you do have to learn new mousing habits.
 </para>
 <para>
-First,
-keep in mind where it's safe to click -- clicking on grey parts of windows or non-link
+First, 
+keep in mind where it's safe to click &mdash; clicking on grey parts of windows or non-link
 areas of web browsers won't hurt anything, so you can safely rest the mouse over those areas 
 until you need it.
 </para>
@@ -308,7 +252,7 @@ until you need it.
 Second, you need to know where you're going to click before you move
 the mouse. Most of the time, when we know we're going to use the mouse, most of
 us grab the mouse and start moving it around randomly until we figure out where
-we want to click. With &kapp;, you need to know where you're going to click
+we want to click. With &kmousetool;, you need to know where you're going to click
 before you move the mouse in the first place. It is also a good idea to keep
 your hands off the mouse when you're not using it.
 </para>
@@ -317,7 +261,7 @@ your hands off the mouse when you're not using it.
 
 <qandaentry>
 <question>
-<para>My mouse sticks when I move it. Can I still use &kapp;?</para>
+<para>My mouse sticks when I move it. Can I still use &kmousetool;?</para>
 </question>
 <answer>
 <para>Yes. If your mouse sticks, it means you need to clean your mouse.
@@ -334,16 +278,16 @@ easily scraped off with a flat blade or with a fingernail.  </para>
 
 <qandaentry>
 <question>
-<para>&kapp; clicks down and never clicks up. What's happening?</para>
+<para>&kmousetool; clicks down and never clicks up. What's happening?</para>
 </question>
 <answer>
-<para>In some rare situations, the system suspends &kapp; when a drag
-starts; if you are using Smart Drag, this means thar &kapp; can never finish the drag by
+<para>In some rare situations, the system suspends &kmousetool; when a drag
+starts; if you are using Smart Drag, this means thar &kmousetool; can never finish the drag by
 clicking up.</para>
-<para>The solution is to simply click manually; this resets &kapp;, and you can then
+<para>The solution is to simply click manually; this resets &kmousetool;, and you can then
 continue to work normally again.</para>
 <para>
-This happens when you use &kapp; under a non-KDE window manager and then
+This happens when you use &kmousetool; under a non &kde; window manager and then
 use it to move a window.  
 </para>
 </answer>
@@ -352,11 +296,10 @@ use it to move a window.
 <qandaentry>
 <question>
 <para>
-
-&kapp; moves the cursor when I'm trying to type.</para>
+&kmousetool; moves the cursor when I'm trying to type.</para>
 </question>
 <answer>
-<para>Problem: When you're typing text, &kapp; keeps
+<para>Problem: When you're typing text, &kmousetool; keeps
 dropping clicks and moving the cursor away from where you want to type.</para>
 <para>Solution: Use the mouse to place the cursor where you want it, but when you're ready
 to type, park the mouse on a neutral area on the screen. Then, if you
@@ -372,25 +315,24 @@ around toolbars and menus, and on the title bars of windows.</para>
 </question>
 <answer>
 <para>
-Smart Drag is an advanced feature of &kapp;, and takes some getting used to. It is very
+Smart Drag is an advanced feature of &kmousetool;, and takes some getting used to. It is very
 possible to use it to select text, to cut and paste, and use it in almost any situation
 where you would normally want to drag the mouse. But you probably won't be able to do this
 at first. Here are some suggestions:
 </para>
-<para>
 <itemizedlist>
-<listitem><para>Don't use Smart Drag while you are first learning to use &kapp;. Instead,
+<listitem><para>Don't use Smart Drag while you are first learning to use &kmousetool;. Instead,
 to select text, click at one end of the text, and hold down
 the shift key while you click at the other end of the text.
 </para></listitem>
-<listitem><para>Use the Audible Click.  This will play a "click" sound when &kapp; clicks
+<listitem><para>Use the Audible Click.  This will play a <quote>click</quote> sound when &kmousetool; clicks
 down, and this will tell you when the Smart Drag delay is beginning.  With practice, you
-can use Smart Drag without the Audible Click (honest!), but it does take a fair amount of practice.
+can use Smart Drag without the Audible Click, but it does take a fair amount of practice.
 </para></listitem>
 <listitem><para>Know where you're going to click the mouse before you begin moving it.
 </para></listitem>
 </itemizedlist>
-</para>
+
 </answer>
 </qandaentry>
 
@@ -399,15 +341,10 @@ can use Smart Drag without the Audible Click (honest!), but it does take a fair 
 
 <chapter id="credits">
 
-<!-- Include credits for the programmers, documentation writers, and
-contributors here. The license for your software should then be included below
-the credits with a reference to the appropriate license file included in the KDE
-distribution. -->
-
 <title>Credits and License</title>
 
 <para>
-&kapp;
+&kmousetool;
 </para>
 <para>
 Program copyright 2002 Jeff Roush<email>jeff@mousetool.com</email>
@@ -424,8 +361,6 @@ Contributors:
 Documentation copyright 2002 Jeff Roush<email>jeff@mousetool.com</email>
 </para>
 
-<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-
 &underFDL;
 &underGPL;        	 <!-- GPL License -->
 
@@ -435,32 +370,34 @@ Documentation copyright 2002 Jeff Roush<email>jeff@mousetool.com</email>
 <title>Installation</title>
 
 <sect1 id="getting-kmousetool">
-<title>How to obtain &kapp;</title>
+<title>How to obtain &kmousetool;</title>
+
+&install.intro.documentation;
 
 <para>
-&kappname; can be downloaded from the KDE accessibility site,
-<ulink url="http://accessibility.kde.org/">http://accessibility.kde.org/</ulink>.
-or from the MouseTool site,
-<ulink url="http://www.mousetool.com/">www.mousetool.com</ulink></para>
+&kappname; can be downloaded from the &kde; accessibility site, <ulink
+url="http://accessibility.kde.org/">http://accessibility.kde.org/</ulink>.
+or from the MouseTool site, <ulink
+url="http://www.mousetool.com/">www.mousetool.com</ulink></para>
 </sect1>
 
 <sect1 id="requirements">
 <title>Requirements</title>
 
 <para>
-In order to successfully use &kappname;, you need KDE 2.0 or higher.
-You also need the XTest extension compiled as part of your X-Windows.  This should
-already be installed on your system; very few systems won't have it.  If you
-<emphasis>don't</emphasis> have this installed, please send an email to me at
+In order to successfully use &kappname;, you need &kde; 2.0 or higher.
+You also need the XTest extension compiled as part of your
+&X-Window;.  This should already be installed on your system; very
+few systems won't have it.  If you <emphasis>don't</emphasis> have
+this installed, please send an email to me at
 <email>jeff@mousetool.com</email>.
 </para>
 <para>
-In order to use the Audible Click feature, you will have to have a sound card and speakers,
-and you will have to have configured the sound card correctly.
+In order to use the Audible Click feature, you will have to have a
+sound card and speakers, and you will have to have configured the
+sound card correctly.
 </para>
 
-<!-- For a list of updates, you may refer to the application web site
-or the ChangeLog file, or ... -->
 <para>
 You can find a list of changes at <ulink
 url="http://www.mousetool.com">http://www.mousetool.com</ulink>.
@@ -470,33 +407,7 @@ url="http://www.mousetool.com">http://www.mousetool.com</ulink>.
 <sect1 id="compilation">
 <title>Compilation and Installation</title>
 
-<para>
-In order to compile and install &kapp; on your system, type the following in the base
-directory of the &kapp; distribution:
-<screen width="40">
-<prompt>%</prompt> <userinput>./configure</userinput>
-<prompt>%</prompt> <userinput>make</userinput>
-<prompt>%</prompt> <userinput>make install</userinput>
-</screen>
-</para>
-
-<para>
-If your Linux distribution placed the KDE files in a non-default location, you may
-have to modify the first line.  For Redhat-based distributions and Debian, use this line:
-<screen width="40">
-<prompt>%</prompt> <userinput>./configure --prefix=/usr</userinput>
-</screen>
-</para>
-<para>
-In addition, for Debian, the install line should look like this:
-<screen width="40">
-<prompt>%</prompt> <userinput>make install kde_htmldir=/usr/share/doc/kde/HTML</userinput>
-</screen>
-</para>
-
-<para>Since &kapp; uses autoconf and automake you should have not trouble compiling it,
-if you follow the above directions.
-Should you run into problems please report them to the KDE mailing lists.</para>
+&install.compile.documentation;
 
 </sect1>
 
@@ -513,16 +424,3 @@ sgml-indent-step:0
 sgml-indent-data:nil
 End:
 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
