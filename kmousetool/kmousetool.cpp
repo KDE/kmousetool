@@ -18,6 +18,7 @@
 
 #include "Xmd_kmousetool.h"
 #include "kmousetool.h"
+#include "kmousetool.moc"
 #include <kconfig.h>
 //#include <fstream>
 //#include <iostream>
@@ -146,7 +147,7 @@ void KMouseTool::timerEvent( QTimerEvent *e )
 			return;
     }
 
-    
+
     // The function CursorHasMoved() sets the global position variables.
 //	QWidget * pw = QApplication::widgetAt(currentXPosition, currentYPosition);
 //	printf("%s\n", pw->name());
@@ -158,11 +159,11 @@ void KMouseTool::timerEvent( QTimerEvent *e )
     if (tick_count<max_ticks)
 	tick_count++;
 
-    
+
   // If the mouse has paused ...
 	if (tick_count==dwell_time) {
     int strokeType = stroke.getStrokeType();
-      
+
     // if we're dragging the mouse, ignore stroke type
     if (mouse_is_down) {
         normalClick();
@@ -180,7 +181,7 @@ void KMouseTool::timerEvent( QTimerEvent *e )
     }
     if (strokeType==MTStroke::bumped_mouse)
       return;
-      
+
     if (strokeType==MTStroke::RightClick || strokeType==MTStroke::UpperRightStroke)
         RightClick();
     else if (strokeType==MTStroke::DoubleClick || strokeType==MTStroke::LowerLeftStroke)
@@ -260,7 +261,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
     int h = fontMetrics().height()*2;
 
     ///////////////////////////////////////////////////////////
-    // topLayout is the top-level widget that contains everything else 
+    // topLayout is the top-level widget that contains everything else
     QVBoxLayout *topLayout = new QVBoxLayout( this, 0, KDialog::spacingHint() );
     QGridLayout *checkboxGrid = new QGridLayout(2);
 
@@ -349,7 +350,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
     connect(mbuttonApply, SIGNAL(clicked()), this, SLOT(applyButtonClicked()));
 
     // Two text boxes for dwell and drag times
-    
+
     // Dwell Time
 
     //	QLabel *dwellLabel = new QLabel( "dwellLabel", dwellLabel );
@@ -527,7 +528,7 @@ void queryPointer(Window *pidRoot, Window *pidWin, int *pnRx, int *pnRy, int *pn
     	static Window old_id2 = 0;
 	if (old_id2 != id2) {
 //		printf("queried pointer\n");
-//        	printf("root: %x, id1: %x, id2: %x -- ", idRoot, id1, id2);   
+//        	printf("root: %x, id1: %x, id2: %x -- ", idRoot, id1, id2);
 //		XFetchName(display, id1, &win_name);
 //        	printf("win_name(id1): %s: ", win_name);
 //        	Try looking at XGetWindowProperty
@@ -542,7 +543,7 @@ void queryPointer(Window *pidRoot, Window *pidWin, int *pnRx, int *pnRy, int *pn
     QString command = "(null)";
     Status ok;
     ok = XGetCommand(display, id2, &argv, &argc);
-    
+
     if (0 != ok) {
 	if (argc > 0 && argv != NULL) {
 	    printf("\nGot a command: argc = %d\n", argc);
@@ -553,13 +554,13 @@ void queryPointer(Window *pidRoot, Window *pidWin, int *pnRx, int *pnRy, int *pn
 		command += argv[i];
 		++i;
 	    }
-	
+
 	    XFreeStringList(argv);
 	}
     }
     XClassHint hint;
     ok = XGetClassHint(display, id2, &hint);
-    
+
     QString resName = "(null)";
     QString resClass= "(null)";
 
@@ -730,7 +731,7 @@ void KMouseTool::applyButtonClicked()
 
     // if we got here, we must be okay.
     dwell_time = dwell;
-    drag_time  = drag;	
+    drag_time  = drag;
     tick_count = max_ticks;
     saveOptions();
 }
@@ -764,18 +765,18 @@ void KMouseTool::loadOptions()
 
     playSound = kapp->config()->readBoolEntry("AudibleClick",false);
     smart_drag_on = kapp->config()->readBoolEntry("SmartDrag",false);
-    
+
     dwell_time = kapp->config()->readNumEntry("DwellTime",5);
     drag_time = kapp->config()->readNumEntry("DragTime",3);
     strokesEnabled = kapp->config()->readBoolEntry("strokesEnabled",false);
-    
+
     QPoint p;
     int x = kapp->config()->readNumEntry("x",0);
     int y = kapp->config()->readNumEntry("y",0);
     p.setX(x);
     p.setY(y);
     move(p);
-    
+
     mousetool_is_running = kapp->config()->readBoolEntry("MouseToolIsRunning",true);
     display = XOpenDisplay(NULL);
 
