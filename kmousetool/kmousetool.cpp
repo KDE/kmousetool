@@ -41,7 +41,7 @@
 #include <qlayout.h>
 #include <qlineedit.h>
 #include <qcheckbox.h>
-#include <ksystemtray.h> 
+#include <ksystemtray.h>
 #include <kiconloader.h>
 #include <kpushbutton.h>
 #include <knuminput.h>
@@ -126,6 +126,28 @@ void KMouseTool::init_vars()
   MTStroke::setUpperRight(1023,0);
   MTStroke::setLowerLeft(0,767);
   MTStroke::setLowerRight(1023,767);
+}
+
+void KMouseTool::resetValues()
+{
+    cbDrag ->setChecked(smart_drag_on);
+    cbStart->setChecked(isAutostart());
+    cbClick->setChecked(playSound);
+    cbStroke->setChecked(strokesEnabled);
+    movementEdit->setValue(min_movement);
+    dwellTimeEdit->setValue(dwell_time);
+    dragTimeEdit->setValue(drag_time);
+}
+
+void KMouseTool::setDefaultValues()
+{
+    cbDrag ->setChecked(false);
+    cbStart->setChecked(false);
+    cbClick->setChecked(false);
+    cbStroke->setChecked(false);
+    movementEdit->setValue(5);
+    dwellTimeEdit->setValue(5);
+    dragTimeEdit->setValue(3);
 }
 
 
@@ -256,33 +278,29 @@ void KMouseTool::playTickSound()
 KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent, name)
 {
     init_vars();
+    resetValues();
 
-    cbDrag ->setChecked(smart_drag_on);
-//    cbStart->setChecked();
-    cbClick->setChecked(playSound);
-    cbStroke->setChecked(strokesEnabled);
-
-    connect(buttonStart, SIGNAL(clicked()), this, SLOT(startButtonClicked()));
-    connect(buttonApply, SIGNAL(clicked()), this, SLOT(applyButtonClicked()));
+    connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
+    connect(buttonDefault, SIGNAL(clicked()), this, SLOT(defaultSelected()));
+    connect(buttonReset, SIGNAL(clicked()), this, SLOT(resetSelected()));
+    connect(buttonApply, SIGNAL(clicked()), this, SLOT(applySelected()));
     connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
+    connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
+    connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
 
-    movementEdit->setValue(min_movement);
-    dwellTimeEdit->setValue(dwell_time);
-    dragTimeEdit->setValue(drag_time);
-
-		// When we first start, it's nice to not click immediately.
-		// So, tell MT we're just starting
-		mousetool_just_started = true;
+    // When we first start, it's nice to not click immediately.
+    // So, tell MT we're just starting
+    mousetool_just_started = true;
 
     startTimer(100);
-    QPixmap icon = KGlobal::iconLoader()->loadIcon("kmousetool", KIcon::Small);
-    KMouseToolTray *trayIcon = new KMouseToolTray (this, "systemTrayIcon");
-    trayIcon->setPixmap (icon);
-    trayIcon->show();
-    //trayIcon->contextMenu()->insertItem (i18n("About KMouseTool"), this, SLOT(aboutSelected()));
+    trayIcon = new KMouseToolTray (this, "systemTrayIcon");
+    updateStartStopText ();
+    connect(trayIcon, SIGNAL(startStopSelected()), this, SLOT(startStopSelected()));
+    connect(trayIcon, SIGNAL(configureSelected()), this, SLOT(configureSelected()));
     connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
     connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
-    
+    connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
+
     aboutDlg = new KAboutApplication (0, "KMouseToolDlg", false);
 }
 
@@ -519,7 +537,7 @@ int CursorHasMoved (int minMovement)
 
     currentXPosition = nRootX;
     currentYPosition = nRootY;
-    
+
     if (nRes) {
        nOldRootX = nRootX;
        nOldRootY = nRootY;
@@ -530,11 +548,19 @@ int CursorHasMoved (int minMovement)
 // End mouse monitoring and event creation code
 
 
+bool KMouseTool::isAutostart()
+{
+    QString sym = autostartdirname;
+    sym += "kmousetool";			// sym is now full path to symlink
+    QFileInfo fi(sym);
+
+    return fi.exists();
+}
+
 void KMouseTool::setAutostart (bool start)
 {
     QString sym = autostartdirname;
     sym += "kmousetool";			// sym is now full path to symlink
-//    cout << "link path: " << sym << "\n";
     QFileInfo fi(sym);
     QString cmd;
 
@@ -543,7 +569,7 @@ void KMouseTool::setAutostart (bool start)
 	cmd.sprintf("ln -s %s %s", appfilename.latin1(), autostartdirname.latin1());
     }
     else {
-       if (!fi.exists()) 			// if it exists, delete it
+       if (fi.exists()) 			// if it exists, delete it
 	    cmd.sprintf("rm -f %s", sym.latin1());
     }
     system(cmd.ascii());
@@ -567,21 +593,14 @@ bool KMouseTool::applySettings()
     smart_drag_on  = cbDrag->isChecked();
     playSound      = cbClick->isChecked();
     strokesEnabled = cbStroke->isChecked();
-    setAutostart (cbClick->isChecked());
+    setAutostart (cbStart->isChecked());
 
     dwell_time = dwell;
     drag_time  = drag;
     tick_count = max_ticks;
-    
+
     saveOptions();
     return true;
-}
-// Slots
-
-// Buttons at the bottom of the dialog
-void KMouseTool::applyButtonClicked()
-{
-    applySettings();
 }
 
 // Save options to kmousetoolrc file
@@ -606,12 +625,6 @@ void KMouseTool::loadOptions()
 
     mousetool_is_running = kapp->config()->readBoolEntry("MouseToolIsRunning",false);
     display = XOpenDisplay(NULL);
-
-    // Okay, restoring as minimized is not done this way ...
-    // (I get an icon on the tasbar, but I also get a window -- with no widgets)
-    // bool b = kapp->config()->readBoolEntry("IsMinimized",false);
-//    if (b)
-//	showMinimized();
 }
 
 // Save options to kmousetoolrc file
@@ -627,7 +640,7 @@ void KMouseTool::saveOptions()
     kapp->config()->writeEntry("x", x);
     kapp->config()->writeEntry("y", y);
     kapp->config()->writeEntry("strokesEnabled", strokesEnabled);
-    kapp->config()->writeEntry("IsMinimized", isMinimized());
+    kapp->config()->writeEntry("IsMinimized", isHidden());
     kapp->config()->writeEntry("DwellTime", dwell_time);
     kapp->config()->writeEntry("DragTime", drag_time);
     kapp->config()->writeEntry("Movement", min_movement);
@@ -652,15 +665,68 @@ void KMouseTool::saveOptions()
     */
 }
 
-void KMouseTool::startButtonClicked()
+void KMouseTool::updateStartStopText()
 {
-   if (applySettings()) {
-      mousetool_is_running = !mousetool_is_running;
-      if (mousetool_is_running)
-         buttonStart->setText(i18n("&Stop"));
-      else
-         buttonStart->setText(i18n("&Start"));
-   }
+  if (mousetool_is_running)
+    buttonStartStop->setText(i18n("&Stop"));
+  else
+    buttonStartStop->setText(i18n("&Start"));
+  trayIcon->updateStartStopText(mousetool_is_running);
+}
+
+void KMouseTool::closeEvent(QCloseEvent *e)
+{
+	hide();
+    e->ignore();
+}
+
+/******** SLOTS **********/
+
+// Buttons within the dialog
+void KMouseTool::startStopSelected()
+{
+   mousetool_is_running = !mousetool_is_running;
+   updateStartStopText();
+}
+
+void KMouseTool::defaultSelected()
+{
+    setDefaultValues();
+}
+
+void KMouseTool::resetSelected()
+{
+    resetValues();
+}
+
+void KMouseTool::applySelected()
+{
+    applySettings();
+}
+
+// Buttons at the bottom of the dialog
+void KMouseTool::helpSelected()
+{
+  kapp->invokeHelp();
+}
+
+void KMouseTool::closeSelected()
+{
+  hide();
+}
+
+void KMouseTool::quitSelected()
+{
+  saveOptions();
+  kapp->quit();
+}
+
+// Menu functions
+void KMouseTool::configureSelected()
+{
+  show();
+  raise();
+  setActiveWindow();
 }
 
 void KMouseTool::aboutSelected()
@@ -668,24 +734,32 @@ void KMouseTool::aboutSelected()
   aboutDlg->show();
 }
 
-void KMouseTool::helpSelected()
-{
-  kapp->invokeHelp();
-}
-
-void KMouseTool::closeEvent(QCloseEvent *e)
-{
-    saveOptions();
-    QWidget::closeEvent(e);
-}
 
 
 KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name)
  : KSystemTray (parent, name)
 {
+   startStopId = contextMenu()->insertItem (i18n("&Start"), this, SIGNAL(startStopSelected()));
+   contextMenu()->insertItem (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
    contextMenu()->insertItem (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
    contextMenu()->insertItem (i18n("&Help"), this, SIGNAL(helpSelected()));
 }
 
 KMouseToolTray::~KMouseToolTray() {
+}
+
+void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
+{
+  QPixmap icon;
+
+  if (mousetool_is_running) {
+    contextMenu()->changeItem (startStopId, i18n("&Stop"));
+    icon = KGlobal::iconLoader()->loadIcon("kmousetool_on", KIcon::Small);
+  }
+  else {
+    contextMenu()->changeItem (startStopId, i18n("&Start"));
+    icon = KGlobal::iconLoader()->loadIcon("kmousetool_off", KIcon::Small);
+  }
+  setPixmap (icon);
+  show();
 }

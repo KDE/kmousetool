@@ -28,7 +28,7 @@
 #include "version.h"
 
 #include <kapplication.h>
-#include <ksystemtray.h> 
+#include <ksystemtray.h>
 #include <qwidget.h>
 #include "mtstroke.h"
 #include "kmousetoolui.h"
@@ -39,6 +39,7 @@ class QCheckBox;
 class QPushButton;
 class KAudioPlayer;
 class KAboutApplication;
+class KMouseToolTray;
 
 // #define DEBUG_MOUSETOOL
 
@@ -61,9 +62,9 @@ class KAboutApplication;
 * It is the main widget for the dialog, and also (as of version 1.0) contains
 * most of the code.  This should change in version 2.0, which will have
 * enough options to split the main dialog into separate parts.
-* sdkhfsdkjf
 *
 */
+
 class KMouseTool : public KMouseToolUI
 {
     Q_OBJECT
@@ -78,21 +79,22 @@ class KMouseTool : public KMouseToolUI
 	int dwell_time;
 	int drag_time;
 	int max_ticks;
-        int min_movement;
+	int min_movement;
 	bool smart_drag_on;
 	bool playSound;
 	bool mousetool_is_running;
 	bool mousetool_just_started;
-        bool moving;
-  bool strokesEnabled;
+	bool moving;
+	bool strokesEnabled;
 
 	QString autostartdirname;
 	QString rcfilename;
 	QString appfilename;
 	QString	mSoundFileName;
 	KAudioPlayer *mplayer;
-        
-        KAboutApplication *aboutDlg;
+	KMouseToolTray *trayIcon;
+
+	KAboutApplication *aboutDlg;
 
 	void closeEvent(QCloseEvent *e);
 
@@ -100,6 +102,9 @@ class KMouseTool : public KMouseToolUI
 	 * Initialize all variables
 	 */
 	void init_vars();
+
+	void resetValues();
+	void setDefaultValues();
 
 	/**
 	 * Take care of details of playing .wav file
@@ -121,30 +126,35 @@ class KMouseTool : public KMouseToolUI
 	 * in a file named "kmousetool.rc"
 	 *
 	 */
-	void saveOptions();
-
-	bool applySettings();
-        void setAutostart (bool start);
-
-	public slots:
-
-	void aboutSelected();
-	void helpSelected();
-
-	    /**
-	     *
-	     */
-	    void applyButtonClicked();
+    void saveOptions();
 
 	/**
-	 * Start/stop button clicked.
 	 *
 	 * This function changes text on button depending on
 	 * state of time (either "start", or "stop").
-	 */
-	void startButtonClicked();
+	 **/
+    void updateStartStopText();
 
-    public:
+	bool applySettings();
+	bool isAutostart();
+    void setAutostart (bool start);
+
+    public slots:
+
+	void startStopSelected();
+
+	void defaultSelected();
+	void resetSelected();
+	void applySelected();
+
+	void helpSelected();
+	void closeSelected();
+	void quitSelected();
+
+	void aboutSelected();
+	void configureSelected();
+
+	public:
 
 	/**
 	 *		This function runs the show; it is called once every
@@ -154,7 +164,7 @@ class KMouseTool : public KMouseToolUI
 	 *		current mouse position to its previous position to see
 	 *		whether to send a down click, and up click, or wait.
 	 */
-	void timerEvent( QTimerEvent *e );
+	void timerEvent (QTimerEvent *e);
 
   /**
    * This generates a normal click event --
@@ -173,11 +183,17 @@ class KMouseTool : public KMouseToolUI
 
 class KMouseToolTray : public KSystemTray {
 Q_OBJECT
+private:
+	int startStopId;
 public:
-   KMouseToolTray (QWidget *parent=0, const char *name=0);
-   ~KMouseToolTray();
+	KMouseToolTray (QWidget *parent=0, const char *name=0);
+	~KMouseToolTray();
+
+	void updateStartStopText (bool mousetool_is_running);
 signals:
-   void aboutSelected();
-   void helpSelected();
+	void startStopSelected();
+	void configureSelected();
+	void aboutSelected();
+	void helpSelected();
 };
 #endif

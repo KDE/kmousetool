@@ -8,42 +8,162 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>289</width>
-            <height>234</height>
+            <width>513</width>
+            <height>438</height>
         </rect>
     </property>
     <property name="caption">
         <string>KMouseTool</string>
     </property>
-    <vbox>
+    <grid>
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
-        <widget class="QLayoutWidget">
+        <widget class="QLayoutWidget" row="3" column="0">
             <property name="name">
-                <cstring>layout4</cstring>
+                <cstring>layout7</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>buttonHelp</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Help</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>260</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonClose</cstring>
+                    </property>
+                    <property name="text">
+                        <string>C&amp;lose</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonQuit</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Quit</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <spacer row="2" column="0">
+            <property name="name">
+                <cstring>spacer7</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>30</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QGroupBox" row="1" column="0">
+            <property name="name">
+                <cstring>groupBox1</cstring>
+            </property>
+            <property name="title">
+                <string>Settings</string>
             </property>
             <grid>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QLabel" row="0" column="0">
+                <widget class="QLayoutWidget" row="3" column="0">
                     <property name="name">
-                        <cstring>movementLabel</cstring>
+                        <cstring>layout9</cstring>
                     </property>
-                    <property name="text">
-                        <string>&amp;Minimum movement:</string>
-                    </property>
-                    <property name="buddy" stdset="0">
-                        <cstring>movementEdit</cstring>
-                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <spacer row="0" column="0">
+                            <property name="name">
+                                <cstring>dragTimeSpace</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>16</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel" row="0" column="1">
+                            <property name="name">
+                                <cstring>dragTimeLabel</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="text">
+                                <string>Drag t&amp;ime (1/10 sec):</string>
+                            </property>
+                            <property name="buddy" stdset="0">
+                                <cstring>dragTimeEdit</cstring>
+                            </property>
+                        </widget>
+                    </grid>
                 </widget>
-                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
+                <widget class="KIntSpinBox" row="3" column="1">
                     <property name="name">
-                        <cstring>cbStart</cstring>
+                        <cstring>dragTimeEdit</cstring>
                     </property>
-                    <property name="text">
-                        <string>Start with &amp;KDE</string>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="maxValue">
+                        <number>40</number>
+                    </property>
+                    <property name="minValue">
+                        <number>1</number>
+                    </property>
+                    <property name="value">
+                        <number>3</number>
                     </property>
                 </widget>
                 <widget class="KIntSpinBox" row="1" column="1">
@@ -68,83 +188,15 @@
                         <number>5</number>
                     </property>
                 </widget>
-                <widget class="QLayoutWidget" row="3" column="0">
+                <widget class="QLabel" row="0" column="0">
                     <property name="name">
-                        <cstring>layout4</cstring>
-                    </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <spacer>
-                            <property name="name">
-                                <cstring>dragTimeSpace</cstring>
-                            </property>
-                            <property name="orientation">
-                                <enum>Horizontal</enum>
-                            </property>
-                            <property name="sizeType">
-                                <enum>Fixed</enum>
-                            </property>
-                            <property name="sizeHint">
-                                <size>
-                                    <width>16</width>
-                                    <height>20</height>
-                                </size>
-                            </property>
-                        </spacer>
-                        <widget class="QLabel">
-                            <property name="name">
-                                <cstring>dragTimeLabel</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>5</hsizetype>
-                                    <vsizetype>0</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="text">
-                                <string>Drag &amp;time (1/10 sec):</string>
-                            </property>
-                            <property name="buddy" stdset="0">
-                                <cstring>dragTimeEdit</cstring>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="KIntSpinBox" row="3" column="1">
-                    <property name="name">
-                        <cstring>dragTimeEdit</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>1</hsizetype>
-                            <vsizetype>0</vsizetype>
-                            <horstretch>1</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="maxValue">
-                        <number>40</number>
-                    </property>
-                    <property name="minValue">
-                        <number>1</number>
-                    </property>
-                    <property name="value">
-                        <number>3</number>
-                    </property>
-                </widget>
-                <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>cbDrag</cstring>
+                        <cstring>movementLabel</cstring>
                     </property>
                     <property name="text">
-                        <string>Sma&amp;rt drag</string>
+                        <string>&amp;Minimum movement:</string>
                     </property>
-                    <property name="checked">
-                        <bool>true</bool>
+                    <property name="buddy" stdset="0">
+                        <cstring>movementEdit</cstring>
                     </property>
                 </widget>
                 <widget class="KIntSpinBox" row="0" column="1">
@@ -187,10 +239,80 @@
                         </sizepolicy>
                     </property>
                     <property name="text">
-                        <string>&amp;Dwell time (1/10 sec):</string>
+                        <string>D&amp;well time (1/10 sec):</string>
                     </property>
                     <property name="buddy" stdset="0">
                         <cstring>dwellTimeEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>cbDrag</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Smar&amp;t drag</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget" row="7" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>layout5</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="KPushButton">
+                            <property name="name">
+                                <cstring>buttonDefault</cstring>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Default</string>
+                            </property>
+                        </widget>
+                        <widget class="KPushButton">
+                            <property name="name">
+                                <cstring>buttonReset</cstring>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Reset</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer4_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>31</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="KPushButton">
+                            <property name="name">
+                                <cstring>buttonApply</cstring>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Apply</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>cbStart</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Start with &amp;KDE</string>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="2">
@@ -198,12 +320,12 @@
                         <cstring>cbClick</cstring>
                     </property>
                     <property name="text">
-                        <string>Audible &amp;click</string>
+                        <string>A&amp;udible click</string>
                     </property>
                 </widget>
             </grid>
         </widget>
-        <widget class="QLayoutWidget">
+        <widget class="QLayoutWidget" row="0" column="0">
             <property name="name">
                 <cstring>layout5</cstring>
             </property>
@@ -211,46 +333,52 @@
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="KPushButton">
+                <widget class="QLabel">
                     <property name="name">
-                        <cstring>buttonHelp</cstring>
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>7</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
                     </property>
                     <property name="text">
-                        <string>&amp;Help</string>
+                        <string>KMouseTool will run as a background application after you close this dialog. To change the settings again, restart KMouseTool or use the KDE system tray.</string>
+                    </property>
+                    <property name="scaledContents">
+                        <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                        <set>WordBreak|AlignJustify|AlignVCenter</set>
                     </property>
                 </widget>
                 <spacer>
                     <property name="name">
-                        <cstring>spacer2</cstring>
+                        <cstring>spacer8</cstring>
                     </property>
                     <property name="orientation">
                         <enum>Horizontal</enum>
                     </property>
                     <property name="sizeType">
-                        <enum>Expanding</enum>
+                        <enum>Fixed</enum>
                     </property>
                     <property name="sizeHint">
                         <size>
-                            <width>40</width>
-                            <height>20</height>
+                            <width>8</width>
+                            <height>8</height>
                         </size>
                     </property>
                 </spacer>
                 <widget class="KPushButton">
                     <property name="name">
-                        <cstring>buttonApply</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Apply Settings</string>
-                    </property>
-                </widget>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>buttonStart</cstring>
+                        <cstring>buttonStartStop</cstring>
                     </property>
                     <property name="sizePolicy">
                         <sizepolicy>
-                            <hsizetype>1</hsizetype>
+                            <hsizetype>0</hsizetype>
                             <vsizetype>0</vsizetype>
                             <horstretch>0</horstretch>
                             <verstretch>0</verstretch>
@@ -262,7 +390,7 @@
                 </widget>
             </hbox>
         </widget>
-    </vbox>
+    </grid>
 </widget>
 <connections>
     <connection>
@@ -280,9 +408,11 @@
 </connections>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
+    <includehint>kpushbutton.h</includehint>
     <includehint>knuminput.h</includehint>
     <includehint>knuminput.h</includehint>
     <includehint>knuminput.h</includehint>
+    <includehint>kpushbutton.h</includehint>
     <includehint>kpushbutton.h</includehint>
     <includehint>kpushbutton.h</includehint>
     <includehint>kpushbutton.h</includehint>

@@ -20,6 +20,9 @@
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
+#include <dcopclient.h>
+#include <qmessagebox.h>
+#include <kconfig.h>
 
 #include "kmousetool.h"
 
@@ -40,7 +43,8 @@ int main(int argc, char *argv[])
     KMOUSETOOL_VERSION, description, KAboutData::License_GPL,
     "(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt", 0, "http://www.mousetool.com", "gunnar@schmi-dt.de");
 
-  aboutData.addAuthor("Gunnar Schmi Dt", I18N_NOOP("Current author"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
+  aboutData.addAuthor("Gunnar Schmi Dt", I18N_NOOP("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
+  aboutData.addAuthor("Olaf Jan Schmidt", I18N_NOOP("Usability improvements"), "ojschmidt@kde.org");
   aboutData.addAuthor("Jeff Roush", I18N_NOOP("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
 
   aboutData.addCredit("Joe Betts");
@@ -48,21 +52,26 @@ int main(int argc, char *argv[])
   KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
   KUniqueApplication::addCmdLineOptions();
 
-#ifdef DEBUG_MOUSETOOL
-  fprintf(stderr, "Compiled with Debugging enabled\n");
-  KApplication a;
-#else
   if (!KUniqueApplication::start()) {
-     fprintf(stderr, "KMouseTool is already running!\n");
-     exit(0);
+    DCOPClient *client = new DCOPClient();
+    client->attach();
+    QByteArray  data;
+    QCString    replyType;
+    QByteArray  replyData;
+    if ( !client->call("kmousetool", "qt/KMouseToolUI", "show()",
+                 data, replyType, replyData, true) ||
+         !client->call("kmousetool", "qt/KMouseToolUI", "raise()",
+                 data, replyType, replyData, true) )
+       fprintf(stderr, "The DCOP calls failed\n");
+    delete client;
+    exit(0);
   }
   KUniqueApplication a;
-#endif
 
   KMouseTool *kmousetool = new KMouseTool();
-  a.setMainWidget(kmousetool);
-//	QString str = locate("appdata", "mousetool_tap.wav");
-  kmousetool->show();
+
+  if (!kapp->config()->readBoolEntry("IsMinimized", false))
+    kmousetool->show();
 
   return a.exec();
 }
