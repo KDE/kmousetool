@@ -1,6 +1,6 @@
 bin_PROGRAMS = kmousetool
 
-kmousetool_SOURCES = kaboutmousetool.cpp mtstroke.cpp kmousetool.cpp main.cpp 
+kmousetool_SOURCES = kmousetoolui.ui kaboutmousetool.cpp mtstroke.cpp kmousetool.cpp main.cpp 
 kmousetool_LDADD   = -lXtst $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT) -lXext -lX11 $(LIBSOCKET)
 
 SUBDIRS = pics 

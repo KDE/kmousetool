@@ -2,8 +2,9 @@
                           kmousetool.cpp  -  description
                              -------------------
     begin                : Sun Jan 20 23:27:58 PST 2002
-    copyright            : (C) 2002 by Jeff Roush
-    email                : jeff@mousetool.com
+    copyright            : (C) 2002-2003 by Jeff Roush
+    copyright            : (C) 2003 by Gunnar Schmi Dt
+    email                : gunnar@schmi-dt.de
  ***************************************************************************/
 
 /***************************************************************************
@@ -31,20 +32,19 @@
 #include <qpushbutton.h>
 #include <qpoint.h>
 #include <qnamespace.h>
-#include <kaboutdialog.h>
 #include <kmessagebox.h>
 #include <kaudioplayer.h>
 #include <kstandarddirs.h>
 #include <qsound.h>
 #include <kglobalsettings.h>
 #include <kdebug.h>
-#include "kaboutmousetool.h"
 #include <qlayout.h>
 #include <qlineedit.h>
 #include <qlabel.h>
 #include <qcheckbox.h>
 #include <ksystemtray.h> 
 #include <kiconloader.h>
+#include <kpushbutton.h>
 
 #include <arts/soundserver.h>
 #include <kwin.h>		// for kwin::info
@@ -250,143 +250,30 @@ void KMouseTool::playTickSound()
     //	cout << "available: " << QSound::available() << "'\n";
 }
 
-KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name)
+KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent, name)
 {
     init_vars();
 
-    // Options grid
-    int rows = 2;
-    int cols = 2;
-//    int border = 4;
-    int spacing = -1;
-    // each button is 8 chars wide by 2 high
-    int w = fontMetrics().maxWidth()*8;
-    int h = fontMetrics().height()*2;
+    cbDrag ->setChecked(smart_drag_on);
+//    cbStart->setChecked();
+    cbClick->setChecked(playSound);
+    cbStroke->setChecked(strokesEnabled);
 
-    ///////////////////////////////////////////////////////////
-    // topLayout is the top-level widget that contains everything else
-    QVBoxLayout *topLayout = new QVBoxLayout( this, 0, KDialog::spacingHint() );
-    QGridLayout *checkboxGrid = new QGridLayout(2);
+    connect(cbDrag,  SIGNAL(clicked()), this, SLOT(cbDragClicked()));
+    connect(cbStart, SIGNAL(clicked()), this, SLOT(cbStartClicked()));
+    connect(cbClick, SIGNAL(clicked()), this, SLOT(cbClickClicked()));
+    connect(cbStroke,SIGNAL(clicked()), this, SLOT(cbStrokesClicked()));
 
-    QGridLayout *optionsLayout = new QGridLayout( rows, cols, spacing, "OptionsLayout" );
-//    QGridLayout *optionsLayout = new QGridLayout( topLayout, rows, cols, spacing, "OptionsLayout" );
+    connect(buttonStart, SIGNAL(clicked()), this, SLOT(startButtonClicked()));
+    connect(buttonApply, SIGNAL(clicked()), this, SLOT(applyButtonClicked()));
 
-//    topLayout->addWidget( optionsLayout );
-//    QGridLayout *optionsLayout = new QGridLayout( this, rows, cols, border, spacing, "OptionsLayout" );
-
-//    QLabel *label1 = new QLabel( this, "label1" );
-//    label1->setText( i18n("MouseTool for KDE") );
-
-    ///////////////////////////////////////////////////////////
-    // First item added to topLayout
-    // Label: "MouseTool for KDE"
-//    topLayout->addWidget( label1 );
-
-    // Checkbox options
-
-    ///////////////////////////////////////////////////////////
-    // Second item added to topLayout
-    // Grid of check boxes
-    topLayout->addLayout(checkboxGrid);
-
-    mcbDrag = new QCheckBox(i18n("Smart drag"), this, "smartDragCheckbox");
-    mcbDrag ->setChecked(smart_drag_on);
-    checkboxGrid->addWidget( mcbDrag, 0,0);
-
-    mcbStart = new QCheckBox(i18n("Start with KDE"), this, "startCheckbox");
-//    mcbStart->setChecked();
-    checkboxGrid->addWidget( mcbStart, 0,1);
-
-    mcbClick = new QCheckBox(i18n("Audible click"), this, "clickCheckbox");
-    mcbClick->setChecked(playSound);
-    checkboxGrid->addWidget( mcbClick, 1,0);
-
-    mcbStroke = new QCheckBox(i18n("Enable strokes"), this, "strokeCheckbox");
-    mcbStroke->setChecked(strokesEnabled);
-    checkboxGrid->addWidget( mcbStroke, 1,1);
-
-    //	checkboxGrid->addWidget( new QCheckBox("box 4", this, "Checkbox4"), 1,1);
-
-    connect(mcbDrag,  SIGNAL(clicked()), this, SLOT(cbDragClicked()));
-    connect(mcbStart, SIGNAL(clicked()), this, SLOT(cbStartClicked()));
-    connect(mcbClick, SIGNAL(clicked()), this, SLOT(cbClickClicked()));
-    connect(mcbStroke,SIGNAL(clicked()), this, SLOT(cbStrokesClicked()));
-
-    ///////////////////////////////////////////////////////////
-    // Third item added to topLayout
-    // Grid of Dwell time/Drag time boxes
-//    topLayout->addLayout(optionsLayout);
-
-    QHBoxLayout *hlayTimes = new QHBoxLayout( topLayout, 10 );
-
-    hlayTimes->addLayout(optionsLayout);
-
-    // Apply button
-    mbuttonApply = new QPushButton( i18n("Apply\nTimes"), this, "buttonApply" );
-    mbuttonApply->setFixedSize(QSize(w,static_cast<int>(1.5*h)));
-    // hlayApplyStart->addWidget( mbuttonApply );
-    hlayTimes->addWidget( mbuttonApply );
-
-    // Buttons to apply settings and to start/stop
-
-    ///////////////////////////////////////////////////////////
-    // Fourth item added to topLayout
-    // Button
-    QHBoxLayout *hlayApplyStart = new QHBoxLayout( topLayout, 10 );
-
-    // About button
-    mbuttonAbout = new QPushButton( i18n("About"), this, "buttonAbout" );
-    mbuttonAbout->setDefault(FALSE);
-    mbuttonAbout->setFixedSize(QSize(w,h));
-    hlayApplyStart->addWidget( mbuttonAbout );
-
-    // Start/stop button
-    mbuttonStart = new QPushButton( i18n("Start"), this, "buttonStart" );
-    mbuttonStart->setDefault(TRUE);
-    mbuttonStart->setFixedSize(QSize(w,h));
-    hlayApplyStart->addWidget( mbuttonStart );
-
-
-
-    connect(mbuttonAbout, SIGNAL(clicked()), this, SLOT(aboutButtonClicked()));
-    connect(mbuttonStart, SIGNAL(clicked()), this, SLOT(startButtonClicked()));
-    connect(mbuttonApply, SIGNAL(clicked()), this, SLOT(applyButtonClicked()));
-
-    // Two text boxes for dwell and drag times
-
-    // Dwell Time
-
-    //	QLabel *dwellLabel = new QLabel( "dwellLabel", dwellLabel );
-    //  dwellLabel->setText( i18n("Dwell time (1/10 sec):") );
-
-    //	QLabel *dwellLabel = new QLabel( this, "dwellLabel" );
-    //  dwellLabel->setText( i18n("Dwell time (1/10 sec):") );
-    //  optionsLayout->addWidget( dwellLabel, 0,0);
-
-    mDwellTimeLabel = new QLabel(i18n("Dwell time (1/10 sec):"), this);
-    optionsLayout->addWidget( mDwellTimeLabel, 0,0);
-
-    w = fontMetrics().maxWidth()*3;
-    h = static_cast<int>(fontMetrics().height()*1.5);
-
-    mDwellTimeEdit = new QLineEdit( this, "dwellTimeEdit" );
-    mDwellTimeEdit->setFixedSize(QSize(w,h));
     QString dwellString;
     dwellString.setNum(dwell_time);
-    mDwellTimeEdit->setText(dwellString);
-    optionsLayout->addWidget( mDwellTimeEdit, 0,1, AlignLeft);
+    dwellTimeEdit->setText(dwellString);
 
-    // Drag Time
-
-    mDragTimeLabel = new QLabel(i18n("Drag time (1/10 sec):"), this);
-    optionsLayout->addWidget( mDragTimeLabel, 1,0);
-
-    mDragTimeEdit = new QLineEdit( this, "dragTimeEdit" );
-    mDragTimeEdit->setFixedSize(QSize(w,h));
     QString dragString;
     dragString.setNum(drag_time);
-    mDragTimeEdit->setText(dragString);
-    optionsLayout->addWidget( mDragTimeEdit, 1,1, AlignLeft);
+    dragTimeEdit->setText(dragString);
 
     showEnabledWidgets();
 
@@ -659,9 +546,7 @@ int CursorHasMoved()
 // Checkboxes
 void KMouseTool::cbDragClicked()
 {
-    smart_drag_on = !smart_drag_on;
-    mDragTimeEdit->setEnabled(smart_drag_on);
-    mDragTimeLabel->setEnabled(smart_drag_on);
+    smart_drag_on = cbDrag->isChecked();
     saveOptions();
 }
 
@@ -672,24 +557,28 @@ void KMouseTool::cbStartClicked()
 //    cout << "link path: " << sym << "\n";
     QFileInfo fi(sym);
     QString cmd;
-    if (fi.exists()) 			// if it exists, delete it
-	cmd.sprintf("rm -f %s", sym.latin1());
-    else  			// if it doesn't exist, make it
+
+    if (cbClick->isChecked()) {
+       if (!fi.exists())  			// if it doesn't exist, make it
 	cmd.sprintf("ln -s %s %s", appfilename.latin1(), autostartdirname.latin1());
+    }
+    else {
+       if (!fi.exists()) 			// if it exists, delete it
+	    cmd.sprintf("rm -f %s", sym.latin1());
+    }
     system(cmd.ascii());
 //    cout << "command: " << cmd << "\n";
 }
 
 void KMouseTool::cbClickClicked()
 {
-    playSound = !playSound;
-    //	KMessageBox::sorry(this, i18n("Sorry, this hasn't been implemented yet"), i18n("Pay no Attention to the Man Behind the Curtain"));
+    playSound = cbClick->isChecked();
     saveOptions();
 }
 
 void KMouseTool::cbStrokesClicked()
 {
-  strokesEnabled = !strokesEnabled;
+  strokesEnabled = cbStroke->isChecked();
 }
 // Buttons at the bottom of the dialog
 void KMouseTool::applyButtonClicked()
@@ -697,12 +586,12 @@ void KMouseTool::applyButtonClicked()
     bool ok = true;
     int drag, dwell;
 
-    drag = (mDragTimeEdit->text()).toInt( &ok ) ;
+    drag = (dragTimeEdit->text()).toInt( &ok ) ;
     if (!ok) {
 	KMessageBox::sorry(this, i18n("Please enter a number for the drag time."), i18n("Invalid Value"));
 	return;
     }
-    dwell = (mDwellTimeEdit->text()).toInt( &ok );
+    dwell = (dwellTimeEdit->text()).toInt( &ok );
     if (!ok) {
 	KMessageBox::sorry(this, i18n("Please enter a number for the dwell time."), i18n("Invalid Value"));
 	return;
@@ -737,22 +626,22 @@ void KMouseTool::applyButtonClicked()
 // Update state of widgets to show which are enabled and which aren't
 void KMouseTool::showEnabledWidgets()
 {
-    mcbStart->setEnabled(mousetool_is_running);
-    mcbClick->setEnabled(mousetool_is_running);
-    mcbDrag->setEnabled(mousetool_is_running);
-    mcbStroke->setEnabled(mousetool_is_running);
-    mDwellTimeLabel->setEnabled(mousetool_is_running);
-    mDwellTimeEdit->setEnabled(mousetool_is_running);
-    mbuttonApply->setEnabled(mousetool_is_running);
+    cbStart->setEnabled(mousetool_is_running);
+    cbClick->setEnabled(mousetool_is_running);
+    cbDrag->setEnabled(mousetool_is_running);
+    cbStroke->setEnabled(mousetool_is_running);
+    dwellTimeLabel->setEnabled(mousetool_is_running);
+    dwellTimeEdit->setEnabled(mousetool_is_running);
+    buttonApply->setEnabled(mousetool_is_running);
     if (mousetool_is_running) {
-	mDragTimeLabel->setEnabled(smart_drag_on);
-	mDragTimeEdit->setEnabled(smart_drag_on);
-	mbuttonStart->setText(i18n("Stop"));
+	dragTimeLabel->setEnabled(smart_drag_on);
+	dragTimeEdit->setEnabled(smart_drag_on);
+	buttonStart->setText(i18n("Stop"));
     }
     else {
-	mDragTimeLabel->setEnabled(false);
-	mDragTimeEdit->setEnabled(false);
-	mbuttonStart->setText(i18n("Start"));
+	dragTimeLabel->setEnabled(false);
+	dragTimeEdit->setEnabled(false);
+	buttonStart->setText(i18n("Start"));
     }
 }
 
@@ -827,14 +716,6 @@ void KMouseTool::startButtonClicked()
     mousetool_is_running = !mousetool_is_running;
     showEnabledWidgets();
 }
-
-void KMouseTool::aboutButtonClicked()
-{
-  KAboutMouseTool dlg(this);
-  dlg.exec();
-
-}
-
 
 void KMouseTool::closeEvent(QCloseEvent *e)
 {

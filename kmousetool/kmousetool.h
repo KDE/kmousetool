@@ -2,8 +2,9 @@
                           kmousetool.h  -  description
                              -------------------
     begin                : Sun Jan 20 23:27:58 PST 2002
-    copyright            : (C) 2002 by Jeff Roush
-    email                : jeff@mousetool.com
+    copyright            : (C) 2002-2003 by Jeff Roush
+    copyright            : (C) 2003 by Gunnar Schmi Dt
+    email                : gunnar@schmi-dt.de
  ***************************************************************************/
 
 /***************************************************************************
@@ -29,6 +30,7 @@
 #include <kapplication.h>
 #include <qwidget.h>
 #include "mtstroke.h"
+#include "kmousetoolui.h"
 
 class QLineEdit;
 class QLabel;
@@ -60,7 +62,7 @@ class KAudioPlayer;
 * sdkhfsdkjf
 *
 */
-class KMouseTool : public QWidget
+class KMouseTool : public KMouseToolUI
 {
     Q_OBJECT
 
@@ -85,27 +87,6 @@ class KMouseTool : public QWidget
 	QString appfilename;
 	QString	mSoundFileName;
 	KAudioPlayer *mplayer;
-
-	/**
-	 * Edit button widget for dwell time
-	 */
-	QLineEdit *mDwellTimeEdit;
-
-	/**
-	 * Edit button widget for drag time.
-	 */
-	QLineEdit *mDragTimeEdit;
-	QLabel	*mDwellTimeLabel;
-	QLabel	*mDragTimeLabel;
-
-	QCheckBox * mcbDrag;
-	QCheckBox * mcbClick;
-	QCheckBox * mcbStart;
-	QCheckBox * mcbStroke;
-
-	QPushButton *mbuttonApply;
-	QPushButton *mbuttonAbout;
-	QPushButton *mbuttonStart;
 
 	void closeEvent(QCloseEvent *e);
 
@@ -157,13 +138,6 @@ class KMouseTool : public QWidget
 	 * state of time (either "start", or "stop").
 	 */
 	void startButtonClicked();
-
-	/**
-	 * About button clicked.
-	 *
-	 * This button shows the "About" dialog
-	 */
-	void aboutButtonClicked();
 
 	/**
 	 *	User clicked on "Smart Drag" checkbox.
