@@ -15,18 +15,59 @@
     <property name="caption">
         <string>KMouseTool</string>
     </property>
-    <grid>
+    <vbox>
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
-        <widget class="QLayoutWidget" row="0" column="0">
+        <widget class="QLayoutWidget">
             <property name="name">
-                <cstring>layout8</cstring>
+                <cstring>layout4</cstring>
             </property>
             <grid>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
+                        <cstring>movementLabel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Minimum movement:</string>
+                    </property>
+                    <property name="buddy" stdset="0">
+                        <cstring>movementEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>cbStart</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Start with &amp;KDE</string>
+                    </property>
+                </widget>
+                <widget class="KIntSpinBox" row="1" column="1">
+                    <property name="name">
+                        <cstring>dwellTimeEdit</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="maxValue">
+                        <number>40</number>
+                    </property>
+                    <property name="minValue">
+                        <number>1</number>
+                    </property>
+                    <property name="value">
+                        <number>5</number>
+                    </property>
+                </widget>
                 <widget class="QLayoutWidget" row="3" column="0">
                     <property name="name">
                         <cstring>layout4</cstring>
@@ -56,6 +97,14 @@
                             <property name="name">
                                 <cstring>dragTimeLabel</cstring>
                             </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
                             <property name="text">
                                 <string>Drag &amp;time (1/10 sec):</string>
                             </property>
@@ -65,20 +114,26 @@
                         </widget>
                     </hbox>
                 </widget>
-                <widget class="QLabel" row="1" column="0">
+                <widget class="KIntSpinBox" row="3" column="1">
                     <property name="name">
-                        <cstring>dwellTimeLabel</cstring>
+                        <cstring>dragTimeEdit</cstring>
                     </property>
-                    <property name="text">
-                        <string>&amp;Dwell time (1/10 sec):</string>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
                     </property>
-                    <property name="buddy" stdset="0">
-                        <cstring>dwellTimeEdit</cstring>
+                    <property name="maxValue">
+                        <number>40</number>
                     </property>
-                </widget>
-                <widget class="QLineEdit" row="1" column="1">
-                    <property name="name">
-                        <cstring>dwellTimeEdit</cstring>
+                    <property name="minValue">
+                        <number>1</number>
+                    </property>
+                    <property name="value">
+                        <number>3</number>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
@@ -92,17 +147,23 @@
                         <bool>true</bool>
                     </property>
                 </widget>
-                <widget class="QLineEdit" row="3" column="1">
+                <widget class="KIntSpinBox" row="0" column="1">
                     <property name="name">
-                        <cstring>dragTimeEdit</cstring>
+                        <cstring>movementEdit</cstring>
                     </property>
-                </widget>
-                <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>cbClick</cstring>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
                     </property>
-                    <property name="text">
-                        <string>Audible &amp;click</string>
+                    <property name="maxValue">
+                        <number>40</number>
+                    </property>
+                    <property name="minValue">
+                        <number>1</number>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="4" column="0" rowspan="1" colspan="2">
@@ -113,33 +174,36 @@
                         <string>&amp;Enable strokes</string>
                     </property>
                 </widget>
-                <widget class="QLineEdit" row="0" column="1">
+                <widget class="QLabel" row="1" column="0">
                     <property name="name">
-                        <cstring>movementEdit</cstring>
+                        <cstring>dwellTimeLabel</cstring>
                     </property>
-                </widget>
-                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>cbStart</cstring>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
                     </property>
                     <property name="text">
-                        <string>Start with &amp;KDE</string>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="0" column="0">
-                    <property name="name">
-                        <cstring>movementLabel</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Minimum movement:</string>
+                        <string>&amp;Dwell time (1/10 sec):</string>
                     </property>
                     <property name="buddy" stdset="0">
-                        <cstring>movementEdit</cstring>
+                        <cstring>dwellTimeEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>cbClick</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Audible &amp;click</string>
                     </property>
                 </widget>
             </grid>
         </widget>
-        <widget class="QLayoutWidget" row="1" column="0">
+        <widget class="QLayoutWidget">
             <property name="name">
                 <cstring>layout5</cstring>
             </property>
@@ -198,24 +262,27 @@
                 </widget>
             </hbox>
         </widget>
-    </grid>
+    </vbox>
 </widget>
 <connections>
-    <connection>
-        <sender>cbDrag</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>dragTimeEdit</receiver>
-        <slot>setEnabled(bool)</slot>
-    </connection>
     <connection>
         <sender>cbDrag</sender>
         <signal>toggled(bool)</signal>
         <receiver>dragTimeLabel</receiver>
         <slot>setEnabled(bool)</slot>
     </connection>
+    <connection>
+        <sender>cbDrag</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>dragTimeEdit</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
 </connections>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
     <includehint>kpushbutton.h</includehint>
     <includehint>kpushbutton.h</includehint>
     <includehint>kpushbutton.h</includehint>

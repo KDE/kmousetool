@@ -117,12 +117,8 @@ class KMouseTool : public KMouseToolUI
 	 */
 	void saveOptions();
 
-	/**
-	 * Update state of widgets to show which are enabled and which aren't
-	 *
-	 */
-	void showEnabledWidgets();
-
+	bool applySettings();
+        void setAutostart (bool start);
 
 	public slots:
 
@@ -139,25 +135,6 @@ class KMouseTool : public KMouseToolUI
 	 */
 	void startButtonClicked();
 
-	/**
-	 *	User clicked on "Smart Drag" checkbox.
-	 */
-	void cbDragClicked();
-
-	/**
-	 *	User clicked on "Start with KDE" checkbox.
-	 */
-	void cbStartClicked();
-
-	/**
-	 * User clicked on "Audible Click" checkbox.
-	 */
-	void cbClickClicked();
-
-	/**
-	 * User clicked on "Enable Strokes" checkbox.
-	 */
-	void cbStrokesClicked();
     public:
 
 	/**

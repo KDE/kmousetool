@@ -40,11 +40,11 @@
 #include <kdebug.h>
 #include <qlayout.h>
 #include <qlineedit.h>
-#include <qlabel.h>
 #include <qcheckbox.h>
 #include <ksystemtray.h> 
 #include <kiconloader.h>
 #include <kpushbutton.h>
+#include <knuminput.h>
 
 #include <arts/soundserver.h>
 #include <kwin.h>		// for kwin::info
@@ -259,23 +259,11 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
     cbClick->setChecked(playSound);
     cbStroke->setChecked(strokesEnabled);
 
-    connect(cbDrag,  SIGNAL(clicked()), this, SLOT(cbDragClicked()));
-    connect(cbStart, SIGNAL(clicked()), this, SLOT(cbStartClicked()));
-    connect(cbClick, SIGNAL(clicked()), this, SLOT(cbClickClicked()));
-    connect(cbStroke,SIGNAL(clicked()), this, SLOT(cbStrokesClicked()));
-
     connect(buttonStart, SIGNAL(clicked()), this, SLOT(startButtonClicked()));
     connect(buttonApply, SIGNAL(clicked()), this, SLOT(applyButtonClicked()));
 
-    QString dwellString;
-    dwellString.setNum(dwell_time);
-    dwellTimeEdit->setText(dwellString);
-
-    QString dragString;
-    dragString.setNum(drag_time);
-    dragTimeEdit->setText(dragString);
-
-    showEnabledWidgets();
+    dwellTimeEdit->setValue(dwell_time);
+    dragTimeEdit->setValue(drag_time);
 
 		// When we first start, it's nice to not click immediately.
 		// So, tell MT we're just starting
@@ -541,24 +529,15 @@ int CursorHasMoved()
 // End mouse monitoring and event creation code
 
 
-// Slots
-
-// Checkboxes
-void KMouseTool::cbDragClicked()
+void KMouseTool::setAutostart (bool start)
 {
-    smart_drag_on = cbDrag->isChecked();
-    saveOptions();
-}
-
-void KMouseTool::cbStartClicked()
-{
-    QString sym = autostartdirname;;
+    QString sym = autostartdirname;
     sym += "kmousetool";			// sym is now full path to symlink
 //    cout << "link path: " << sym << "\n";
     QFileInfo fi(sym);
     QString cmd;
 
-    if (cbClick->isChecked()) {
+    if (start) {
        if (!fi.exists())  			// if it doesn't exist, make it
 	cmd.sprintf("ln -s %s %s", appfilename.latin1(), autostartdirname.latin1());
     }
@@ -567,82 +546,40 @@ void KMouseTool::cbStartClicked()
 	    cmd.sprintf("rm -f %s", sym.latin1());
     }
     system(cmd.ascii());
-//    cout << "command: " << cmd << "\n";
 }
 
-void KMouseTool::cbClickClicked()
+bool KMouseTool::applySettings()
 {
-    playSound = cbClick->isChecked();
-    saveOptions();
-}
-
-void KMouseTool::cbStrokesClicked()
-{
-  strokesEnabled = cbStroke->isChecked();
-}
-// Buttons at the bottom of the dialog
-void KMouseTool::applyButtonClicked()
-{
-    bool ok = true;
     int drag, dwell;
 
-    drag = (dragTimeEdit->text()).toInt( &ok ) ;
-    if (!ok) {
-	KMessageBox::sorry(this, i18n("Please enter a number for the drag time."), i18n("Invalid Value"));
-	return;
-    }
-    dwell = (dwellTimeEdit->text()).toInt( &ok );
-    if (!ok) {
-	KMessageBox::sorry(this, i18n("Please enter a number for the dwell time."), i18n("Invalid Value"));
-	return;
-    }
-
-    // minimum and maximum values for drag and dwell times
-    int min = 1;
-    int max = 40;
-    // verify that values are between min and max
-    if (drag<min || drag>max) {
-	KMessageBox::sorry(this, i18n("Please enter a number between %1 and %2 for the drag time.").arg(min).arg(max), i18n("Invalid Value"));
-	return;
-    }
-    if (dwell<min || dwell>max) {
-	KMessageBox::sorry(this, i18n("Please enter a number between %1 and %2 for the dwell time.").arg(min).arg(max), i18n("Invalid Value"));
-	return;
-    }
+    dwell = dwellTimeEdit->value();
+    drag = dragTimeEdit->value() ;
 
     // The drag time must be less than the dwell time
     if ( dwell < drag) {
 	KMessageBox::sorry(this, i18n("The drag time must be less than or equal to the dwell time."), i18n("Invalid Value"));
-	return;
+	return false;
     }
 
     // if we got here, we must be okay.
+    smart_drag_on  = cbDrag->isChecked();
+    playSound      = cbClick->isChecked();
+    strokesEnabled = cbStroke->isChecked();
+    setAutostart (cbClick->isChecked());
+
     dwell_time = dwell;
     drag_time  = drag;
     tick_count = max_ticks;
+    
     saveOptions();
+    return true;
 }
+// Slots
 
-// Update state of widgets to show which are enabled and which aren't
-void KMouseTool::showEnabledWidgets()
+// Buttons at the bottom of the dialog
+void KMouseTool::applyButtonClicked()
 {
-    cbStart->setEnabled(mousetool_is_running);
-    cbClick->setEnabled(mousetool_is_running);
-    cbDrag->setEnabled(mousetool_is_running);
-    cbStroke->setEnabled(mousetool_is_running);
-    dwellTimeLabel->setEnabled(mousetool_is_running);
-    dwellTimeEdit->setEnabled(mousetool_is_running);
-    buttonApply->setEnabled(mousetool_is_running);
-    if (mousetool_is_running) {
-	dragTimeLabel->setEnabled(smart_drag_on);
-	dragTimeEdit->setEnabled(smart_drag_on);
-	buttonStart->setText(i18n("Stop"));
-    }
-    else {
-	dragTimeLabel->setEnabled(false);
-	dragTimeEdit->setEnabled(false);
-	buttonStart->setText(i18n("Start"));
-    }
+    applySettings();
 }
 
 // Save options to kmousetoolrc file
@@ -713,8 +650,13 @@ void KMouseTool::saveOptions()
 
 void KMouseTool::startButtonClicked()
 {
-    mousetool_is_running = !mousetool_is_running;
-    showEnabledWidgets();
+   if (applySettings()) {
+      mousetool_is_running = !mousetool_is_running;
+      if (mousetool_is_running)
+         buttonStart->setText(i18n("Stop"));
+      else
+         buttonStart->setText(i18n("Start"));
+   }
 }
 
 void KMouseTool::closeEvent(QCloseEvent *e)
