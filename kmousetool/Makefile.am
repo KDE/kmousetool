@@ -5,7 +5,7 @@ kmousetool_LDADD   = -lXtst $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT) -lXext -lX11 $
 
 SUBDIRS = pics 
 
-EXTRA_DIST = main.cpp kmousetool.cpp kmousetool.h kmousetool.desktop mtstroke.cpp mtstroke.h kaboutmousetool.cpp kaboutmousetool.h mousetool_tap.wav 
+EXTRA_DIST = main.cpp version.h kmousetool.cpp kmousetool.h kmousetool.desktop mtstroke.cpp mtstroke.h kaboutmousetool.cpp kaboutmousetool.h mousetool_tap.wav 
 
 install-data-local:
 	$(mkinstalldirs) $(kde_appsdir)/Applications/

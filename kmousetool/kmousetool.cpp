@@ -786,7 +786,7 @@ void KMouseTool::saveOptions()
     int y = p.y();
 
     kapp->config()->setGroup("ProgramOptions");
-    kapp->config()->writeEntry("Version", VERSION);
+    kapp->config()->writeEntry("Version", KMOUSETOOL_VERSION);
     kapp->config()->setGroup("UserOptions");
     kapp->config()->writeEntry("x", x);
     kapp->config()->writeEntry("y", y);
@@ -806,7 +806,7 @@ void KMouseTool::saveOptions()
     ofstream rcfile(rcfilename);
     if (!rcfile)
 	return;
-    rcfile << "# Config file created by KMouseTool, version " << VERSION << "\"\n\n";
+    rcfile << "# Config file created by KMouseTool, version " << KMOUSETOOL_VERSION << "\"\n\n";
     rcfile << "[UserOptions]\n";
     rcfile << "DwellTime:    " << dwell_time    << "\n";
     rcfile << "DragTime:     " << drag_time     << "\n";

@@ -24,6 +24,8 @@
 #include <config.h>
 #endif
 
+#include "version.h"
+
 #include <kapp.h>
 #include <qwidget.h>
 #include <qlayout.h>
