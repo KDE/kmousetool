@@ -64,7 +64,7 @@ KAboutMouseTool::KAboutMouseTool( QWidget *parent)
 	   arg(QString::fromLatin1(VERSION)) );
   addTextPage( i18n("About KMouseTool","&About"), text1, true );
   addTextPage( i18n("&Report Bugs or Wishes"), text2, true );
-  addTextPage( i18n("&License agreement"), text3, true );
+  addTextPage( i18n("&License Agreement"), text3, true );
   setImage( locate( "data", QString::fromLatin1("kdeui/pics/aboutkde.png")) );
 //  setImageBackgroundColor( white );
 }

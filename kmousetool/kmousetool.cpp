@@ -112,8 +112,8 @@ void KMouseTool::init_vars()
     //	QDir cfgdir (QDir::homeDirPath());
     //	if (!cfgdir.exists()) {
     //		KMessageBox::sorry(this,
-    //								"MouseTool Configuration Directory doesn't exist.\nI'm creating it now.",
-    //								"Need to create configuration directory");
+    //								i18n("MouseTool configuration directory doesn't exist.\nI'm creating it now.",
+    //								i18n("Need to Create Configuration Directory"));
     //		QDir::mkdir(mSoundFileName);
     //	}
 
@@ -286,7 +286,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
     // Grid of check boxes
     topLayout->addLayout(checkboxGrid);
 
-    mcbDrag = new QCheckBox(i18n("Smart Drag"), this, "smartDragCheckbox");
+    mcbDrag = new QCheckBox(i18n("Smart drag"), this, "smartDragCheckbox");
     mcbDrag ->setChecked(smart_drag_on);
     checkboxGrid->addWidget( mcbDrag, 0,0);
 
@@ -294,11 +294,11 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
 //    mcbStart->setChecked();
     checkboxGrid->addWidget( mcbStart, 0,1);
 
-    mcbClick = new QCheckBox(i18n("Audible Click"), this, "clickCheckbox");
+    mcbClick = new QCheckBox(i18n("Audible click"), this, "clickCheckbox");
     mcbClick->setChecked(playSound);
     checkboxGrid->addWidget( mcbClick, 1,0);
 
-    mcbStroke = new QCheckBox(i18n("Enable Strokes"), this, "strokeCheckbox");
+    mcbStroke = new QCheckBox(i18n("Enable strokes"), this, "strokeCheckbox");
     mcbStroke->setChecked(strokesEnabled);
     checkboxGrid->addWidget( mcbStroke, 1,1);
 
@@ -354,13 +354,13 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
     // Dwell Time
 
     //	QLabel *dwellLabel = new QLabel( "dwellLabel", dwellLabel );
-    //  dwellLabel->setText( i18n("Dwell Time (1/10 sec):") );
+    //  dwellLabel->setText( i18n("Dwell time (1/10 sec):") );
 
     //	QLabel *dwellLabel = new QLabel( this, "dwellLabel" );
-    //  dwellLabel->setText( i18n("Dwell Time (1/10 sec):") );
+    //  dwellLabel->setText( i18n("Dwell time (1/10 sec):") );
     //  optionsLayout->addWidget( dwellLabel, 0,0);
 
-    mDwellTimeLabel = new QLabel(i18n("Dwell Time (1/10 sec):"), this);
+    mDwellTimeLabel = new QLabel(i18n("Dwell time (1/10 sec):"), this);
     optionsLayout->addWidget( mDwellTimeLabel, 0,0);
 
     w = fontMetrics().maxWidth()*3;
@@ -375,7 +375,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
 
     // Drag Time
 
-    mDragTimeLabel = new QLabel(i18n("Drag Time (1/10 sec):"), this);
+    mDragTimeLabel = new QLabel(i18n("Drag time (1/10 sec):"), this);
     optionsLayout->addWidget( mDragTimeLabel, 1,0);
 
     mDragTimeEdit = new QLineEdit( this, "dragTimeEdit" );
@@ -676,7 +676,7 @@ void KMouseTool::cbStartClicked()
 void KMouseTool::cbClickClicked()
 {
     playSound = !playSound;
-    //	KMessageBox::sorry(this, "Sorry, this hasn't been implemented yet", "Pay no attention to the man behind the curtain");
+    //	KMessageBox::sorry(this, i18n("Sorry, this hasn't been implemented yet"), i18n("Pay no attention to the man behind the curtain"));
     saveOptions();
 }
 
@@ -692,12 +692,12 @@ void KMouseTool::applyButtonClicked()
 
     drag = (mDragTimeEdit->text()).toInt( &ok ) ;
     if (!ok) {
-	KMessageBox::sorry(this, "Please enter a number for the drag time", "Invalid value");
+	KMessageBox::sorry(this, i18n("Please enter a number for the drag time."), i18n("Invalid Value"));
 	return;
     }
     dwell = (mDwellTimeEdit->text()).toInt( &ok );
     if (!ok) {
-	KMessageBox::sorry(this, "Please enter a number for the dwell time", "Invalid value");
+	KMessageBox::sorry(this, i18n("Please enter a number for the dwell time."), i18n("Invalid Value"));
 	return;
     }
 
@@ -705,27 +705,18 @@ void KMouseTool::applyButtonClicked()
     int min = 1;
     int max = 40;
     // verify that values are between min and max
-    QString baseString = "Please enter a number between ";
-    QString str;
-    str.setNum(min);
-    baseString.append(str);
-    baseString.append(" and ");
-    str.setNum(max);
-    baseString.append(str);
     if (drag<min || drag>max) {
-	baseString.append(" for the drag time");
-	KMessageBox::sorry(this, baseString, "Invalid value");
+	KMessageBox::sorry(this, i18n("Please enter a number between %1 and %2 for the drag time.").arg(min).arg(max), i18n("Invalid Value"));
 	return;
     }
     if (dwell<min || dwell>max) {
-	baseString.append(" for the dwell time");
-	KMessageBox::sorry(this, baseString, "Invalid value");
+	KMessageBox::sorry(this, i18n("Please enter a number between %1 and %2 for the dwell time.").arg(min).arg(max), i18n("Invalid Value"));
 	return;
     }
 
     // The drag time must be less than the dwell time
     if ( dwell < drag) {
-	KMessageBox::sorry(this, "the Drag Time must be less than or equal to the Dwell Time", "Invalid value");
+	KMessageBox::sorry(this, i18n("The drag time must be less than or equal to the dwell time."), i18n("Invalid Value"));
 	return;
     }
 
