@@ -677,7 +677,7 @@ void KMouseTool::updateStartStopText()
 void KMouseTool::closeEvent(QCloseEvent *e)
 {
 	hide();
-    e->ignore();
+    e->accept();
 }
 
 /******** SLOTS **********/
