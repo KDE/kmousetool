@@ -3,6 +3,9 @@
                              -------------------
     begin                : Sun Jan 20 23:27:58 PST 2002
     copyright            : (C) 2002-2003 by Jeff Roush
+    email                : jeff@mousetool.com
+    copyright            : (C) 2003 by Olaf Schmidt
+    email                : ojschmidt@kde.org
     copyright            : (C) 2003 by Gunnar Schmi Dt
     email                : gunnar@schmi-dt.de
  ***************************************************************************/
@@ -85,9 +88,6 @@ private:
 	 */
 	void init_vars();
 
-	void resetValues();
-	void setDefaultValues();
-
 	/**
 	 * Take care of details of playing .wav file
 	 *
@@ -111,17 +111,48 @@ private:
     void saveOptions();
 
 	/**
-	 *
 	 * This function changes text on button depending on
 	 * state of time (either "start", or "stop").
 	 **/
 	void updateStartStopText();
 
+	/**
+	 * Returns true if the current values in the settings window are different
+	 * from the settings currently used
+	 **/
+	bool newSettings();
+
+	/**
+	 * Returns true if the current values in the settings window are identical
+	 * with the default settings
+	 **/
+	bool defaultSettings();
+
+	/**
+	 * Resets the values in the settings window to the settings currently used
+	 **/
+	void resetSettings();
+
+	/**
+	 * Sets the values in the settings window to the default settings
+	 **/
+	void setDefaultSettings();
+
+	/**
+	 * Applies the current values in the settings window
+	 **/
 	bool applySettings();
+
 	bool isAutostart();
 	void setAutostart (bool start);
 
 public slots:
+	/**
+	 * This slot is called whenever a value in the settings window was changed.
+	 * It enabled and disables the three buttons "Defaults", "Reset" and "Apply".
+	 **/
+	void settingsChanged();
+
 	void startStopSelected();
 
 	void defaultSelected();

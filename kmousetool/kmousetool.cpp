@@ -3,6 +3,9 @@
                              -------------------
     begin                : Sun Jan 20 23:27:58 PST 2002
     copyright            : (C) 2002-2003 by Jeff Roush
+    email                : jeff@mousetool.com
+    copyright            : (C) 2003 by Olaf Schmidt
+    email                : ojschmidt@kde.org
     copyright            : (C) 2003 by Gunnar Schmi Dt
     email                : gunnar@schmi-dt.de
  ***************************************************************************/
@@ -110,7 +113,7 @@ void KMouseTool::init_vars()
 	MTStroke::setLowerRight(1023,767);
 }
 
-void KMouseTool::resetValues()
+void KMouseTool::resetSettings()
 {
 	cbDrag ->setChecked(smart_drag_on);
 	cbStart->setChecked(isAutostart());
@@ -119,9 +122,10 @@ void KMouseTool::resetValues()
 	movementEdit->setValue(min_movement);
 	dwellTimeEdit->setValue(dwell_time);
 	dragTimeEdit->setValue(drag_time);
+	settingsChanged();
 }
 
-void KMouseTool::setDefaultValues()
+void KMouseTool::setDefaultSettings()
 {
 	cbDrag ->setChecked(false);
 	cbStart->setChecked(false);
@@ -130,6 +134,7 @@ void KMouseTool::setDefaultValues()
 	movementEdit->setValue(5);
 	dwellTimeEdit->setValue(5);
 	dragTimeEdit->setValue(3);
+	settingsChanged();
 }
 
 
@@ -245,7 +250,15 @@ void KMouseTool::playTickSound()
 KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent, name)
 {
 	init_vars();
-	resetValues();
+	resetSettings();
+
+	connect(movementEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
+	connect(dwellTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
+	connect(dragTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
+	connect(cbDrag, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+	connect(cbStroke, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+	connect(cbClick, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+	connect(cbStart, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
 
 	connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
 	buttonDefault->setGuiItem(KStdGuiItem::defaults());
@@ -415,6 +428,7 @@ bool KMouseTool::applySettings()
 	tick_count = max_ticks;
 
 	saveOptions();
+	settingsChanged();
 	return true;
 }
 
@@ -474,7 +488,37 @@ void KMouseTool::updateStartStopText()
 	trayIcon->updateStartStopText(mousetool_is_running);
 }
 
+bool KMouseTool::newSettings()
+{
+	return ((dwell_time != dwellTimeEdit->value()) ||
+		(drag_time != dragTimeEdit->value()) ||
+		(min_movement != movementEdit->value()) ||
+		(smart_drag_on != cbDrag->isChecked()) ||
+		(playSound != cbClick->isChecked()) ||
+		(strokesEnabled != cbStroke->isChecked()) ||
+		(isAutostart() != cbStart->isChecked()));
+}
+
+bool KMouseTool::defaultSettings()
+{
+	return ((5 == dwellTimeEdit->value()) &&
+		(3 == dragTimeEdit->value()) &&
+		(5 == movementEdit->value()) &&
+		!cbDrag->isChecked() &&
+		!cbClick->isChecked() &&
+		!cbStroke->isChecked() &&
+		!cbStart->isChecked());
+}
+
 /******** SLOTS **********/
+
+// Value or state changed
+void KMouseTool::settingsChanged ()
+{
+	buttonReset->setEnabled (newSettings());
+	buttonApply->setEnabled (newSettings());
+	buttonDefault->setDisabled (defaultSettings());
+}
 
 // Buttons within the dialog
 void KMouseTool::startStopSelected()
@@ -485,12 +529,12 @@ void KMouseTool::startStopSelected()
 
 void KMouseTool::defaultSelected()
 {
-	setDefaultValues();
+	setDefaultSettings();
 }
 
 void KMouseTool::resetSelected()
 {
-	resetValues();
+	resetSettings();
 }
 
 void KMouseTool::applySelected()
@@ -506,13 +550,44 @@ void KMouseTool::helpSelected()
 
 void KMouseTool::closeSelected()
 {
-	hide();
+	if (newSettings())
+	{
+		int answer = KMessageBox::questionYesNoCancel (this,
+			i18n("There are unsaved changes in the active module.<br>Do you want to apply the changes before closing the configuration window or discard the changes?"),
+			i18n("Closing Configuration Window"),
+			KStdGuiItem::apply(), KStdGuiItem::discard(), "AutomaticSave");
+		if (answer == KMessageBox::Yes)
+			applySettings();
+		else if (answer == KMessageBox::No)
+			resetSettings();
+		if (answer != KMessageBox::Cancel)
+			hide();
+	}
+	else
+		hide();
 }
 
 void KMouseTool::quitSelected()
 {
-	saveOptions();
-	kapp->quit();
+	if (newSettings())
+	{
+		int answer = KMessageBox::questionYesNoCancel (this,
+			i18n("There are unsaved changes in the active module.<br>Do you want to apply the changes before quitting KMousetool or discard the changes?"),
+			i18n("Quitting KMousetool"),
+			KStdGuiItem::apply(), KStdGuiItem::discard(), "AutomaticSave");
+		if (answer == KMessageBox::Yes)
+			applySettings();
+		if (answer != KMessageBox::Cancel)
+		{
+			saveOptions();
+			kapp->quit();
+		}
+	}
+	else
+	{
+		saveOptions();
+		kapp->quit();
+	}
 }
 
 // Menu functions
