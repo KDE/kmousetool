@@ -657,9 +657,9 @@ void KMouseTool::startButtonClicked()
    if (applySettings()) {
       mousetool_is_running = !mousetool_is_running;
       if (mousetool_is_running)
-         buttonStart->setText(i18n("Stop"));
+         buttonStart->setText(i18n("&Stop"));
       else
-         buttonStart->setText(i18n("Start"));
+         buttonStart->setText(i18n("&Start"));
    }
 }
 
