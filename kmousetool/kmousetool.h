@@ -57,20 +57,20 @@ class KMouseToolTray;
 
 
 /**
-* KMouseTool is the base class of the project
-*
-* It is the main widget for the dialog, and also (as of version 1.0) contains
-* most of the code.  This should change in version 2.0, which will have
-* enough options to split the main dialog into separate parts.
-*
-*/
+ * KMouseTool is the base class of the project
+ *
+ * It is the main widget for the dialog, and also (as of version 1.0) contains
+ * most of the code.  This should change in version 2.0, which will have
+ * enough options to split the main dialog into separate parts.
+ *
+ */
 
 class KMouseTool : public KMouseToolUI
 {
-    Q_OBJECT
+	Q_OBJECT
 
-    private:
-  MTStroke stroke;
+private:
+	MTStroke stroke;
 
 	// boolean flags to keep track of program states
 	int mouse_is_down;
@@ -133,14 +133,13 @@ class KMouseTool : public KMouseToolUI
 	 * This function changes text on button depending on
 	 * state of time (either "start", or "stop").
 	 **/
-    void updateStartStopText();
+	void updateStartStopText();
 
 	bool applySettings();
 	bool isAutostart();
-    void setAutostart (bool start);
+	void setAutostart (bool start);
 
-    public slots:
-
+public slots:
 	void startStopSelected();
 
 	void defaultSelected();
@@ -154,23 +153,22 @@ class KMouseTool : public KMouseToolUI
 	void aboutSelected();
 	void configureSelected();
 
-	public:
-
+public:
 	/**
-	 *		This function runs the show; it is called once every
-	 *		1/10 second.
+	 * This function runs the show; it is called once every
+	 * 1/10 second.
 	 *
-	 *		It checks to see if SmartDrag is on, and compares the
-	 *		current mouse position to its previous position to see
-	 *		whether to send a down click, and up click, or wait.
+	 * It checks to see if SmartDrag is on, and compares the
+	 * current mouse position to its previous position to see
+	 * whether to send a down click, and up click, or wait.
 	 */
 	void timerEvent (QTimerEvent *e);
 
-  /**
-   * This generates a normal click event --
-   * down, up, or down-up, depending on smart-drag settings and current state
-   */
-  void normalClick();
+	/**
+	 * This generates a normal click event --
+	 * down, up, or down-up, depending on smart-drag settings and current state
+	 */
+	void normalClick();
 
 	/**
 	 *  construtor
@@ -179,7 +177,7 @@ class KMouseTool : public KMouseToolUI
 
 	/** destructor */
 	~KMouseTool();
-};
+}
 
 class KMouseToolTray : public KSystemTray {
 Q_OBJECT
@@ -195,5 +193,5 @@ signals:
 	void configureSelected();
 	void aboutSelected();
 	void helpSelected();
-};
+}
 #endif

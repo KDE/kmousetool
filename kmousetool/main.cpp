@@ -33,45 +33,45 @@ static const char *description =
 
 static KCmdLineOptions options[] =
 {
-  { 0, 0, 0 }
-  // INSERT YOUR COMMANDLINE OPTIONS HERE
+	{ 0, 0, 0 }
+	// INSERT YOUR COMMANDLINE OPTIONS HERE
 };
 
 int main(int argc, char *argv[])
 {
-  KAboutData aboutData( "kmousetool", I18N_NOOP("KMouseTool"),
-    KMOUSETOOL_VERSION, description, KAboutData::License_GPL,
-    "(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt", 0, "http://www.mousetool.com", "gunnar@schmi-dt.de");
+	KAboutData aboutData( "kmousetool", I18N_NOOP("KMouseTool"),
+	KMOUSETOOL_VERSION, description, KAboutData::License_GPL,
+	"(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt", 0, "http://www.mousetool.com", "gunnar@schmi-dt.de");
 
-  aboutData.addAuthor("Gunnar Schmi Dt", I18N_NOOP("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
-  aboutData.addAuthor("Olaf Jan Schmidt", I18N_NOOP("Usability improvements"), "ojschmidt@kde.org");
-  aboutData.addAuthor("Jeff Roush", I18N_NOOP("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
+	aboutData.addAuthor("Gunnar Schmi Dt", I18N_NOOP("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
+	aboutData.addAuthor("Olaf Jan Schmidt", I18N_NOOP("Usability improvements"), "ojschmidt@kde.org");
+	aboutData.addAuthor("Jeff Roush", I18N_NOOP("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
 
-  aboutData.addCredit("Joe Betts");
-  KCmdLineArgs::init( argc, argv, &aboutData );
-  KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
-  KUniqueApplication::addCmdLineOptions();
+	aboutData.addCredit("Joe Betts");
+	KCmdLineArgs::init( argc, argv, &aboutData );
+	KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
+	KUniqueApplication::addCmdLineOptions();
 
-  if (!KUniqueApplication::start()) {
-    DCOPClient *client = new DCOPClient();
-    client->attach();
-    QByteArray  data;
-    QCString    replyType;
-    QByteArray  replyData;
-    if ( !client->call("kmousetool", "qt/KMouseToolUI", "show()",
-                 data, replyType, replyData, true) ||
-         !client->call("kmousetool", "qt/KMouseToolUI", "raise()",
-                 data, replyType, replyData, true) )
-       fprintf(stderr, "The DCOP calls failed\n");
-    delete client;
-    exit(0);
-  }
-  KUniqueApplication a;
+	if (!KUniqueApplication::start()) {
+		DCOPClient *client = new DCOPClient();
+		client->attach();
+		QByteArray  data;
+		QCString    replyType;
+		QByteArray  replyData;
+		if ( !client->call("kmousetool", "qt/KMouseToolUI", "show()",
+					data, replyType, replyData, true) ||
+			!client->call("kmousetool", "qt/KMouseToolUI", "raise()",
+					data, replyType, replyData, true) )
+		fprintf(stderr, "The DCOP calls failed\n");
+		delete client;
+		exit(0);
+	}
+	KUniqueApplication a;
 
-  KMouseTool *kmousetool = new KMouseTool();
+	KMouseTool *kmousetool = new KMouseTool();
 
-  if (!kapp->config()->readBoolEntry("IsMinimized", false))
-    kmousetool->show();
+	if (!kapp->config()->readBoolEntry("IsMinimized", false))
+		kmousetool->show();
 
-  return a.exec();
+	return a.exec();
 }
