@@ -553,7 +553,7 @@ void KMouseTool::closeSelected()
 	if (newSettings())
 	{
 		int answer = KMessageBox::questionYesNoCancel (this,
-			i18n("There are unsaved changes in the active module.<br>Do you want to apply the changes before closing the configuration window or discard the changes?"),
+			i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before closing the configuration window or discard the changes?"),
 			i18n("Closing Configuration Window"),
 			KStdGuiItem::apply(), KStdGuiItem::discard(), "AutomaticSave");
 		if (answer == KMessageBox::Yes)
@@ -572,7 +572,7 @@ void KMouseTool::quitSelected()
 	if (newSettings())
 	{
 		int answer = KMessageBox::questionYesNoCancel (this,
-			i18n("There are unsaved changes in the active module.<br>Do you want to apply the changes before quitting KMousetool or discard the changes?"),
+			i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before quitting KMousetool or discard the changes?"),
 			i18n("Quitting KMousetool"),
 			KStdGuiItem::apply(), KStdGuiItem::discard(), "AutomaticSave");
 		if (answer == KMessageBox::Yes)
