@@ -678,7 +678,7 @@ void KMouseTool::cbStartClicked()
 void KMouseTool::cbClickClicked()
 {
     playSound = !playSound;
-    //	KMessageBox::sorry(this, i18n("Sorry, this hasn't been implemented yet"), i18n("Pay no attention to the man behind the curtain"));
+    //	KMessageBox::sorry(this, i18n("Sorry, this hasn't been implemented yet"), i18n("Pay no Attention to the Man Behind the Curtain"));
     saveOptions();
 }
 
