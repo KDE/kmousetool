@@ -283,7 +283,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
     connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
     connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
     
-    aboutDlg = new KAboutApplication (this, "KMouseToolDlg", false);
+    aboutDlg = new KAboutApplication (0, "KMouseToolDlg", false);
 }
 
 KMouseTool::~KMouseTool()
@@ -683,8 +683,8 @@ void KMouseTool::closeEvent(QCloseEvent *e)
 KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name)
  : KSystemTray (parent, name)
 {
-   contextMenu()->insertItem (i18n("About KMouseTool"), this, SIGNAL(aboutSelected()));
-   contextMenu()->insertItem (i18n("Help"), this, SIGNAL(helpSelected()));
+   contextMenu()->insertItem (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
+   contextMenu()->insertItem (i18n("&Help"), this, SIGNAL(helpSelected()));
 }
 
 KMouseToolTray::~KMouseToolTray() {
