@@ -186,8 +186,15 @@ void MTStroke::getExtent()
 // if unable to create it,
 bool MTStroke::readSequence()
 {
-	QString strokefilename;
-  strokefilename = locateLocal("config", "kmousetool_strokes.txt");
+  QString strokefilename;
+  strokefilename = locate("config", "kmousetool_strokes.txt");
+  if (strokefilename.isEmpty()) {
+    // make default
+    if (sequenceMap.size()==0)
+      makeDefaultSequenceMap();
+    writeSequence();
+    return false;
+  }
   ifstream infile (strokefilename.ascii());
   if (!infile) {
     // make default
