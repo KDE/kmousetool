@@ -50,14 +50,14 @@
 #include <kpopupmenu.h>
 #include <kaboutapplication.h>
 
-#include <arts/soundserver.h>
+//#include <arts/soundserver.h>
 #include <netwm.h>
 
 #include <iostream>
 
 #include "mtstroke.h"
 
-using namespace Arts;
+//using namespace Arts;
 
 int currentXPosition;
 int currentYPosition;
