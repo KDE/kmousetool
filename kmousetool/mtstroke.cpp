@@ -4,6 +4,8 @@
     begin                : Fri Oct 11 2002
     copyright            : (C) 2002 by Jeff Roush
     email                : jeff@mousetool.com
+    copyright            : (C) 2003 by Olaf Schmidt
+    email                : ojschmidt@kde.org
  ***************************************************************************/
 
 /***************************************************************************
