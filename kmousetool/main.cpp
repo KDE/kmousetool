@@ -18,16 +18,16 @@
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
 #include <klocale.h>
-#include <kstddirs.h>
-#include <kuniqueapp.h>
+#include <kstandarddirs.h>
+#include <kuniqueapplication.h>
 
 #include "kmousetool.h"
 
 static const char *description =
 	I18N_NOOP("KMouseTool");
 // INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
-	
-	
+
+
 static KCmdLineOptions options[] =
 {
   { 0, 0, 0 }
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
   KMouseTool *kmousetool = new KMouseTool();
   a.setMainWidget(kmousetool);
 //	QString str = locate("appdata", "mousetool_tap.wav");
-  kmousetool->show();  
+  kmousetool->show();
 
   return a.exec();
 }

@@ -26,15 +26,15 @@
 
 #include "version.h"
 
-#include <kapp.h>
+#include <kapplication.h>
 #include <qwidget.h>
-#include <qlayout.h>
-#include <qlineedit.h>
-#include <qlabel.h>
-#include <kaudioplayer.h>
-#include <qcheckbox.h>
-#include <qpushbutton.h>
 #include "mtstroke.h"
+
+class QLineEdit;
+class QLabel;
+class QCheckBox;
+class QPushButton;
+class KAudioPlayer;
 
 // #define DEBUG_MOUSETOOL
 
@@ -44,19 +44,19 @@
 #define print2ints(str, int1, int2) (fprintf(stderr, str, int1, int2))
 #define print3ints(str, int1, int2, int3) (fprintf(stderr, str, int1, int2, int3))
 #else
-#define printmsg(str) 
-#define printint(str, int1) 
-#define print2ints(str, int1, int2) 
-#define print3ints(str, int1, int2, int3) 
+#define printmsg(str)
+#define printint(str, int1)
+#define print2ints(str, int1, int2)
+#define print3ints(str, int1, int2, int3)
 #endif
 
 
 /**
 * KMouseTool is the base class of the project
 *
-* It is the main widget for the dialog, and also (as of version 1.0) contains 
+* It is the main widget for the dialog, and also (as of version 1.0) contains
 * most of the code.  This should change in version 2.0, which will have
-* enough options to split the main dialog into separate parts. 
+* enough options to split the main dialog into separate parts.
 * sdkhfsdkjf
 *
 */
@@ -66,7 +66,7 @@ class KMouseTool : public QWidget
 
     private:
   MTStroke stroke;
-  
+
 	// boolean flags to keep track of program states
 	int mouse_is_down;
 	int continue_timer;
@@ -79,10 +79,10 @@ class KMouseTool : public QWidget
 	bool mousetool_is_running;
 	bool mousetool_just_started;
   bool strokesEnabled;
-  
-	QString autostartdirname; 
-	QString rcfilename; 
-	QString appfilename; 
+
+	QString autostartdirname;
+	QString rcfilename;
+	QString appfilename;
 	QString	mSoundFileName;
 	KAudioPlayer *mplayer;
 
@@ -98,8 +98,8 @@ class KMouseTool : public QWidget
 	QLabel	*mDwellTimeLabel;
 	QLabel	*mDragTimeLabel;
 
-	QCheckBox * mcbDrag; 
-	QCheckBox * mcbClick; 
+	QCheckBox * mcbDrag;
+	QCheckBox * mcbClick;
 	QCheckBox * mcbStart;
 	QCheckBox * mcbStroke;
 
@@ -141,8 +141,8 @@ class KMouseTool : public QWidget
 	 *
 	 */
 	void showEnabledWidgets();
-	    
-	    
+
+
 	public slots:
 
 	    /**
@@ -189,7 +189,7 @@ class KMouseTool : public QWidget
 	/**
 	 *		This function runs the show; it is called once every
 	 *		1/10 second.
-	 *		
+	 *
 	 *		It checks to see if SmartDrag is on, and compares the
 	 *		current mouse position to its previous position to see
 	 *		whether to send a down click, and up click, or wait.
@@ -201,7 +201,7 @@ class KMouseTool : public QWidget
    * down, up, or down-up, depending on smart-drag settings and current state
    */
   void normalClick();
-  
+
 	/**
 	 *  construtor
 	 */

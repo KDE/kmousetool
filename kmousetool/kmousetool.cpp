@@ -20,8 +20,6 @@
 #include "kmousetool.h"
 #include "kmousetool.moc"
 #include <kconfig.h>
-//#include <fstream>
-//#include <iostream>
 #include <X11/Intrinsic.h>     /* Intrinsics Definitions*/
 #include <X11/StringDefs.h>    /* Standard Name-String definitions*/
 #include <X11/extensions/xtestext1.h>    /* Standard Name-String definitions*/
@@ -36,12 +34,16 @@
 #include <kaboutdialog.h>
 #include <kmessagebox.h>
 #include <kaudioplayer.h>
-// #include <kapp.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 #include <qsound.h>
 #include <kglobalsettings.h>
 #include <kdebug.h>
 #include "kaboutmousetool.h"
+#include <qlayout.h>
+#include <qlineedit.h>
+#include <qlabel.h>
+#include <qcheckbox.h>
+
 
 #include <arts/soundserver.h>
 #include <kwin.h>		// for kwin::info
