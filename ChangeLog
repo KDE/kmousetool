@@ -1,0 +1,9 @@
+1-16-03 
+Version 1.11: Stroke handling, several bug fixes.  Uploaded to KDE CVS.
+6-27-02
+Version 1.05: Added doc/ directory back to project.  No other change in source.
+6-21-02
+Version 1.01: increased maximum allowable value for Drag Time --
+now it is equal to the Dwell Time.
+5-22-02
+Initial release, version 1.0

@@ -1,0 +1,17 @@
+KMouseTool was created by Jeff Roush <jeff@mousetool.com>, 2002
+Documentation initally written by Jeff Roush <jeff@mousetool.com>, 2002
+
+The clever Smart Drag idea was suggested by Joe Betts.  Thanks, Joe!
+
+The idea for MouseTool came to me when I was thinking about
+head-tracking systems that allow you to move a cursor using
+your head orientation, and then send clicks when you pause.
+As far as I know, I was the first person to use this technique
+with an ordinary mouse, but it is possible that I am wrong about that.
+There are now other programs available for Windows and Macs that
+do this; I know that some were developed after MouseTool, but
+it is likely others came before.
+
+Other ideas in MouseTool for Windows that I hope to port to KDE were
+either suggested by MouseTool users or came out of email discussions
+with users.
