@@ -768,7 +768,7 @@ void KMouseTool::loadOptions()
     p.setY(y);
     move(p);
 
-    mousetool_is_running = kapp->config()->readBoolEntry("MouseToolIsRunning",true);
+    mousetool_is_running = kapp->config()->readBoolEntry("MouseToolIsRunning",false);
     display = XOpenDisplay(NULL);
 
     // Okay, restoring as minimized is not done this way ...
