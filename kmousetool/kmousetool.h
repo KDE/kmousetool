@@ -41,27 +41,11 @@ class KAudioPlayer;
 class KAboutApplication;
 class KMouseToolTray;
 
-// #define DEBUG_MOUSETOOL
-
-#ifdef DEBUG_MOUSETOOL
-#define printmsg(str) (fprintf(stderr, str))
-#define printint(str, int1) (fprintf(stderr, str, int1))
-#define print2ints(str, int1, int2) (fprintf(stderr, str, int1, int2))
-#define print3ints(str, int1, int2, int3) (fprintf(stderr, str, int1, int2, int3))
-#else
-#define printmsg(str)
-#define printint(str, int1)
-#define print2ints(str, int1, int2)
-#define print3ints(str, int1, int2, int3)
-#endif
-
 
 /**
  * KMouseTool is the base class of the project
  *
- * It is the main widget for the dialog, and also (as of version 1.0) contains
- * most of the code.  This should change in version 2.0, which will have
- * enough options to split the main dialog into separate parts.
+ * It is the main widget for the dialog
  *
  */
 

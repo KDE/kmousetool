@@ -23,16 +23,9 @@
 #include <kstandarddirs.h>
 #include <qstring.h>
 
-// #include <fstream>
 // #include <string>
 
 using namespace std;
-
-void Pt::dump()
-{
-  fprintf (stderr, "pt: (%d, %d)\n", x,y);
-}
-
 
 const int MTStroke::DontClick        = -1;
 const int MTStroke::bumped_mouse     = 0;
@@ -62,27 +55,15 @@ MTStroke::MTStroke(){
 MTStroke::~MTStroke(){
 }
 
-void MTStroke::dump(){
-//  int n=0;
-  
-  printint ("size: %d\n", points.size());
-  std::vector<Pt>::iterator pos;
-  for (pos=points.begin(); pos<points.end(); pos++) {
-    print2ints ("(%d, %d)\n", pos-x, pos->y);
-  }
-}
-
 // add the new point, but only if it's not the same as the previous point.
 void MTStroke::addPt(const int x, const int y)
 {
   if (points.size()==0) {
-//  fprintf (stderr, "size=0; adding (%d, %d)\n", x, y);
     points.push_back(Pt(x,y));
   }
   else {
     Pt pt(x,y);
     if (!pt.sameAs(points[points.size()-1])) {
-//      fprintf (stderr, "size: %d; adding (%d, %d)\n", points.size(), x, y);
       points.push_back(Pt(x,y));
     }
   }
@@ -105,9 +86,7 @@ bool MTStroke::pointsContain(Pt pt)
 
 int MTStroke::getStrokeType()
 {
-//  dump();
   int size = points.size();
-//  printint ("Size: %d\n", size);
 
   // If the mouse moved just a bit, it was probably bumped.  Don't click.
   if (size<min_num_points)
@@ -115,14 +94,13 @@ int MTStroke::getStrokeType()
 //    return bumped_mouse;
 
   Pt lastPoint = points[points.size()-1];
-//  print2ints ("point: (%d, %d)\n", lastPoint.x, lastPoint.y);
 
   // If the mouse is pausing in a corner, then the user is either in the middle of a
   // stroke, or wants to rest the mouse.  Don't click.
   if (lastPoint.sameAs(LowerLeft) || lastPoint.sameAs(LowerRight)
    || lastPoint.sameAs(UpperLeft) || lastPoint.sameAs(UpperRight))
    return DontClick;
-  
+
   // If the mouse visited a corner...
   if (pointsContain(LowerLeft)) {
     reset();
@@ -133,7 +111,7 @@ int MTStroke::getStrokeType()
     return UpperRightStroke;
   }
   scale();
-  printint ("sequence appears %d times\n", sequenceMap.count(sequence));
+
   std::map<std::string, int>::iterator keypos = sequenceMap.find(sequence);
   if (keypos == sequenceMap.end()) {
     reset();
@@ -151,9 +129,7 @@ void MTStroke::scale()
   int deltay = stroke_maxy - stroke_miny;
   int delta  = max(deltax, deltay);
   int scale = (int) delta/2;
-//  print2ints ("deltax, deltay: (%d, %d)\n", deltax, deltay);
-//  print2ints ("scalex, scaley: (%d, %d)\n", scalex, scaley);
-  
+
   std::vector<Pt>::iterator pos;
   for (pos=points.begin(); pos<points.end(); pos++) {
 
@@ -161,7 +137,7 @@ void MTStroke::scale()
       // round _up_ or _down_, depending on which is closer.
     pos->x = (int) (pos->x-stroke_minx + scale/2)/scale;
     pos->y = (int) (pos->y-stroke_miny + scale/2)/scale;
-//    print2ints ("x, y: (%d, %d)\n", pos->x, pos->y);
+
     // now, get the integer representing this position and add it to the stroke sequence
     int n = 3*pos->y + pos->x + 1;
     int index = sequence.size()-1;
@@ -171,7 +147,6 @@ void MTStroke::scale()
     else if (n!=sequence[index])
       sequence += n;
   }
-//  cerr << "sequence: " << sequence.c_str() << "\n";
 }
 
 int MTStroke::max(int n, int m)
@@ -191,7 +166,7 @@ void MTStroke::getExtent()
   stroke_maxx = 0;
   stroke_miny = LowerLeft.y;
   stroke_maxy = 0;
-  
+
   std::vector<Pt>::iterator pos;
   for (pos=points.begin(); pos<points.end(); pos++) {
     if (stroke_minx > pos->x)
@@ -220,7 +195,6 @@ bool MTStroke::readSequence()
     return false;
   }
 
-//  cerr << "\nBeginning data:\n";
   while (!infile.eof()) {
     string str;
     infile >> str;
@@ -232,23 +206,18 @@ bool MTStroke::readSequence()
       infile >> str2;
       int n = str2[0] - '0';    // the action is a single integer digit; convert it to an int
       sequenceMap[ string(str) ] = n;
-//      cerr << str << " " ;
     }
   }
-//  cerr << "\nEnd of data\n";
   return true;
 }
 
 bool MTStroke::writeSequence()
 {
-	QString strokefilename;
+  QString strokefilename;
   strokefilename = locateLocal("config", "kmousetool_strokes.txt");
-//  cerr << "strokefilename: " << strokefilename << "\n";
 
-//  ofstream outfile ("/home/jeff/.mousetool/strokes", ios::out);
   ofstream outfile (strokefilename.ascii(), ios::out);
   if (!outfile) {
-    printmsg ("can't write strokes file.\n");
     return false;
   }
 
@@ -274,7 +243,6 @@ bool MTStroke::writeSequence()
   outfile << "#  3     Double click\n";
   outfile << "\n";
   outfile << "#Stroke\tAction\n";
-//  printmsg ("writing strokes file.\n");
   std::map<std::string, int>::iterator pos = sequenceMap.begin();
   while (pos != sequenceMap.end()) {
     outfile << pos->first << "\t" << pos->second << "\n";
@@ -294,7 +262,7 @@ void MTStroke::makeDefaultSequenceMap()
   sequenceMap[ string("3213") ]  = DoubleClick;
   sequenceMap[ string("3123") ]  = DoubleClick;
   sequenceMap[ string("313") ]   = DoubleClick;
-/*  
+/*
   sequenceMap[ string("") ] = ;
   sequenceMap[ string("") ] = ;
   sequenceMap[ string("") ] = ;
