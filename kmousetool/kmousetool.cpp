@@ -43,7 +43,8 @@
 #include <qlineedit.h>
 #include <qlabel.h>
 #include <qcheckbox.h>
-
+#include <ksystemtray.h> 
+#include <kiconloader.h>
 
 #include <arts/soundserver.h>
 #include <kwin.h>		// for kwin::info
@@ -394,6 +395,10 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
 		mousetool_just_started = true;
 
     startTimer(100);
+    QPixmap icon = KGlobal::iconLoader()->loadIcon("kmousetool", KIcon::Small);
+    KSystemTray *trayIcon = new KSystemTray (this, "systemTrayIcon");
+    trayIcon->setPixmap (icon);
+    trayIcon->show();
 }
 
 KMouseTool::~KMouseTool()
