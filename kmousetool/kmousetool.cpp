@@ -533,9 +533,14 @@ void KMouseTool::aboutSelected()
 KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTray (parent, name)
 {
 	startStopId = contextMenu()->insertItem (i18n("&Start"), this, SIGNAL(startStopSelected()));
-	contextMenu()->insertItem (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
-	contextMenu()->insertItem (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
-	contextMenu()->insertItem (i18n("&Help"), this, SIGNAL(helpSelected()));
+	contextMenu()->insertSeparator();
+	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("configure", KIcon::Small),
+	                           i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
+	contextMenu()->insertSeparator();
+	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("contents", KIcon::Small),
+	                           i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
+	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("kmousetool", KIcon::Small),
+	                           i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
 }
 
 KMouseToolTray::~KMouseToolTray() {
