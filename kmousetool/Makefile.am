@@ -7,15 +7,11 @@ SUBDIRS = pics
 
 EXTRA_DIST = main.cpp version.h kmousetool.cpp kmousetool.h kmousetool.desktop mtstroke.cpp mtstroke.h kaboutmousetool.cpp kaboutmousetool.h mousetool_tap.wav 
 
-install-data-local:
-	$(mkinstalldirs) $(kde_appsdir)/Applications/
-	$(INSTALL_DATA) $(srcdir)/kmousetool.desktop $(kde_appsdir)/Applications/kmousetool.desktop
-	$(mkinstalldirs) $(kde_sounddir)/
-	$(INSTALL_DATA) $(srcdir)/mousetool_tap.wav $(kde_sounddir)/mousetool_tap.wav
+kmousetooldir = $(kde_appsdir)/Applications
+kmousetool_DATA = kmousetool.desktop
 
-uninstall-local:
-	-rm -f $(kde_appsdir)/Applications/kmousetool.desktop
-	-rm -f $(kde_sounddir)/mousetool_tap.wav
+datadir = $(kde_datadir)/kmousetool/sounds
+data_DATA = mousetool_tap.wav
 
 # set the include path for X, qt and KDE
 INCLUDES= $(all_includes)
