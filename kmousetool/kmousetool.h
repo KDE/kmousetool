@@ -177,11 +177,10 @@ public:
 
 	/** destructor */
 	~KMouseTool();
-}
+};
 
 class KMouseToolTray : public KSystemTray {
-Q_OBJECT
-private:
+        Q_OBJECT
 	int startStopId;
 public:
 	KMouseToolTray (QWidget *parent=0, const char *name=0);
@@ -193,5 +192,5 @@ signals:
 	void configureSelected();
 	void aboutSelected();
 	void helpSelected();
-}
+};
 #endif
