@@ -126,7 +126,7 @@ void KMouseTool::init_vars()
 }
 
 
-void KMouseTool::timerEvent( QTimerEvent *e )
+void KMouseTool::timerEvent( QTimerEvent * )
 {
     if (!mousetool_is_running)
 	return;
@@ -322,7 +322,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
 
     // Apply button
     mbuttonApply = new QPushButton( i18n("Apply\nTimes"), this, "buttonApply" );
-    mbuttonApply->setFixedSize(QSize(w,1.5*h));
+    mbuttonApply->setFixedSize(QSize(w,static_cast<int>(1.5*h)));
     // hlayApplyStart->addWidget( mbuttonApply );
     hlayTimes->addWidget( mbuttonApply );
 
@@ -366,7 +366,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : QWidget(parent, name
     optionsLayout->addWidget( mDwellTimeLabel, 0,0);
 
     w = fontMetrics().maxWidth()*3;
-    h = (int) fontMetrics().height()*1.5;
+    h = static_cast<int>(fontMetrics().height()*1.5);
 
     mDwellTimeEdit = new QLineEdit( this, "dwellTimeEdit" );
     mDwellTimeEdit->setFixedSize(QSize(w,h));
