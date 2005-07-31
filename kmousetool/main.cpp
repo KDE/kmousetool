@@ -24,6 +24,8 @@
 #include <kuniqueapplication.h>
 #include <dcopclient.h>
 #include <qmessagebox.h>
+//Added by qt3to4:
+#include <Q3CString>
 #include <kconfig.h>
 
 #include "kmousetool.h"
@@ -58,7 +60,7 @@ int main(int argc, char *argv[])
 		DCOPClient *client = new DCOPClient();
 		client->attach();
 		QByteArray  data;
-		QCString    replyType;
+		Q3CString    replyType;
 		QByteArray  replyData;
 		if ( !client->call("kmousetool", "qt/KMouseToolUI", "show()",
 					data, replyType, replyData, true) ||

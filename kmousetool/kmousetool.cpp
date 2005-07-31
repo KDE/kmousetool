@@ -33,6 +33,9 @@
 #include <qpushbutton.h>
 #include <qpoint.h>
 #include <qnamespace.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <QTimerEvent>
 #include <kmessagebox.h>
 #include <kaudioplayer.h>
 #include <kstandarddirs.h>

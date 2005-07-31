@@ -23,6 +23,9 @@
 #define KMOUSETOOL_H
 
 #include <qdir.h>
+//Added by qt3to4:
+#include <QLabel>
+#include <QTimerEvent>
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
