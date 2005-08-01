@@ -36,6 +36,7 @@
 //Added by qt3to4:
 #include <QPixmap>
 #include <QTimerEvent>
+#include <QDesktopWidget>
 #include <kmessagebox.h>
 #include <kaudioplayer.h>
 #include <kstandarddirs.h>
@@ -57,6 +58,7 @@
 #include <netwm.h>
 
 #include <iostream>
+#include <QAbstractEventDispatcher>
 
 #include "mtstroke.h"
 
@@ -150,7 +152,7 @@ void KMouseTool::timerEvent( QTimerEvent * )
 		return;
 
 	if (!continue_timer) {
-		killTimers();
+		QAbstractEventDispatcher::instance()->unregisterTimers(this);
 		return;
 	}
 

@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 		DCOPClient *client = new DCOPClient();
 		client->attach();
 		QByteArray  data;
-		Q3CString    replyType;
+		DCOPCString    replyType;
 		QByteArray  replyData;
 		if ( !client->call("kmousetool", "qt/KMouseToolUI", "show()",
 					data, replyType, replyData, true) ||
