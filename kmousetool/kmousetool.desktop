@@ -107,6 +107,6 @@ GenericName[uz]=Сичқончани авто-босиш
 GenericName[xx]=xxAutomatic Mouse Clickxx
 GenericName[zh_CN]=自动鼠标点击
 GenericName[zh_TW]=自動滑鼠點擊
-Categories=Qt;KDE;Utility;X-KDE-More;
+Categories=Qt;KDE;Utility;Accessibility;
 
 Encoding=UTF-8
