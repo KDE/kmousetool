@@ -98,7 +98,7 @@ void KMouseTool::init_vars()
 	loadOptions();
 
 	// If the ~/.mousetool directory doesn't exist, create it
-//	mSoundFileName = QDir::homeDirPath();
+//	mSoundFileName = QDir::homePath();
 	mSoundFileName = locate("appdata", "sounds/mousetool_tap.wav");
 	mplayer = new KAudioPlayer(mSoundFileName);
 
