@@ -59,6 +59,7 @@
 
 #include <iostream>
 #include <QAbstractEventDispatcher>
+#include <ktoolinvocation.h>
 
 #include "mtstroke.h"
 
@@ -553,7 +554,7 @@ void KMouseTool::applySelected()
 // Buttons at the bottom of the dialog
 void KMouseTool::helpSelected()
 {
-	kapp->invokeHelp();
+	KToolInvocation::invokeHelp();
 }
 
 void KMouseTool::closeSelected()
