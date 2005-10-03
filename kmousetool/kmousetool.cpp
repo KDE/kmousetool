@@ -51,7 +51,7 @@
 #include <kpushbutton.h>
 #include <kstdguiitem.h>
 #include <knuminput.h>
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <kaboutapplication.h>
 
 //#include <arts/soundserver.h>
