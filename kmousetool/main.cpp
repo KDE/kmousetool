@@ -25,6 +25,7 @@
 #include <dcopclient.h>
 #include <qmessagebox.h>
 #include <kconfig.h>
+#include <kglobal.h>
 
 #include "kmousetool.h"
 
@@ -72,7 +73,7 @@ int main(int argc, char *argv[])
 
 	KMouseTool *kmousetool = new KMouseTool();
 
-	if (!kapp->config()->readBoolEntry("IsMinimized", false))
+	if (!KGlobal::config()->readBoolEntry("IsMinimized", false))
 		kmousetool->show();
 
 	return a.exec();

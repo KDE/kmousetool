@@ -60,6 +60,7 @@
 #include <iostream>
 #include <QAbstractEventDispatcher>
 #include <ktoolinvocation.h>
+#include <kglobal.h>
 
 #include "mtstroke.h"
 
@@ -444,24 +445,24 @@ bool KMouseTool::applySettings()
 // Save options to kmousetoolrc file
 void KMouseTool::loadOptions()
 {
-	kapp->config()->setGroup("UserOptions");
+	KGlobal::config()->setGroup("UserOptions");
 
-	playSound = kapp->config()->readBoolEntry("AudibleClick",false);
-	smart_drag_on = kapp->config()->readBoolEntry("SmartDrag",false);
+	playSound = KGlobal::config()->readBoolEntry("AudibleClick",false);
+	smart_drag_on = KGlobal::config()->readBoolEntry("SmartDrag",false);
 
-	dwell_time = kapp->config()->readNumEntry("DwellTime",5);
-	drag_time = kapp->config()->readNumEntry("DragTime",3);
-	min_movement = kapp->config()->readNumEntry("Movement",5);
-	strokesEnabled = kapp->config()->readBoolEntry("strokesEnabled",false);
+	dwell_time = KGlobal::config()->readNumEntry("DwellTime",5);
+	drag_time = KGlobal::config()->readNumEntry("DragTime",3);
+	min_movement = KGlobal::config()->readNumEntry("Movement",5);
+	strokesEnabled = KGlobal::config()->readBoolEntry("strokesEnabled",false);
 
 	QPoint p;
-	int x = kapp->config()->readNumEntry("x",0);
-	int y = kapp->config()->readNumEntry("y",0);
+	int x = KGlobal::config()->readNumEntry("x",0);
+	int y = KGlobal::config()->readNumEntry("y",0);
 	p.setX(x);
 	p.setY(y);
 	move(p);
 
-	mousetool_is_running = kapp->config()->readBoolEntry("MouseToolIsRunning",false);
+	mousetool_is_running = KGlobal::config()->readBoolEntry("MouseToolIsRunning",false);
 	display = XOpenDisplay(NULL);
 }
 
@@ -472,20 +473,20 @@ void KMouseTool::saveOptions()
 	int x = p.x();
 	int y = p.y();
 
-	kapp->config()->setGroup("ProgramOptions");
-	kapp->config()->writeEntry("Version", KMOUSETOOL_VERSION);
-	kapp->config()->setGroup("UserOptions");
-	kapp->config()->writeEntry("x", x);
-	kapp->config()->writeEntry("y", y);
-	kapp->config()->writeEntry("strokesEnabled", strokesEnabled);
-	kapp->config()->writeEntry("IsMinimized", isHidden());
-	kapp->config()->writeEntry("DwellTime", dwell_time);
-	kapp->config()->writeEntry("DragTime", drag_time);
-	kapp->config()->writeEntry("Movement", min_movement);
-	kapp->config()->writeEntry("SmartDrag", smart_drag_on);
-	kapp->config()->writeEntry("AudibleClick", playSound);
-	kapp->config()->writeEntry("MouseToolIsRunning", mousetool_is_running);
-	kapp->config()->sync();
+	KGlobal::config()->setGroup("ProgramOptions");
+	KGlobal::config()->writeEntry("Version", KMOUSETOOL_VERSION);
+	KGlobal::config()->setGroup("UserOptions");
+	KGlobal::config()->writeEntry("x", x);
+	KGlobal::config()->writeEntry("y", y);
+	KGlobal::config()->writeEntry("strokesEnabled", strokesEnabled);
+	KGlobal::config()->writeEntry("IsMinimized", isHidden());
+	KGlobal::config()->writeEntry("DwellTime", dwell_time);
+	KGlobal::config()->writeEntry("DragTime", drag_time);
+	KGlobal::config()->writeEntry("Movement", min_movement);
+	KGlobal::config()->writeEntry("SmartDrag", smart_drag_on);
+	KGlobal::config()->writeEntry("AudibleClick", playSound);
+	KGlobal::config()->writeEntry("MouseToolIsRunning", mousetool_is_running);
+	KGlobal::config()->sync();
 }
 
 void KMouseTool::updateStartStopText()
