@@ -15,15 +15,15 @@
 <authorgroup>
 <author>
 <firstname>Jeff</firstname>
-<othername></othername>
+
 <surname>Roush</surname>
 <affiliation>
 <address><email>jeff@kmousetool.com</email></address>
 </affiliation>
 </author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
 
 <copyright>
 <year>2002</year>
@@ -32,7 +32,7 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2003-09-16</date>
+<date>2005-12-10</date>
 <releaseinfo>1.12</releaseinfo>
 
 <abstract>
@@ -71,7 +71,7 @@ computer-related pain and haven't yet seen a doctor, please do so.
 </para>
 <para>
 Just to make it absolutely clear: while &kmousetool; can help reduce the pain
-caused by <emphasis>clicking</emphasis> the mouse, it can not help any pain
+caused by <emphasis>clicking</emphasis> the mouse, it cannot help any pain
 caused by <emphasis>moving</emphasis> the mouse.  And, like all ergonomic tools,
 your mileage may vary.
 </para>
@@ -104,7 +104,7 @@ practice, but becomes natural once you get used to it.
 <title>Command Reference</title>
 
 <sect1 id="kmousetool-mainwindow">
-<title>The main &kmousetool; window</title>
+<title>The Main &kmousetool; window</title>
 
     <para>&kmousetool;'s
     options are accessed mostly via the mouse.</para>
@@ -112,7 +112,7 @@ practice, but becomes natural once you get used to it.
 
     <variablelist>
       <varlistentry>
-        <term><guibutton>Start Button</guibutton>
+        <term><guibutton>Start</guibutton>
         </term>
         <listitem>
           <para>Starts (or stops) &kmousetool;.</para>
@@ -127,7 +127,7 @@ to click the mouse.</para>
 </varlistentry>
 
       <varlistentry>
-        <term><guilabel>Dwell Time (1/10 sec):</guilabel>
+        <term><guilabel>Dwell time (1/10 sec):</guilabel>
         </term>
         <listitem>
           <para>The time the mouse has to pause before &kmousetool; clicks.
@@ -136,19 +136,19 @@ to click the mouse.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><guilabel>Smart Drag</guilabel>
+        <term><guilabel>Smart drag</guilabel>
         </term>
         <listitem>
           <para>Enables or disables Smart Drag.  Disabled use is
           easier, so this is the default.</para><para>If you enable
-          <guilabel>Smart Drag</guilabel> the <guilabel>Drag time
+          <guilabel>Smart drag</guilabel> the <guilabel>Drag time
           (1/10 sec):</guilabel> field becomes available.  This is the
           time &kmousetool; waits, after it clicks down, before it
           clicks back up if you don't move the mouse. </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><guilabel>Enable Strokes</guilabel>
+        <term><guilabel>Enable strokes</guilabel>
         </term>
         <listitem>
           <para>&kmousetool; now supports strokes.  When you enable
@@ -162,7 +162,7 @@ can be modified afterwards.)
         </listitem>
       </varlistentry>      
        <varlistentry>
-        <term><guilabel>Audible Click</guilabel>
+        <term><guilabel>Audible click</guilabel>
         </term>
         <listitem>
           <para>
@@ -172,8 +172,8 @@ can be modified afterwards.)
 	  <para>
 	 If the sound seems delayed, you can have &kde; speed it up.
 	 To do this open the &kcontrolcenter;, click on
-	 <guimenuitem>Sound</guimenuitem>, then on <guimenuitem>Sound
-	 Server</guimenuitem>, and then select the <guilabel>Sound
+	 <guimenuitem>Sound &amp; Multimedia</guimenuitem>, then on <guimenuitem>Sound
+	 System</guimenuitem>, and then select the <guilabel>Sound
 	 I/O</guilabel> tab.  At the bottom
 	 of the tab, there is an <guilabel>Audio buffer size (response
 	 time)</guilabel> adjustment; 
@@ -329,7 +329,7 @@ use it to move a window.
 <qandaentry>
 <question>
 <para>
-&kmousetool; moves the cursor when I'm trying to type.</para>
+&kmousetool; moves the cursor when I am trying to type.</para>
 </question>
 <answer>
 <para>Problem: When you're typing text, &kmousetool; keeps
@@ -344,7 +344,7 @@ around toolbars and menus, and on the title bars of windows.</para>
 
 <qandaentry>
 <question>
-<para>I'm trying to use Smart Drag, but I can't get the hang of using it to edit text.</para>
+<para>I'm trying to use Smart Drag, but I cannot get the hang of using it to edit text.</para>
 </question>
 <answer>
 <para>
@@ -396,6 +396,7 @@ Contributors:
 Documentation copyright 2002 Jeff Roush<email>jeff@mousetool.com</email>
 </para>
 
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 &underFDL;
 &underGPL;        	 <!-- GPL License -->
 
