@@ -15,15 +15,15 @@
 <authorgroup>
 <author>
 <firstname>Jeff</firstname>
-<othername></othername>
+
 <surname>Roush</surname>
 <affiliation>
 <address><email>jeff@kmousetool.com</email></address>
 </affiliation>
 </author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
 
 <copyright>
 <year>2002</year>
@@ -32,7 +32,7 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2003-09-16</date>
+<date>2005-12-10</date>
 <releaseinfo>1.12</releaseinfo>
 
 <abstract>
@@ -71,7 +71,7 @@ computer-related pain and haven't yet seen a doctor, please do so.
 </para>
 <para>
 Just to make it absolutely clear: while &kmousetool; can help reduce the pain
-caused by <emphasis>clicking</emphasis> the mouse, it can not help any pain
+caused by <emphasis>clicking</emphasis> the mouse, it cannot help any pain
 caused by <emphasis>moving</emphasis> the mouse.  And, like all ergonomic tools,
 your mileage may vary.
 </para>
@@ -104,7 +104,7 @@ practice, but becomes natural once you get used to it.
 <title>Command Reference</title>
 
 <sect1 id="kmousetool-mainwindow">
-<title>The main &kmousetool; window</title>
+<title>The Main &kmousetool; window</title>
 
     <para>&kmousetool;'s
     options are accessed mostly via the mouse.</para>
@@ -127,7 +127,7 @@ to click the mouse.</para>
 </varlistentry>
 
       <varlistentry>
-        <term><guilabel>Dwell Time (1/10 sec):</guilabel>
+        <term><guilabel>Dwell time (1/10 sec):</guilabel>
         </term>
         <listitem>
           <para>The time the mouse has to pause before &kmousetool; clicks.
@@ -329,7 +329,7 @@ use it to move a window.
 <qandaentry>
 <question>
 <para>
-&kmousetool; moves the cursor when I'm trying to type.</para>
+&kmousetool; moves the cursor when I am trying to type.</para>
 </question>
 <answer>
 <para>Problem: When you're typing text, &kmousetool; keeps
@@ -344,7 +344,7 @@ around toolbars and menus, and on the title bars of windows.</para>
 
 <qandaentry>
 <question>
-<para>I'm trying to use Smart Drag, but I can't get the hang of using it to edit text.</para>
+<para>I'm trying to use Smart Drag, but I cannot get the hang of using it to edit text.</para>
 </question>
 <answer>
 <para>
@@ -396,6 +396,7 @@ Contributors:
 Documentation copyright 2002 Jeff Roush<email>jeff@mousetool.com</email>
 </para>
 
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 &underFDL;
 &underGPL;        	 <!-- GPL License -->
 
