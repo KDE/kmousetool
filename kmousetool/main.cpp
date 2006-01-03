@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 
 	KMouseTool *kmousetool = new KMouseTool();
 
-	if (!KGlobal::config()->readBoolEntry("IsMinimized", false))
+	if (!KGlobal::config()->readEntry("IsMinimized", QVariant(false)).toBool())
 		kmousetool->show();
 
 	return a.exec();
