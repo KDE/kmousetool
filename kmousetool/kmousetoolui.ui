@@ -12,7 +12,7 @@
             <height>395</height>
         </rect>
     </property>
-    <property name="caption">
+    <property name="windowTitle">
         <string>KMouseTool</string>
     </property>
     <grid>
