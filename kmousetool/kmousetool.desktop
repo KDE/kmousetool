@@ -5,11 +5,13 @@ Exec=kmousetool -caption "%c" %i %m
 Icon=kmousetool
 DocPath=kmousetool/index.html
 Comment=Clicks the mouse for you, reducing the effects of RSI
+Comment[fr]=Clique sur la souris à votre place, limitant les douleurs liées aux TMS
 Comment[x-test]=xxClicks the mouse for you, reducing the effects of RSIxx
 Terminal=false
 Name=KMouseTool
 Name[x-test]=xxKMouseToolxx
 GenericName=Automatic Mouse Click
+GenericName[fr]=Clic de souris automatique
 GenericName[x-test]=xxAutomatic Mouse Clickxx
 Categories=Qt;KDE;Utility;Accessibility;
 
