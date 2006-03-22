@@ -620,12 +620,12 @@ KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTray
 	setObjectName(name);
 	startStopId = contextMenu()->insertItem (i18n("&Start"), this, SIGNAL(startStopSelected()));
 	contextMenu()->insertSeparator();
-	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("configure", KIcon::Small),
+	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("configure", K3Icon::Small),
 	                           i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
 	contextMenu()->insertSeparator();
-	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("contents", KIcon::Small),
+	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("contents", K3Icon::Small),
 	                           i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
-	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("kmousetool", KIcon::Small),
+	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("kmousetool", K3Icon::Small),
 	                           i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
 }
 
@@ -638,11 +638,11 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 
 	if (mousetool_is_running) {
 		contextMenu()->changeItem (startStopId, i18n("&Stop"));
-		icon = KGlobal::iconLoader()->loadIcon("kmousetool_on", KIcon::Small);
+		icon = KGlobal::iconLoader()->loadIcon("kmousetool_on", K3Icon::Small);
 	}
 	else {
 		contextMenu()->changeItem (startStopId, i18n("&Start"));
-		icon = KGlobal::iconLoader()->loadIcon("kmousetool_off", KIcon::Small);
+		icon = KGlobal::iconLoader()->loadIcon("kmousetool_off", K3Icon::Small);
 	}
 	setPixmap (icon);
 	show();
