@@ -47,6 +47,10 @@ class KAudioPlayer;
 class KAboutApplication;
 class KMouseToolTray;
 
+namespace Phonon
+{
+      class SimplePlayer;
+}
 
 /**
  * KMouseTool is the base class of the project
@@ -81,7 +85,7 @@ private:
 	QString rcfilename;
 	QString appfilename;
 	QString	mSoundFileName;
-	KAudioPlayer *mplayer;
+	Phonon::SimplePlayer *mplayer;
 	KMouseToolTray *trayIcon;
 
 	KAboutApplication *aboutDlg;
