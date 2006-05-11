@@ -23,7 +23,7 @@
 
 // these are for locating the stroke information file
 #include <kstandarddirs.h>
-#include <qstring.h>
+#include <QString>
 
 // #include <string>
 

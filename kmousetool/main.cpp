@@ -23,7 +23,7 @@
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
 #include <dcopclient.h>
-#include <qmessagebox.h>
+#include <QMessageBox>
 #include <kconfig.h>
 #include <kglobal.h>
 

@@ -22,7 +22,7 @@
 #ifndef KMOUSETOOL_H
 #define KMOUSETOOL_H
 
-#include <qdir.h>
+#include <QDir>
 //Added by qt3to4:
 #include <QLabel>
 #include <QTimerEvent>

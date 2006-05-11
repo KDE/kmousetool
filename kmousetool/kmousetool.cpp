@@ -30,7 +30,7 @@
 #include <X11/extensions/XTest.h>    /* Standard Name-String definitions*/
 #include <kdialog.h>
 #include <klocale.h>
-#include <qpushbutton.h>
+#include <QPushButton>
 #include <qpoint.h>
 #include <qnamespace.h>
 //Added by qt3to4:
@@ -43,9 +43,9 @@
 #include <qsound.h>
 #include <kglobalsettings.h>
 #include <kdebug.h>
-#include <qlayout.h>
-#include <qlineedit.h>
-#include <qcheckbox.h>
+#include <QLayout>
+#include <QLineEdit>
+#include <QCheckBox>
 #include <ksystemtray.h>
 #include <kiconloader.h>
 #include <kpushbutton.h>
