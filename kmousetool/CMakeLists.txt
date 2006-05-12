@@ -1,4 +1,3 @@
-kde4_header()
 
 add_subdirectory( pics ) 
 
@@ -25,7 +24,6 @@ install_targets(/bin kmousetool )
 install_files( ${APPLNK_INSTALL_DIR}/Applications FILES kmousetool.desktop )
 install_files( ${DATA_INSTALL_DIR}/kmousetool/sounds FILES mousetool_tap.wav )
 
-kde4_footer()
 
 
 
