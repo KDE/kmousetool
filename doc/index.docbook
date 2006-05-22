@@ -317,12 +317,12 @@ easily scraped off with a flat blade or with a fingernail.  </para>
 <para>In some rare situations, the system suspends &kmousetool; when a drag
 starts; if you are using Smart Drag, this means thar &kmousetool; can never finish the drag by
 clicking up.</para>
-<para>The solution is to simply click manually; this resets &kmousetool;, and you can then
-continue to work normally again.</para>
 <para>
 This happens when you use &kmousetool; under a non &kde; window manager and then
 use it to move a window.  
 </para>
+<para>The solution is to simply click manually; this resets &kmousetool;, and you can then
+continue to work normally again.</para>
 </answer>
 </qandaentry>
 
