@@ -38,7 +38,6 @@
 #include <QTimerEvent>
 #include <QDesktopWidget>
 #include <kmessagebox.h>
-#include <kaudioplayer.h>
 #include <kstandarddirs.h>
 #include <qsound.h>
 #include <kglobalsettings.h>
