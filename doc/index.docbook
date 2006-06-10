@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.0//EN" "dtd/kdex.dtd" [
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!ENTITY kmousetool '<application>KMouseTool</application>'>
   <!ENTITY kappname "&kmousetool;">
   <!ENTITY package "kdeaccessibility">
@@ -32,7 +32,7 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-12-10</date>
+<date>2006-05-20</date>
 <releaseinfo>1.12</releaseinfo>
 
 <abstract>
@@ -317,12 +317,12 @@ easily scraped off with a flat blade or with a fingernail.  </para>
 <para>In some rare situations, the system suspends &kmousetool; when a drag
 starts; if you are using Smart Drag, this means thar &kmousetool; can never finish the drag by
 clicking up.</para>
-<para>The solution is to simply click manually; this resets &kmousetool;, and you can then
-continue to work normally again.</para>
 <para>
 This happens when you use &kmousetool; under a non &kde; window manager and then
 use it to move a window.  
 </para>
+<para>The solution is to simply click manually; this resets &kmousetool;, and you can then
+continue to work normally again.</para>
 </answer>
 </qandaentry>
 
