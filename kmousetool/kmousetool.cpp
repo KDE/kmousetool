@@ -46,6 +46,7 @@
 #include <QLineEdit>
 #include <QCheckBox>
 #include <ksystemtray.h>
+#include <kicon.h>
 #include <kiconloader.h>
 #include <kpushbutton.h>
 #include <kstdguiitem.h>
@@ -101,7 +102,7 @@ void KMouseTool::init_vars()
 	// If the ~/.mousetool directory doesn't exist, create it
 //	mSoundFileName = QDir::homePath();
 	mSoundFileName = locate("appdata", "sounds/mousetool_tap.wav");
-	mplayer = new Phonon::SimplePlayer(this);
+	mplayer = new Phonon::SimplePlayer(Phonon::AccessibilityCategory, this);
 
 	// find application file
 	appfilename = locate("exe", "kmousetool");
@@ -247,7 +248,7 @@ void KMouseTool::playTickSound()
 
 //	if(sound_server.isNull())
 //		return;
-//	sound_server.play(mSoundFileName.latin1());
+//	sound_server.play(mSoundFileName.toLatin1());
 
 	// Another approach is to try using QSound.
 	// QSound depends on Network Audio Server, which doesn't seem to work on my Debian Woody system.
@@ -255,8 +256,11 @@ void KMouseTool::playTickSound()
 //	QSound::play(mSoundFileName);
 }
 
-KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent, name)
+KMouseTool::KMouseTool(QWidget *parent, const char *name) : 
+        QWidget(parent)
 {
+        setupUi(this);
+        setObjectName(name);
 	init_vars();
 	resetSettings();
 
@@ -296,7 +300,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
 	connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
 	connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
 
-	aboutDlg = new KAboutApplication (0, false);
+	aboutDlg = new KAboutApplication (KGlobal::instance()->aboutData(), false);
 }
 
 KMouseTool::~KMouseTool()
@@ -402,13 +406,13 @@ void KMouseTool::setAutostart (bool start)
 
 	if (start) {
 		if (!fi.exists())  			// if it doesn't exist, make it
-		cmd.sprintf("ln -s %s %s", appfilename.latin1(), autostartdirname.latin1());
+		cmd = QString("ln -s %1 %2").arg(appfilename).arg(autostartdirname);
 	}
 	else {
 	if (fi.exists()) 			// if it exists, delete it
-		cmd.sprintf("rm -f %s", sym.latin1());
+		cmd = QString("rm -f %s").arg(sym);
 	}
-	system(cmd.ascii());
+	system(cmd.toAscii());
 }
 
 bool KMouseTool::applySettings()
@@ -616,15 +620,17 @@ void KMouseTool::aboutSelected()
 KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTray (parent)
 {
 	setObjectName(name);
-	startStopId = contextMenu()->insertItem (i18n("&Start"), this, SIGNAL(startStopSelected()));
-	contextMenu()->insertSeparator();
-	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("configure", K3Icon::Small),
-	                           i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
-	contextMenu()->insertSeparator();
-	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("contents", K3Icon::Small),
-	                           i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
-	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("kmousetool", K3Icon::Small),
-	                           i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
+        
+	startStopAct = contextMenu()->addAction (i18n("&Start"), this, SIGNAL(startStopSelected()));
+	contextMenu()->addSeparator();
+        QAction* act;
+	act = contextMenu()->addAction (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
+        act->setIcon(KIcon("configure"));
+	contextMenu()->addSeparator();
+	act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
+        act->setIcon(KIcon("contents"));
+	act = contextMenu()->addAction (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
+        act->setIcon(KIcon("kmousetool"));
 }
 
 KMouseToolTray::~KMouseToolTray() {
@@ -635,11 +641,11 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 	QPixmap icon;
 
 	if (mousetool_is_running) {
-		contextMenu()->changeItem (startStopId, i18n("&Stop"));
+                startStopAct->setText(i18n("&Stop"));
 		icon = KGlobal::iconLoader()->loadIcon("kmousetool_on", K3Icon::Small);
 	}
 	else {
-		contextMenu()->changeItem (startStopId, i18n("&Start"));
+                startStopAct->setText(i18n("&Start"));
 		icon = KGlobal::iconLoader()->loadIcon("kmousetool_off", K3Icon::Small);
 	}
 	setPixmap (icon);

@@ -23,7 +23,6 @@
 #define KMOUSETOOL_H
 
 #include <QDir>
-//Added by qt3to4:
 #include <QLabel>
 #include <QTimerEvent>
 
@@ -37,12 +36,13 @@
 #include <ksystemtray.h>
 #include <qwidget.h>
 #include "mtstroke.h"
-#include "kmousetoolui.h"
+#include "ui_kmousetoolui.h"
 
 class QLineEdit;
 class QLabel;
 class QCheckBox;
 class QPushButton;
+class QAction;
 class KAudioPlayer;
 class KAboutApplication;
 class KMouseToolTray;
@@ -59,7 +59,7 @@ namespace Phonon
  *
  */
 
-class KMouseTool : public KMouseToolUI
+class KMouseTool : public QWidget, public Ui::KMouseToolUI
 {
 	Q_OBJECT
 
@@ -201,7 +201,7 @@ public:
 
 class KMouseToolTray : public KSystemTray {
         Q_OBJECT
-	int startStopId;
+	QAction* startStopAct;
 public:
 	KMouseToolTray (QWidget *parent=0, const char *name=0);
 	~KMouseToolTray();

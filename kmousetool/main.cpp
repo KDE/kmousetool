@@ -22,7 +22,7 @@
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
-#include <dcopclient.h>
+#include <dbus/qdbus.h>
 #include <QMessageBox>
 #include <kconfig.h>
 #include <kglobal.h>
@@ -30,51 +30,50 @@
 #include "kmousetool.h"
 
 static const char description[] =
-	I18N_NOOP("KMouseTool");
+    I18N_NOOP("KMouseTool");
 // INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
 
 
 static KCmdLineOptions options[] =
 {
-	KCmdLineLastOption
-	// INSERT YOUR COMMANDLINE OPTIONS HERE
+    KCmdLineLastOption
+    // INSERT YOUR COMMANDLINE OPTIONS HERE
 };
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData( "kmousetool", I18N_NOOP("KMouseTool"),
-	KMOUSETOOL_VERSION, description, KAboutData::License_GPL,
-	"(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt", 0, "http://www.mousetool.com", "gunnar@schmi-dt.de");
+    KAboutData aboutData( "kmousetool", I18N_NOOP("KMouseTool"),
+    KMOUSETOOL_VERSION, description, KAboutData::License_GPL,
+    "(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt", 0, "http://www.mousetool.com", "gunnar@schmi-dt.de");
 
-	aboutData.addAuthor("Gunnar Schmi Dt", I18N_NOOP("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
-	aboutData.addAuthor("Olaf Schmidt", I18N_NOOP("Usability improvements"), "ojschmidt@kde.org");
-	aboutData.addAuthor("Jeff Roush", I18N_NOOP("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
+    aboutData.addAuthor("Gunnar Schmi Dt", I18N_NOOP("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
+    aboutData.addAuthor("Olaf Schmidt", I18N_NOOP("Usability improvements"), "ojschmidt@kde.org");
+    aboutData.addAuthor("Jeff Roush", I18N_NOOP("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
 
-	aboutData.addCredit("Joe Betts");
-	KCmdLineArgs::init( argc, argv, &aboutData );
-	KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
-	KUniqueApplication::addCmdLineOptions();
+    aboutData.addCredit("Joe Betts");
+    KCmdLineArgs::init( argc, argv, &aboutData );
+    KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
+    KUniqueApplication::addCmdLineOptions();
+        
+    KUniqueApplication::setOrganizationDomain("kde.org");
+    KUniqueApplication::setApplicationName("kmousetool");
 
-	if (!KUniqueApplication::start()) {
-		DCOPClient *client = new DCOPClient();
-		client->attach();
-		QByteArray  data;
-		DCOPCString    replyType;
-		QByteArray  replyData;
-		if ( !client->call("kmousetool", "qt/KMouseToolUI", "show()",
-					data, replyType, replyData, true) ||
-			!client->call("kmousetool", "qt/KMouseToolUI", "raise()",
-					data, replyType, replyData, true) )
-		fprintf(stderr, "The DCOP calls failed\n");
-		delete client;
-		exit(0);
-	}
-	KUniqueApplication a;
+    if (!KUniqueApplication::start()) {
+        QDBusInterfacePtr iface("org.kde.kmousetool", "/org/kde/KMouseToolUI", "org.kde.KMouseToolUI");
+        QDBusReply<bool> reply = iface->call("show");
+        if (reply)
+            reply = iface->call("raise");
+        if (!reply) {
+            fprintf(stderr, "The DBUS calls to running KMouseTool failed.\n");
+            exit(0);
+        }
+    }
+    KUniqueApplication a;
 
-	KMouseTool *kmousetool = new KMouseTool();
+    KMouseTool *kmousetool = new KMouseTool();
 
-	if (!KGlobal::config()->readEntry("IsMinimized", QVariant(false)).toBool())
-		kmousetool->show();
+    if (!KGlobal::config()->readEntry("IsMinimized", QVariant(false)).toBool())
+        kmousetool->show();
 
-	return a.exec();
+    return a.exec();
 }

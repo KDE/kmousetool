@@ -1,436 +1,437 @@
-<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
-<class>KMouseToolUI</class>
-<widget class="QWidget">
-    <property name="name">
-        <cstring>KMouseToolUI</cstring>
-    </property>
-    <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>544</width>
-            <height>395</height>
-        </rect>
-    </property>
-    <property name="windowTitle">
-        <string>KMouseTool</string>
-    </property>
-    <grid>
-        <property name="name">
-            <cstring>unnamed</cstring>
+<ui version="4.0" >
+ <author></author>
+ <comment></comment>
+ <exportmacro></exportmacro>
+ <class>KMouseToolUI</class>
+ <widget class="QWidget" name="KMouseToolUI" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>544</width>
+    <height>395</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>KMouseTool</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>11</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="2" column="0" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>20</width>
+       <height>30</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QGroupBox" name="groupBox1" >
+     <property name="title" >
+      <string>Settings</string>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="margin" >
+       <number>11</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item row="3" column="0" >
+       <layout class="QGridLayout" >
+        <property name="margin" >
+         <number>0</number>
         </property>
-        <spacer row="2" column="0">
-            <property name="name">
-                <cstring>spacer7</cstring>
-            </property>
-            <property name="orientation">
-                <enum>Vertical</enum>
-            </property>
-            <property name="sizeType">
-                <enum>Expanding</enum>
-            </property>
-            <property name="sizeHint">
-                <size>
-                    <width>20</width>
-                    <height>30</height>
-                </size>
-            </property>
-        </spacer>
-        <widget class="QGroupBox" row="1" column="0">
-            <property name="name">
-                <cstring>groupBox1</cstring>
-            </property>
-            <property name="title">
-                <string>Settings</string>
-            </property>
-            <grid>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QLayoutWidget" row="3" column="0">
-                    <property name="name">
-                        <cstring>layout9</cstring>
-                    </property>
-                    <grid>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <spacer row="0" column="0">
-                            <property name="name">
-                                <cstring>dragTimeSpace</cstring>
-                            </property>
-                            <property name="orientation">
-                                <enum>Horizontal</enum>
-                            </property>
-                            <property name="sizeType">
-                                <enum>Fixed</enum>
-                            </property>
-                            <property name="sizeHint">
-                                <size>
-                                    <width>16</width>
-                                    <height>20</height>
-                                </size>
-                            </property>
-                        </spacer>
-                        <widget class="QLabel" row="0" column="1">
-                            <property name="name">
-                                <cstring>dragTimeLabel</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>5</hsizetype>
-                                    <vsizetype>0</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="text">
-                                <string>Drag t&amp;ime (1/10 sec):</string>
-                            </property>
-                            <property name="buddy" stdset="0">
-                                <cstring>dragTimeEdit</cstring>
-                            </property>
-                        </widget>
-                    </grid>
-                </widget>
-                <widget class="KIntSpinBox" row="3" column="1">
-                    <property name="name">
-                        <cstring>dragTimeEdit</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>1</hsizetype>
-                            <vsizetype>0</vsizetype>
-                            <horstretch>1</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="maximum">
-                        <number>40</number>
-                    </property>
-                    <property name="minimum">
-                        <number>1</number>
-                    </property>
-                    <property name="value">
-                        <number>3</number>
-                    </property>
-                </widget>
-                <widget class="KIntSpinBox" row="1" column="1">
-                    <property name="name">
-                        <cstring>dwellTimeEdit</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>1</hsizetype>
-                            <vsizetype>0</vsizetype>
-                            <horstretch>1</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="maximum">
-                        <number>40</number>
-                    </property>
-                    <property name="minimum">
-                        <number>1</number>
-                    </property>
-                    <property name="value">
-                        <number>5</number>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="0" column="0">
-                    <property name="name">
-                        <cstring>movementLabel</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Minimum movement:</string>
-                    </property>
-                    <property name="buddy" stdset="0">
-                        <cstring>movementEdit</cstring>
-                    </property>
-                </widget>
-                <widget class="KIntSpinBox" row="0" column="1">
-                    <property name="name">
-                        <cstring>movementEdit</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>1</hsizetype>
-                            <vsizetype>0</vsizetype>
-                            <horstretch>1</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="maximum">
-                        <number>40</number>
-                    </property>
-                    <property name="minimum">
-                        <number>1</number>
-                    </property>
-                </widget>
-                <widget class="QCheckBox" row="4" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>cbStroke</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Enable strokes</string>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="1" column="0">
-                    <property name="name">
-                        <cstring>dwellTimeLabel</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>5</hsizetype>
-                            <vsizetype>0</vsizetype>
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="text">
-                        <string>D&amp;well time (1/10 sec):</string>
-                    </property>
-                    <property name="buddy" stdset="0">
-                        <cstring>dwellTimeEdit</cstring>
-                    </property>
-                </widget>
-                <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>cbDrag</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Smar&amp;t drag</string>
-                    </property>
-                    <property name="checked">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-                <widget class="QLayoutWidget" row="7" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>layout5</cstring>
-                    </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>buttonDefault</cstring>
-                            </property>
-                            <property name="text">
-                                <string>&amp;Defaults</string>
-                            </property>
-                        </widget>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>buttonReset</cstring>
-                            </property>
-                            <property name="text">
-                                <string>&amp;Reset</string>
-                            </property>
-                        </widget>
-                        <spacer>
-                            <property name="name">
-                                <cstring>spacer4_2</cstring>
-                            </property>
-                            <property name="orientation">
-                                <enum>Horizontal</enum>
-                            </property>
-                            <property name="sizeType">
-                                <enum>Expanding</enum>
-                            </property>
-                            <property name="sizeHint">
-                                <size>
-                                    <width>31</width>
-                                    <height>20</height>
-                                </size>
-                            </property>
-                        </spacer>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>buttonApply</cstring>
-                            </property>
-                            <property name="text">
-                                <string>&amp;Apply</string>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>cbStart</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Start with &amp;KDE</string>
-                    </property>
-                </widget>
-                <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>cbClick</cstring>
-                    </property>
-                    <property name="text">
-                        <string>A&amp;udible click</string>
-                    </property>
-                </widget>
-            </grid>
-        </widget>
-        <widget class="QLayoutWidget" row="0" column="0">
-            <property name="name">
-                <cstring>layout5</cstring>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QLabel">
-                    <property name="name">
-                        <cstring>textLabel1</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>7</hsizetype>
-                            <vsizetype>5</vsizetype>
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="text">
-                        <string>KMouseTool will run as a background application after you close this dialog. To change the settings again, restart KMouseTool or use the KDE system tray.</string>
-                    </property>
-                    <property name="scaledContents">
-                        <bool>false</bool>
-                    </property>
-                    <property name="alignment">
-                        <set>AlignJustify|AlignVCenter</set>
-                    </property>
-                    <property name="wordWrap">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-                <spacer>
-                    <property name="name">
-                        <cstring>spacer8</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Fixed</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>8</width>
-                            <height>8</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>buttonStartStop</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>0</hsizetype>
-                            <vsizetype>0</vsizetype>
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Start</string>
-                    </property>
-                </widget>
-            </hbox>
-        </widget>
-        <widget class="QLayoutWidget" row="3" column="0">
-            <property name="name">
-                <cstring>layout5</cstring>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>buttonHelp</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Help</string>
-                    </property>
-                </widget>
-                <spacer>
-                    <property name="name">
-                        <cstring>spacer2</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>241</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>buttonClose</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Close</string>
-                    </property>
-                </widget>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>buttonQuit</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Quit</string>
-                    </property>
-                </widget>
-            </hbox>
-        </widget>
-    </grid>
-</widget>
-<connections>
-    <connection>
-        <sender>cbDrag</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>dragTimeLabel</receiver>
-        <slot>setEnabled(bool)</slot>
-    </connection>
-    <connection>
-        <sender>cbDrag</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>dragTimeEdit</receiver>
-        <slot>setEnabled(bool)</slot>
-    </connection>
-</connections>
-<layoutdefaults spacing="6" margin="11"/>
-<includes>
-    <include location="global" impldecl="in declaration">knuminput.h</include>
-</includes>
-<customwidgets>
-	<customwidget>
-		<class>KIntSpinBox</class>
-		<header location="global">knuminput.h</header>
-		<container>0</container>
-	</customwidget>
-</customwidgets>
-
-<includehints>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-</includehints>
-</UI>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item row="0" column="0" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType" >
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>16</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1" >
+         <widget class="QLabel" name="dragTimeLabel" >
+          <property name="sizePolicy" >
+           <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>0</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text" >
+           <string>Drag t&amp;ime (1/10 sec):</string>
+          </property>
+          <property name="buddy" >
+           <cstring>dragTimeEdit</cstring>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="1" >
+       <widget class="KIntSpinBox" name="dragTimeEdit" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>1</hsizetype>
+          <vsizetype>0</vsizetype>
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>40</number>
+        </property>
+        <property name="minimum" >
+         <number>1</number>
+        </property>
+        <property name="value" >
+         <number>3</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="KIntSpinBox" name="dwellTimeEdit" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>1</hsizetype>
+          <vsizetype>0</vsizetype>
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>40</number>
+        </property>
+        <property name="minimum" >
+         <number>1</number>
+        </property>
+        <property name="value" >
+         <number>5</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" >
+       <widget class="QLabel" name="movementLabel" >
+        <property name="text" >
+         <string>&amp;Minimum movement:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>movementEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="KIntSpinBox" name="movementEdit" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>1</hsizetype>
+          <vsizetype>0</vsizetype>
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>40</number>
+        </property>
+        <property name="minimum" >
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2" >
+       <widget class="QCheckBox" name="cbStroke" >
+        <property name="text" >
+         <string>&amp;Enable strokes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="dwellTimeLabel" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>5</hsizetype>
+          <vsizetype>0</vsizetype>
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text" >
+         <string>D&amp;well time (1/10 sec):</string>
+        </property>
+        <property name="buddy" >
+         <cstring>dwellTimeEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2" >
+       <widget class="QCheckBox" name="cbDrag" >
+        <property name="text" >
+         <string>Smar&amp;t drag</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2" >
+       <layout class="QHBoxLayout" >
+        <property name="margin" >
+         <number>0</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="KPushButton" name="buttonDefault" >
+          <property name="text" >
+           <string>&amp;Defaults</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="KPushButton" name="buttonReset" >
+          <property name="text" >
+           <string>&amp;Reset</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType" >
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>31</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="KPushButton" name="buttonApply" >
+          <property name="text" >
+           <string>&amp;Apply</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="6" column="0" colspan="2" >
+       <widget class="QCheckBox" name="cbStart" >
+        <property name="text" >
+         <string>Start with &amp;KDE</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2" >
+       <widget class="QCheckBox" name="cbClick" >
+        <property name="text" >
+         <string>A&amp;udible click</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <layout class="QHBoxLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="textLabel1" >
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>7</hsizetype>
+         <vsizetype>5</vsizetype>
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text" >
+        <string>KMouseTool will run as a background application after you close this dialog. To change the settings again, restart KMouseTool or use the KDE system tray.</string>
+       </property>
+       <property name="scaledContents" >
+        <bool>false</bool>
+       </property>
+       <property name="alignment" >
+        <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+       </property>
+       <property name="wordWrap" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType" >
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>8</width>
+         <height>8</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="KPushButton" name="buttonStartStop" >
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>0</hsizetype>
+         <vsizetype>0</vsizetype>
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text" >
+        <string>&amp;Start</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0" >
+    <layout class="QHBoxLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="KPushButton" name="buttonHelp" >
+       <property name="text" >
+        <string>&amp;Help</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType" >
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>241</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="KPushButton" name="buttonClose" >
+       <property name="text" >
+        <string>&amp;Close</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KPushButton" name="buttonQuit" >
+       <property name="text" >
+        <string>&amp;Quit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>KIntSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>knuminput.h</header>
+   <container>0</container>
+   <pixmap></pixmap>
+  </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+   <container>0</container>
+   <pixmap></pixmap>
+  </customwidget>
+ </customwidgets>
+ <includes>
+  <include location="global" >knuminput.h</include>
+  <include location="global" >kpushbutton.h</include>
+ </includes>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cbDrag</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dragTimeLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbDrag</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dragTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

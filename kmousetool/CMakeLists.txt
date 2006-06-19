@@ -10,7 +10,7 @@ set(kmousetool_SRCS mtstroke.cpp kmousetool.cpp main.cpp )
 
 kde4_automoc(${kmousetool_SRCS})
 
-kde4_add_ui3_files(kmousetool_SRCS kmousetoolui.ui )
+kde4_add_ui_files(kmousetool_SRCS kmousetoolui.ui )
 
 kde4_add_executable(kmousetool ${kmousetool_SRCS})
 
