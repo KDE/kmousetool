@@ -22,7 +22,7 @@
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
-#include <dbus/qdbus.h>
+#include <QtDBus/QtDBus>
 #include <QMessageBox>
 #include <kconfig.h>
 #include <kglobal.h>
@@ -59,10 +59,10 @@ int main(int argc, char *argv[])
     KUniqueApplication::setApplicationName("kmousetool");
 
     if (!KUniqueApplication::start()) {
-        QDBusInterfacePtr iface("org.kde.kmousetool", "/org/kde/KMouseToolUI", "org.kde.KMouseToolUI");
-        QDBusReply<bool> reply = iface->call("show");
+        QDBusInterface iface("org.kde.kmousetool", "/org/kde/KMouseToolUI", "org.kde.KMouseToolUI");
+        QDBusReply<bool> reply = iface.call("show");
         if (reply)
-            reply = iface->call("raise");
+            reply = iface.call("raise");
         if (!reply) {
             fprintf(stderr, "The DBUS calls to running KMouseTool failed.\n");
             exit(0);
