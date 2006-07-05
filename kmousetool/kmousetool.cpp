@@ -101,11 +101,11 @@ void KMouseTool::init_vars()
 
 	// If the ~/.mousetool directory doesn't exist, create it
 //	mSoundFileName = QDir::homePath();
-	mSoundFileName = locate("appdata", "sounds/mousetool_tap.wav");
+	mSoundFileName = KStandardDirs::locate("appdata", "sounds/mousetool_tap.wav");
 	mplayer = new Phonon::SimplePlayer(Phonon::AccessibilityCategory, this);
 
 	// find application file
-	appfilename = locate("exe", "kmousetool");
+	appfilename = KStandardDirs::locate("exe", "kmousetool");
 
 	// find the user's autostart directory
 	autostartdirname = KGlobalSettings::autostartPath();

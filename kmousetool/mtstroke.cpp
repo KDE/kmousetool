@@ -187,7 +187,7 @@ void MTStroke::getExtent()
 bool MTStroke::readSequence()
 {
   QString strokefilename;
-  strokefilename = locate("config", "kmousetool_strokes.txt");
+  strokefilename = KStandardDirs::locate("config", "kmousetool_strokes.txt");
   if (strokefilename.isEmpty()) {
     // make default
     if (sequenceMap.size()==0)
@@ -223,7 +223,7 @@ bool MTStroke::readSequence()
 bool MTStroke::writeSequence()
 {
   QString strokefilename;
-  strokefilename = locateLocal("config", "kmousetool_strokes.txt");
+  strokefilename = KStandardDirs::locateLocal("config", "kmousetool_strokes.txt");
 
   ofstream outfile (strokefilename.toAscii(), ios::out);
   if (!outfile) {
