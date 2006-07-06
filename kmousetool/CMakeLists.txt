@@ -16,7 +16,7 @@ kde4_add_executable(kmousetool ${kmousetool_SRCS})
 
 target_link_libraries(kmousetool  ${KDE4_KDEUI_LIBS} ${X11_XTest_LIB} ${X11_Xext_LIB}  phononcore)
 
-install_targets(/bin kmousetool )
+install(TARGETS kmousetool  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### install files ###############
