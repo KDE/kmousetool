@@ -53,7 +53,7 @@
 #include <knuminput.h>
 #include <kmenu.h>
 #include <kaboutapplication.h>
-#include <phonon/simpleplayer.h>
+#include <phonon/audioplayer.h>
 //#include <arts/soundserver.h>
 #include <netwm.h>
 
@@ -102,7 +102,7 @@ void KMouseTool::init_vars()
 	// If the ~/.mousetool directory doesn't exist, create it
 //	mSoundFileName = QDir::homePath();
 	mSoundFileName = KStandardDirs::locate("appdata", "sounds/mousetool_tap.wav");
-	mplayer = new Phonon::SimplePlayer(Phonon::AccessibilityCategory, this);
+	mplayer = new Phonon::AudioPlayer(Phonon::AccessibilityCategory, this);
 
 	// find application file
 	appfilename = KStandardDirs::locate("exe", "kmousetool");
@@ -256,7 +256,7 @@ void KMouseTool::playTickSound()
 //	QSound::play(mSoundFileName);
 }
 
-KMouseTool::KMouseTool(QWidget *parent, const char *name) : 
+KMouseTool::KMouseTool(QWidget *parent, const char *name) :
         QWidget(parent)
 {
         setupUi(this);
@@ -620,7 +620,7 @@ void KMouseTool::aboutSelected()
 KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTray (parent)
 {
 	setObjectName(name);
-        
+
 	startStopAct = contextMenu()->addAction (i18n("&Start"), this, SIGNAL(startStopSelected()));
 	contextMenu()->addSeparator();
         QAction* act;
