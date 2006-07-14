@@ -638,7 +638,7 @@ KMouseToolTray::~KMouseToolTray() {
 
 void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 {
-	QPixmap icon;
+	QIcon icon;
 
 	if (mousetool_is_running) {
                 startStopAct->setText(i18n("&Stop"));
@@ -648,6 +648,6 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
                 startStopAct->setText(i18n("&Start"));
 		icon = KGlobal::iconLoader()->loadIcon("kmousetool_off", K3Icon::Small);
 	}
-	setPixmap (icon);
+	setIcon (icon);
 	show();
 }
