@@ -282,9 +282,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) :
 	connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
 	buttonClose->setGuiItem(KStdGuiItem::close());
 	connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
-#if KDE_VERSION >= KDE_MAKE_VERSION (3,1,90)
 	buttonQuit->setGuiItem(KStdGuiItem::quit());
-#endif // KDE 3.2
 	connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
 
 	// When we first start, it's nice to not click immediately.
