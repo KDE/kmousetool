@@ -45,7 +45,7 @@
 #include <QLayout>
 #include <QLineEdit>
 #include <QCheckBox>
-#include <ksystemtray.h>
+#include <ksystemtrayicon.h>
 #include <kicon.h>
 #include <kiconloader.h>
 #include <kpushbutton.h>
@@ -615,7 +615,7 @@ void KMouseTool::aboutSelected()
 
 
 
-KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTray (parent)
+KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTrayIcon (parent)
 {
 	setObjectName(name);
 

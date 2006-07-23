@@ -31,7 +31,7 @@
 #include "version.h"
 
 #include <kapplication.h>
-#include <ksystemtray.h>
+#include <ksystemtrayicon.h>
 #include <qwidget.h>
 #include "mtstroke.h"
 #include "ui_kmousetoolui.h"
@@ -197,7 +197,7 @@ public:
 	~KMouseTool();
 };
 
-class KMouseToolTray : public KSystemTray {
+class KMouseToolTray : public KSystemTrayIcon {
         Q_OBJECT
 	QAction* startStopAct;
 public:
