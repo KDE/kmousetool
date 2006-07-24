@@ -45,7 +45,7 @@
 #include <QLayout>
 #include <QLineEdit>
 #include <QCheckBox>
-#include <ksystemtray.h>
+#include <ksystemtrayicon.h>
 #include <kicon.h>
 #include <kiconloader.h>
 #include <kpushbutton.h>
@@ -615,7 +615,7 @@ void KMouseTool::aboutSelected()
 
 
 
-KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTray (parent)
+KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTrayIcon (parent)
 {
 	setObjectName(name);
 
@@ -636,7 +636,7 @@ KMouseToolTray::~KMouseToolTray() {
 
 void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 {
-	QPixmap icon;
+	QIcon icon;
 
 	if (mousetool_is_running) {
                 startStopAct->setText(i18n("&Stop"));
@@ -646,6 +646,6 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
                 startStopAct->setText(i18n("&Start"));
 		icon = KGlobal::iconLoader()->loadIcon("kmousetool_off", K3Icon::Small);
 	}
-	setPixmap (icon);
+	setIcon (icon);
 	show();
 }
