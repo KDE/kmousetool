@@ -1,18 +1,1 @@
-
-
-
-
-########### install files ###############
-
-install( FILES   DESTINATION  ${DATA_INSTALL_DIR}/kmousetool/icons )
-
-kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
-
-
-
-
-#original Makefile.am contents follow:
-
-#kmousetooliconsdir = $(kde_datadir)/kmousetool/icons
-#kmousetoolicons_ICON = AUTO
-#KDE_ICON = kmousetool
+kde4_install_icons( ${DATA_INSTALL_DIR}/kmousetool/icons  hicolor )
