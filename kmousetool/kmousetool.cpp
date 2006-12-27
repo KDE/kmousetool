@@ -49,7 +49,7 @@
 #include <kicon.h>
 #include <kiconloader.h>
 #include <kpushbutton.h>
-#include <kstdguiitem.h>
+#include <kstandardguiitem.h>
 #include <knuminput.h>
 #include <kmenu.h>
 #include <kaboutapplication.h>
@@ -273,16 +273,16 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) :
 	connect(cbStart, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
 
 	connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
-	buttonDefault->setGuiItem(KStdGuiItem::defaults());
+	buttonDefault->setGuiItem(KStandardGuiItem::defaults());
 	connect(buttonDefault, SIGNAL(clicked()), this, SLOT(defaultSelected()));
 	connect(buttonReset, SIGNAL(clicked()), this, SLOT(resetSelected()));
-	buttonApply->setGuiItem(KStdGuiItem::apply());
+	buttonApply->setGuiItem(KStandardGuiItem::apply());
 	connect(buttonApply, SIGNAL(clicked()), this, SLOT(applySelected()));
-	buttonHelp->setGuiItem(KStdGuiItem::help());
+	buttonHelp->setGuiItem(KStandardGuiItem::help());
 	connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
-	buttonClose->setGuiItem(KStdGuiItem::close());
+	buttonClose->setGuiItem(KStandardGuiItem::close());
 	connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
-	buttonQuit->setGuiItem(KStdGuiItem::quit());
+	buttonQuit->setGuiItem(KStandardGuiItem::quit());
 	connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
 
 	// When we first start, it's nice to not click immediately.
@@ -565,7 +565,7 @@ void KMouseTool::closeSelected()
 		int answer = KMessageBox::questionYesNoCancel (this,
 			i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before closing the configuration window or discard the changes?"),
 			i18n("Closing Configuration Window"),
-			KStdGuiItem::apply(), KStdGuiItem::discard(), "AutomaticSave");
+			KStandardGuiItem::apply(), KStandardGuiItem::discard(), "AutomaticSave");
 		if (answer == KMessageBox::Yes)
 			applySettings();
 		else if (answer == KMessageBox::No)
@@ -584,7 +584,7 @@ void KMouseTool::quitSelected()
 		int answer = KMessageBox::questionYesNoCancel (this,
 			i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before quitting KMousetool or discard the changes?"),
 			i18n("Quitting KMousetool"),
-			KStdGuiItem::apply(), KStdGuiItem::discard(), "AutomaticSave");
+			KStandardGuiItem::apply(), KStandardGuiItem::discard(), "AutomaticSave");
 		if (answer == KMessageBox::Yes)
 			applySettings();
 		if (answer != KMessageBox::Cancel)
