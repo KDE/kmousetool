@@ -54,9 +54,8 @@
 #include <kmenu.h>
 #include <kaboutapplication.h>
 #include <phonon/audioplayer.h>
-//#include <arts/soundserver.h>
 #include <netwm.h>
-
+#include <kapplication.h>
 #include <iostream>
 #include <QAbstractEventDispatcher>
 #include <ktoolinvocation.h>

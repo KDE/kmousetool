@@ -30,7 +30,6 @@
 
 #include "version.h"
 
-#include <kapplication.h>
 #include <ksystemtrayicon.h>
 #include <qwidget.h>
 #include "mtstroke.h"
