@@ -41,7 +41,7 @@ class QCheckBox;
 class QPushButton;
 class QAction;
 class KAudioPlayer;
-class KAboutApplication;
+class KAboutApplicationDialog;
 class KMouseToolTray;
 
 namespace Phonon
@@ -85,7 +85,7 @@ private:
 	Phonon::AudioPlayer *mplayer;
 	KMouseToolTray *trayIcon;
 
-	KAboutApplication *aboutDlg;
+	KAboutApplicationDialog *aboutDlg;
 
 	/**
 	 * Initialize all variables

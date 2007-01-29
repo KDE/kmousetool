@@ -52,7 +52,7 @@
 #include <kstandardguiitem.h>
 #include <knuminput.h>
 #include <kmenu.h>
-#include <kaboutapplication.h>
+#include <kaboutapplicationdialog.h>
 #include <phonon/audioplayer.h>
 #include <netwm.h>
 #include <kapplication.h>
@@ -297,7 +297,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) :
 	connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
 	connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
 
-	aboutDlg = new KAboutApplication (KGlobal::mainComponent().aboutData(), false);
+	aboutDlg = new KAboutApplicationDialog (KGlobal::mainComponent().aboutData());
 }
 
 KMouseTool::~KMouseTool()
