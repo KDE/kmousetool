@@ -297,7 +297,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) :
 	connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
 	connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
 
-	aboutDlg = new KAboutApplication (KGlobal::instance()->aboutData(), false);
+	aboutDlg = new KAboutApplication (KGlobal::mainComponent().aboutData(), false);
 }
 
 KMouseTool::~KMouseTool()
