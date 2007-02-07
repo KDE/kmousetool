@@ -26,8 +26,6 @@
 #include <QLabel>
 #include <QTimerEvent>
 
-#include <config.h>
-
 #include "version.h"
 
 #include <ksystemtrayicon.h>
