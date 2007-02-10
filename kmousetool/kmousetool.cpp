@@ -446,13 +446,13 @@ void KMouseTool::loadOptions()
 {
 	KGlobal::config()->setGroup("UserOptions");
 
-	playSound = KGlobal::config()->readEntry("AudibleClick", QVariant(false)).toBool();
-	smart_drag_on = KGlobal::config()->readEntry("SmartDrag", QVariant(false)).toBool();
+	playSound = KGlobal::config()->readEntry("AudibleClick", false);
+	smart_drag_on = KGlobal::config()->readEntry("SmartDrag", false);
 
 	dwell_time = KGlobal::config()->readEntry("DwellTime",5);
 	drag_time = KGlobal::config()->readEntry("DragTime",3);
 	min_movement = KGlobal::config()->readEntry("Movement",5);
-	strokesEnabled = KGlobal::config()->readEntry("strokesEnabled", QVariant(false)).toBool();
+	strokesEnabled = KGlobal::config()->readEntry("strokesEnabled", false);
 
 	QPoint p;
 	int x = KGlobal::config()->readEntry("x",0);
@@ -461,7 +461,7 @@ void KMouseTool::loadOptions()
 	p.setY(y);
 	move(p);
 
-	mousetool_is_running = KGlobal::config()->readEntry("MouseToolIsRunning", QVariant(false)).toBool();
+	mousetool_is_running = KGlobal::config()->readEntry("MouseToolIsRunning", false);
 	display = XOpenDisplay(NULL);
 }
 
