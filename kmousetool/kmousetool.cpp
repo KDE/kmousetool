@@ -444,19 +444,19 @@ bool KMouseTool::applySettings()
 // Save options to kmousetoolrc file
 void KMouseTool::loadOptions()
 {
-	KGlobal::config()->setGroup("UserOptions");
+	KConfigGroup cfg = KGlobal::config()->group("UserOptions");
 
-	playSound = KGlobal::config()->readEntry("AudibleClick", false);
-	smart_drag_on = KGlobal::config()->readEntry("SmartDrag", false);
+	playSound = cfg.readEntry("AudibleClick", false);
+	smart_drag_on = cfg.readEntry("SmartDrag", false);
 
-	dwell_time = KGlobal::config()->readEntry("DwellTime",5);
-	drag_time = KGlobal::config()->readEntry("DragTime",3);
-	min_movement = KGlobal::config()->readEntry("Movement",5);
-	strokesEnabled = KGlobal::config()->readEntry("strokesEnabled", false);
+	dwell_time = cfg.readEntry("DwellTime",5);
+	drag_time = cfg.readEntry("DragTime",3);
+	min_movement = cfg.readEntry("Movement",5);
+	strokesEnabled = cfg.readEntry("strokesEnabled", false);
 
 	QPoint p;
-	int x = KGlobal::config()->readEntry("x",0);
-	int y = KGlobal::config()->readEntry("y",0);
+	int x = cfg.readEntry("x",0);
+	int y = cfg.readEntry("y",0);
 	p.setX(x);
 	p.setY(y);
 	move(p);
@@ -472,20 +472,20 @@ void KMouseTool::saveOptions()
 	int x = p.x();
 	int y = p.y();
 
-	KGlobal::config()->setGroup("ProgramOptions");
-	KGlobal::config()->writeEntry("Version", KMOUSETOOL_VERSION);
-	KGlobal::config()->setGroup("UserOptions");
-	KGlobal::config()->writeEntry("x", x);
-	KGlobal::config()->writeEntry("y", y);
-	KGlobal::config()->writeEntry("strokesEnabled", strokesEnabled);
-	KGlobal::config()->writeEntry("IsMinimized", isHidden());
-	KGlobal::config()->writeEntry("DwellTime", dwell_time);
-	KGlobal::config()->writeEntry("DragTime", drag_time);
-	KGlobal::config()->writeEntry("Movement", min_movement);
-	KGlobal::config()->writeEntry("SmartDrag", smart_drag_on);
-	KGlobal::config()->writeEntry("AudibleClick", playSound);
-	KGlobal::config()->writeEntry("MouseToolIsRunning", mousetool_is_running);
-	KGlobal::config()->sync();
+	KConfigGroup cfg = KGlobal::config()->group("ProgramOptions");
+	cfg.writeEntry("Version", KMOUSETOOL_VERSION);
+	cfg = KGlobal::config()->group("UserOptions");
+	cfg.writeEntry("x", x);
+	cfg.writeEntry("y", y);
+	cfg.writeEntry("strokesEnabled", strokesEnabled);
+	cfg.writeEntry("IsMinimized", isHidden());
+	cfg.writeEntry("DwellTime", dwell_time);
+	cfg.writeEntry("DragTime", drag_time);
+	cfg.writeEntry("Movement", min_movement);
+	cfg.writeEntry("SmartDrag", smart_drag_on);
+	cfg.writeEntry("AudibleClick", playSound);
+	cfg.writeEntry("MouseToolIsRunning", mousetool_is_running);
+	cfg.sync();
 }
 
 void KMouseTool::updateStartStopText()
