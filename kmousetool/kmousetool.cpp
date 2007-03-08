@@ -625,7 +625,7 @@ KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTray
         act->setIcon(KIcon("configure"));
 	contextMenu()->addSeparator();
 	act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
-        act->setIcon(KIcon("contents"));
+        act->setIcon(KIcon("help-contents"));
 	act = contextMenu()->addAction (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
         act->setIcon(KIcon("kmousetool"));
 }
