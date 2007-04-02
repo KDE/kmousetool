@@ -23,6 +23,7 @@
 #include <fstream>
 #include <map>
 #include <string>
+#include <cstdlib>
 
 /**Implements stroke recording for MouseTool.
   *@author Jeff Roush
