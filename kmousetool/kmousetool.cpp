@@ -461,7 +461,7 @@ void KMouseTool::loadOptions()
 	p.setY(y);
 	move(p);
 
-	mousetool_is_running = KGlobal::config()->readEntry("MouseToolIsRunning", false);
+	mousetool_is_running = cfg.readEntry("MouseToolIsRunning", false);
 	display = XOpenDisplay(NULL);
 }
 
@@ -606,7 +606,7 @@ void KMouseTool::configureSelected()
 {
 	show();
 	raise();
-	setActiveWindow();
+	activateWindow();
 }
 
 void KMouseTool::aboutSelected()
