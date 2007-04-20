@@ -20,9 +20,10 @@
  ***************************************************************************/
 
 
-#include "Xmd_kmousetool.h"
 #include "kmousetool.h"
+#include "Xmd_kmousetool.h"
 #include "kmousetool.moc"
+#include "mtstroke.h"
 #include <kconfig.h>
 #include <X11/Intrinsic.h>     /* Intrinsics Definitions*/
 #include <X11/StringDefs.h>    /* Standard Name-String definitions*/
@@ -61,8 +62,6 @@
 #include <ktoolinvocation.h>
 #include <kglobal.h>
 
-#include "mtstroke.h"
-
 //using namespace Arts;
 
 int currentXPosition;
@@ -94,7 +93,7 @@ void KMouseTool::init_vars()
 	continue_timer = 1;
 	tick_count = 0;
 	max_ticks = dwell_time+1;
-	mouse_is_down = FALSE;
+	mouse_is_down = false;
 
 	loadOptions();
 
@@ -207,13 +206,13 @@ void KMouseTool::normalClick()
 	if (smart_drag_on) {
 		if (!mouse_is_down) {
 			LeftDn();
-			mouse_is_down = TRUE;
+			mouse_is_down = true;
 			tick_count = 0;
 			playTickSound();
 		}
 		else if (mouse_is_down) {
 			LeftUp();
-			mouse_is_down = FALSE;
+			mouse_is_down = false;
 			tick_count = max_ticks;
 		}
 	}
@@ -310,34 +309,34 @@ KMouseTool::~KMouseTool()
 // these should be moved to a separate file.
 void LeftClick()
 {
-	XTestFakeButtonEvent(display, 1, TRUE, 0);
-	XTestFakeButtonEvent(display, 1, FALSE, 0);
+	XTestFakeButtonEvent(display, 1, true, 0);
+	XTestFakeButtonEvent(display, 1, false, 0);
 }
 
 void DoubleClick()
 {
-	XTestFakeButtonEvent(display, 1, TRUE, 0);
-	XTestFakeButtonEvent(display, 1, FALSE, 100);
-	XTestFakeButtonEvent(display, 1, TRUE, 200);
-	XTestFakeButtonEvent(display, 1, FALSE, 300);
+	XTestFakeButtonEvent(display, 1, true, 0);
+	XTestFakeButtonEvent(display, 1, false, 100);
+	XTestFakeButtonEvent(display, 1, true, 200);
+	XTestFakeButtonEvent(display, 1, false, 300);
 }
 
 void RightClick()
 {
-	XTestFakeButtonEvent(display, 3, TRUE, 0);
-	XTestFakeButtonEvent(display, 3, FALSE, 0);
+	XTestFakeButtonEvent(display, 3, true, 0);
+	XTestFakeButtonEvent(display, 3, false, 0);
 }
 
 
 void LeftDn()
 {
-	XTestFakeButtonEvent(display, 1, TRUE, 0);
+	XTestFakeButtonEvent(display, 1, true, 0);
 }
 
 
 void LeftUp()
 {
-	XTestFakeButtonEvent(display, 1, FALSE, 0);
+	XTestFakeButtonEvent(display, 1, false, 0);
 }
 
 
