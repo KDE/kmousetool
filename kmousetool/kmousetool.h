@@ -33,10 +33,7 @@
 #include "mtstroke.h"
 #include "ui_kmousetoolui.h"
 
-class QLineEdit;
 class QLabel;
-class QCheckBox;
-class QPushButton;
 class QAction;
 class KAudioPlayer;
 class KAboutApplicationDialog;
