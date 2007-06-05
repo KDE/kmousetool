@@ -33,9 +33,9 @@ class Pt {
 
   public:
   int x,y;
-  Pt () { } ;
-  Pt (const int xx, const int yy) { x=xx; y=yy; };
-  bool sameAs(Pt pt) { return (x==pt.x&&y==pt.y); };
+  Pt () { } 
+  Pt (const int xx, const int yy) { x=xx; y=yy; }
+  bool sameAs(Pt pt) { return (x==pt.x&&y==pt.y); }
   bool nearTo(Pt pt, int delta) { return ( (abs(x-pt.x)<delta) && (abs(y-pt.y)<delta) ); }
 
   void dump();
@@ -77,10 +77,10 @@ public:
   // min points before it can be considered a "stroke"  
   static const int min_num_points;
 
-  static void setLowerLeft (int x, int y) { LowerLeft.x  = x;  LowerLeft.y  = y; };
-  static void setLowerRight(int x, int y) { LowerRight.x = x;  LowerRight.y = y; };
-  static void setUpperLeft (int x, int y) { UpperLeft.x  = x;  UpperLeft.y  = y; };
-  static void setUpperRight(int x, int y) { UpperRight.x = x;  UpperRight.y = y; };
+  static void setLowerLeft (int x, int y) { LowerLeft.x  = x;  LowerLeft.y  = y; }
+  static void setLowerRight(int x, int y) { LowerRight.x = x;  LowerRight.y = y; }
+  static void setUpperLeft (int x, int y) { UpperLeft.x  = x;  UpperLeft.y  = y; }
+  static void setUpperRight(int x, int y) { UpperRight.x = x;  UpperRight.y = y; }
   
   void dump();
   void scale();
