@@ -34,24 +34,20 @@ static const char description[] =
 // INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
 
 
-static KCmdLineOptions options[] =
-{
-    KCmdLineLastOption
-    // INSERT YOUR COMMANDLINE OPTIONS HERE
-};
-
 int main(int argc, char *argv[])
 {
-    KAboutData aboutData( "kmousetool", I18N_NOOP("KMouseTool"),
-    KMOUSETOOL_VERSION, description, KAboutData::License_GPL,
-    "(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt", 0, "http://www.mousetool.com", "gunnar@schmi-dt.de");
+    KAboutData aboutData( "kmousetool", 0, ki18n("KMouseTool"),
+    KMOUSETOOL_VERSION, ki18n(description), KAboutData::License_GPL,
+    ki18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt"), KLocalizedString(), "http://www.mousetool.com", "gunnar@schmi-dt.de");
 
-    aboutData.addAuthor("Gunnar Schmi Dt", I18N_NOOP("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
-    aboutData.addAuthor("Olaf Schmidt", I18N_NOOP("Usability improvements"), "ojschmidt@kde.org");
-    aboutData.addAuthor("Jeff Roush", I18N_NOOP("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
+    aboutData.addAuthor(ki18n("Gunnar Schmi Dt"), ki18n("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
+    aboutData.addAuthor(ki18n("Olaf Schmidt"), ki18n("Usability improvements"), "ojschmidt@kde.org");
+    aboutData.addAuthor(ki18n("Jeff Roush"), ki18n("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
 
-    aboutData.addCredit("Joe Betts");
+    aboutData.addCredit(ki18n("Joe Betts"));
     KCmdLineArgs::init( argc, argv, &aboutData );
+
+    KCmdLineOptions options;
     KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
     KUniqueApplication::addCmdLineOptions();
         
