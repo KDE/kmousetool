@@ -19,6 +19,6 @@ install(TARGETS kmousetool  DESTINATION ${BIN_INSTALL_DIR} )
 
 ########### install files ###############
 
-install( FILES kmousetool.desktop  DESTINATION  ${XDG_APPS_DIR} )
+install( FILES kmousetool.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES mousetool_tap.wav  DESTINATION  ${DATA_INSTALL_DIR}/kmousetool/sounds )
 
