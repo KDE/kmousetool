@@ -41,7 +41,7 @@ class KMouseToolTray;
 
 namespace Phonon
 {
-      class AudioPlayer;
+      class MediaObject;
 }
 
 /**
@@ -77,7 +77,7 @@ private:
 	QString rcfilename;
 	QString appfilename;
 	QString	mSoundFileName;
-	Phonon::AudioPlayer *mplayer;
+	Phonon::MediaObject *mplayer;
 	KMouseToolTray *trayIcon;
 
 	KAboutApplicationDialog *aboutDlg;

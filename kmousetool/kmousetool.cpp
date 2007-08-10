@@ -54,7 +54,7 @@
 #include <knuminput.h>
 #include <kmenu.h>
 #include <kaboutapplicationdialog.h>
-#include <phonon/audioplayer.h>
+#include <Phonon/MediaObject>
 #include <netwm.h>
 #include <kapplication.h>
 #include <iostream>
@@ -100,7 +100,8 @@ void KMouseTool::init_vars()
 	// If the ~/.mousetool directory doesn't exist, create it
 //	mSoundFileName = QDir::homePath();
 	mSoundFileName = KStandardDirs::locate("appdata", "sounds/mousetool_tap.wav");
-	mplayer = new Phonon::AudioPlayer(Phonon::AccessibilityCategory, this);
+	mplayer = Phonon::createPlayer(Phonon::AccessibilityCategory);
+	mplayer->setParent(this);
 
 	// find application file
 	appfilename = KStandardDirs::locate("exe", "kmousetool");
@@ -229,7 +230,8 @@ void KMouseTool::playTickSound()
 	if (!playSound)
 	return;
 
-	mplayer->play(mSoundFileName);
+	mplayer->setCurrentSource(mSoundFileName);
+	mplayer->play();
 	// This is a bit slow.
 //	KAudioPlayer::play(mSoundFileName);
 	return;
