@@ -185,7 +185,7 @@ public:
 	/**
 	 *  construtor
 	 */
-	KMouseTool(QWidget* parent=0, const char *name=0);
+	explicit KMouseTool(QWidget* parent=0, const char *name=0);
 
 	/** destructor */
 	~KMouseTool();
@@ -195,7 +195,7 @@ class KMouseToolTray : public KSystemTrayIcon {
         Q_OBJECT
 	QAction* startStopAct;
 public:
-	KMouseToolTray (QWidget *parent=0, const char *name=0);
+	explicit KMouseToolTray (QWidget *parent=0, const char *name=0);
 	~KMouseToolTray();
 
 	void updateStartStopText (bool mousetool_is_running);
