@@ -246,7 +246,7 @@ bool MTStroke::writeSequence()
   outfile << "\n";
   outfile << "# For each stroke recognized, provide an integer describing an action\n";
   outfile << "# KMouseTool can take.  At the moment, valid actions are:\n";
-  outfile << "# -1     Don't click\n";
+  outfile << "# -1     Do not click\n";
   outfile << "#  1     Normal click (use Smart Drag if that's enabled)\n";
   outfile << "#  2     Right  click\n";
   outfile << "#  3     Double click\n";
