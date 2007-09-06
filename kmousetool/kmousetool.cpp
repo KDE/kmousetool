@@ -19,7 +19,6 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "kmousetool.h"
 #include "Xmd_kmousetool.h"
 #include "kmousetool.moc"
@@ -31,21 +30,20 @@
 #include <X11/extensions/XTest.h>    /* Standard Name-String definitions*/
 #include <kdialog.h>
 #include <klocale.h>
-#include <QPushButton>
-#include <qpoint.h>
-#include <qnamespace.h>
-//Added by qt3to4:
-#include <QPixmap>
-#include <QTimerEvent>
-#include <QDesktopWidget>
+#include <QtGui/QPushButton>
+#include <QtCore/QPoint>
+#include <QtCore/qnamespace.h>
+#include <QtGui/QPixmap>
+#include <QtCore/QTimerEvent>
+#include <QtGui/QDesktopWidget>
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
-#include <qsound.h>
+#include <QtGui/QSound>
 #include <kglobalsettings.h>
 #include <kdebug.h>
-#include <QLayout>
-#include <QLineEdit>
-#include <QCheckBox>
+#include <QtGui/QLayout>
+#include <QtGui/QLineEdit>
+#include <QtGui/QCheckBox>
 #include <ksystemtrayicon.h>
 #include <kicon.h>
 #include <kiconloader.h>
@@ -58,7 +56,7 @@
 #include <netwm.h>
 #include <kapplication.h>
 #include <iostream>
-#include <QAbstractEventDispatcher>
+#include <QtCore/QAbstractEventDispatcher>
 #include <ktoolinvocation.h>
 #include <kglobal.h>
 

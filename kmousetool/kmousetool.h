@@ -22,14 +22,14 @@
 #ifndef KMOUSETOOL_H
 #define KMOUSETOOL_H
 
-#include <QDir>
-#include <QLabel>
-#include <QTimerEvent>
+#include <QtCore/QDir>
+#include <QtGui/QLabel>
+#include <QtCore/QTimerEvent>
+#include <QtGui/QWidget>
 
 #include "version.h"
 
 #include <ksystemtrayicon.h>
-#include <qwidget.h>
 #include "mtstroke.h"
 #include "ui_kmousetoolui.h"
 

@@ -23,7 +23,7 @@
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
 #include <QtDBus/QtDBus>
-#include <QMessageBox>
+#include <QtGui/QMessageBox>
 #include <kconfig.h>
 #include <kglobal.h>
 
