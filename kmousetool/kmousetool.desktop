@@ -3,7 +3,7 @@
 Type=Application
 Exec=kmousetool -caption "%c" %i
 Icon=kmousetool
-DocPath=kmousetool/index.html
+X-DocPath=kmousetool/index.html
 Comment=Clicks the mouse for you, reducing the effects of RSI
 Comment[ar]=ينقر على الفأرة بدلاً عنك، مُخَفِّفاً عنك تأثيرات RSI
 Comment[bg]=Автоматично щракване с бутона на мишката
