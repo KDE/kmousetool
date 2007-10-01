@@ -640,11 +640,11 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 
 	if (mousetool_is_running) {
                 startStopAct->setText(i18n("&Stop"));
-		icon = KIconLoader::global()->loadIcon("kmousetool_on", K3Icon::Small);
+		icon = KIconLoader::global()->loadIcon("kmousetool_on", KIconLoader::Small);
 	}
 	else {
                 startStopAct->setText(i18n("&Start"));
-		icon = KIconLoader::global()->loadIcon("kmousetool_off", K3Icon::Small);
+		icon = KIconLoader::global()->loadIcon("kmousetool_off", KIconLoader::Small);
 	}
 	setIcon (icon);
 	show();
