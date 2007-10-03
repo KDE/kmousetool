@@ -25,6 +25,7 @@
 #include <QtDBus/QtDBus>
 #include <QtGui/QMessageBox>
 #include <kconfig.h>
+#include <kconfiggroup.h>
 #include <kglobal.h>
 
 #include "kmousetool.h"
@@ -68,7 +69,7 @@ int main(int argc, char *argv[])
 
     KMouseTool *kmousetool = new KMouseTool();
 
-    if (!KGlobal::config()->readEntry("IsMinimized", false))
+    if (!KGlobal::config()->group("UserOptions").readEntry("IsMinimized", false))
         kmousetool->show();
 
     return a.exec();

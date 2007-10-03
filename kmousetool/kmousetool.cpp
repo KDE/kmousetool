@@ -20,6 +20,7 @@
  ***************************************************************************/
 
 #include "kmousetool.h"
+#include <QTextStream>
 #include "Xmd_kmousetool.h"
 #include "kmousetool.moc"
 #include "mtstroke.h"
