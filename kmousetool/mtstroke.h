@@ -24,6 +24,7 @@
 #include <map>
 #include <string>
 #include <cstdlib>
+#include <cmath>
 
 /**Implements stroke recording for MouseTool.
   *@author Jeff Roush
@@ -36,7 +37,7 @@ class Pt {
   Pt () { } 
   Pt (const int xx, const int yy) { x=xx; y=yy; }
   bool sameAs(Pt pt) { return (x==pt.x&&y==pt.y); }
-  bool nearTo(Pt pt, int delta) { return ( (abs(x-pt.x)<delta) && (abs(y-pt.y)<delta) ); }
+  bool nearTo(Pt pt, int delta) { return ( (std::abs(x-pt.x)<delta) && (std::abs(y-pt.y)<delta) ); }
 
   void dump();
 };

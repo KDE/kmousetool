@@ -58,7 +58,7 @@ MTStroke::~MTStroke(){
 }
 
 // add the new point, but only if it's not the same as the previous point.
-void MTStroke::addPt(const int x, const int y)
+void MTStroke::addPt(int x, int y)
 {
   if (points.size()==0) {
     points.push_back(Pt(x,y));
@@ -195,7 +195,7 @@ bool MTStroke::readSequence()
     writeSequence();
     return false;
   }
-  ifstream infile (strokefilename.toAscii());
+  ifstream infile (strokefilename.toAscii().constData());
   if (!infile) {
     // make default
     if (sequenceMap.size()==0)
