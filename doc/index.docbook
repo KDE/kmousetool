@@ -315,7 +315,7 @@ easily scraped off with a flat blade or with a fingernail.  </para>
 </question>
 <answer>
 <para>In some rare situations, the system suspends &kmousetool; when a drag
-starts; if you are using Smart Drag, this means thar &kmousetool; can never finish the drag by
+starts; if you are using Smart Drag, this means that &kmousetool; can never finish the drag by
 clicking up.</para>
 <para>
 This happens when you use &kmousetool; under a non &kde; window manager and then
