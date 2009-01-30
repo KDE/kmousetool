@@ -79,7 +79,7 @@ void MTStroke::addPt(int x, int y)
 bool MTStroke::pointsContain(Pt pt)
 {
   std::vector<Pt>::iterator pos;
-  for (pos=points.begin(); pos<points.end(); pos++) {
+  for (pos=points.begin(); pos<points.end(); ++pos) {
     if (pt.x==pos->x && pt.y==pos->y)
       return true;
   }
@@ -133,7 +133,7 @@ void MTStroke::scale()
   int scale = (int) delta/2;
 
   std::vector<Pt>::iterator pos;
-  for (pos=points.begin(); pos<points.end(); pos++) {
+  for (pos=points.begin(); pos<points.end(); ++pos) {
 
       // add an extra (scale/2) because the divide rounds _down_, and we want to
       // round _up_ or _down_, depending on which is closer.
@@ -170,7 +170,7 @@ void MTStroke::getExtent()
   stroke_maxy = 0;
 
   std::vector<Pt>::iterator pos;
-  for (pos=points.begin(); pos<points.end(); pos++) {
+  for (pos=points.begin(); pos<points.end(); ++pos) {
     if (stroke_minx > pos->x)
       stroke_minx   =  pos->x;
     if (stroke_maxx < pos->x)
