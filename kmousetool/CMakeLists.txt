@@ -12,7 +12,7 @@ kde4_add_ui_files(kmousetool_SRCS kmousetoolui.ui )
 
 kde4_add_executable(kmousetool ${kmousetool_SRCS})
 
-target_link_libraries(kmousetool  ${KDE4_KDEUI_LIBS} ${X11_XTest_LIB} ${X11_Xext_LIB} ${KDE4_PHONON_LIBS})
+target_link_libraries(kmousetool  ${KDE4_KDEUI_LIBS} ${X11_XTest_LIB} ${X11_Xext_LIB} ${X11_LIBRARIES} ${KDE4_PHONON_LIBS})
 
 install(TARGETS kmousetool  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
