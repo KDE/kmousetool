@@ -45,13 +45,13 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(ki18n("Jeff Roush"), ki18n("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
 
     aboutData.addCredit(ki18n("Joe Betts"));
+    aboutData.setOrganizationDomain("kde.org");
     KCmdLineArgs::init( argc, argv, &aboutData );
 
     KCmdLineOptions options;
     KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
     KUniqueApplication::addCmdLineOptions();
         
-    KUniqueApplication::setOrganizationDomain("kde.org");
     KUniqueApplication::setApplicationName("kmousetool");
 
     if (!KUniqueApplication::start()) {
