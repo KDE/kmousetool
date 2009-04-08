@@ -108,9 +108,6 @@ void KMouseTool::init_vars()
 	// find the user's autostart directory
 	autostartdirname = KGlobalSettings::autostartPath();
 
-	// SimpleSoundServer server(Reference("global:Arts_SimpleSoundServer"));
-//	sound_server(Reference("global:Arts_SimpleSoundServer"));
-
 	QDesktopWidget *d = QApplication::desktop();
 	int w = d->width();
 	int h = d->height();
@@ -231,28 +228,7 @@ void KMouseTool::playTickSound()
 
 	mplayer->setCurrentSource(mSoundFileName);
 	mplayer->play();
-	// This is a bit slow.
-//	KAudioPlayer::play(mSoundFileName);
-	return;
 
-	// the solution seems to be to use MCOP,
-	// but SimpleSoundServer is not cooperating
-
-	// When using the following code, make sure to link with
-	// Put " -lsoundserver_idl" in the linker options in KDevelop.
-
-//  SimpleSoundServer server = SimpleSoundServer::_fromString("global:Arts_SimpleSoundServer");
-//	SimpleSoundServer *ss = new SimpleSoundServer(Reference("global:Arts_SimpleSoundServer"));
-//	SimpleSoundServer sound_server2(Reference("global:Arts_SimpleSoundServer"));
-
-//	if(sound_server.isNull())
-//		return;
-//	sound_server.play(mSoundFileName.toLatin1());
-
-	// Another approach is to try using QSound.
-	// QSound depends on Network Audio Server, which doesn't seem to work on my Debian Woody system.
-	// I haven't spent much time working on it, though.
-//	QSound::play(mSoundFileName);
 }
 
 KMouseTool::KMouseTool(QWidget *parent, const char *name) :
