@@ -55,14 +55,8 @@ int main(int argc, char *argv[])
     KUniqueApplication::setApplicationName("kmousetool");
 
     if (!KUniqueApplication::start()) {
-        QDBusInterface iface("org.kde.kmousetool", "/org/kde/KMouseToolUI", "org.kde.KMouseToolUI");
-        QDBusReply<bool> reply = iface.call("show");
-        if (reply)
-            reply = iface.call("raise");
-        if (!reply) {
-            fprintf(stderr, "The DBUS calls to running KMouseTool failed.\n");
+            fprintf(stderr, "KMouseTool is already running !\n");
             exit(0);
-        }
     }
     KUniqueApplication a;
 
