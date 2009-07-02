@@ -383,7 +383,7 @@ void KMouseTool::setAutostart (bool start)
 	}
 	else {
 	if (fi.exists()) 			// if it exists, delete it
-		cmd = QString("rm -f %s").arg(sym);
+		cmd = QString("rm -f %1").arg(sym);
 	}
 	system(cmd.toAscii());
 }
