@@ -29,7 +29,7 @@
 
 #include "version.h"
 
-#include <ksystemtrayicon.h>
+#include <knotificationitem.h>
 #include "mtstroke.h"
 #include "ui_kmousetoolui.h"
 
@@ -191,11 +191,10 @@ public:
 	~KMouseTool();
 };
 
-class KMouseToolTray : public KSystemTrayIcon {
+class KMouseToolTray : public Experimental::KNotificationItem {
         Q_OBJECT
-	QAction* startStopAct;
 public:
-	explicit KMouseToolTray (QWidget *parent=0, const char *name=0);
+	explicit KMouseToolTray (QWidget *parent=0);
 	~KMouseToolTray();
 
 	void updateStartStopText (bool mousetool_is_running);
@@ -204,5 +203,8 @@ signals:
 	void configureSelected();
 	void aboutSelected();
 	void helpSelected();
+private:
+        QAction* startStopAct;
+
 };
 #endif

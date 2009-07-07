@@ -265,7 +265,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) :
 	mousetool_just_started = true;
 
 	startTimer(100);
-	trayIcon = new KMouseToolTray (this, "systemTrayIcon");
+	trayIcon = new KMouseToolTray (this);
 	updateStartStopText ();
 	connect(trayIcon, SIGNAL(startStopSelected()), this, SLOT(startStopSelected()));
 	connect(trayIcon, SIGNAL(configureSelected()), this, SLOT(configureSelected()));
@@ -592,10 +592,8 @@ void KMouseTool::aboutSelected()
 
 
 
-KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTrayIcon (parent)
+KMouseToolTray::KMouseToolTray (QWidget *parent) : Experimental::KNotificationItem(parent)
 {
-	setObjectName(name);
-
 	startStopAct = contextMenu()->addAction (i18nc("Start tracking the mouse", "&Start"), this, SIGNAL(startStopSelected()));
 	contextMenu()->addSeparator();
         QAction* act;
@@ -623,6 +621,5 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
                 startStopAct->setText(i18nc("Start tracking the mouse", "&Start"));
 		icon = KIconLoader::global()->loadIcon("kmousetool_off", KIconLoader::Small);
 	}
-	setIcon (icon);
-	show();
+	setIconByPixmap (icon);
 }
