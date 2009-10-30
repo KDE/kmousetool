@@ -29,7 +29,7 @@
 
 #include "version.h"
 
-#include <KNotificationItem>
+#include <KStatusNotifierItem>
 #include "mtstroke.h"
 #include "ui_kmousetoolui.h"
 
@@ -191,7 +191,7 @@ public:
 	~KMouseTool();
 };
 
-class KMouseToolTray : public KNotificationItem {
+class KMouseToolTray : public KStatusNotifierItem {
         Q_OBJECT
 public:
 	explicit KMouseToolTray (QWidget *parent=0);

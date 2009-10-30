@@ -592,9 +592,9 @@ void KMouseTool::aboutSelected()
 
 
 
-KMouseToolTray::KMouseToolTray (QWidget *parent) : KNotificationItem(parent)
+KMouseToolTray::KMouseToolTray (QWidget *parent) : KStatusNotifierItem(parent)
 {
-	setStatus(KNotificationItem::Active);
+	setStatus(KStatusNotifierItem::Active);
 	startStopAct = contextMenu()->addAction (i18nc("Start tracking the mouse", "&Start"), this, SIGNAL(startStopSelected()));
 	contextMenu()->addSeparator();
         QAction* act;
