@@ -96,7 +96,7 @@ SOFTWARE.
 
 /*
  * Bitfield suffixes for the protocol structure elements, if you
- * need them.  Note that bitfields are not guarranteed to be signed
+ * need them.  Note that bitfields are not guaranteed to be signed
  * (or even unsigned) according to ANSI C.
  */
 #ifdef WORD64
