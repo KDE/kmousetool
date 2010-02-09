@@ -32,8 +32,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2006-05-20</date>
-<releaseinfo>1.12</releaseinfo>
+<date>2009-12-19</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
 
 <abstract>
 <para>
@@ -169,6 +169,7 @@ can be modified afterwards.)
 	 Plays a sound when &kmousetool; clicks down.  This helps, especially
          with Smart Drag.
 	  </para>
+	  <!-- not in kde4
 	  <para>
 	 If the sound seems delayed, you can have &kde; speed it up.
 	 To do this open the &kcontrolcenter;, click on
@@ -179,6 +180,7 @@ can be modified afterwards.)
 	 time)</guilabel> adjustment; 
 	 slide this towards the lower number to speed up the audio
 	 response time.</para>
+	 -->
         </listitem>
       </varlistentry>
       <varlistentry>
