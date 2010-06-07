@@ -70,11 +70,15 @@ int currentYPosition;
 
 #undef long
 
+int leftButton;
+int rightButton;
+
 /**
 * Gnarly X functions
 */
 void queryPointer(Window *pidRoot, int *pnRx, int *pnRy, int *pnX, int *pnY, unsigned int *puMask);
 int CursorHasMoved(int minMovement);
+void getMouseButtons();
 void LeftClick();
 void RightClick();
 void DoubleClick();
@@ -173,6 +177,7 @@ void KMouseTool::timerEvent( QTimerEvent * )
 	// If the mouse has paused ...
 	if (tick_count==dwell_time) {
 		int strokeType = stroke.getStrokeType();
+		getMouseButtons();
 
 		// if we're dragging the mouse, ignore stroke type
 		if (mouse_is_down) {
@@ -284,36 +289,59 @@ KMouseTool::~KMouseTool()
 // Raw X functions
 // Begin mouse monitoring and event generation code.
 // these should be moved to a separate file.
+void getMouseButtons()
+{
+	unsigned char buttonMap[3];
+	const int buttonCount = XGetPointerMapping(display, buttonMap, 3);
+	switch (buttonCount)
+	{
+	case 0:
+	case 1:
+		// ### should not happen
+		leftButton = 1;
+		rightButton = 1;
+		break;
+	case 2:
+		leftButton = buttonMap[0];
+		rightButton = buttonMap[1];
+		break;
+	default:
+		leftButton = buttonMap[0];
+		rightButton = buttonMap[2];
+		break;
+	}
+}
+
 void LeftClick()
 {
-	XTestFakeButtonEvent(display, 1, true, 0);
-	XTestFakeButtonEvent(display, 1, false, 0);
+	XTestFakeButtonEvent(display, leftButton, true, 0);
+	XTestFakeButtonEvent(display, leftButton, false, 0);
 }
 
 void DoubleClick()
 {
-	XTestFakeButtonEvent(display, 1, true, 0);
-	XTestFakeButtonEvent(display, 1, false, 100);
-	XTestFakeButtonEvent(display, 1, true, 200);
-	XTestFakeButtonEvent(display, 1, false, 300);
+	XTestFakeButtonEvent(display, leftButton, true, 0);
+	XTestFakeButtonEvent(display, leftButton, false, 100);
+	XTestFakeButtonEvent(display, leftButton, true, 200);
+	XTestFakeButtonEvent(display, leftButton, false, 300);
 }
 
 void RightClick()
 {
-	XTestFakeButtonEvent(display, 3, true, 0);
-	XTestFakeButtonEvent(display, 3, false, 0);
+	XTestFakeButtonEvent(display, rightButton, true, 0);
+	XTestFakeButtonEvent(display, rightButton, false, 0);
 }
 
 
 void LeftDn()
 {
-	XTestFakeButtonEvent(display, 1, true, 0);
+	XTestFakeButtonEvent(display, leftButton, true, 0);
 }
 
 
 void LeftUp()
 {
-	XTestFakeButtonEvent(display, 1, false, 0);
+	XTestFakeButtonEvent(display, leftButton, false, 0);
 }
 
 
