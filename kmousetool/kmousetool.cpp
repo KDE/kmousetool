@@ -30,18 +30,18 @@
 #include <X11/extensions/XTest.h>    /* Standard Name-String definitions*/
 #include <kdialog.h>
 #include <klocale.h>
-#include <qpushbutton.h>
-#include <qpoint.h>
-#include <qnamespace.h>
+#include <tqpushbutton.h>
+#include <tqpoint.h>
+#include <tqnamespace.h>
 #include <kmessagebox.h>
 #include <kaudioplayer.h>
 #include <kstandarddirs.h>
-#include <qsound.h>
+#include <tqsound.h>
 #include <kglobalsettings.h>
 #include <kdebug.h>
-#include <qlayout.h>
-#include <qlineedit.h>
-#include <qcheckbox.h>
+#include <tqlayout.h>
+#include <tqlineedit.h>
+#include <tqcheckbox.h>
 #include <ksystemtray.h>
 #include <kiconloader.h>
 #include <kpushbutton.h>
@@ -93,7 +93,7 @@ void KMouseTool::init_vars()
 	loadOptions();
 
 	// If the ~/.mousetool directory doesn't exist, create it
-//	mSoundFileName = QDir::homeDirPath();
+//	mSoundFileName = TQDir::homeDirPath();
 	mSoundFileName = locate("appdata", "sounds/mousetool_tap.wav");
 	mplayer = new KAudioPlayer(mSoundFileName);
 
@@ -107,7 +107,7 @@ void KMouseTool::init_vars()
 	// SimpleSoundServer server(Reference("global:Arts_SimpleSoundServer"));
 //	sound_server(Reference("global:Arts_SimpleSoundServer"));
 
-	QDesktopWidget *d = QApplication::desktop();
+	TQDesktopWidget *d = TQApplication::desktop();
 	int w = d->width();
 	int h = d->height();
 	MTStroke::setUpperLeft(0,0);
@@ -141,7 +141,7 @@ void KMouseTool::setDefaultSettings()
 }
 
 
-void KMouseTool::timerEvent( QTimerEvent * )
+void KMouseTool::timerEvent( TQTimerEvent * )
 {
 	if (!mousetool_is_running)
 		return;
@@ -244,39 +244,39 @@ void KMouseTool::playTickSound()
 //		return;
 //	sound_server.play(mSoundFileName.latin1());
 
-	// Another approach is to try using QSound.
-	// QSound depends on Network Audio Server, which doesn't seem to work on my Debian Woody system.
+	// Another approach is to try using TQSound.
+	// TQSound depends on Network Audio Server, which doesn't seem to work on my Debian Woody system.
 	// I haven't spent much time working on it, though.
-//	QSound::play(mSoundFileName);
+//	TQSound::play(mSoundFileName);
 }
 
-KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent, name)
+KMouseTool::KMouseTool(TQWidget *parent, const char *name) : KMouseToolUI(parent, name)
 {
 	init_vars();
 	resetSettings();
 
-	connect(movementEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
-	connect(dwellTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
-	connect(dragTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
-	connect(cbDrag, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-	connect(cbStroke, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-	connect(cbClick, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-	connect(cbStart, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+	connect(movementEdit, TQT_SIGNAL(valueChanged(int)), this, TQT_SLOT(settingsChanged()));
+	connect(dwellTimeEdit, TQT_SIGNAL(valueChanged(int)), this, TQT_SLOT(settingsChanged()));
+	connect(dragTimeEdit, TQT_SIGNAL(valueChanged(int)), this, TQT_SLOT(settingsChanged()));
+	connect(cbDrag, TQT_SIGNAL(stateChanged(int)), this, TQT_SLOT(settingsChanged()));
+	connect(cbStroke, TQT_SIGNAL(stateChanged(int)), this, TQT_SLOT(settingsChanged()));
+	connect(cbClick, TQT_SIGNAL(stateChanged(int)), this, TQT_SLOT(settingsChanged()));
+	connect(cbStart, TQT_SIGNAL(stateChanged(int)), this, TQT_SLOT(settingsChanged()));
 
-	connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
+	connect(buttonStartStop, TQT_SIGNAL(clicked()), this, TQT_SLOT(startStopSelected()));
 	buttonDefault->setGuiItem(KStdGuiItem::defaults());
-	connect(buttonDefault, SIGNAL(clicked()), this, SLOT(defaultSelected()));
-	connect(buttonReset, SIGNAL(clicked()), this, SLOT(resetSelected()));
+	connect(buttonDefault, TQT_SIGNAL(clicked()), this, TQT_SLOT(defaultSelected()));
+	connect(buttonReset, TQT_SIGNAL(clicked()), this, TQT_SLOT(resetSelected()));
 	buttonApply->setGuiItem(KStdGuiItem::apply());
-	connect(buttonApply, SIGNAL(clicked()), this, SLOT(applySelected()));
+	connect(buttonApply, TQT_SIGNAL(clicked()), this, TQT_SLOT(applySelected()));
 	buttonHelp->setGuiItem(KStdGuiItem::help());
-	connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
+	connect(buttonHelp, TQT_SIGNAL(clicked()), this, TQT_SLOT(helpSelected()));
 	buttonClose->setGuiItem(KStdGuiItem::close());
-	connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
+	connect(buttonClose, TQT_SIGNAL(clicked()), this, TQT_SLOT(closeSelected()));
 #if KDE_VERSION >= KDE_MAKE_VERSION (3,1,90)
 	buttonQuit->setGuiItem(KStdGuiItem::quit());
 #endif // KDE 3.2
-	connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
+	connect(buttonQuit, TQT_SIGNAL(clicked()), this, TQT_SLOT(quitSelected()));
 
 	// When we first start, it's nice to not click immediately.
 	// So, tell MT we're just starting
@@ -285,11 +285,11 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) : KMouseToolUI(parent,
 	startTimer(100);
 	trayIcon = new KMouseToolTray (this, "systemTrayIcon");
 	updateStartStopText ();
-	connect(trayIcon, SIGNAL(startStopSelected()), this, SLOT(startStopSelected()));
-	connect(trayIcon, SIGNAL(configureSelected()), this, SLOT(configureSelected()));
-	connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
-	connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
-	connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
+	connect(trayIcon, TQT_SIGNAL(startStopSelected()), this, TQT_SLOT(startStopSelected()));
+	connect(trayIcon, TQT_SIGNAL(configureSelected()), this, TQT_SLOT(configureSelected()));
+	connect(trayIcon, TQT_SIGNAL(aboutSelected()), this, TQT_SLOT(aboutSelected()));
+	connect(trayIcon, TQT_SIGNAL(helpSelected()), this, TQT_SLOT(helpSelected()));
+	connect(trayIcon, TQT_SIGNAL(quitSelected()), this, TQT_SLOT(quitSelected()));
 
 	aboutDlg = new KAboutApplication (0, "KMouseToolDlg", false);
 }
@@ -381,19 +381,19 @@ int CursorHasMoved (int minMovement)
 
 bool KMouseTool::isAutostart()
 {
-	QString sym = autostartdirname;
+	TQString sym = autostartdirname;
 	sym += "kmousetool";			// sym is now full path to symlink
-	QFileInfo fi(sym);
+	TQFileInfo fi(sym);
 
 	return fi.exists();
 }
 
 void KMouseTool::setAutostart (bool start)
 {
-	QString sym = autostartdirname;
+	TQString sym = autostartdirname;
 	sym += "kmousetool";			// sym is now full path to symlink
-	QFileInfo fi(sym);
-	QString cmd;
+	TQFileInfo fi(sym);
+	TQString cmd;
 
 	if (start) {
 		if (!fi.exists())  			// if it doesn't exist, make it
@@ -448,7 +448,7 @@ void KMouseTool::loadOptions()
 	min_movement = kapp->config()->readNumEntry("Movement",5);
 	strokesEnabled = kapp->config()->readBoolEntry("strokesEnabled",false);
 
-	QPoint p;
+	TQPoint p;
 	int x = kapp->config()->readNumEntry("x",0);
 	int y = kapp->config()->readNumEntry("y",0);
 	p.setX(x);
@@ -462,7 +462,7 @@ void KMouseTool::loadOptions()
 // Save options to kmousetoolrc file
 void KMouseTool::saveOptions()
 {
-	QPoint p = pos();
+	TQPoint p = pos();
 	int x = p.x();
 	int y = p.y();
 
@@ -608,17 +608,17 @@ void KMouseTool::aboutSelected()
 
 
 
-KMouseToolTray::KMouseToolTray (QWidget *parent, const char *name) : KSystemTray (parent, name)
+KMouseToolTray::KMouseToolTray (TQWidget *parent, const char *name) : KSystemTray (parent, name)
 {
-	startStopId = contextMenu()->insertItem (i18n("&Start"), this, SIGNAL(startStopSelected()));
+	startStopId = contextMenu()->insertItem (i18n("&Start"), this, TQT_SIGNAL(startStopSelected()));
 	contextMenu()->insertSeparator();
 	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("configure", KIcon::Small),
-	                           i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
+	                           i18n("&Configure KMouseTool..."), this, TQT_SIGNAL(configureSelected()));
 	contextMenu()->insertSeparator();
 	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("contents", KIcon::Small),
-	                           i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
+	                           i18n("KMousetool &Handbook"), this, TQT_SIGNAL(helpSelected()));
 	contextMenu()->insertItem (KGlobal::iconLoader()->loadIcon("kmousetool", KIcon::Small),
-	                           i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
+	                           i18n("&About KMouseTool"), this, TQT_SIGNAL(aboutSelected()));
 }
 
 KMouseToolTray::~KMouseToolTray() {
@@ -626,7 +626,7 @@ KMouseToolTray::~KMouseToolTray() {
 
 void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 {
-	QPixmap icon;
+	TQPixmap icon;
 
 	if (mousetool_is_running) {
 		contextMenu()->changeItem (startStopId, i18n("&Stop"));

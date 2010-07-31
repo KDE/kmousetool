@@ -23,7 +23,7 @@
 
 // these are for locating the stroke information file
 #include <kstandarddirs.h>
-#include <qstring.h>
+#include <tqstring.h>
 
 // #include <string>
 
@@ -186,7 +186,7 @@ void MTStroke::getExtent()
 // if unable to create it,
 bool MTStroke::readSequence()
 {
-  QString strokefilename;
+  TQString strokefilename;
   strokefilename = locate("config", "kmousetool_strokes.txt");
   if (strokefilename.isEmpty()) {
     // make default
@@ -222,7 +222,7 @@ bool MTStroke::readSequence()
 
 bool MTStroke::writeSequence()
 {
-  QString strokefilename;
+  TQString strokefilename;
   strokefilename = locateLocal("config", "kmousetool_strokes.txt");
 
   ofstream outfile (strokefilename.ascii(), ios::out);

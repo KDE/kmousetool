@@ -22,7 +22,7 @@
 #ifndef KMOUSETOOL_H
 #define KMOUSETOOL_H
 
-#include <qdir.h>
+#include <tqdir.h>
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
@@ -32,7 +32,7 @@
 
 #include <kapplication.h>
 #include <ksystemtray.h>
-#include <qwidget.h>
+#include <tqwidget.h>
 #include "mtstroke.h"
 #include "kmousetoolui.h"
 
@@ -74,9 +74,9 @@ private:
 	bool moving;
 	bool strokesEnabled;
 
-	QString autostartdirname;
-	QString rcfilename;
-	QString appfilename;
+	TQString autostartdirname;
+	TQString rcfilename;
+	TQString appfilename;
 	QString	mSoundFileName;
 	KAudioPlayer *mplayer;
 	KMouseToolTray *trayIcon;
@@ -175,7 +175,7 @@ public:
 	 * current mouse position to its previous position to see
 	 * whether to send a down click, and up click, or wait.
 	 */
-	void timerEvent (QTimerEvent *e);
+	void timerEvent (TQTimerEvent *e);
 
 	/**
 	 * This generates a normal click event --
@@ -186,7 +186,7 @@ public:
 	/**
 	 *  construtor
 	 */
-	KMouseTool(QWidget* parent=0, const char *name=0);
+	KMouseTool(TQWidget* parent=0, const char *name=0);
 
 	/** destructor */
 	~KMouseTool();
@@ -196,7 +196,7 @@ class KMouseToolTray : public KSystemTray {
         Q_OBJECT
 	int startStopId;
 public:
-	KMouseToolTray (QWidget *parent=0, const char *name=0);
+	KMouseToolTray (TQWidget *parent=0, const char *name=0);
 	~KMouseToolTray();
 
 	void updateStartStopText (bool mousetool_is_running);

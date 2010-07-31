@@ -23,7 +23,7 @@
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
 #include <dcopclient.h>
-#include <qmessagebox.h>
+#include <tqmessagebox.h>
 #include <kconfig.h>
 
 #include "kmousetool.h"
@@ -57,9 +57,9 @@ int main(int argc, char *argv[])
 	if (!KUniqueApplication::start()) {
 		DCOPClient *client = new DCOPClient();
 		client->attach();
-		QByteArray  data;
-		QCString    replyType;
-		QByteArray  replyData;
+		TQByteArray  data;
+		TQCString    replyType;
+		TQByteArray  replyData;
 		if ( !client->call("kmousetool", "qt/KMouseToolUI", "show()",
 					data, replyType, replyData, true) ||
 			!client->call("kmousetool", "qt/KMouseToolUI", "raise()",
