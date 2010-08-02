@@ -36,10 +36,10 @@
 #include "mtstroke.h"
 #include "kmousetoolui.h"
 
-class QLineEdit;
-class QLabel;
-class QCheckBox;
-class QPushButton;
+class TQLineEdit;
+class TQLabel;
+class TQCheckBox;
+class TQPushButton;
 class KAudioPlayer;
 class KAboutApplication;
 class KMouseToolTray;
