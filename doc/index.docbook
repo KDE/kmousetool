@@ -32,8 +32,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2009-12-19</date>
-<releaseinfo>&kde; 4.4</releaseinfo>
+<date>2010-09-15</date>
+<releaseinfo>&kde; 4.5</releaseinfo>
 
 <abstract>
 <para>
@@ -112,7 +112,7 @@ practice, but becomes natural once you get used to it.
 
     <variablelist>
       <varlistentry>
-        <term><guibutton>Start</guibutton>
+	<term><guibutton>Start</guibutton>/<guibutton>Stop</guibutton>
         </term>
         <listitem>
           <para>Starts (or stops) &kmousetool;.</para>
