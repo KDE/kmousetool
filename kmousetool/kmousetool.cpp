@@ -102,12 +102,12 @@ void KMouseTool::init_vars()
 
 	// If the ~/.mousetool directory doesn't exist, create it
 //	mSoundFileName = QDir::homePath();
-	mSoundFileName = KStandardDirs::locate("appdata", "sounds/mousetool_tap.wav");
+	mSoundFileName = KStandardDirs::locate("appdata", QLatin1String( "sounds/mousetool_tap.wav" ));
 	mplayer = Phonon::createPlayer(Phonon::AccessibilityCategory);
 	mplayer->setParent(this);
 
 	// find application file
-	appfilename = KStandardDirs::locate("exe", "kmousetool");
+	appfilename = KStandardDirs::locate("exe", QLatin1String( "kmousetool" ));
 
 	// find the user's autostart directory
 	autostartdirname = KGlobalSettings::autostartPath();
@@ -240,7 +240,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name) :
         QWidget(parent)
 {
         setupUi(this);
-        setObjectName(name);
+        setObjectName( QLatin1String( name ));
 	init_vars();
 	resetSettings();
 
@@ -392,7 +392,7 @@ int CursorHasMoved (int minMovement)
 bool KMouseTool::isAutostart()
 {
 	QString sym = autostartdirname;
-	sym += "kmousetool";			// sym is now full path to symlink
+	sym += QLatin1String( "kmousetool" );			// sym is now full path to symlink
 	QFileInfo fi(sym);
 
 	return fi.exists();
@@ -401,17 +401,17 @@ bool KMouseTool::isAutostart()
 void KMouseTool::setAutostart (bool start)
 {
 	QString sym = autostartdirname;
-	sym += "kmousetool";			// sym is now full path to symlink
+	sym += QLatin1String( "kmousetool" );			// sym is now full path to symlink
 	QFileInfo fi(sym);
 	QString cmd;
 
 	if (start) {
 		if (!fi.exists())  			// if it doesn't exist, make it
-		cmd = QString("ln -s %1 %2").arg(appfilename).arg(autostartdirname);
+		cmd = QString(QLatin1String( "ln -s %1 %2" )).arg(appfilename).arg(autostartdirname);
 	}
 	else {
 	if (fi.exists()) 			// if it exists, delete it
-		cmd = QString("rm -f %1").arg(sym);
+		cmd = QString(QLatin1String( "rm -f %1" )).arg(sym);
 	}
 	system(cmd.toAscii());
 }
@@ -569,7 +569,7 @@ void KMouseTool::closeSelected()
 			i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before closing the configuration window or discard the changes?"),
 			i18n("Closing Configuration Window"),
 			KStandardGuiItem::apply(), KStandardGuiItem::discard(),
-			KStandardGuiItem::cancel(), "AutomaticSave");
+			KStandardGuiItem::cancel(), QLatin1String( "AutomaticSave" ));
 		if (answer == KMessageBox::Yes)
 			applySettings();
 		else if (answer == KMessageBox::No)
@@ -589,7 +589,7 @@ void KMouseTool::quitSelected()
 			i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before quitting KMousetool or discard the changes?"),
 			i18n("Quitting KMousetool"),
 			KStandardGuiItem::apply(), KStandardGuiItem::discard(),
-			KStandardGuiItem::cancel(), "AutomaticSave");
+			KStandardGuiItem::cancel(), QLatin1String( "AutomaticSave" ));
 		if (answer == KMessageBox::Yes)
 			applySettings();
 		if (answer != KMessageBox::Cancel)
@@ -627,12 +627,12 @@ KMouseToolTray::KMouseToolTray (QWidget *parent) : KStatusNotifierItem(parent)
 	contextMenu()->addSeparator();
         QAction* act;
 	act = contextMenu()->addAction (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
-        act->setIcon(KIcon("configure"));
+        act->setIcon(KIcon(QLatin1String( "configure" )));
 	contextMenu()->addSeparator();
 	act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
-        act->setIcon(KIcon("help-contents"));
+        act->setIcon(KIcon(QLatin1String( "help-contents" )));
 	act = contextMenu()->addAction (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
-        act->setIcon(KIcon("kmousetool"));
+        act->setIcon(KIcon(QLatin1String( "kmousetool" )));
 }
 
 KMouseToolTray::~KMouseToolTray() {
@@ -644,11 +644,11 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 
 	if (mousetool_is_running) {
                 startStopAct->setText(i18n("&Stop"));
-		icon = KIconLoader::global()->loadIcon("kmousetool_on", KIconLoader::Small);
+		icon = KIconLoader::global()->loadIcon(QLatin1String( "kmousetool_on" ), KIconLoader::Small);
 	}
 	else {
                 startStopAct->setText(i18nc("Start tracking the mouse", "&Start"));
-		icon = KIconLoader::global()->loadIcon("kmousetool_off", KIconLoader::Small);
+		icon = KIconLoader::global()->loadIcon(QLatin1String( "kmousetool_off" ), KIconLoader::Small);
 	}
 	setIconByPixmap (icon);
 }

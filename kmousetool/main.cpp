@@ -51,8 +51,8 @@ int main(int argc, char *argv[])
     KCmdLineOptions options;
     KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
     KUniqueApplication::addCmdLineOptions();
-        
-    KUniqueApplication::setApplicationName("kmousetool");
+
+    KUniqueApplication::setApplicationName(QLatin1String( "kmousetool" ));
 
     if (!KUniqueApplication::start()) {
             fprintf(stderr, "KMouseTool is already running !\n");
