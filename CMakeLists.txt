@@ -4,6 +4,7 @@ if(Q_WS_X11)
   macro_log_feature(X11_XTest_FOUND "libXtst" "X11 Testing Resource extension library" "http://xorg.freedesktop.org" TRUE "" "Needed to build kmousetool.")
 
   if(X11_XTest_FOUND)
+    add_subdirectory( doc )
     add_subdirectory( kmousetool )
   endif(X11_XTest_FOUND)
 else(Q_WS_X11)
