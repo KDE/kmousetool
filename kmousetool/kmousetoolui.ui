@@ -1,6 +1,6 @@
 <!DOCTYPE UI><UI version="3.1" stdsetdef="1">
 <class>KMouseToolUI</class>
-<widget class="QWidget">
+<widget class="TQWidget">
     <property name="name">
         <cstring>KMouseToolUI</cstring>
     </property>
@@ -29,14 +29,14 @@
             <property name="sizeType">
                 <enum>Expanding</enum>
             </property>
-            <property name="sizeHint">
+            <property name="tqsizeHint">
                 <size>
                     <width>20</width>
                     <height>30</height>
                 </size>
             </property>
         </spacer>
-        <widget class="QGroupBox" row="1" column="0">
+        <widget class="TQGroupBox" row="1" column="0">
             <property name="name">
                 <cstring>groupBox1</cstring>
             </property>
@@ -47,9 +47,9 @@
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QLayoutWidget" row="3" column="0">
+                <widget class="TQLayoutWidget" row="3" column="0">
                     <property name="name">
-                        <cstring>layout9</cstring>
+                        <cstring>tqlayout9</cstring>
                     </property>
                     <grid>
                         <property name="name">
@@ -65,14 +65,14 @@
                             <property name="sizeType">
                                 <enum>Fixed</enum>
                             </property>
-                            <property name="sizeHint">
+                            <property name="tqsizeHint">
                                 <size>
                                     <width>16</width>
                                     <height>20</height>
                                 </size>
                             </property>
                         </spacer>
-                        <widget class="QLabel" row="0" column="1">
+                        <widget class="TQLabel" row="0" column="1">
                             <property name="name">
                                 <cstring>dragTimeLabel</cstring>
                             </property>
@@ -137,7 +137,7 @@
                         <number>5</number>
                     </property>
                 </widget>
-                <widget class="QLabel" row="0" column="0">
+                <widget class="TQLabel" row="0" column="0">
                     <property name="name">
                         <cstring>movementLabel</cstring>
                     </property>
@@ -167,7 +167,7 @@
                         <number>1</number>
                     </property>
                 </widget>
-                <widget class="QCheckBox" row="4" column="0" rowspan="1" colspan="2">
+                <widget class="TQCheckBox" row="4" column="0" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>cbStroke</cstring>
                     </property>
@@ -175,7 +175,7 @@
                         <string>&amp;Enable strokes</string>
                     </property>
                 </widget>
-                <widget class="QLabel" row="1" column="0">
+                <widget class="TQLabel" row="1" column="0">
                     <property name="name">
                         <cstring>dwellTimeLabel</cstring>
                     </property>
@@ -194,7 +194,7 @@
                         <cstring>dwellTimeEdit</cstring>
                     </property>
                 </widget>
-                <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
+                <widget class="TQCheckBox" row="2" column="0" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>cbDrag</cstring>
                     </property>
@@ -205,9 +205,9 @@
                         <bool>true</bool>
                     </property>
                 </widget>
-                <widget class="QLayoutWidget" row="7" column="0" rowspan="1" colspan="2">
+                <widget class="TQLayoutWidget" row="7" column="0" rowspan="1" colspan="2">
                     <property name="name">
-                        <cstring>layout5</cstring>
+                        <cstring>tqlayout5</cstring>
                     </property>
                     <hbox>
                         <property name="name">
@@ -239,7 +239,7 @@
                             <property name="sizeType">
                                 <enum>Expanding</enum>
                             </property>
-                            <property name="sizeHint">
+                            <property name="tqsizeHint">
                                 <size>
                                     <width>31</width>
                                     <height>20</height>
@@ -256,7 +256,7 @@
                         </widget>
                     </hbox>
                 </widget>
-                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
+                <widget class="TQCheckBox" row="6" column="0" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>cbStart</cstring>
                     </property>
@@ -264,7 +264,7 @@
                         <string>Start with &amp;KDE</string>
                     </property>
                 </widget>
-                <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="2">
+                <widget class="TQCheckBox" row="5" column="0" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>cbClick</cstring>
                     </property>
@@ -274,15 +274,15 @@
                 </widget>
             </grid>
         </widget>
-        <widget class="QLayoutWidget" row="0" column="0">
+        <widget class="TQLayoutWidget" row="0" column="0">
             <property name="name">
-                <cstring>layout5</cstring>
+                <cstring>tqlayout5</cstring>
             </property>
             <hbox>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QLabel">
+                <widget class="TQLabel">
                     <property name="name">
                         <cstring>textLabel1</cstring>
                     </property>
@@ -300,7 +300,7 @@
                     <property name="scaledContents">
                         <bool>false</bool>
                     </property>
-                    <property name="alignment">
+                    <property name="tqalignment">
                         <set>WordBreak|AlignJustify|AlignVCenter</set>
                     </property>
                 </widget>
@@ -314,7 +314,7 @@
                     <property name="sizeType">
                         <enum>Fixed</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>8</width>
                             <height>8</height>
@@ -339,9 +339,9 @@
                 </widget>
             </hbox>
         </widget>
-        <widget class="QLayoutWidget" row="3" column="0">
+        <widget class="TQLayoutWidget" row="3" column="0">
             <property name="name">
-                <cstring>layout5</cstring>
+                <cstring>tqlayout5</cstring>
             </property>
             <hbox>
                 <property name="name">
@@ -365,7 +365,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>241</width>
                             <height>20</height>
@@ -406,7 +406,7 @@
         <slot>setEnabled(bool)</slot>
     </connection>
 </connections>
-<layoutdefaults spacing="6" margin="11"/>
+<tqlayoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>knuminput.h</includehint>
     <includehint>knuminput.h</includehint>

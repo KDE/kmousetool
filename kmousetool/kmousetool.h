@@ -55,6 +55,7 @@ class KMouseToolTray;
 class KMouseTool : public KMouseToolUI
 {
 	Q_OBJECT
+  TQ_OBJECT
 
 private:
 	MTStroke stroke;
@@ -77,7 +78,7 @@ private:
 	TQString autostartdirname;
 	TQString rcfilename;
 	TQString appfilename;
-	QString	mSoundFileName;
+	TQString	mSoundFileName;
 	KAudioPlayer *mplayer;
 	KMouseToolTray *trayIcon;
 
@@ -186,7 +187,7 @@ public:
 	/**
 	 *  construtor
 	 */
-	KMouseTool(TQWidget* parent=0, const char *name=0);
+	KMouseTool(TQWidget* tqparent=0, const char *name=0);
 
 	/** destructor */
 	~KMouseTool();
@@ -194,9 +195,10 @@ public:
 
 class KMouseToolTray : public KSystemTray {
         Q_OBJECT
+  TQ_OBJECT
 	int startStopId;
 public:
-	KMouseToolTray (TQWidget *parent=0, const char *name=0);
+	KMouseToolTray (TQWidget *tqparent=0, const char *name=0);
 	~KMouseToolTray();
 
 	void updateStartStopText (bool mousetool_is_running);

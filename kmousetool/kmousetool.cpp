@@ -147,7 +147,7 @@ void KMouseTool::timerEvent( TQTimerEvent * )
 		return;
 
 	if (!continue_timer) {
-		killTimers();
+		TQT_TQOBJECT(this)->killTimers();
 		return;
 	}
 
@@ -250,7 +250,7 @@ void KMouseTool::playTickSound()
 //	TQSound::play(mSoundFileName);
 }
 
-KMouseTool::KMouseTool(TQWidget *parent, const char *name) : KMouseToolUI(parent, name)
+KMouseTool::KMouseTool(TQWidget *tqparent, const char *name) : KMouseToolUI(tqparent, name)
 {
 	init_vars();
 	resetSettings();
@@ -608,7 +608,7 @@ void KMouseTool::aboutSelected()
 
 
 
-KMouseToolTray::KMouseToolTray (TQWidget *parent, const char *name) : KSystemTray (parent, name)
+KMouseToolTray::KMouseToolTray (TQWidget *tqparent, const char *name) : KSystemTray (tqparent, name)
 {
 	startStopId = contextMenu()->insertItem (i18n("&Start"), this, TQT_SIGNAL(startStopSelected()));
 	contextMenu()->insertSeparator();
