@@ -187,7 +187,7 @@ public:
 	/**
 	 *  construtor
 	 */
-	KMouseTool(TQWidget* tqparent=0, const char *name=0);
+	KMouseTool(TQWidget* parent=0, const char *name=0);
 
 	/** destructor */
 	~KMouseTool();
@@ -198,7 +198,7 @@ class KMouseToolTray : public KSystemTray {
   TQ_OBJECT
 	int startStopId;
 public:
-	KMouseToolTray (TQWidget *tqparent=0, const char *name=0);
+	KMouseToolTray (TQWidget *parent=0, const char *name=0);
 	~KMouseToolTray();
 
 	void updateStartStopText (bool mousetool_is_running);
