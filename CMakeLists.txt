@@ -22,4 +22,6 @@ else(Q_WS_X11)
   message(FATAL_ERROR "kmousetool needs an X11-based system.")
 endif(Q_WS_X11)
 
-
+if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
+    macro_display_feature_log()
+endif(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
