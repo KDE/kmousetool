@@ -29,18 +29,16 @@
 
 #include "kmousetool.h"
 
-static const char description[] =
-    I18N_NOOP("KMouseTool");
+static const char description[] = I18N_NOOP("KMouseTool");
 // INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
-
 
 int main(int argc, char *argv[])
 {
     KAboutData aboutData( "kmousetool", 0, ki18n("KMouseTool"),
     KMOUSETOOL_VERSION, ki18n(description), KAboutData::License_GPL,
-    ki18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmi Dt"), KLocalizedString(), "http://www.mousetool.com", "gunnar@schmi-dt.de");
+    ki18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmidt"), KLocalizedString(), "http://www.mousetool.com", "gunnar@schmi-dt.de");
 
-    aboutData.addAuthor(ki18n("Gunnar Schmi Dt"), ki18n("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
+    aboutData.addAuthor(ki18n("Gunnar Schmidt"), ki18n("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
     aboutData.addAuthor(ki18n("Olaf Schmidt"), ki18n("Usability improvements"), "ojschmidt@kde.org");
     aboutData.addAuthor(ki18n("Jeff Roush"), ki18n("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
 
@@ -55,8 +53,8 @@ int main(int argc, char *argv[])
     KUniqueApplication::setApplicationName(QLatin1String( "kmousetool" ));
 
     if (!KUniqueApplication::start()) {
-            fprintf(stderr, "KMouseTool is already running !\n");
-            exit(0);
+        fprintf(stderr, "KMouseTool is already running !\n");
+        exit(0);
     }
     KUniqueApplication a;
 

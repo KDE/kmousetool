@@ -61,12 +61,8 @@
 #include <ktoolinvocation.h>
 #include <kglobal.h>
 
-//using namespace Arts;
-
 int currentXPosition;
 int currentYPosition;
-
-//using namespace std;
 
 #undef long
 
@@ -88,197 +84,190 @@ void LeftUp();
 // Declarations
 Display *display;
 
-//SimpleSoundServer sound_server(Reference("global:Arts_SimpleSoundServer"));
-
 
 void KMouseTool::init_vars()
 {
-	continue_timer = 1;
-	tick_count = 0;
-	max_ticks = dwell_time+1;
-	mouse_is_down = false;
+    continue_timer = 1;
+    tick_count = 0;
+    max_ticks = dwell_time+1;
+    mouse_is_down = false;
 
-	loadOptions();
+    loadOptions();
 
-	// If the ~/.mousetool directory doesn't exist, create it
-//	mSoundFileName = QDir::homePath();
-	mSoundFileName = KStandardDirs::locate("appdata", QLatin1String( "sounds/mousetool_tap.wav" ));
-	mplayer = Phonon::createPlayer(Phonon::AccessibilityCategory);
-	mplayer->setParent(this);
+    // If the ~/.mousetool directory doesn't exist, create it
+    mSoundFileName = KStandardDirs::locate("appdata", QLatin1String( "sounds/mousetool_tap.wav" ));
+    mplayer = Phonon::createPlayer(Phonon::AccessibilityCategory);
+    mplayer->setParent(this);
 
-	// find application file
-	appfilename = KStandardDirs::locate("exe", QLatin1String( "kmousetool" ));
+    // find application file
+    appfilename = KStandardDirs::locate("exe", QLatin1String( "kmousetool" ));
 
-	// find the user's autostart directory
-	autostartdirname = KGlobalSettings::autostartPath();
+    // find the user's autostart directory
+    autostartdirname = KGlobalSettings::autostartPath();
 
-	QDesktopWidget *d = QApplication::desktop();
-	int w = d->width();
-	int h = d->height();
-	MTStroke::setUpperLeft(0,0);
-	MTStroke::setUpperRight(w-1,0);
-	MTStroke::setLowerLeft(0,h-1);
-	MTStroke::setLowerRight(w-1,h-1);
+    QDesktopWidget *d = QApplication::desktop();
+    int w = d->width();
+    int h = d->height();
+    MTStroke::setUpperLeft(0,0);
+    MTStroke::setUpperRight(w-1,0);
+    MTStroke::setLowerLeft(0,h-1);
+    MTStroke::setLowerRight(w-1,h-1);
 }
 
 void KMouseTool::resetSettings()
 {
-	cbDrag ->setChecked(smart_drag_on);
-	cbStart->setChecked(isAutostart());
-	cbClick->setChecked(playSound);
-	cbStroke->setChecked(strokesEnabled);
-	movementEdit->setValue(min_movement);
-	dwellTimeEdit->setValue(dwell_time);
-	dragTimeEdit->setValue(drag_time);
-	settingsChanged();
+    cbDrag ->setChecked(smart_drag_on);
+    cbStart->setChecked(isAutostart());
+    cbClick->setChecked(playSound);
+    cbStroke->setChecked(strokesEnabled);
+    movementEdit->setValue(min_movement);
+    dwellTimeEdit->setValue(dwell_time);
+    dragTimeEdit->setValue(drag_time);
+    settingsChanged();
 }
 
 void KMouseTool::setDefaultSettings()
 {
-	cbDrag ->setChecked(false);
-	cbStart->setChecked(false);
-	cbClick->setChecked(false);
-	cbStroke->setChecked(false);
-	movementEdit->setValue(5);
-	dwellTimeEdit->setValue(5);
-	dragTimeEdit->setValue(3);
-	settingsChanged();
+    cbDrag ->setChecked(false);
+    cbStart->setChecked(false);
+    cbClick->setChecked(false);
+    cbStroke->setChecked(false);
+    movementEdit->setValue(5);
+    dwellTimeEdit->setValue(5);
+    dragTimeEdit->setValue(3);
+    settingsChanged();
 }
 
 
 void KMouseTool::timerEvent( QTimerEvent * )
 {
-	if (!mousetool_is_running)
-		return;
+    if (!mousetool_is_running)
+        return;
 
-	if (!continue_timer) {
-		QAbstractEventDispatcher::instance()->unregisterTimers(this);
-		return;
-	}
+    if (!continue_timer) {
+        QAbstractEventDispatcher::instance()->unregisterTimers(this);
+        return;
+    }
 
-	max_ticks = dwell_time + drag_time;
-	stroke.addPt(currentXPosition, currentYPosition);
+    max_ticks = dwell_time + drag_time;
+    stroke.addPt(currentXPosition, currentYPosition);
 
-	moving = moving?CursorHasMoved(1):CursorHasMoved(min_movement);
-	if (moving) {
-		if (mousetool_just_started) {
-			mousetool_just_started = false;
-			tick_count = max_ticks;
-		}
-		else
-			tick_count = 0;
-		return;
-	}
+    moving = moving?CursorHasMoved(1):CursorHasMoved(min_movement);
+    if (moving) {
+        if (mousetool_just_started) {
+            mousetool_just_started = false;
+            tick_count = max_ticks;
+        } else {
+            tick_count = 0;
+        }
+        return;
+    }
 
-	if (tick_count<max_ticks)
-		tick_count++;
+    if (tick_count<max_ticks)
+        tick_count++;
 
+    // If the mouse has paused ...
+        if (tick_count==dwell_time) {
+            int strokeType = stroke.getStrokeType();
+            getMouseButtons();
 
-	// If the mouse has paused ...
-	if (tick_count==dwell_time) {
-		int strokeType = stroke.getStrokeType();
-		getMouseButtons();
+            // if we're dragging the mouse, ignore stroke type
+            if (mouse_is_down) {
+                normalClick();
+                return;
+            }
 
-		// if we're dragging the mouse, ignore stroke type
-		if (mouse_is_down) {
-			normalClick();
-			return;
-		}
+            if (!strokesEnabled) {
+                normalClick();
+                return;
+            }
+            if (strokeType == MTStroke::DontClick)
+                return;
+            if (strokeType==MTStroke::bumped_mouse)
+                return;
 
-		if (!strokesEnabled) {
-			normalClick();
-			return;
-		}
-		if (strokeType == MTStroke::DontClick)
-			return;
-		if (strokeType==MTStroke::bumped_mouse)
-			return;
-
-		if (strokeType==MTStroke::RightClick || strokeType==MTStroke::UpperRightStroke)
-			RightClick();
-		else if (strokeType==MTStroke::DoubleClick || strokeType==MTStroke::LowerLeftStroke)
-			DoubleClick();
-		else
-			normalClick();
-	}
+            if (strokeType==MTStroke::RightClick || strokeType==MTStroke::UpperRightStroke)
+                RightClick();
+            else if (strokeType==MTStroke::DoubleClick || strokeType==MTStroke::LowerLeftStroke)
+                DoubleClick();
+            else
+                normalClick();
+        }
 }
 
 void KMouseTool::normalClick()
 {
-	if (smart_drag_on) {
-		if (!mouse_is_down) {
-			LeftDn();
-			mouse_is_down = true;
-			tick_count = 0;
-			playTickSound();
-		}
-		else if (mouse_is_down) {
-			LeftUp();
-			mouse_is_down = false;
-			tick_count = max_ticks;
-		}
-	}
-	else {
-		// not smart_drag_on
-		LeftClick();
-		playTickSound();
-	}
+    if (smart_drag_on) {
+        if (!mouse_is_down) {
+            LeftDn();
+            mouse_is_down = true;
+            tick_count = 0;
+            playTickSound();
+        } else if (mouse_is_down) {
+            LeftUp();
+            mouse_is_down = false;
+            tick_count = max_ticks;
+        }
+    } else {
+        // not smart_drag_on
+        LeftClick();
+        playTickSound();
+    }
 }
 
 // This function isn't happy yet.
 void KMouseTool::playTickSound()
 {
-	if (!playSound)
-	return;
+    if (!playSound)
+        return;
 
-	mplayer->setCurrentSource(mSoundFileName);
-	mplayer->play();
-
+    mplayer->setCurrentSource(mSoundFileName);
+    mplayer->play();
 }
 
-KMouseTool::KMouseTool(QWidget *parent, const char *name) :
-        QWidget(parent)
+KMouseTool::KMouseTool(QWidget *parent, const char *name)
+ : QWidget(parent)
 {
-        setupUi(this);
-        setObjectName( QLatin1String( name ));
-	init_vars();
-	resetSettings();
+    setupUi(this);
+    setObjectName( QLatin1String( name ));
+    init_vars();
+    resetSettings();
 
-	connect(movementEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
-	connect(dwellTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
-	connect(dragTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
-	connect(cbDrag, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-	connect(cbStroke, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-	connect(cbClick, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-	connect(cbStart, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+    connect(movementEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
+    connect(dwellTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
+    connect(dragTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
+    connect(cbDrag, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+    connect(cbStroke, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+    connect(cbClick, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+    connect(cbStart, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
 
-	connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
-	buttonDefault->setGuiItem(KStandardGuiItem::defaults());
-	connect(buttonDefault, SIGNAL(clicked()), this, SLOT(defaultSelected()));
-	connect(buttonReset, SIGNAL(clicked()), this, SLOT(resetSelected()));
-	buttonApply->setGuiItem(KStandardGuiItem::apply());
-	connect(buttonApply, SIGNAL(clicked()), this, SLOT(applySelected()));
-	buttonHelp->setGuiItem(KStandardGuiItem::help());
-	connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
-	buttonClose->setGuiItem(KStandardGuiItem::close());
-	connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
-	buttonQuit->setGuiItem(KStandardGuiItem::quit());
-	connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
+    connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
+    buttonDefault->setGuiItem(KStandardGuiItem::defaults());
+    connect(buttonDefault, SIGNAL(clicked()), this, SLOT(defaultSelected()));
+    connect(buttonReset, SIGNAL(clicked()), this, SLOT(resetSelected()));
+    buttonApply->setGuiItem(KStandardGuiItem::apply());
+    connect(buttonApply, SIGNAL(clicked()), this, SLOT(applySelected()));
+    buttonHelp->setGuiItem(KStandardGuiItem::help());
+    connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
+    buttonClose->setGuiItem(KStandardGuiItem::close());
+    connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
+    buttonQuit->setGuiItem(KStandardGuiItem::quit());
+    connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
 
-	// When we first start, it's nice to not click immediately.
-	// So, tell MT we're just starting
-	mousetool_just_started = true;
+    // When we first start, it's nice to not click immediately.
+    // So, tell MT we're just starting
+    mousetool_just_started = true;
 
-	startTimer(100);
-	trayIcon = new KMouseToolTray (this);
-	updateStartStopText ();
-	connect(trayIcon, SIGNAL(startStopSelected()), this, SLOT(startStopSelected()));
-	connect(trayIcon, SIGNAL(configureSelected()), this, SLOT(configureSelected()));
-	connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
-	connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
-	connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
+    startTimer(100);
+    trayIcon = new KMouseToolTray (this);
+    updateStartStopText ();
+    connect(trayIcon, SIGNAL(startStopSelected()), this, SLOT(startStopSelected()));
+    connect(trayIcon, SIGNAL(configureSelected()), this, SLOT(configureSelected()));
+    connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
+    connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
+    connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
 
-	aboutDlg = new KAboutApplicationDialog (KGlobal::mainComponent().aboutData());
+    aboutDlg = new KAboutApplicationDialog (KGlobal::mainComponent().aboutData());
 }
 
 KMouseTool::~KMouseTool()
@@ -291,236 +280,234 @@ KMouseTool::~KMouseTool()
 // these should be moved to a separate file.
 void getMouseButtons()
 {
-	unsigned char buttonMap[3];
-	const int buttonCount = XGetPointerMapping(display, buttonMap, 3);
-	switch (buttonCount)
-	{
-	case 0:
-	case 1:
-		// ### should not happen
-		leftButton = 1;
-		rightButton = 1;
-		break;
-	case 2:
-		leftButton = buttonMap[0];
-		rightButton = buttonMap[1];
-		break;
-	default:
-		leftButton = buttonMap[0];
-		rightButton = buttonMap[2];
-		break;
-	}
+    unsigned char buttonMap[3];
+    const int buttonCount = XGetPointerMapping(display, buttonMap, 3);
+    switch (buttonCount)
+    {
+    case 0:
+    case 1:
+        // ### should not happen
+        leftButton = 1;
+        rightButton = 1;
+        break;
+    case 2:
+        leftButton = buttonMap[0];
+        rightButton = buttonMap[1];
+        break;
+    default:
+        leftButton = buttonMap[0];
+        rightButton = buttonMap[2];
+        break;
+    }
 }
 
 void LeftClick()
 {
-	XTestFakeButtonEvent(display, leftButton, true, 0);
-	XTestFakeButtonEvent(display, leftButton, false, 0);
+    XTestFakeButtonEvent(display, leftButton, true, 0);
+    XTestFakeButtonEvent(display, leftButton, false, 0);
 }
 
 void DoubleClick()
 {
-	XTestFakeButtonEvent(display, leftButton, true, 0);
-	XTestFakeButtonEvent(display, leftButton, false, 100);
-	XTestFakeButtonEvent(display, leftButton, true, 200);
-	XTestFakeButtonEvent(display, leftButton, false, 300);
+    XTestFakeButtonEvent(display, leftButton, true, 0);
+    XTestFakeButtonEvent(display, leftButton, false, 100);
+    XTestFakeButtonEvent(display, leftButton, true, 200);
+    XTestFakeButtonEvent(display, leftButton, false, 300);
 }
 
 void RightClick()
 {
-	XTestFakeButtonEvent(display, rightButton, true, 0);
-	XTestFakeButtonEvent(display, rightButton, false, 0);
+    XTestFakeButtonEvent(display, rightButton, true, 0);
+    XTestFakeButtonEvent(display, rightButton, false, 0);
 }
-
 
 void LeftDn()
 {
-	XTestFakeButtonEvent(display, leftButton, true, 0);
+    XTestFakeButtonEvent(display, leftButton, true, 0);
 }
-
 
 void LeftUp()
 {
-	XTestFakeButtonEvent(display, leftButton, false, 0);
+    XTestFakeButtonEvent(display, leftButton, false, 0);
 }
 
 
 void queryPointer(Window *pidRoot, int *pnRx, int *pnRy, int *pnX, int *pnY, unsigned int *puMask)
 {
-	Window id2, idRoot;
-	int screen_num;
+    Window id2, idRoot;
+    int screen_num;
 
-	screen_num = DefaultScreen(display);
-	idRoot = RootWindow(display,screen_num);
-	XQueryPointer(display, idRoot, &idRoot, &id2, pnRx, pnRy, pnX, pnY, puMask);
+    screen_num = DefaultScreen(display);
+    idRoot = RootWindow(display,screen_num);
+    XQueryPointer(display, idRoot, &idRoot, &id2, pnRx, pnRy, pnX, pnY, puMask);
 
-	*pidRoot = idRoot;
+    *pidRoot = idRoot;
 }
 
 // return 1 if cursor has moved, 0 otherwise
 int CursorHasMoved (int minMovement)
 {
-	static int nOldRootX = -1;
-	static int nOldRootY = -1;
+    static int nOldRootX = -1;
+    static int nOldRootY = -1;
 
-//	XEvent evButtonEvent;
-	Window idRootWin;
-	int nRootX, nRootY, nWinX, nWinY;
-	unsigned int uintMask;
+    // XEvent evButtonEvent;
+    Window idRootWin;
+    int nRootX, nRootY, nWinX, nWinY;
+    unsigned int uintMask;
 
-	queryPointer(&idRootWin, &nRootX, &nRootY, &nWinX, &nWinY, &uintMask);
+    queryPointer(&idRootWin, &nRootX, &nRootY, &nWinX, &nWinY, &uintMask);
 
-	int nRes = 0;
-	if ((nRootX>nOldRootX?nRootX-nOldRootX:nOldRootX-nRootX) >= minMovement)
-		nRes = 1;
-	if ((nRootY>nOldRootY?nRootY-nOldRootY:nOldRootY-nRootY) >= minMovement)
-		nRes = 1;
+    int nRes = 0;
+    if ((nRootX>nOldRootX?nRootX-nOldRootX:nOldRootX-nRootX) >= minMovement)
+        nRes = 1;
+    if ((nRootY>nOldRootY?nRootY-nOldRootY:nOldRootY-nRootY) >= minMovement)
+        nRes = 1;
 
-	currentXPosition = nRootX;
-	currentYPosition = nRootY;
+    currentXPosition = nRootX;
+    currentYPosition = nRootY;
 
-	if (nRes) {
-		nOldRootX = nRootX;
-		nOldRootY = nRootY;
-	}
+    if (nRes) {
+        nOldRootX = nRootX;
+        nOldRootY = nRootY;
+    }
 
-	return nRes;
+    return nRes;
 }
 // End mouse monitoring and event creation code
 
 
 bool KMouseTool::isAutostart()
 {
-	QString sym = autostartdirname;
-	sym += QLatin1String( "kmousetool" );			// sym is now full path to symlink
-	QFileInfo fi(sym);
+    QString sym = autostartdirname;
+    sym += QLatin1String( "kmousetool" ); // sym is now full path to symlink
+    QFileInfo fi(sym);
 
-	return fi.exists();
+    return fi.exists();
 }
 
 void KMouseTool::setAutostart (bool start)
 {
-	QString sym = autostartdirname;
-	sym += QLatin1String( "kmousetool" );			// sym is now full path to symlink
-	QFileInfo fi(sym);
-	QString cmd;
+    QString sym = autostartdirname;
+    sym += QLatin1String( "kmousetool" ); // sym is now full path to symlink
+    QFileInfo fi(sym);
+    QString cmd;
 
-	if (start) {
-		if (!fi.exists())  			// if it doesn't exist, make it
-		cmd = QString(QLatin1String( "ln -s %1 %2" )).arg(appfilename).arg(autostartdirname);
-	}
-	else {
-	if (fi.exists()) 			// if it exists, delete it
-		cmd = QString(QLatin1String( "rm -f %1" )).arg(sym);
-	}
-	system(cmd.toAscii());
+    if (start) {
+        if (!fi.exists()) // if it doesn't exist, make it
+            cmd = QString(QLatin1String( "ln -s %1 %2" )).arg(appfilename).arg(autostartdirname);
+    } else {
+        if (fi.exists()) // if it exists, delete it
+            cmd = QString(QLatin1String( "rm -f %1" )).arg(sym);
+    }
+    system(cmd.toAscii());
 }
 
 bool KMouseTool::applySettings()
 {
-	int drag, dwell;
+    int drag, dwell;
 
-	dwell = dwellTimeEdit->value();
-	drag = dragTimeEdit->value() ;
+    dwell = dwellTimeEdit->value();
+    drag = dragTimeEdit->value() ;
 
-	// The drag time must be less than the dwell time
-	if ( dwell < drag) {
-		KMessageBox::sorry(this, i18n("The drag time must be less than or equal to the dwell time."), i18n("Invalid Value"));
-		return false;
-	}
+    // The drag time must be less than the dwell time
+    if ( dwell < drag) {
+        KMessageBox::sorry(this, i18n("The drag time must be less than or equal to the dwell time."), i18n("Invalid Value"));
+        return false;
+    }
 
-	// if we got here, we must be okay.
-	min_movement   = movementEdit->value();
-	smart_drag_on  = cbDrag->isChecked();
-	playSound      = cbClick->isChecked();
-	strokesEnabled = cbStroke->isChecked();
-	setAutostart (cbStart->isChecked());
+    // if we got here, we must be okay.
+    min_movement   = movementEdit->value();
+    smart_drag_on  = cbDrag->isChecked();
+    playSound      = cbClick->isChecked();
+    strokesEnabled = cbStroke->isChecked();
+    setAutostart (cbStart->isChecked());
 
-	dwell_time = dwell;
-	drag_time  = drag;
-	tick_count = max_ticks;
+    dwell_time = dwell;
+    drag_time  = drag;
+    tick_count = max_ticks;
 
-	saveOptions();
-	settingsChanged();
-	return true;
+    saveOptions();
+    settingsChanged();
+    return true;
 }
 
 // Save options to kmousetoolrc file
 void KMouseTool::loadOptions()
 {
-	KConfigGroup cfg = KGlobal::config()->group("UserOptions");
+    KConfigGroup cfg = KGlobal::config()->group("UserOptions");
 
-	playSound = cfg.readEntry("AudibleClick", false);
-	smart_drag_on = cfg.readEntry("SmartDrag", false);
+    playSound = cfg.readEntry("AudibleClick", false);
+    smart_drag_on = cfg.readEntry("SmartDrag", false);
 
-	dwell_time = cfg.readEntry("DwellTime",5);
-	drag_time = cfg.readEntry("DragTime",3);
-	min_movement = cfg.readEntry("Movement",5);
-	strokesEnabled = cfg.readEntry("strokesEnabled", false);
+    dwell_time = cfg.readEntry("DwellTime",5);
+    drag_time = cfg.readEntry("DragTime",3);
+    min_movement = cfg.readEntry("Movement",5);
+    strokesEnabled = cfg.readEntry("strokesEnabled", false);
 
-	QPoint p;
-	int x = cfg.readEntry("x",0);
-	int y = cfg.readEntry("y",0);
-	p.setX(x);
-	p.setY(y);
-	move(p);
+    QPoint p;
+    int x = cfg.readEntry("x",0);
+    int y = cfg.readEntry("y",0);
+    p.setX(x);
+    p.setY(y);
+    move(p);
 
-	mousetool_is_running = cfg.readEntry("MouseToolIsRunning", false);
-	display = XOpenDisplay(NULL);
+    mousetool_is_running = cfg.readEntry("MouseToolIsRunning", false);
+    display = XOpenDisplay(NULL);
 }
 
 // Save options to kmousetoolrc file
 void KMouseTool::saveOptions()
 {
-	QPoint p = pos();
-	int x = p.x();
-	int y = p.y();
+    QPoint p = pos();
+    int x = p.x();
+    int y = p.y();
 
-	KConfigGroup cfg = KGlobal::config()->group("ProgramOptions");
-	cfg.writeEntry("Version", KMOUSETOOL_VERSION);
-	cfg = KGlobal::config()->group("UserOptions");
-	cfg.writeEntry("x", x);
-	cfg.writeEntry("y", y);
-	cfg.writeEntry("strokesEnabled", strokesEnabled);
-	cfg.writeEntry("IsMinimized", isHidden());
-	cfg.writeEntry("DwellTime", dwell_time);
-	cfg.writeEntry("DragTime", drag_time);
-	cfg.writeEntry("Movement", min_movement);
-	cfg.writeEntry("SmartDrag", smart_drag_on);
-	cfg.writeEntry("AudibleClick", playSound);
-	cfg.writeEntry("MouseToolIsRunning", mousetool_is_running);
-	cfg.sync();
+    KConfigGroup cfg = KGlobal::config()->group("ProgramOptions");
+    cfg.writeEntry("Version", KMOUSETOOL_VERSION);
+    cfg = KGlobal::config()->group("UserOptions");
+    cfg.writeEntry("x", x);
+    cfg.writeEntry("y", y);
+    cfg.writeEntry("strokesEnabled", strokesEnabled);
+    cfg.writeEntry("IsMinimized", isHidden());
+    cfg.writeEntry("DwellTime", dwell_time);
+    cfg.writeEntry("DragTime", drag_time);
+    cfg.writeEntry("Movement", min_movement);
+    cfg.writeEntry("SmartDrag", smart_drag_on);
+    cfg.writeEntry("AudibleClick", playSound);
+    cfg.writeEntry("MouseToolIsRunning", mousetool_is_running);
+    cfg.sync();
 }
 
 void KMouseTool::updateStartStopText()
 {
-	if (mousetool_is_running)
-		buttonStartStop->setText(i18n("&Stop"));
-	else
-		buttonStartStop->setText(i18nc("Start tracking the mouse", "&Start"));
-	trayIcon->updateStartStopText(mousetool_is_running);
+    if (mousetool_is_running) {
+        buttonStartStop->setText(i18n("&Stop"));
+    } else {
+        buttonStartStop->setText(i18nc("Start tracking the mouse", "&Start"));
+    }
+    trayIcon->updateStartStopText(mousetool_is_running);
 }
 
 bool KMouseTool::newSettings()
 {
-	return ((dwell_time != dwellTimeEdit->value()) ||
-		(drag_time != dragTimeEdit->value()) ||
-		(min_movement != movementEdit->value()) ||
-		(smart_drag_on != cbDrag->isChecked()) ||
-		(playSound != cbClick->isChecked()) ||
-		(strokesEnabled != cbStroke->isChecked()) ||
-		(isAutostart() != cbStart->isChecked()));
+    return ((dwell_time != dwellTimeEdit->value()) ||
+            (drag_time != dragTimeEdit->value()) ||
+            (min_movement != movementEdit->value()) ||
+            (smart_drag_on != cbDrag->isChecked()) ||
+            (playSound != cbClick->isChecked()) ||
+            (strokesEnabled != cbStroke->isChecked()) ||
+            (isAutostart() != cbStart->isChecked()));
 }
 
 bool KMouseTool::defaultSettings()
 {
-	return ((5 == dwellTimeEdit->value()) &&
-		(3 == dragTimeEdit->value()) &&
-		(5 == movementEdit->value()) &&
-		!cbDrag->isChecked() &&
-		!cbClick->isChecked() &&
-		!cbStroke->isChecked() &&
-		!cbStart->isChecked());
+    return ((5 == dwellTimeEdit->value()) &&
+            (3 == dragTimeEdit->value()) &&
+            (5 == movementEdit->value()) &&
+            !cbDrag->isChecked() &&
+            !cbClick->isChecked() &&
+            !cbStroke->isChecked() &&
+            !cbStart->isChecked());
 }
 
 /******** SLOTS **********/
@@ -528,111 +515,109 @@ bool KMouseTool::defaultSettings()
 // Value or state changed
 void KMouseTool::settingsChanged ()
 {
-	buttonReset->setEnabled (newSettings());
-	buttonApply->setEnabled (newSettings());
-	buttonDefault->setDisabled (defaultSettings());
+    buttonReset->setEnabled (newSettings());
+    buttonApply->setEnabled (newSettings());
+    buttonDefault->setDisabled (defaultSettings());
 }
 
 // Buttons within the dialog
 void KMouseTool::startStopSelected()
 {
-	mousetool_is_running = !mousetool_is_running;
-	updateStartStopText();
+    mousetool_is_running = !mousetool_is_running;
+    updateStartStopText();
 }
 
 void KMouseTool::defaultSelected()
 {
-	setDefaultSettings();
+    setDefaultSettings();
 }
 
 void KMouseTool::resetSelected()
 {
-	resetSettings();
+    resetSettings();
 }
 
 void KMouseTool::applySelected()
 {
-	applySettings();
+    applySettings();
 }
 
 // Buttons at the bottom of the dialog
 void KMouseTool::helpSelected()
 {
-	KToolInvocation::invokeHelp();
+    KToolInvocation::invokeHelp();
 }
 
 void KMouseTool::closeSelected()
 {
-	if (newSettings())
-	{
-		int answer = KMessageBox::questionYesNoCancel (this,
-			i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before closing the configuration window or discard the changes?"),
-			i18n("Closing Configuration Window"),
-			KStandardGuiItem::apply(), KStandardGuiItem::discard(),
-			KStandardGuiItem::cancel(), QLatin1String( "AutomaticSave" ));
-		if (answer == KMessageBox::Yes)
-			applySettings();
-		else if (answer == KMessageBox::No)
-			resetSettings();
-		if (answer != KMessageBox::Cancel)
-			hide();
-	}
-	else
-		hide();
+    if (newSettings())
+    {
+        int answer = KMessageBox::questionYesNoCancel (this,
+                                                       i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before closing the configuration window or discard the changes?"),
+                                                       i18n("Closing Configuration Window"),
+                                                       KStandardGuiItem::apply(), KStandardGuiItem::discard(),
+                                                       KStandardGuiItem::cancel(), QLatin1String( "AutomaticSave" ));
+        if (answer == KMessageBox::Yes)
+            applySettings();
+        else if (answer == KMessageBox::No)
+            resetSettings();
+        if (answer != KMessageBox::Cancel)
+            hide();
+    } else {
+        hide();
+    }
 }
 
 void KMouseTool::quitSelected()
 {
-	if (newSettings())
-	{
-		int answer = KMessageBox::questionYesNoCancel (this,
-			i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before quitting KMousetool or discard the changes?"),
-			i18n("Quitting KMousetool"),
-			KStandardGuiItem::apply(), KStandardGuiItem::discard(),
-			KStandardGuiItem::cancel(), QLatin1String( "AutomaticSave" ));
-		if (answer == KMessageBox::Yes)
-			applySettings();
-		if (answer != KMessageBox::Cancel)
-		{
-			saveOptions();
-			kapp->quit();
-		}
-	}
-	else
-	{
-		saveOptions();
-		kapp->quit();
-	}
+    if (newSettings())
+    {
+        int answer = KMessageBox::questionYesNoCancel (this,
+                                                       i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before quitting KMousetool or discard the changes?"),
+                                                       i18n("Quitting KMousetool"),
+                                                       KStandardGuiItem::apply(), KStandardGuiItem::discard(),
+                                                       KStandardGuiItem::cancel(), QLatin1String( "AutomaticSave" ));
+        if (answer == KMessageBox::Yes)
+            applySettings();
+        if (answer != KMessageBox::Cancel)
+        {
+            saveOptions();
+            kapp->quit();
+        }
+    } else {
+        saveOptions();
+        kapp->quit();
+    }
 }
 
 // Menu functions
 void KMouseTool::configureSelected()
 {
-	show();
-	raise();
-	activateWindow();
+    show();
+    raise();
+    activateWindow();
 }
 
 void KMouseTool::aboutSelected()
 {
-	aboutDlg->show();
+    aboutDlg->show();
 }
 
 
 
 KMouseToolTray::KMouseToolTray (QWidget *parent) : KStatusNotifierItem(parent)
 {
-	setStatus(KStatusNotifierItem::Active);
-	startStopAct = contextMenu()->addAction (i18nc("Start tracking the mouse", "&Start"), this, SIGNAL(startStopSelected()));
-	contextMenu()->addSeparator();
-        QAction* act;
-	act = contextMenu()->addAction (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
-        act->setIcon(KIcon(QLatin1String( "configure" )));
-	contextMenu()->addSeparator();
-	act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
-        act->setIcon(KIcon(QLatin1String( "help-contents" )));
-	act = contextMenu()->addAction (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
-        act->setIcon(KIcon(QLatin1String( "kmousetool" )));
+    setStatus(KStatusNotifierItem::Active);
+    startStopAct = contextMenu()->addAction (i18nc("Start tracking the mouse", "&Start"), this, SIGNAL(startStopSelected()));
+    contextMenu()->addSeparator();
+    QAction* act;
+    act = contextMenu()->addAction (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
+    act->setIcon(KIcon(QLatin1String( "configure" )));
+    contextMenu()->addSeparator();
+    act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
+    act->setIcon(KIcon(QLatin1String( "help-contents" )));
+    act = contextMenu()->addAction (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
+    act->setIcon(KIcon(QLatin1String( "kmousetool" )));
 }
 
 KMouseToolTray::~KMouseToolTray() {
@@ -640,15 +625,14 @@ KMouseToolTray::~KMouseToolTray() {
 
 void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 {
-	QIcon icon;
+    QIcon icon;
 
-	if (mousetool_is_running) {
-                startStopAct->setText(i18n("&Stop"));
-		icon = KIconLoader::global()->loadIcon(QLatin1String( "kmousetool_on" ), KIconLoader::Small);
-	}
-	else {
-                startStopAct->setText(i18nc("Start tracking the mouse", "&Start"));
-		icon = KIconLoader::global()->loadIcon(QLatin1String( "kmousetool_off" ), KIconLoader::Small);
-	}
-	setIconByPixmap (icon);
+    if (mousetool_is_running) {
+        startStopAct->setText(i18n("&Stop"));
+        icon = KIconLoader::global()->loadIcon(QLatin1String( "kmousetool_on" ), KIconLoader::Small);
+    } else {
+        startStopAct->setText(i18nc("Start tracking the mouse", "&Start"));
+        icon = KIconLoader::global()->loadIcon(QLatin1String( "kmousetool_off" ), KIconLoader::Small);
+    }
+    setIconByPixmap (icon);
 }
