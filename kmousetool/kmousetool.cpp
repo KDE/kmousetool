@@ -20,7 +20,7 @@
  ***************************************************************************/
 
 #include "kmousetool.h"
-#include "Xmd_kmousetool.h"
+#include <X11/Xmd.h>
 #include "kmousetool.moc"
 #include "mtstroke.h"
 #include <kconfig.h>
