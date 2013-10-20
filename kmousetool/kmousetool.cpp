@@ -39,7 +39,6 @@
 #include <QtGui/QDesktopWidget>
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
-#include <QtGui/QSound>
 #include <kglobalsettings.h>
 #include <kdebug.h>
 #include <QtGui/QLayout>
