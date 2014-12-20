@@ -21,7 +21,6 @@
 
 #include "kmousetool.h"
 #include <X11/Xmd.h>
-#include "kmousetool.moc"
 #include "mtstroke.h"
 #include <kconfig.h>
 #include <X11/Intrinsic.h>     /* Intrinsics Definitions*/
@@ -52,12 +51,12 @@
 #include <knuminput.h>
 #include <kmenu.h>
 #include <kaboutapplicationdialog.h>
-#include <Phonon/MediaObject>
+#include <phonon/MediaObject>
 #include <netwm.h>
 #include <kapplication.h>
 #include <iostream>
 #include <QtCore/QAbstractEventDispatcher>
-#include <ktoolinvocation.h>
+#include <khelpclient.h>
 #include <kglobal.h>
 
 int currentXPosition;
@@ -102,7 +101,8 @@ void KMouseTool::init_vars()
     appfilename = KStandardDirs::locate("exe", QLatin1String( "kmousetool" ));
 
     // find the user's autostart directory
-    autostartdirname = KGlobalSettings::autostartPath();
+#pragma warning FIXME port to KF5
+    autostartdirname = QString(); //KGlobalSettings::autostartPath();
 
     QDesktopWidget *d = QApplication::desktop();
     int w = d->width();
@@ -266,7 +266,7 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name)
     connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
     connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
 
-    aboutDlg = new KAboutApplicationDialog (KGlobal::mainComponent().aboutData());
+//    aboutDlg = new KAboutApplicationDialog (KGlobal::mainComponent().aboutData());
 }
 
 KMouseTool::~KMouseTool()
@@ -544,7 +544,7 @@ void KMouseTool::applySelected()
 // Buttons at the bottom of the dialog
 void KMouseTool::helpSelected()
 {
-    KToolInvocation::invokeHelp();
+    KHelpClient::invokeHelp();
 }
 
 void KMouseTool::closeSelected()
@@ -599,7 +599,8 @@ void KMouseTool::configureSelected()
 
 void KMouseTool::aboutSelected()
 {
-    aboutDlg->show();
+#pragma warning FIXME port to KF5
+//    aboutDlg->show();
 }
 
 

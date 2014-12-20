@@ -22,10 +22,10 @@
 #ifndef KMOUSETOOL_H
 #define KMOUSETOOL_H
 
-#include <QtCore/QDir>
-#include <QtGui/QLabel>
-#include <QtCore/QTimerEvent>
-#include <QtGui/QWidget>
+#include <QDir>
+#include <QLabel>
+#include <QTimerEvent>
+#include <QWidget>
 
 #include "version.h"
 

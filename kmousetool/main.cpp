@@ -18,13 +18,14 @@
  ***************************************************************************/
 
 #include <kcmdlineargs.h>
-#include <kaboutdata.h>
+#include <k4aboutdata.h>
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
 #include <QtDBus/QtDBus>
 #include <QtGui/QMessageBox>
 #include <kconfig.h>
+#include <kconfiggroup.h>
 #include <kglobal.h>
 
 #include "kmousetool.h"
@@ -34,8 +35,8 @@ static const char description[] = I18N_NOOP("KMouseTool");
 
 int main(int argc, char *argv[])
 {
-    KAboutData aboutData( "kmousetool", 0, ki18n("KMouseTool"),
-    KMOUSETOOL_VERSION, ki18n(description), KAboutData::License_GPL,
+    K4AboutData aboutData( "kmousetool", 0, ki18n("KMouseTool"),
+    KMOUSETOOL_VERSION, ki18n(description), K4AboutData::License_GPL,
     ki18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmidt"), KLocalizedString(), "http://www.mousetool.com", "gunnar@schmi-dt.de");
 
     aboutData.addAuthor(ki18n("Gunnar Schmidt"), ki18n("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
