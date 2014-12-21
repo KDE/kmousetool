@@ -20,6 +20,7 @@
  ***************************************************************************/
 
 #include "kmousetool.h"
+
 #include <X11/Xmd.h>
 #include "mtstroke.h"
 #include <kconfig.h>
@@ -28,21 +29,17 @@
 #include <X11/extensions/xtestext1.h>    /* Standard Name-String definitions*/
 #include <X11/extensions/XTest.h>    /* Standard Name-String definitions*/
 #include <fixx11h.h>
+
+#include <QAbstractEventDispatcher>
+#include <QDesktopWidget>
+#include <QTimerEvent>
+
 #include <kdialog.h>
 #include <klocale.h>
-#include <QtGui/QPushButton>
-#include <QtCore/QPoint>
-#include <QtCore/qnamespace.h>
-#include <QtGui/QPixmap>
-#include <QtCore/QTimerEvent>
-#include <QtGui/QDesktopWidget>
 #include <kmessagebox.h>
 #include <kstandarddirs.h>
 #include <kglobalsettings.h>
 #include <kdebug.h>
-#include <QtGui/QLayout>
-#include <QtGui/QLineEdit>
-#include <QtGui/QCheckBox>
 #include <ksystemtrayicon.h>
 #include <kicon.h>
 #include <kiconloader.h>
@@ -55,7 +52,6 @@
 #include <netwm.h>
 #include <kapplication.h>
 #include <iostream>
-#include <QtCore/QAbstractEventDispatcher>
 #include <khelpclient.h>
 #include <kglobal.h>
 

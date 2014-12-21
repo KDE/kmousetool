@@ -22,8 +22,6 @@
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kuniqueapplication.h>
-#include <QtDBus/QtDBus>
-#include <QtGui/QMessageBox>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <kglobal.h>
