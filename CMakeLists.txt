@@ -33,3 +33,5 @@ if(X11_XTest_FOUND)
     add_subdirectory( doc )
     add_subdirectory( kmousetool )
 endif(X11_XTest_FOUND)
+
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
