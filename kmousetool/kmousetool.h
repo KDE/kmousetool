@@ -36,7 +36,7 @@
 class QLabel;
 class QAction;
 class KAudioPlayer;
-class KAboutApplicationDialog;
+class KHelpMenu;
 class KMouseToolTray;
 
 namespace Phonon
@@ -80,7 +80,7 @@ private:
     Phonon::MediaObject *mplayer;
     KMouseToolTray *trayIcon;
 
-    KAboutApplicationDialog *aboutDlg;
+    KHelpMenu *helpMenu;
 
     /**
      * Initialize all variables

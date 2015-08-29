@@ -34,6 +34,7 @@
 #include <QDesktopWidget>
 #include <QTimerEvent>
 
+#include <KHelpMenu>
 #include <kdialog.h>
 #include <klocale.h>
 #include <kmessagebox.h>
@@ -43,9 +44,7 @@
 #include <ksystemtrayicon.h>
 #include <kicon.h>
 #include <kiconloader.h>
-#include <kpushbutton.h>
 #include <kstandardguiitem.h>
-#include <knuminput.h>
 #include <kmenu.h>
 #include <kaboutapplicationdialog.h>
 #include <phonon/MediaObject>
@@ -216,12 +215,12 @@ void KMouseTool::playTickSound()
     if (!playSound)
         return;
 
-    mplayer->setCurrentSource(mSoundFileName);
+    mplayer->setCurrentSource(QUrl::fromLocalFile(mSoundFileName));
     mplayer->play();
 }
 
 KMouseTool::KMouseTool(QWidget *parent, const char *name)
- : QWidget(parent)
+ : QWidget(parent), helpMenu(new KHelpMenu(NULL))
 {
     setupUi(this);
     setObjectName( QLatin1String( name ));
@@ -237,16 +236,16 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name)
     connect(cbStart, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
 
     connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
-    buttonDefault->setGuiItem(KStandardGuiItem::defaults());
+    KGuiItem::assign(buttonDefault, KStandardGuiItem::defaults());
     connect(buttonDefault, SIGNAL(clicked()), this, SLOT(defaultSelected()));
     connect(buttonReset, SIGNAL(clicked()), this, SLOT(resetSelected()));
-    buttonApply->setGuiItem(KStandardGuiItem::apply());
+    KGuiItem::assign(buttonApply, KStandardGuiItem::apply());
     connect(buttonApply, SIGNAL(clicked()), this, SLOT(applySelected()));
-    buttonHelp->setGuiItem(KStandardGuiItem::help());
+    KGuiItem::assign(buttonHelp, KStandardGuiItem::help());
     connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
-    buttonClose->setGuiItem(KStandardGuiItem::close());
+    KGuiItem::assign(buttonClose, KStandardGuiItem::close());
     connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
-    buttonQuit->setGuiItem(KStandardGuiItem::quit());
+    KGuiItem::assign(buttonQuit, KStandardGuiItem::quit());
     connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
 
     // When we first start, it's nice to not click immediately.
@@ -261,8 +260,6 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name)
     connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
     connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
     connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
-
-//    aboutDlg = new KAboutApplicationDialog (KGlobal::mainComponent().aboutData());
 }
 
 KMouseTool::~KMouseTool()
@@ -429,7 +426,7 @@ bool KMouseTool::applySettings()
 // Save options to kmousetoolrc file
 void KMouseTool::loadOptions()
 {
-    KConfigGroup cfg = KGlobal::config()->group("UserOptions");
+    KConfigGroup cfg = KSharedConfig::openConfig()->group("UserOptions");
 
     playSound = cfg.readEntry("AudibleClick", false);
     smart_drag_on = cfg.readEntry("SmartDrag", false);
@@ -457,9 +454,9 @@ void KMouseTool::saveOptions()
     int x = p.x();
     int y = p.y();
 
-    KConfigGroup cfg = KGlobal::config()->group("ProgramOptions");
+    KConfigGroup cfg = KSharedConfig::openConfig()->group("ProgramOptions");
     cfg.writeEntry("Version", KMOUSETOOL_VERSION);
-    cfg = KGlobal::config()->group("UserOptions");
+    cfg = KSharedConfig::openConfig()->group("UserOptions");
     cfg.writeEntry("x", x);
     cfg.writeEntry("y", y);
     cfg.writeEntry("strokesEnabled", strokesEnabled);
@@ -540,7 +537,7 @@ void KMouseTool::applySelected()
 // Buttons at the bottom of the dialog
 void KMouseTool::helpSelected()
 {
-    KHelpClient::invokeHelp();
+    helpMenu->appHelpActivated();
 }
 
 void KMouseTool::closeSelected()
@@ -595,8 +592,7 @@ void KMouseTool::configureSelected()
 
 void KMouseTool::aboutSelected()
 {
-#pragma warning FIXME port to KF5
-//    aboutDlg->show();
+    helpMenu->aboutApplication();
 }
 
 
@@ -608,12 +604,12 @@ KMouseToolTray::KMouseToolTray (QWidget *parent) : KStatusNotifierItem(parent)
     contextMenu()->addSeparator();
     QAction* act;
     act = contextMenu()->addAction (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
-    act->setIcon(KIcon(QLatin1String( "configure" )));
+    act->setIcon(QIcon::fromTheme(QLatin1String( "configure" )));
     contextMenu()->addSeparator();
     act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
-    act->setIcon(KIcon(QLatin1String( "help-contents" )));
+    act->setIcon(QIcon::fromTheme(QLatin1String( "help-contents" )));
     act = contextMenu()->addAction (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
-    act->setIcon(KIcon(QLatin1String( "kmousetool" )));
+    act->setIcon(QIcon::fromTheme(QLatin1String( "kmousetool" )));
 }
 
 KMouseToolTray::~KMouseToolTray() {
