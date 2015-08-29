@@ -215,4 +215,5 @@ GenericName[x-test]=xxAutomatic Mouse Clickxx
 GenericName[zh_CN]=自动鼠标点击
 GenericName[zh_TW]=自動滑鼠點擊
 Categories=Qt;KDE;Utility;Accessibility;
+X-DBUS-ServiceName=org.kde.kmousetool
 

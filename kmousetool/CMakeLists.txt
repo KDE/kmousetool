@@ -21,6 +21,6 @@ install(TARGETS kmousetool  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
-install( PROGRAMS kmousetool.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS org.kde.kmousetool.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES mousetool_tap.wav  DESTINATION  ${DATA_INSTALL_DIR}/kmousetool/sounds )
 
