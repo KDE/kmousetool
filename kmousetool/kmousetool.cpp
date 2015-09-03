@@ -23,7 +23,6 @@
 
 #include <X11/Xmd.h>
 #include "mtstroke.h"
-#include <kconfig.h>
 #include <X11/Intrinsic.h>     /* Intrinsics Definitions*/
 #include <X11/StringDefs.h>    /* Standard Name-String definitions*/
 #include <X11/extensions/xtestext1.h>    /* Standard Name-String definitions*/
@@ -31,30 +30,23 @@
 #include <fixx11h.h>
 
 #include <QAbstractEventDispatcher>
+#include <QApplication>
 #include <QDesktopWidget>
+#include <QIcon>
+#include <QMenu>
+#include <QStandardPaths>
 #include <QTimerEvent>
 
+#include <KConfig>
+#include <KConfigGroup>
 #include <KHelpMenu>
-#include <kdialog.h>
-#include <klocale.h>
-#include <kmessagebox.h>
-#include <kstandarddirs.h>
-#include <kglobalsettings.h>
-#include <kdebug.h>
-#include <ksystemtrayicon.h>
-#include <kicon.h>
-#include <kiconloader.h>
-#include <kstandardguiitem.h>
-#include <kmenu.h>
-#include <kaboutapplicationdialog.h>
-#include <phonon/MediaObject>
-#include <netwm.h>
-#include <kapplication.h>
-#include <iostream>
-#include <khelpclient.h>
-#include <kglobal.h>
-#include <QStandardPaths>
+#include <KIconLoader>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <KSharedConfig>
+#include <KStandardGuiItem>
+
+#include <phonon/MediaObject>
 
 int currentXPosition;
 int currentYPosition;
@@ -95,11 +87,10 @@ void KMouseTool::init_vars()
     mplayer->setParent(this);
 
     // find application file
-    appfilename = KStandardDirs::findExe(QLatin1String( "kmousetool" ));
+    appfilename = QStandardPaths::findExecutable(QLatin1String( "kmousetool" ));
 
     // find the user's autostart directory
-#pragma warning FIXME port to KF5
-    autostartdirname = QString(); //KGlobalSettings::autostartPath();
+    autostartdirname = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart-scripts/");
 
     QDesktopWidget *d = QApplication::desktop();
     int w = d->width();
@@ -576,11 +567,11 @@ void KMouseTool::quitSelected()
         if (answer != KMessageBox::Cancel)
         {
             saveOptions();
-            kapp->quit();
+            qApp->quit();
         }
     } else {
         saveOptions();
-        kapp->quit();
+        qApp->quit();
     }
 }
 

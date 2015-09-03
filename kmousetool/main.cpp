@@ -19,13 +19,12 @@
 
 #include <kcmdlineargs.h>
 #include <k4aboutdata.h>
-#include <klocale.h>
+
+#include <KConfigGroup>
+#include <KLocalizedString>
+#include <KSharedConfig>
 
 #include <kuniqueapplication.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <kglobal.h>
-#include <KSharedConfig>
 
 #include "kmousetool.h"
 

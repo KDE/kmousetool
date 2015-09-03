@@ -416,8 +416,6 @@
   </layout>
  </widget>
  <includes>
-  <include location="global">knuminput.h</include>
-  <include location="global">kpushbutton.h</include>
  </includes>
  <resources/>
  <connections>
