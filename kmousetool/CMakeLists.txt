@@ -6,7 +6,7 @@ add_subdirectory( pics )
 
 ########### next target ###############
 
-include_directories(${PHONON_INCLUDE_DIR})
+include_directories(${PHONON_INCLUDE_DIR} ${X11_INCLUDE_DIR})
 
 set(kmousetool_SRCS mtstroke.cpp kmousetool.cpp main.cpp )
 
