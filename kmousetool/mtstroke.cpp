@@ -22,10 +22,11 @@
 #include <iostream>
 
 // these are for locating the stroke information file
-#include <kstandarddirs.h>
+
 
 
 // #include <string>
+#include <QStandardPaths>
 
 using namespace std;
 
@@ -187,7 +188,7 @@ void MTStroke::getExtent()
 bool MTStroke::readSequence()
 {
   QString strokefilename;
-  strokefilename = KStandardDirs::locate("config", QLatin1String( "kmousetool_strokes.txt" ) );
+  strokefilename = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1String( "kmousetool_strokes.txt" ) );
   if (strokefilename.isEmpty()) {
     // make default
     if (sequenceMap.size()==0)
@@ -223,7 +224,7 @@ bool MTStroke::readSequence()
 bool MTStroke::writeSequence()
 {
   QString strokefilename;
-  strokefilename = KStandardDirs::locateLocal("config", QLatin1String( "kmousetool_strokes.txt" ));
+  strokefilename = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1String("/kmousetool_strokes.txt" );
 
   ofstream outfile (strokefilename.toAscii(), ios::out);
   if (!outfile) {

@@ -53,6 +53,8 @@
 #include <iostream>
 #include <khelpclient.h>
 #include <kglobal.h>
+#include <QStandardPaths>
+#include <KSharedConfig>
 
 int currentXPosition;
 int currentYPosition;
@@ -88,12 +90,12 @@ void KMouseTool::init_vars()
     loadOptions();
 
     // If the ~/.mousetool directory doesn't exist, create it
-    mSoundFileName = KStandardDirs::locate("appdata", QLatin1String( "sounds/mousetool_tap.wav" ));
+    mSoundFileName = QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1String( "sounds/mousetool_tap.wav" ));
     mplayer = Phonon::createPlayer(Phonon::AccessibilityCategory);
     mplayer->setParent(this);
 
     // find application file
-    appfilename = KStandardDirs::locate("exe", QLatin1String( "kmousetool" ));
+    appfilename = KStandardDirs::findExe(QLatin1String( "kmousetool" ));
 
     // find the user's autostart directory
 #pragma warning FIXME port to KF5
