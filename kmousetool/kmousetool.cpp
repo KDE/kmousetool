@@ -30,7 +30,6 @@
 #include <X11/StringDefs.h>    /* Standard Name-String definitions*/
 #include <X11/extensions/xtestext1.h>    /* Standard Name-String definitions*/
 #include <X11/extensions/XTest.h>    /* Standard Name-String definitions*/
-#include <fixx11h.h>
 
 #include <QAbstractEventDispatcher>
 #include <QApplication>
