@@ -1,7 +1,7 @@
 # KDE Config File
 [Desktop Entry]
 Type=Application
-Exec=kmousetool -caption %c %i
+Exec=kmousetool -qwindowtitle %c
 Icon=kmousetool
 X-DocPath=kmousetool/index.html
 Comment=Clicks the mouse for you, reducing the effects of RSI

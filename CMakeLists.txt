@@ -16,8 +16,13 @@ include(FeatureSummary)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets)
 
 find_package (KF5 REQUIRED
-    KDELibs4Support
+    ConfigWidgets
+    DBusAddons
+    DocTools
+    I18n
+    IconThemes
     Notifications
+    XmlGui
 )
 
 find_package(Phonon4Qt5 REQUIRED NO_MODULE)

@@ -196,7 +196,7 @@ bool MTStroke::readSequence()
     writeSequence();
     return false;
   }
-  ifstream infile (strokefilename.toAscii().constData());
+  ifstream infile (strokefilename.toLatin1().constData());
   if (!infile) {
     // make default
     if (sequenceMap.size()==0)
@@ -226,7 +226,7 @@ bool MTStroke::writeSequence()
   QString strokefilename;
   strokefilename = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1String("/kmousetool_strokes.txt" );
 
-  ofstream outfile (strokefilename.toAscii(), ios::out);
+  ofstream outfile (strokefilename.toLatin1(), ios::out);
   if (!outfile) {
     return false;
   }

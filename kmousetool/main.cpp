@@ -17,50 +17,59 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <kcmdlineargs.h>
-#include <k4aboutdata.h>
-
-#include <KConfigGroup>
-#include <KLocalizedString>
-#include <KSharedConfig>
-
-#include <kuniqueapplication.h>
 
 #include "kmousetool.h"
 
+#include <KAboutData>
+#include <KConfigGroup>
+#include <KDBusService>
+#include <KLocalizedString>
+#include <KSharedConfig>
+
+#include <QCommandLineParser>
+
 static const char description[] = I18N_NOOP("KMouseTool");
-// INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
 
 int main(int argc, char *argv[])
 {
-    K4AboutData aboutData( "kmousetool", 0, ki18n("KMouseTool"),
-    KMOUSETOOL_VERSION, ki18n(description), K4AboutData::License_GPL,
-    ki18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmidt"), KLocalizedString(), "http://www.mousetool.com", "gunnar@schmi-dt.de");
+    QApplication::setApplicationName(QLatin1String("kmousetool"));
+    QApplication::setApplicationVersion(QLatin1String(KMOUSETOOL_VERSION));
+    QApplication::setOrganizationDomain(QLatin1String("kde.org"));
+    KLocalizedString::setApplicationDomain("kmousetool");
+    QApplication::setApplicationDisplayName(i18n("kmousetool"));
+    QApplication app(argc, argv);
 
-    aboutData.addAuthor(ki18n("Gunnar Schmidt"), ki18n("Current maintainer"), "gunnar@schmi-dt.de", "http://www.schmi-dt.de");
-    aboutData.addAuthor(ki18n("Olaf Schmidt"), ki18n("Usability improvements"), "ojschmidt@kde.org");
-    aboutData.addAuthor(ki18n("Jeff Roush"), ki18n("Original author"), "jeff@mousetool.com", "http://www.mousetool.com");
+    KAboutData aboutData(QLatin1Literal("kmousetool"),
+                         i18n("KMouseTool"),
+                         QLatin1Literal(KMOUSETOOL_VERSION),
+                         i18n(description),
+                         KAboutLicense::GPL,
+                         i18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmidt"),
+                         QString(),
+                         QLatin1Literal("http://www.mousetool.com"),
+                         QLatin1Literal("gunnar@schmi-dt.de"));
 
-    aboutData.addCredit(ki18n("Joe Betts"));
+    aboutData.addAuthor(i18n("Gunnar Schmidt"), i18n("Current maintainer"), QLatin1String("gunnar@schmi-dt.de"), QLatin1String("http://www.schmi-dt.de"));
+    aboutData.addAuthor(i18n("Olaf Schmidt"), i18n("Usability improvements"), QLatin1String("ojschmidt@kde.org"));
+    aboutData.addAuthor(i18n("Jeff Roush"), i18n("Original author"), QLatin1String("jeff@mousetool.com"), QLatin1String("http://www.mousetool.com"));
+
+    aboutData.addCredit(i18n("Joe Betts"));
     aboutData.setOrganizationDomain("kde.org");
-    KCmdLineArgs::init( argc, argv, &aboutData );
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(aboutData);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    //PORTING SCRIPT: adapt aboutdata variable if necessary
+    aboutData.setupCommandLine(&parser);
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
 
-    KCmdLineOptions options;
-    KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
-    KUniqueApplication::addCmdLineOptions();
-
-    KUniqueApplication::setApplicationName(QLatin1String( "kmousetool" ));
-
-    if (!KUniqueApplication::start()) {
-        fprintf(stderr, "KMouseTool is already running !\n");
-        exit(0);
-    }
-    KUniqueApplication a;
+    KDBusService service(KDBusService::Unique, &app);
 
     KMouseTool *kmousetool = new KMouseTool();
 
     if (!KSharedConfig::openConfig()->group("UserOptions").readEntry("IsMinimized", false))
         kmousetool->show();
 
-    return a.exec();
+    return app.exec();
 }

@@ -21,6 +21,9 @@
 
 #include "kmousetool.h"
 
+// Needs to be be before X11/Intrinsic.h because of qtextstream.h
+#include <phonon/MediaObject>
+
 #include <X11/Xmd.h>
 #include "mtstroke.h"
 #include <X11/Intrinsic.h>     /* Intrinsics Definitions*/
@@ -45,8 +48,6 @@
 #include <KMessageBox>
 #include <KSharedConfig>
 #include <KStandardGuiItem>
-
-#include <phonon/MediaObject>
 
 int currentXPosition;
 int currentYPosition;
@@ -384,7 +385,7 @@ void KMouseTool::setAutostart (bool start)
         if (fi.exists()) // if it exists, delete it
             cmd = QString(QLatin1String( "rm -f %1" )).arg(sym);
     }
-    system(cmd.toAscii());
+    system(cmd.toLatin1());
 }
 
 bool KMouseTool::applySettings()
