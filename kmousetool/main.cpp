@@ -32,26 +32,26 @@ static const char description[] = I18N_NOOP("KMouseTool");
 
 int main(int argc, char *argv[])
 {
-    QApplication::setApplicationName(QLatin1String("kmousetool"));
-    QApplication::setApplicationVersion(QLatin1String(KMOUSETOOL_VERSION));
-    QApplication::setOrganizationDomain(QLatin1String("kde.org"));
+    QApplication::setApplicationName(QStringLiteral("kmousetool"));
+    QApplication::setApplicationVersion(QStringLiteral(KMOUSETOOL_VERSION));
+    QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     KLocalizedString::setApplicationDomain("kmousetool");
     QApplication::setApplicationDisplayName(i18n("kmousetool"));
     QApplication app(argc, argv);
 
-    KAboutData aboutData(QLatin1Literal("kmousetool"),
+    KAboutData aboutData(QStringLiteral("kmousetool"),
                          i18n("KMouseTool"),
-                         QLatin1Literal(KMOUSETOOL_VERSION),
+                         QStringLiteral(KMOUSETOOL_VERSION),
                          i18n(description),
                          KAboutLicense::GPL,
                          i18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmidt"),
                          QString(),
-                         QLatin1Literal("http://www.mousetool.com"),
-                         QLatin1Literal("gunnar@schmi-dt.de"));
+                         QStringLiteral("http://www.mousetool.com"),
+                         QStringLiteral("gunnar@schmi-dt.de"));
 
-    aboutData.addAuthor(i18n("Gunnar Schmidt"), i18n("Current maintainer"), QLatin1String("gunnar@schmi-dt.de"), QLatin1String("http://www.schmi-dt.de"));
-    aboutData.addAuthor(i18n("Olaf Schmidt"), i18n("Usability improvements"), QLatin1String("ojschmidt@kde.org"));
-    aboutData.addAuthor(i18n("Jeff Roush"), i18n("Original author"), QLatin1String("jeff@mousetool.com"), QLatin1String("http://www.mousetool.com"));
+    aboutData.addAuthor(i18n("Gunnar Schmidt"), i18n("Current maintainer"), QStringLiteral("gunnar@schmi-dt.de"), QStringLiteral("http://www.schmi-dt.de"));
+    aboutData.addAuthor(i18n("Olaf Schmidt"), i18n("Usability improvements"), QStringLiteral("ojschmidt@kde.org"));
+    aboutData.addAuthor(i18n("Jeff Roush"), i18n("Original author"), QStringLiteral("jeff@mousetool.com"), QStringLiteral("http://www.mousetool.com"));
 
     aboutData.addCredit(i18n("Joe Betts"));
     aboutData.setOrganizationDomain("kde.org");

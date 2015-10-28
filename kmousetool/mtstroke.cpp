@@ -188,7 +188,7 @@ void MTStroke::getExtent()
 bool MTStroke::readSequence()
 {
   QString strokefilename;
-  strokefilename = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1String( "kmousetool_strokes.txt" ) );
+  strokefilename = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral( "kmousetool_strokes.txt" ) );
   if (strokefilename.isEmpty()) {
     // make default
     if (sequenceMap.size()==0)

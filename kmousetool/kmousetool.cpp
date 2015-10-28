@@ -82,12 +82,12 @@ void KMouseTool::init_vars()
     loadOptions();
 
     // If the ~/.mousetool directory doesn't exist, create it
-    mSoundFileName = QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1String( "sounds/mousetool_tap.wav" ));
+    mSoundFileName = QStandardPaths::locate(QStandardPaths::DataLocation, QStringLiteral( "sounds/mousetool_tap.wav" ));
     mplayer = Phonon::createPlayer(Phonon::AccessibilityCategory);
     mplayer->setParent(this);
 
     // find application file
-    appfilename = QStandardPaths::findExecutable(QLatin1String( "kmousetool" ));
+    appfilename = QStandardPaths::findExecutable(QStringLiteral( "kmousetool" ));
 
     // find the user's autostart directory
     autostartdirname = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart-scripts/");
@@ -223,23 +223,23 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name)
     connect(movementEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
     connect(dwellTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
     connect(dragTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
-    connect(cbDrag, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-    connect(cbStroke, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-    connect(cbClick, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
-    connect(cbStart, SIGNAL(stateChanged(int)), this, SLOT(settingsChanged()));
+    connect(cbDrag, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
+    connect(cbStroke, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
+    connect(cbClick, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
+    connect(cbStart, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
 
-    connect(buttonStartStop, SIGNAL(clicked()), this, SLOT(startStopSelected()));
+    connect(buttonStartStop, &QAbstractButton::clicked, this, &KMouseTool::startStopSelected);
     KGuiItem::assign(buttonDefault, KStandardGuiItem::defaults());
-    connect(buttonDefault, SIGNAL(clicked()), this, SLOT(defaultSelected()));
-    connect(buttonReset, SIGNAL(clicked()), this, SLOT(resetSelected()));
+    connect(buttonDefault, &QAbstractButton::clicked, this, &KMouseTool::defaultSelected);
+    connect(buttonReset, &QAbstractButton::clicked, this, &KMouseTool::resetSelected);
     KGuiItem::assign(buttonApply, KStandardGuiItem::apply());
-    connect(buttonApply, SIGNAL(clicked()), this, SLOT(applySelected()));
+    connect(buttonApply, &QAbstractButton::clicked, this, &KMouseTool::applySelected);
     KGuiItem::assign(buttonHelp, KStandardGuiItem::help());
-    connect(buttonHelp, SIGNAL(clicked()), this, SLOT(helpSelected()));
+    connect(buttonHelp, &QAbstractButton::clicked, this, &KMouseTool::helpSelected);
     KGuiItem::assign(buttonClose, KStandardGuiItem::close());
-    connect(buttonClose, SIGNAL(clicked()), this, SLOT(closeSelected()));
+    connect(buttonClose, &QAbstractButton::clicked, this, &KMouseTool::closeSelected);
     KGuiItem::assign(buttonQuit, KStandardGuiItem::quit());
-    connect(buttonQuit, SIGNAL(clicked()), this, SLOT(quitSelected()));
+    connect(buttonQuit, &QAbstractButton::clicked, this, &KMouseTool::quitSelected);
 
     // When we first start, it's nice to not click immediately.
     // So, tell MT we're just starting
@@ -248,10 +248,10 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name)
     startTimer(100);
     trayIcon = new KMouseToolTray (this);
     updateStartStopText ();
-    connect(trayIcon, SIGNAL(startStopSelected()), this, SLOT(startStopSelected()));
-    connect(trayIcon, SIGNAL(configureSelected()), this, SLOT(configureSelected()));
-    connect(trayIcon, SIGNAL(aboutSelected()), this, SLOT(aboutSelected()));
-    connect(trayIcon, SIGNAL(helpSelected()), this, SLOT(helpSelected()));
+    connect(trayIcon, &KMouseToolTray::startStopSelected, this, &KMouseTool::startStopSelected);
+    connect(trayIcon, &KMouseToolTray::configureSelected, this, &KMouseTool::configureSelected);
+    connect(trayIcon, &KMouseToolTray::aboutSelected, this, &KMouseTool::aboutSelected);
+    connect(trayIcon, &KMouseToolTray::helpSelected, this, &KMouseTool::helpSelected);
     connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
 }
 
@@ -379,10 +379,10 @@ void KMouseTool::setAutostart (bool start)
 
     if (start) {
         if (!fi.exists()) // if it doesn't exist, make it
-            cmd = QString(QLatin1String( "ln -s %1 %2" )).arg(appfilename).arg(autostartdirname);
+            cmd = QStringLiteral( "ln -s %1 %2" ).arg(appfilename).arg(autostartdirname);
     } else {
         if (fi.exists()) // if it exists, delete it
-            cmd = QString(QLatin1String( "rm -f %1" )).arg(sym);
+            cmd = QStringLiteral( "rm -f %1" ).arg(sym);
     }
     system(cmd.toLatin1());
 }
@@ -541,7 +541,7 @@ void KMouseTool::closeSelected()
                                                        i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before closing the configuration window or discard the changes?"),
                                                        i18n("Closing Configuration Window"),
                                                        KStandardGuiItem::apply(), KStandardGuiItem::discard(),
-                                                       KStandardGuiItem::cancel(), QLatin1String( "AutomaticSave" ));
+                                                       KStandardGuiItem::cancel(), QStringLiteral( "AutomaticSave" ));
         if (answer == KMessageBox::Yes)
             applySettings();
         else if (answer == KMessageBox::No)
@@ -561,7 +561,7 @@ void KMouseTool::quitSelected()
                                                        i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before quitting KMousetool or discard the changes?"),
                                                        i18n("Quitting KMousetool"),
                                                        KStandardGuiItem::apply(), KStandardGuiItem::discard(),
-                                                       KStandardGuiItem::cancel(), QLatin1String( "AutomaticSave" ));
+                                                       KStandardGuiItem::cancel(), QStringLiteral( "AutomaticSave" ));
         if (answer == KMessageBox::Yes)
             applySettings();
         if (answer != KMessageBox::Cancel)
@@ -597,12 +597,12 @@ KMouseToolTray::KMouseToolTray (QWidget *parent) : KStatusNotifierItem(parent)
     contextMenu()->addSeparator();
     QAction* act;
     act = contextMenu()->addAction (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
-    act->setIcon(QIcon::fromTheme(QLatin1String( "configure" )));
+    act->setIcon(QIcon::fromTheme(QStringLiteral( "configure" )));
     contextMenu()->addSeparator();
     act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
-    act->setIcon(QIcon::fromTheme(QLatin1String( "help-contents" )));
+    act->setIcon(QIcon::fromTheme(QStringLiteral( "help-contents" )));
     act = contextMenu()->addAction (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
-    act->setIcon(QIcon::fromTheme(QLatin1String( "kmousetool" )));
+    act->setIcon(QIcon::fromTheme(QStringLiteral( "kmousetool" )));
 }
 
 KMouseToolTray::~KMouseToolTray() {
@@ -614,10 +614,10 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 
     if (mousetool_is_running) {
         startStopAct->setText(i18n("&Stop"));
-        icon = KIconLoader::global()->loadIcon(QLatin1String( "kmousetool_on" ), KIconLoader::Small);
+        icon = KIconLoader::global()->loadIcon(QStringLiteral( "kmousetool_on" ), KIconLoader::Small);
     } else {
         startStopAct->setText(i18nc("Start tracking the mouse", "&Start"));
-        icon = KIconLoader::global()->loadIcon(QLatin1String( "kmousetool_off" ), KIconLoader::Small);
+        icon = KIconLoader::global()->loadIcon(QStringLiteral( "kmousetool_off" ), KIconLoader::Small);
     }
     setIconByPixmap (icon);
 }
