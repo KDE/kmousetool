@@ -19,7 +19,6 @@ target_link_libraries(kmousetool
   Qt5::Gui
   Qt5::Widgets
   ${PHONON_LIBRARIES}
-  KF5::ConfigWidgets
   KF5::DBusAddons
   KF5::I18n
   KF5::IconThemes
