@@ -172,15 +172,11 @@ can be modified afterwards.)
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><guilabel>Start with KDE</guilabel>
+        <term><guilabel>Start with desktop session</guilabel>
         </term>
         <listitem>
           <para>When this is enabled, &kmousetool; will start each
-	  time &kde; starts. At the moment, this only works under
-	  &kde;.  Under GNOME or other Window Managers, see the
-	  documentation for the Window Manager itself to see how to
-	  start a program automatically when you start the windowing
-	  system.</para> 
+	  time the session of the desktop starts.</para>
         </listitem>
       </varlistentry>
 <varlistentry>
