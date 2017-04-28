@@ -379,12 +379,11 @@ void KMouseTool::setAutostart (bool start)
 
     if (start) {
         if (!fi.exists()) // if it doesn't exist, make it
-            cmd = QStringLiteral( "ln -s %1 %2" ).arg(appfilename).arg(autostartdirname);
+            QFile(appfilename).link(sym);
     } else {
         if (fi.exists()) // if it exists, delete it
-            cmd = QStringLiteral( "rm -f %1" ).arg(sym);
+            QFile(sym).remove();
     }
-    system(cmd.toLatin1());
 }
 
 bool KMouseTool::applySettings()
