@@ -174,7 +174,7 @@ public:
      * current mouse position to its previous position to see
      * whether to send a down click, and up click, or wait.
      */
-    void timerEvent (QTimerEvent *e);
+    void timerEvent (QTimerEvent *e) Q_DECL_OVERRIDE;
 
     /**
      * This generates a normal click event --
