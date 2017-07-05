@@ -1,1 +1,10 @@
-kde4_install_icons( ${ICON_INSTALL_DIR} )
+ecm_install_icons(ICONS
+    16-actions-kmousetool_off.png
+    16-actions-kmousetool_on.png
+    16-apps-kmousetool.png
+    32-actions-kmousetool_off.png
+    32-actions-kmousetool_on.png
+    32-apps-kmousetool.png
+    DESTINATION ${ICON_INSTALL_DIR}
+    THEME hicolor
+)

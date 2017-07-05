@@ -29,7 +29,9 @@ MouseTool Options:
                         with Smart Drag, but as of version 0.8, the latency is too high.
                         By the time you hear the click, you're doing something else.
                         This will be fixed in the next version.
-  Start with KDE     -- When this is enabled, MouseTool will start each time KDE starts.
+  Start with desktop session
+                     -- When this is enabled, MouseTool will start each time the desktop session
+                        starts.
   Enable Strokes     -- When this is enabled, you can generate right- or double-clicks 
                         using mouse strokes.
 

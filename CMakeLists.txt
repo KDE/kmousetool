@@ -1,27 +1,41 @@
 project(kmousetool)
 
-find_package(KDE4 REQUIRED)
-include (KDE4Defaults)
-include (MacroLibrary)
+cmake_minimum_required (VERSION 2.8.12 FATAL_ERROR)
+set (QT_MIN_VERSION "5.3.0")
 
-add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+find_package (ECM 1.3.0 REQUIRED NO_MODULE)
+set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+
+include(CheckIncludeFiles)
+include(KDEInstallDirs)
+include(ECMInstallIcons)
+include(KDECMakeSettings)
+include(KDECompilerSettings)
+include(FeatureSummary)
+
+find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets)
+
+find_package (KF5 REQUIRED
+    DBusAddons
+    DocTools
+    I18n
+    IconThemes
+    Notifications
+    XmlGui
+)
+
+find_package(Phonon4Qt5 REQUIRED NO_MODULE)
+
 add_definitions( -DQT_NO_CAST_FROM_ASCII )
 add_definitions( -DQT_NO_CAST_TO_ASCII )
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 
-include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES})
+include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
-if(Q_WS_X11)
-  macro_log_feature(X11_XTest_FOUND "libXtst" "X11 Testing Resource extension library" "http://xorg.freedesktop.org" TRUE "" "Needed to build kmousetool.")
-
-  if(X11_XTest_FOUND)
+find_package(X11 REQUIRED)
+if(X11_XTest_FOUND)
     add_subdirectory( doc )
     add_subdirectory( kmousetool )
-  endif(X11_XTest_FOUND)
-else(Q_WS_X11)
-  message(FATAL_ERROR "kmousetool needs an X11-based system.")
-endif(Q_WS_X11)
+endif(X11_XTest_FOUND)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-    macro_display_feature_log()
-endif(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

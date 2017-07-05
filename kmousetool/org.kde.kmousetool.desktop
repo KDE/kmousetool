@@ -1,7 +1,6 @@
-# KDE Config File
 [Desktop Entry]
 Type=Application
-Exec=kmousetool -caption %c %i
+Exec=kmousetool -qwindowtitle %c
 Icon=kmousetool
 X-DocPath=kmousetool/index.html
 Comment=Clicks the mouse for you, reducing the effects of RSI
@@ -218,4 +217,5 @@ GenericName[x-test]=xxAutomatic Mouse Clickxx
 GenericName[zh_CN]=自动鼠标点击
 GenericName[zh_TW]=自動滑鼠點擊
 Categories=Qt;KDE;Utility;Accessibility;
+X-DBUS-ServiceName=org.kde.kmousetool
 

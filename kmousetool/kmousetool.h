@@ -22,10 +22,10 @@
 #ifndef KMOUSETOOL_H
 #define KMOUSETOOL_H
 
-#include <QtCore/QDir>
-#include <QtGui/QLabel>
-#include <QtCore/QTimerEvent>
-#include <QtGui/QWidget>
+#include <QDir>
+#include <QLabel>
+#include <QTimerEvent>
+#include <QWidget>
 
 #include "version.h"
 
@@ -36,7 +36,7 @@
 class QLabel;
 class QAction;
 class KAudioPlayer;
-class KAboutApplicationDialog;
+class KHelpMenu;
 class KMouseToolTray;
 
 namespace Phonon
@@ -80,7 +80,7 @@ private:
     Phonon::MediaObject *mplayer;
     KMouseToolTray *trayIcon;
 
-    KAboutApplicationDialog *aboutDlg;
+    KHelpMenu *helpMenu;
 
     /**
      * Initialize all variables
@@ -174,7 +174,7 @@ public:
      * current mouse position to its previous position to see
      * whether to send a down click, and up click, or wait.
      */
-    void timerEvent (QTimerEvent *e);
+    void timerEvent (QTimerEvent *e) Q_DECL_OVERRIDE;
 
     /**
      * This generates a normal click event --
