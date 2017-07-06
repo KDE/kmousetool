@@ -32,12 +32,8 @@ static const char description[] = I18N_NOOP("KMouseTool");
 
 int main(int argc, char *argv[])
 {
-    QApplication::setApplicationName(QStringLiteral("kmousetool"));
-    QApplication::setApplicationVersion(QStringLiteral(KMOUSETOOL_VERSION));
-    QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
-    KLocalizedString::setApplicationDomain("kmousetool");
-    QApplication::setApplicationDisplayName(i18n("kmousetool"));
     QApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("kmousetool");
 
     KAboutData aboutData(QStringLiteral("kmousetool"),
                          i18n("KMouseTool"),
@@ -46,7 +42,7 @@ int main(int argc, char *argv[])
                          KAboutLicense::GPL,
                          i18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmidt"),
                          QString(),
-                         QStringLiteral("http://www.mousetool.com"),
+                         QStringLiteral("https://www.kde.org/applications/utilities/kmousetool/"),
                          QStringLiteral("gunnar@schmi-dt.de"));
 
     aboutData.addAuthor(i18n("Gunnar Schmidt"), i18n("Current maintainer"), QStringLiteral("gunnar@schmi-dt.de"), QStringLiteral("http://www.schmi-dt.de"));
@@ -55,11 +51,13 @@ int main(int argc, char *argv[])
 
     aboutData.addCredit(i18n("Joe Betts"));
     aboutData.setOrganizationDomain("kde.org");
+    aboutData.setDesktopFileName(QStringLiteral("org.kde.kmousetool"));
+
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    //PORTING SCRIPT: adapt aboutdata variable if necessary
+
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
