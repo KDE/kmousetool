@@ -13,45 +13,18 @@
   <property name="windowTitle">
    <string>KMouseTool</string>
   </property>
-  <layout class="QGridLayout">
-   <property name="leftMargin">
-    <number>11</number>
-   </property>
-   <property name="topMargin">
-    <number>11</number>
-   </property>
-   <property name="rightMargin">
-    <number>11</number>
-   </property>
-   <property name="bottomMargin">
-    <number>11</number>
-   </property>
-   <property name="spacing">
-    <number>6</number>
-   </property>
+  <layout class="QGridLayout" name="mainLayout">
    <item row="1" column="0">
     <widget class="QGroupBox" name="groupBox1">
      <property name="title">
       <string>Settings</string>
      </property>
      <layout class="QGridLayout">
-      <property name="leftMargin">
-       <number>11</number>
-      </property>
-      <property name="topMargin">
-       <number>11</number>
-      </property>
-      <property name="rightMargin">
-       <number>11</number>
-      </property>
-      <property name="bottomMargin">
-       <number>11</number>
-      </property>
       <property name="spacing">
        <number>6</number>
       </property>
       <item row="3" column="0">
-       <layout class="QGridLayout">
+       <layout class="QGridLayout" name="groupBoxLayout">
         <property name="leftMargin">
          <number>0</number>
         </property>
@@ -85,12 +58,6 @@
         </item>
         <item row="0" column="1">
          <widget class="QLabel" name="dragTimeLabel">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
           <property name="text">
            <string>&amp;Drag time (1/10 sec):</string>
           </property>
@@ -103,12 +70,6 @@
       </item>
       <item row="0" column="1">
        <widget class="QSpinBox" name="movementEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>1</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="minimum">
          <number>1</number>
         </property>
@@ -119,12 +80,6 @@
       </item>
       <item row="1" column="1">
        <widget class="QSpinBox" name="dwellTimeEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>1</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="minimum">
          <number>1</number>
         </property>
@@ -172,12 +127,6 @@
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="dwellTimeLabel">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="text">
          <string>Dwell &amp;time (1/10 sec):</string>
         </property>
@@ -188,12 +137,6 @@
       </item>
       <item row="3" column="1">
        <widget class="QSpinBox" name="dragTimeEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>1</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="minimum">
          <number>1</number>
         </property>
@@ -224,9 +167,6 @@
    </item>
    <item row="0" column="0">
     <layout class="QHBoxLayout">
-     <property name="spacing">
-      <number>6</number>
-     </property>
      <property name="leftMargin">
       <number>0</number>
      </property>
@@ -279,12 +219,6 @@
      </item>
      <item>
       <widget class="QPushButton" name="buttonStartStop">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
        <property name="text">
         <string>&amp;Start</string>
        </property>
