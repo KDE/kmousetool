@@ -99,6 +99,8 @@ void KMouseTool::init_vars()
     MTStroke::setUpperRight(w-1,0);
     MTStroke::setLowerLeft(0,h-1);
     MTStroke::setLowerRight(w-1,h-1);
+
+    buttonQuit = buttonBox->addButton(QString(), QDialogButtonBox::RejectRole);
 }
 
 void KMouseTool::resetSettings()
@@ -229,15 +231,11 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name)
     connect(cbStart, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
 
     connect(buttonStartStop, &QAbstractButton::clicked, this, &KMouseTool::startStopSelected);
-    KGuiItem::assign(buttonDefault, KStandardGuiItem::defaults());
-    connect(buttonDefault, &QAbstractButton::clicked, this, &KMouseTool::defaultSelected);
-    connect(buttonReset, &QAbstractButton::clicked, this, &KMouseTool::resetSelected);
-    KGuiItem::assign(buttonApply, KStandardGuiItem::apply());
-    connect(buttonApply, &QAbstractButton::clicked, this, &KMouseTool::applySelected);
-    KGuiItem::assign(buttonHelp, KStandardGuiItem::help());
-    connect(buttonHelp, &QAbstractButton::clicked, this, &KMouseTool::helpSelected);
-    KGuiItem::assign(buttonClose, KStandardGuiItem::close());
-    connect(buttonClose, &QAbstractButton::clicked, this, &KMouseTool::closeSelected);
+    connect(buttonBoxSettings->button(QDialogButtonBox::RestoreDefaults), &QAbstractButton::clicked, this, &KMouseTool::defaultSelected);
+    connect(buttonBoxSettings->button(QDialogButtonBox::Reset), &QAbstractButton::clicked, this, &KMouseTool::resetSelected);
+    connect(buttonBoxSettings->button(QDialogButtonBox::Apply), &QAbstractButton::clicked, this, &KMouseTool::applySelected);
+    connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KMouseTool::helpSelected);
+    connect(buttonBox->button(QDialogButtonBox::Close), &QAbstractButton::clicked, this, &KMouseTool::closeSelected);
     KGuiItem::assign(buttonQuit, KStandardGuiItem::quit());
     connect(buttonQuit, &QAbstractButton::clicked, this, &KMouseTool::quitSelected);
 
@@ -499,9 +497,9 @@ bool KMouseTool::defaultSettings()
 // Value or state changed
 void KMouseTool::settingsChanged ()
 {
-    buttonReset->setEnabled (newSettings());
-    buttonApply->setEnabled (newSettings());
-    buttonDefault->setDisabled (defaultSettings());
+    buttonBoxSettings->button(QDialogButtonBox::Reset)->setEnabled (newSettings());
+    buttonBoxSettings->button(QDialogButtonBox::Apply)->setEnabled (newSettings());
+    buttonBoxSettings->button(QDialogButtonBox::RestoreDefaults)->setDisabled (defaultSettings());
 }
 
 // Buttons within the dialog

@@ -81,6 +81,7 @@ private:
     KMouseToolTray *trayIcon;
 
     KHelpMenu *helpMenu;
+    QPushButton *buttonQuit;
 
     /**
      * Initialize all variables
