@@ -6,7 +6,7 @@ add_subdirectory( pics )
 
 ########### next target ###############
 
-include_directories(${PHONON_INCLUDE_DIR} ${X11_INCLUDE_DIR})
+include_directories(${X11_INCLUDE_DIR})
 
 set(kmousetool_SRCS mtstroke.cpp kmousetool.cpp main.cpp )
 
@@ -18,7 +18,7 @@ target_link_libraries(kmousetool
   Qt5::Core
   Qt5::Gui
   Qt5::Widgets
-  ${PHONON_LIBRARIES}
+  Phonon::phonon4qt5
   KF5::DBusAddons
   KF5::I18n
   KF5::IconThemes
