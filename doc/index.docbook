@@ -1,8 +1,5 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY kmousetool '<application>KMouseTool</application>'>
-  <!ENTITY kappname "&kmousetool;">
-  <!ENTITY package "kdeaccessibility">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
@@ -32,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2013-06-01</date>
-<releaseinfo>1.12 (&kde; 4.11)</releaseinfo>
+<date>2017-07-06</date>
+<releaseinfo>1.12 (Applications 17.08)</releaseinfo>
 
 <abstract>
 <para>
@@ -45,7 +42,7 @@ pressing buttons hurts.
 
 <keywordset>
 <keyword>KDE</keyword>
-<keyword>kdeutils</keyword>
+<keyword>rsi</keyword>
 <keyword>KMouseTool</keyword>
 <keyword>ergonomic</keyword>
 <keyword>tendonitis</keyword>
@@ -249,9 +246,6 @@ Then, once you are comfortable clicking, move on to practicing Smart Drag.</para
 <chapter id="faq">
 <title>Questions and Answers</title>
 
-&reporting.bugs;
-&updating.documentation;
-
 <qandaset id="faqlist">
 <qandaentry>
 <question>
@@ -387,40 +381,6 @@ Documentation copyright 2002 Jeff Roush <email>jeff@mousetool.com</email>
 &underGPL;        	 <!-- GPL License -->
 
 </chapter>
-
-<appendix id="installation">
-<title>Installation</title>
-
-<sect1 id="getting-kmousetool">
-<title>How to obtain &kmousetool;</title>
-
-&install.intro.documentation;
-
-</sect1>
-
-<sect1 id="requirements">
-<title>Requirements</title>
-
-<para>
-In order to successfully use &kappname;, you need the XTest extension
-compiled as part of your &X-Window;. This should already be installed
-on your system; very few systems won't have it.
-</para>
-<para>
-In order to use the Audible Click feature, you will have to have a
-sound card and speakers, and you will have to have configured the
-sound card correctly.
-</para>
-</sect1>
-
-<sect1 id="compilation">
-<title>Compilation and Installation</title>
-
-&install.compile.documentation;
-
-</sect1>
-
-</appendix>
 
 &documentation.index;
 </book>
