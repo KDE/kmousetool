@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.kmousetool</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>KMouseTool</name>
+  <summary>Automatic Mouse Click</summary>
+  <description>
+    <p>
+     KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.
+    </p>
+  </description>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kmousetool</url>
+  <url type="donation">https://www.kde.org/community/donations/</url>
+  <url type="help">https://docs.kde.org/?application=kmousetool</url>
+  <url type="homepage">https://www.kde.org/applications/utilities/kmousetool/</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.kde.org/images/screenshots/kmousetool.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>kmousetool</binary>
+  </provides>
+  <launchable type="desktop-id">org.kde.kmousetool.desktop</launchable>
+</component>
