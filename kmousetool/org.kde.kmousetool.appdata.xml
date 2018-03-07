@@ -4,11 +4,26 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KMouseTool</name>
+  <name xml:lang="ca">KMouseTool</name>
+  <name xml:lang="nl">KMouseTool</name>
+  <name xml:lang="pt">KMouseTool</name>
+  <name xml:lang="uk">KMouseTool</name>
+  <name xml:lang="x-test">xxKMouseToolxx</name>
   <summary>Automatic Mouse Click</summary>
+  <summary xml:lang="ca">Clic automàtic del ratolí</summary>
+  <summary xml:lang="nl">Automatische muisklik</summary>
+  <summary xml:lang="pt">Botão do Rato Automático</summary>
+  <summary xml:lang="uk">Автоматичне клацання кнопками миші</summary>
+  <summary xml:lang="x-test">xxAutomatic Mouse Clickxx</summary>
   <description>
     <p>
      KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.
     </p>
+    <p xml:lang="ca">El KMouseTool fa clic de ratolí per vós, així que no ho heu de fer. El KMouseTool funciona amb qualsevol ratolí o dispositiu apuntador.</p>
+    <p xml:lang="nl">KMouseTool klikt voor u de muis, dus hoeft u dat niet te doen. KMouseTool werkt met elke muis of aanwijzer.</p>
+    <p xml:lang="pt">O KMouseTool carrega o botão do rato, para que não tenha de o fazer. O KMouseTool funciona com qualquer rato ou dispositivo de ponteiro.</p>
+    <p xml:lang="uk">KMouseTool «клацає» кнопками миші за вас. KMouseTool працює замість будь-якої миші або координатного пристрою.</p>
+    <p xml:lang="x-test">xxKMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.xx</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kmousetool</url>
   <url type="donation">https://www.kde.org/community/donations/</url>
