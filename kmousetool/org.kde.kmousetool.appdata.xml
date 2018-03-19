@@ -8,6 +8,7 @@
   <name xml:lang="ca-valencia">KMouseTool</name>
   <name xml:lang="de">KMouseTool</name>
   <name xml:lang="en-GB">KMouseTool</name>
+  <name xml:lang="es">KMouseTool</name>
   <name xml:lang="fr">KMouseTool</name>
   <name xml:lang="nl">KMouseTool</name>
   <name xml:lang="nn">KMouseTool</name>
@@ -22,6 +23,7 @@
   <summary xml:lang="ca-valencia">Clic automàtic del ratolí</summary>
   <summary xml:lang="de">Automatische Mausklicks</summary>
   <summary xml:lang="en-GB">Automatic Mouse Click</summary>
+  <summary xml:lang="es">Pulsación automática del ratón</summary>
   <summary xml:lang="nl">Automatische muisklik</summary>
   <summary xml:lang="nn">Automatisk museklikk</summary>
   <summary xml:lang="pt">Botão do Rato Automático</summary>
@@ -38,6 +40,7 @@
     <p xml:lang="ca-valencia">El KMouseTool fa clic de ratolí per vós, així que no ho heu de fer. El KMouseTool funciona amb qualsevol ratolí o dispositiu apuntador.</p>
     <p xml:lang="de">KMouseTool drückt die Maustaste für Sie und funktioniert mit jeder Maus und jedem Zeigergerät.</p>
     <p xml:lang="en-GB">KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.</p>
+    <p xml:lang="es">KMouseTool pulsa los botones del ratón por usted. KMouseTool funciona con cualquier ratón o dispositivo apuntador.</p>
     <p xml:lang="nl">KMouseTool klikt voor u de muis, dus hoeft u dat niet te doen. KMouseTool werkt met elke muis of aanwijzer.</p>
     <p xml:lang="nn">KMouseTool trykkjer med musa for deg, slik at du slepp. Det fungerer med alle typar mus og peikeverktøy.</p>
     <p xml:lang="pt">O KMouseTool carrega o botão do rato, para que não tenha de o fazer. O KMouseTool funciona com qualquer rato ou dispositivo de ponteiro.</p>
