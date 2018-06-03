@@ -16,6 +16,7 @@
   <name xml:lang="nn">KMouseTool</name>
   <name xml:lang="pl">KMouseTool</name>
   <name xml:lang="pt">KMouseTool</name>
+  <name xml:lang="pt-BR">KMouseTool</name>
   <name xml:lang="sk">KMouseTool</name>
   <name xml:lang="sv">Kmousetool</name>
   <name xml:lang="uk">KMouseTool</name>
@@ -29,11 +30,13 @@
   <summary xml:lang="en-GB">Automatic Mouse Click</summary>
   <summary xml:lang="es">Pulsación automática del ratón</summary>
   <summary xml:lang="fi">Automaattinen hiiren napsautus</summary>
+  <summary xml:lang="fr">Clic de souris automatique</summary>
   <summary xml:lang="gl">Clic automático do rato</summary>
   <summary xml:lang="nl">Automatische muisklik</summary>
   <summary xml:lang="nn">Automatisk museklikk</summary>
   <summary xml:lang="pl">Kliknięcia myszą</summary>
   <summary xml:lang="pt">Botão do Rato Automático</summary>
+  <summary xml:lang="pt-BR">Clique automático do mouse</summary>
   <summary xml:lang="sk">Automatické klikanie myšou</summary>
   <summary xml:lang="sv">Automatiska musklick</summary>
   <summary xml:lang="uk">Автоматичне клацання кнопками миші</summary>
@@ -49,6 +52,7 @@
     <p xml:lang="en-GB">KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.</p>
     <p xml:lang="es">KMouseTool pulsa los botones del ratón por usted. KMouseTool funciona con cualquier ratón o dispositivo apuntador.</p>
     <p xml:lang="fi">KMouseTool napsauttaa hiirtä puolestasi, jottei sinun tarvitse. KMouseTool toimii kaikilla hiirillä ja osoitinlaitteilla.</p>
+    <p xml:lang="fr">KMouseTool clique sur la souris pour vous afin que vous n'ayez pas à le faire. KMouseTool fonctionne avec n'importe quelle souris ou dispositif de pointage.</p>
     <p xml:lang="gl">KMouseTool preme o rato por vostede. KMouseTool funciona con calquera rato ou dispositivo de punteiro.</p>
     <p xml:lang="nl">KMouseTool klikt voor u de muis, dus hoeft u dat niet te doen. KMouseTool werkt met elke muis of aanwijzer.</p>
     <p xml:lang="nn">KMouseTool trykkjer med musa for deg, slik at du slepp. Det fungerer med alle typar mus og peikeverktøy.</p>
