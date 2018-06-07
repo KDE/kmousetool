@@ -12,6 +12,7 @@
   <name xml:lang="fi">KMouseTool</name>
   <name xml:lang="fr">KMouseTool</name>
   <name xml:lang="gl">KMouseTool</name>
+  <name xml:lang="it">KMouseTool</name>
   <name xml:lang="nl">KMouseTool</name>
   <name xml:lang="nn">KMouseTool</name>
   <name xml:lang="pl">KMouseTool</name>
@@ -32,6 +33,7 @@
   <summary xml:lang="fi">Automaattinen hiiren napsautus</summary>
   <summary xml:lang="fr">Clic de souris automatique</summary>
   <summary xml:lang="gl">Clic automático do rato</summary>
+  <summary xml:lang="it">Clic del mouse automatico</summary>
   <summary xml:lang="nl">Automatische muisklik</summary>
   <summary xml:lang="nn">Automatisk museklikk</summary>
   <summary xml:lang="pl">Kliknięcia myszą</summary>
@@ -54,6 +56,7 @@
     <p xml:lang="fi">KMouseTool napsauttaa hiirtä puolestasi, jottei sinun tarvitse. KMouseTool toimii kaikilla hiirillä ja osoitinlaitteilla.</p>
     <p xml:lang="fr">KMouseTool clique sur la souris pour vous afin que vous n'ayez pas à le faire. KMouseTool fonctionne avec n'importe quelle souris ou dispositif de pointage.</p>
     <p xml:lang="gl">KMouseTool preme o rato por vostede. KMouseTool funciona con calquera rato ou dispositivo de punteiro.</p>
+    <p xml:lang="it">KMouseTool fa clic col mouse per te, cosicché tu non debba farlo. Funziona con qualsiasi mouse o strumento di puntamento.</p>
     <p xml:lang="nl">KMouseTool klikt voor u de muis, dus hoeft u dat niet te doen. KMouseTool werkt met elke muis of aanwijzer.</p>
     <p xml:lang="nn">KMouseTool trykkjer med musa for deg, slik at du slepp. Det fungerer med alle typar mus og peikeverktøy.</p>
     <p xml:lang="pl">KMouseTool klika myszą za ciebie, abyś sam nie musiał ego robić. KMouseTool działa z każdą myszą lub urządzeniem wskazującym.</p>
