@@ -17,6 +17,7 @@
   <name xml:lang="nl">KMouseTool</name>
   <name xml:lang="nn">KMouseTool</name>
   <name xml:lang="pt">KMouseTool</name>
+  <name xml:lang="pt-BR">KMouseTool</name>
   <name xml:lang="sk">KMouseTool</name>
   <name xml:lang="sv">Kmousetool</name>
   <name xml:lang="uk">KMouseTool</name>
@@ -36,6 +37,7 @@
   <summary xml:lang="nl">Automatische muisklik</summary>
   <summary xml:lang="nn">Automatisk museklikk</summary>
   <summary xml:lang="pt">Botão do Rato Automático</summary>
+  <summary xml:lang="pt-BR">Clique automático do mouse</summary>
   <summary xml:lang="sk">Automatické klikanie myšou</summary>
   <summary xml:lang="sv">Automatiska musklick</summary>
   <summary xml:lang="uk">Автоматичне клацання кнопками миші</summary>
@@ -57,6 +59,7 @@
     <p xml:lang="nl">KMouseTool klikt voor u de muis, dus hoeft u dat niet te doen. KMouseTool werkt met elke muis of aanwijzer.</p>
     <p xml:lang="nn">KMouseTool trykkjer med musa for deg, slik at du slepp. Det fungerer med alle typar mus og peikeverktøy.</p>
     <p xml:lang="pt">O KMouseTool carrega o botão do rato, para que não tenha de o fazer. O KMouseTool funciona com qualquer rato ou dispositivo de ponteiro.</p>
+    <p xml:lang="pt-BR">O KMouseTool clica o botão do mouse para você. Ele funciona com qualquer mouse ou dispositivo apontador.</p>
     <p xml:lang="sv">Kmousetool klickar musen åt dig så att du inte behöver göra det. Kmousetool fungerar med vilken mus eller pekenhet som helst.</p>
     <p xml:lang="uk">KMouseTool «клацає» кнопками миші за вас. KMouseTool працює замість будь-якої миші або координатного пристрою.</p>
     <p xml:lang="x-test">xxKMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.xx</p>
