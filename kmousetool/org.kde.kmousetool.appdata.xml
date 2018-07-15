@@ -10,6 +10,7 @@
   <name xml:lang="de">KMouseTool</name>
   <name xml:lang="en-GB">KMouseTool</name>
   <name xml:lang="es">KMouseTool</name>
+  <name xml:lang="eu">KMouseTool</name>
   <name xml:lang="fi">KMouseTool</name>
   <name xml:lang="fr">KMouseTool</name>
   <name xml:lang="gl">KMouseTool</name>
@@ -31,6 +32,7 @@
   <summary xml:lang="de">Automatische Mausklicks</summary>
   <summary xml:lang="en-GB">Automatic Mouse Click</summary>
   <summary xml:lang="es">Pulsación automática del ratón</summary>
+  <summary xml:lang="eu">Saguaren klik automatikoa</summary>
   <summary xml:lang="fi">Automaattinen hiiren napsautus</summary>
   <summary xml:lang="fr">Clic de souris automatique</summary>
   <summary xml:lang="gl">Clic automático do rato</summary>
@@ -54,6 +56,7 @@
     <p xml:lang="de">KMouseTool drückt die Maustaste für Sie und funktioniert mit jeder Maus und jedem Zeigergerät.</p>
     <p xml:lang="en-GB">KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.</p>
     <p xml:lang="es">KMouseTool pulsa los botones del ratón por usted. KMouseTool funciona con cualquier ratón o dispositivo apuntador.</p>
+    <p xml:lang="eu">KMouseTool tresnak saguari klik egiten dio zure ordez, zuk egin behar ez dezazun. KMouseTool edozein sagu edo gailu erakuslerekin dabil.</p>
     <p xml:lang="fi">KMouseTool napsauttaa hiirtä puolestasi, jottei sinun tarvitse. KMouseTool toimii kaikilla hiirillä ja osoitinlaitteilla.</p>
     <p xml:lang="fr">KMouseTool clique sur la souris pour vous afin que vous n'ayez pas à le faire. KMouseTool fonctionne avec n'importe quelle souris ou dispositif de pointage.</p>
     <p xml:lang="gl">KMouseTool preme o rato por vostede. KMouseTool funciona con calquera rato ou dispositivo de punteiro.</p>
