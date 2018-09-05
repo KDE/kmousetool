@@ -33,9 +33,14 @@ add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
 find_package(X11 REQUIRED)
-if(X11_XTest_FOUND)
-    add_subdirectory( doc )
-    add_subdirectory( kmousetool )
-endif(X11_XTest_FOUND)
+if(NOT X11_Xt_FOUND)
+    message(FATAL_ERROR "Cannot find X11 Xt component (libxt header file X11/Intrinsic.h)")
+endif(NOT X11_Xt_FOUND)
+if(NOT X11_XTest_FOUND)
+    message(FATAL_ERROR "Cannot find X11 XTest component (libxcb-xtest header file X11/extensions/XTest.h)")
+endif(NOT X11_XTest_FOUND)
+
+add_subdirectory( doc )
+add_subdirectory( kmousetool )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
