@@ -146,7 +146,7 @@ private:
     bool isAutostart();
     void setAutostart (bool start);
 
-public slots:
+public Q_SLOTS:
     /**
      * This slot is called whenever a value in the settings window was changed.
      * It enabled and disables the three buttons "Defaults", "Reset" and "Apply".
@@ -199,7 +199,7 @@ public:
     ~KMouseToolTray();
 
     void updateStartStopText (bool mousetool_is_running);
-signals:
+Q_SIGNALS:
     void startStopSelected();
     void configureSelected();
     void aboutSelected();
