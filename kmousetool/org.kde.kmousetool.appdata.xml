@@ -80,7 +80,7 @@
     <p xml:lang="zh-CN">KMouseTool 为您单击鼠标，因此您不必这样做。KMouseTool 可用于任何鼠标或指针设备。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kmousetool</url>
-  <url type="donation">https://www.kde.org/community/donations/</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=kmousetool&amp;source=appdata</url>
   <url type="help">https://docs.kde.org/?application=kmousetool</url>
   <url type="homepage">https://www.kde.org/applications/utilities/kmousetool/</url>
   <screenshots>
