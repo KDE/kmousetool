@@ -2,10 +2,10 @@ project(kmousetool)
 
 cmake_minimum_required (VERSION 2.8.12 FATAL_ERROR)
 set(QT_MIN_VERSION "5.9.0")
-set(KF5_VERSION "5.46.0")
+set(KF5_MIN_VERSION "5.46.0")
 
 
-find_package (ECM ${KF5_VERSION} REQUIRED NO_MODULE)
+find_package (ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 include(CheckIncludeFiles)
@@ -17,7 +17,7 @@ include(FeatureSummary)
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets)
 
-find_package (KF5 ${KF5_VERSION} REQUIRED
+find_package (KF5 ${KF5_MIN_VERSION} REQUIRED
     DBusAddons
     DocTools
     I18n
