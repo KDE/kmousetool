@@ -186,7 +186,7 @@ public:
     /**
      *  construtor
      */
-    explicit KMouseTool(QWidget* parent=nullptr, const char *name=0);
+    explicit KMouseTool(QWidget* parent=nullptr, const char *name=nullptr);
 
     /** destructor */
     ~KMouseTool();

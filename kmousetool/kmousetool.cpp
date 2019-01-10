@@ -215,7 +215,7 @@ void KMouseTool::playTickSound()
 }
 
 KMouseTool::KMouseTool(QWidget *parent, const char *name)
- : QWidget(parent), helpMenu(new KHelpMenu(NULL))
+ : QWidget(parent), helpMenu(new KHelpMenu(nullptr))
 {
     setupUi(this);
     setObjectName( QLatin1String( name ));
@@ -434,7 +434,7 @@ void KMouseTool::loadOptions()
     move(p);
 
     mousetool_is_running = cfg.readEntry("MouseToolIsRunning", false);
-    display = XOpenDisplay(NULL);
+    display = XOpenDisplay(nullptr);
 }
 
 // Save options to kmousetoolrc file
@@ -590,15 +590,15 @@ void KMouseTool::aboutSelected()
 KMouseToolTray::KMouseToolTray (QWidget *parent) : KStatusNotifierItem(parent)
 {
     setStatus(KStatusNotifierItem::Active);
-    startStopAct = contextMenu()->addAction (i18nc("Start tracking the mouse", "&Start"), this, SIGNAL(startStopSelected()));
+    startStopAct = contextMenu()->addAction (i18nc("Start tracking the mouse", "&Start"), this, &KMouseToolTray::startStopSelected);
     contextMenu()->addSeparator();
     QAction* act;
-    act = contextMenu()->addAction (i18n("&Configure KMouseTool..."), this, SIGNAL(configureSelected()));
+    act = contextMenu()->addAction (i18n("&Configure KMouseTool..."), this, &KMouseToolTray::configureSelected);
     act->setIcon(QIcon::fromTheme(QStringLiteral( "configure" )));
     contextMenu()->addSeparator();
-    act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, SIGNAL(helpSelected()));
+    act = contextMenu()->addAction (i18n("KMousetool &Handbook"), this, &KMouseToolTray::helpSelected);
     act->setIcon(QIcon::fromTheme(QStringLiteral( "help-contents" )));
-    act = contextMenu()->addAction (i18n("&About KMouseTool"), this, SIGNAL(aboutSelected()));
+    act = contextMenu()->addAction (i18n("&About KMouseTool"), this, &KMouseToolTray::aboutSelected);
     act->setIcon(QIcon::fromTheme(QStringLiteral( "kmousetool" )));
 }
 
