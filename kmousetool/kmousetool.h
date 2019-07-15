@@ -22,7 +22,6 @@
 #ifndef KMOUSETOOL_H
 #define KMOUSETOOL_H
 
-#include <QDir>
 #include <QLabel>
 #include <QTimerEvent>
 #include <QWidget>

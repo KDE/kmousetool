@@ -38,6 +38,8 @@
 #include <QMenu>
 #include <QStandardPaths>
 #include <QTimerEvent>
+#include <QFile>
+#include <QFileInfo>
 
 #include <KConfig>
 #include <KConfigGroup>
