@@ -242,7 +242,7 @@ bool MTStroke::writeSequence()
   outfile << "# \n";
   outfile << "# The mouse path can then be described by a sequence of numbers:\n";
   outfile << "# for example, \"12321\" describes the mouse moving from left to right and back.\n";
-  outfile << "# This general scheme follows libstroke (http://www.etla.net/~willey/projects/libstroke/)\n";
+  outfile << "# This general scheme follows libstroke (https://directory.fsf.org/wiki/LibStroke)\n";
   outfile << "# although it was reimplemented from scratch for KMouseTool.\n";
   outfile << "\n";
   outfile << "# For each stroke recognized, provide an integer describing an action\n";

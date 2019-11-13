@@ -52,7 +52,7 @@ url="help:/kmousetool">help:/kmousetool</ulink>
 <parameter>help:/kmousetool</parameter></userinput>).</member>
 <member>kf5options(7)</member>
 <member>qt5options(7)</member>
-<member>There is also further information available at <ulink url="http://accessibility.kde.org">the &kde; accessibility site.</ulink></member>
+<member>There is also further information available at <ulink url="https://community.kde.org/Accessibility">the &kde; accessibility site.</ulink></member>
 </simplelist>
 </refsect1>
 

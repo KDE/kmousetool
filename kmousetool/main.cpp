@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 
     aboutData.addAuthor(i18n("Gunnar Schmidt"), i18n("Current maintainer"), QStringLiteral("gunnar@schmi-dt.de"), QStringLiteral("http://www.schmi-dt.de"));
     aboutData.addAuthor(i18n("Olaf Schmidt"), i18n("Usability improvements"), QStringLiteral("ojschmidt@kde.org"));
-    aboutData.addAuthor(i18n("Jeff Roush"), i18n("Original author"), QStringLiteral("jeff@mousetool.com"), QStringLiteral("http://www.mousetool.com"));
+    aboutData.addAuthor(i18n("Jeff Roush"), i18n("Original author"), QStringLiteral("jeff@mousetool.com"));
 
     aboutData.addCredit(i18n("Joe Betts"));
     aboutData.setOrganizationDomain("kde.org");
