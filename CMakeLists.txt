@@ -24,6 +24,7 @@ find_package (KF5 ${KF5_MIN_VERSION} REQUIRED
     IconThemes
     Notifications
     XmlGui
+    WindowSystem
 )
 
 find_package(Phonon4Qt5 REQUIRED NO_MODULE)

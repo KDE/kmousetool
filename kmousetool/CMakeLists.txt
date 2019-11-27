@@ -23,6 +23,7 @@ target_link_libraries(kmousetool
   KF5::I18n
   KF5::IconThemes
   KF5::Notifications
+  KF5::WindowSystem
   KF5::XmlGui
   ${X11_XTest_LIB}
   ${X11_Xext_LIB}
