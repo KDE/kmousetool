@@ -35,36 +35,6 @@
   <name xml:lang="zh-CN">K 鼠标工具</name>
   <name xml:lang="zh-TW">KMouseTool</name>
   <summary>Automatic clicks to reduce the effects of repetitive strain injury</summary>
-  <summary xml:lang="ca">Clic automàtic del ratolí</summary>
-  <summary xml:lang="ca-valencia">Clic automàtic del ratolí</summary>
-  <summary xml:lang="cs">Automatické klikání myší</summary>
-  <summary xml:lang="da">Automatiske museklik</summary>
-  <summary xml:lang="de">Automatische Mausklicks</summary>
-  <summary xml:lang="el">Αυτόματο κλικ ποντικιού</summary>
-  <summary xml:lang="en-GB">Automatic Mouse Click</summary>
-  <summary xml:lang="es">Pulsación automática del ratón</summary>
-  <summary xml:lang="et">Automaatne hiireklõps</summary>
-  <summary xml:lang="eu">Saguaren klik automatikoa</summary>
-  <summary xml:lang="fi">Automaattinen hiiren napsautus</summary>
-  <summary xml:lang="fr">Clic de souris automatique</summary>
-  <summary xml:lang="gl">Clic automático do rato</summary>
-  <summary xml:lang="ia">Pulsar automatic de mus</summary>
-  <summary xml:lang="id">Klik Mouse Otomatis</summary>
-  <summary xml:lang="it">Clic del mouse automatico</summary>
-  <summary xml:lang="ko">자동 마우스 클릭</summary>
-  <summary xml:lang="nl">Automatische muisklik</summary>
-  <summary xml:lang="nn">Automatisk museklikk</summary>
-  <summary xml:lang="pl">Automatyczne kliknięcia myszą</summary>
-  <summary xml:lang="pt">Botão do Rato Automático</summary>
-  <summary xml:lang="pt-BR">Clique automático do mouse</summary>
-  <summary xml:lang="ru">Автощелчок мышью</summary>
-  <summary xml:lang="sk">Automatické klikanie myšou</summary>
-  <summary xml:lang="sl">Avtomatski klik miške</summary>
-  <summary xml:lang="sv">Automatiska musklick</summary>
-  <summary xml:lang="uk">Автоматичне клацання кнопками миші</summary>
-  <summary xml:lang="x-test">xxAutomatic Mouse Clickxx</summary>
-  <summary xml:lang="zh-CN">自动鼠标点击</summary>
-  <summary xml:lang="zh-TW">自動點擊滑鼠工具</summary>
   <description>
     <p>
      KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.
