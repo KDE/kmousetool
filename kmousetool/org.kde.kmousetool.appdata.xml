@@ -35,6 +35,13 @@
   <name xml:lang="zh-CN">K 鼠标工具</name>
   <name xml:lang="zh-TW">KMouseTool</name>
   <summary>Automatic clicks to reduce the effects of repetitive strain injury</summary>
+  <summary xml:lang="ca">Els clics automàtics redueixen els efectes la síndrome del canal carpià</summary>
+  <summary xml:lang="ca-valencia">Els clics automàtics redueixen els efectes la síndrome del canal carpià</summary>
+  <summary xml:lang="es">Clics automáticos para reducir el efecto de lesiones por esfuerzo repetitivo</summary>
+  <summary xml:lang="pt">'Clicks' automáticos para reduzir os efeitos de lesões por movimentos repetitivos</summary>
+  <summary xml:lang="sv">Automatiska klick för att reducera effekten av belastningsskador</summary>
+  <summary xml:lang="uk">Автоматично клацає для запобігання шкоді вашому здоров'ю від постійного напруження</summary>
+  <summary xml:lang="x-test">xxAutomatic clicks to reduce the effects of repetitive strain injuryxx</summary>
   <description>
     <p>
      KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.
