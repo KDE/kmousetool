@@ -25,7 +25,6 @@
 #include <phonon/MediaObject>
 
 #include <X11/Xmd.h>
-#include "mtstroke.h"
 #include <X11/Intrinsic.h>     /* Intrinsics Definitions*/
 #include <X11/StringDefs.h>    /* Standard Name-String definitions*/
 #include <X11/extensions/xtestext1.h>    /* Standard Name-String definitions*/
@@ -38,7 +37,6 @@
 #include <QIcon>
 #include <QMenu>
 #include <QStandardPaths>
-#include <QTimerEvent>
 #include <QFile>
 #include <QFileInfo>
 
