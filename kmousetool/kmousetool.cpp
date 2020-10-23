@@ -157,32 +157,32 @@ void KMouseTool::timerEvent( QTimerEvent * )
         tick_count++;
 
     // If the mouse has paused ...
-        if (tick_count==dwell_time) {
-            int strokeType = stroke.getStrokeType();
-            getMouseButtons();
+    if (tick_count==dwell_time) {
+        int strokeType = stroke.getStrokeType();
+        getMouseButtons();
 
-            // if we're dragging the mouse, ignore stroke type
-            if (mouse_is_down) {
-                normalClick();
-                return;
-            }
-
-            if (!strokesEnabled) {
-                normalClick();
-                return;
-            }
-            if (strokeType == MTStroke::DontClick)
-                return;
-            if (strokeType==MTStroke::bumped_mouse)
-                return;
-
-            if (strokeType==MTStroke::RightClick || strokeType==MTStroke::UpperRightStroke)
-                RightClick();
-            else if (strokeType==MTStroke::DoubleClick || strokeType==MTStroke::LowerLeftStroke)
-                DoubleClick();
-            else
-                normalClick();
+        // if we're dragging the mouse, ignore stroke type
+        if (mouse_is_down) {
+            normalClick();
+            return;
         }
+
+        if (!strokesEnabled) {
+            normalClick();
+            return;
+        }
+        if (strokeType == MTStroke::DontClick)
+            return;
+        if (strokeType==MTStroke::bumped_mouse)
+            return;
+
+        if (strokeType==MTStroke::RightClick || strokeType==MTStroke::UpperRightStroke)
+            RightClick();
+        else if (strokeType==MTStroke::DoubleClick || strokeType==MTStroke::LowerLeftStroke)
+            DoubleClick();
+        else
+            normalClick();
+    }
 }
 
 void KMouseTool::normalClick()
@@ -374,7 +374,6 @@ void KMouseTool::setAutostart (bool start)
     QString sym = autostartdirname;
     sym += QLatin1String( "kmousetool" ); // sym is now full path to symlink
     QFileInfo fi(sym);
-    QString cmd;
 
     if (start) {
         if (!fi.exists()) // if it doesn't exist, make it
