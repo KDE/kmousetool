@@ -29,12 +29,12 @@ target_link_libraries(kmousetool
   ${X11_Xext_LIB}
   ${X11_LIBRARIES})
 
-install(TARGETS kmousetool  ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kmousetool  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
 
-install( PROGRAMS org.kde.kmousetool.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES mousetool_tap.wav  DESTINATION  ${DATA_INSTALL_DIR}/kmousetool/sounds )
-install(FILES org.kde.kmousetool.appdata.xml DESTINATION ${CMAKE_INSTALL_METAINFODIR})
+install( PROGRAMS org.kde.kmousetool.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
+install( FILES mousetool_tap.wav  DESTINATION  ${KDE_INSTALL_DATADIR}/kmousetool/sounds )
+install(FILES org.kde.kmousetool.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
