@@ -42,5 +42,7 @@ endif(NOT X11_XTest_FOUND)
 
 add_subdirectory( doc )
 add_subdirectory( kmousetool )
+ki18n_install(po)
+kdoctools_install(po)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
