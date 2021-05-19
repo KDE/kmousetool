@@ -15,9 +15,9 @@ ki18n_wrap_ui(kmousetool_SRCS kmousetoolui.ui )
 add_executable(kmousetool ${kmousetool_SRCS})
 
 target_link_libraries(kmousetool
-  Qt5::Core
-  Qt5::Gui
-  Qt5::Widgets
+  Qt::Core
+  Qt::Gui
+  Qt::Widgets
   Phonon::phonon4qt5
   KF5::DBusAddons
   KF5::I18n
