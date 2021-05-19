@@ -1,8 +1,8 @@
 project(kmousetool)
 
-cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
-set(QT_MIN_VERSION "5.14.0")
-set(KF5_MIN_VERSION "5.72.0")
+cmake_minimum_required (VERSION 3.16 FATAL_ERROR)
+set(QT_MIN_VERSION "5.15.0")
+set(KF5_MIN_VERSION "5.83.0")
 
 
 find_package (ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
