@@ -1,21 +1,8 @@
-/***************************************************************************
-                          main.cpp  -  description
-                             -------------------
-    begin                : Sun Jan 20 23:27:58 PST 2002
-    copyright            : (C) 2002 by Jeff Roush
-    email                : jeff@mousetool.com
-    copyright            : (C) 2003 by Olaf Schmidt
-    email                : ojschmidt@kde.org
- ***************************************************************************/
-
-/***************************************************************************
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- ***************************************************************************/
+/*
+    SPDX-FileCopyrightText: 2002 Jeff Roush <jeff@mousetool.com>
+    SPDX-FileCopyrightText: 2003 Olaf Schmidt <ojschmidt@kde.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 
 #include "kmousetool.h"
@@ -44,7 +31,7 @@ int main(int argc, char *argv[])
                          QStringLiteral(KMOUSETOOL_VERSION),
                          i18n(description),
                          KAboutLicense::GPL,
-                         i18n("(c) 2002-2003, Jeff Roush\n(c) 2003, Gunnar Schmidt"),
+                         i18n("(c) 2002-2003, Jeff Roush\nSPDX-FileCopyrightText: 2003 Gunnar Schmidt "),
                          QString(),
                          QStringLiteral("https://www.kde.org/applications/utilities/kmousetool/"),
                          QStringLiteral("gunnar@schmi-dt.de"));
