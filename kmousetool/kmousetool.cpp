@@ -445,7 +445,6 @@ void KMouseTool::saveOptions()
     int y = p.y();
 
     KConfigGroup cfg = KSharedConfig::openConfig()->group("ProgramOptions");
-    cfg.writeEntry("Version", KMOUSETOOL_VERSION);
     cfg = KSharedConfig::openConfig()->group("UserOptions");
     cfg.writeEntry("x", x);
     cfg.writeEntry("y", y);

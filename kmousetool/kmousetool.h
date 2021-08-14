@@ -26,8 +26,6 @@
 #include <QTimerEvent>
 #include <QWidget>
 
-#include "version.h"
-
 #include <KStatusNotifierItem>
 #include "mtstroke.h"
 #include "ui_kmousetoolui.h"

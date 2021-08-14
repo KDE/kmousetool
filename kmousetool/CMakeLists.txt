@@ -14,6 +14,7 @@ ki18n_wrap_ui(kmousetool_SRCS kmousetoolui.ui )
 
 add_executable(kmousetool ${kmousetool_SRCS})
 
+target_compile_definitions(kmousetool PRIVATE -DKMOUSETOOL_VERSION="${RELEASE_SERVICE_VERSION}")
 target_link_libraries(kmousetool
   Qt::Core
   Qt::Gui
