@@ -36,9 +36,6 @@ find_package (KF5 ${KF5_MIN_VERSION} REQUIRED
 
 find_package(Phonon4Qt5 REQUIRED NO_MODULE)
 
-include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
-
-
 find_package(X11 REQUIRED)
 if(NOT X11_Xt_FOUND)
     message(FATAL_ERROR "Cannot find X11 Xt component (libxt header file X11/Intrinsic.h)")
