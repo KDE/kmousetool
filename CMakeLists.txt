@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
+
 project(kmousetool)
 
 # KDE Application Version, managed by release script
@@ -6,7 +8,6 @@ set (RELEASE_SERVICE_VERSION_MINOR "07")
 set (RELEASE_SERVICE_VERSION_MICRO "20")
 set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}.${RELEASE_SERVICE_VERSION_MICRO}")
 
-cmake_minimum_required (VERSION 3.16 FATAL_ERROR)
 set(QT_MIN_VERSION "5.15.0")
 set(KF5_MIN_VERSION "5.83.0")
 
