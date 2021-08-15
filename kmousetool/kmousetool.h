@@ -158,7 +158,7 @@ public:
      * current mouse position to its previous position to see
      * whether to send a down click, and up click, or wait.
      */
-    void timerEvent (QTimerEvent *e) Q_DECL_OVERRIDE;
+    void timerEvent (QTimerEvent *e) override;
 
     /**
      * This generates a normal click event --
@@ -172,14 +172,14 @@ public:
     explicit KMouseTool(QWidget* parent=nullptr, const char *name=nullptr);
 
     /** destructor */
-    ~KMouseTool();
+    ~KMouseTool() override;
 };
 
 class KMouseToolTray : public KStatusNotifierItem {
     Q_OBJECT
 public:
     explicit KMouseToolTray (QWidget *parent=nullptr);
-    ~KMouseToolTray();
+    ~KMouseToolTray() override;
 
     void updateStartStopText (bool mousetool_is_running);
 Q_SIGNALS:
