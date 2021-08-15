@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
                          QStringLiteral(KMOUSETOOL_VERSION),
                          i18n(description),
                          KAboutLicense::GPL,
-                         i18n("(c) 2002-2003, Jeff Roush\nSPDX-FileCopyrightText: 2003 Gunnar Schmidt "),
+                         i18n("(c) 2002-2003, Jeff Roush\n(c) 2003 Gunnar Schmidt "),
                          QString(),
                          QStringLiteral("https://www.kde.org/applications/utilities/kmousetool/"),
                          QStringLiteral("gunnar@schmi-dt.de"));
