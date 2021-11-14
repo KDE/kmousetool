@@ -15,8 +15,6 @@
 
 #include <QCommandLineParser>
 
-static const char description[] = I18N_NOOP("KMouseTool");
-
 int main(int argc, char *argv[])
 {
     // enable high dpi support
@@ -29,7 +27,7 @@ int main(int argc, char *argv[])
     KAboutData aboutData(QStringLiteral("kmousetool"),
                          i18n("KMouseTool"),
                          QStringLiteral(KMOUSETOOL_VERSION),
-                         i18n(description),
+                         i18n("KMouseTool"),
                          KAboutLicense::GPL,
                          i18n("(c) 2002-2003, Jeff Roush\n(c) 2003 Gunnar Schmidt "),
                          QString(),
