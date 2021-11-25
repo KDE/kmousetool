@@ -47,6 +47,7 @@
   <summary xml:lang="eu">Esfortzu errepikakorraren ondoriozko lesioaren efektuak murrizteko klik automatikoak</summary>
   <summary xml:lang="fi">Hiiren automaattinapsautukset rasitusvammojen vaikutusten vähentämiseksi</summary>
   <summary xml:lang="fr">Clics automatiques pour réduire les effets des troubles musculo-squelettiques</summary>
+  <summary xml:lang="ia">Clicar automatic per reducer le effectos de damnos sporadic repetitive</summary>
   <summary xml:lang="id">Klik otomatis untuk mengurangi efek cedera pegal</summary>
   <summary xml:lang="it">Clic automatici per ridurre gli effetti del disturbo degli arti superiori da lavoro</summary>
   <summary xml:lang="ko">자동 클릭으로 반복성 긴장 장애 예방</summary>
@@ -78,6 +79,7 @@
     <p xml:lang="fi">KMouseTool napsauttaa hiirtä puolestasi, jottei sinun tarvitse. KMouseTool toimii kaikilla hiirillä ja osoitinlaitteilla.</p>
     <p xml:lang="fr">KMouseTool clique sur la souris pour vous afin que vous n'ayez pas à le faire. KMouseTool fonctionne avec n'importe quelle souris ou dispositif de pointage.</p>
     <p xml:lang="gl">KMouseTool preme o rato por vostede. KMouseTool funciona con calquera rato ou dispositivo de punteiro.</p>
+    <p xml:lang="ia">KMouseTool cicca le mus per te, assi que tu non debe facer lo. KMouseTool functiona con ulle mus o dispositivo de punctar.</p>
     <p xml:lang="id">KMouseTool mengeklik mouse untuk kamu, jadi kamu tidak perlu melakukannya. KMouseTool bekerja dengan mouse atau perangkat penunjuk apa pun.</p>
     <p xml:lang="it">KMouseTool fa clic col mouse per te, cosicché tu non debba farlo. Funziona con qualsiasi mouse o strumento di puntamento.</p>
     <p xml:lang="ko">KMouseTool은 여러분을 대신하여 마우스 단추를 눌러 줍니다. 마우스 및 포인팅 장치에 관계 없이 동작합니다.</p>
