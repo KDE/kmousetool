@@ -26,14 +26,17 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets)
 
 find_package (KF5 ${KF5_MIN_VERSION} REQUIRED
     DBusAddons
-    DocTools
     I18n
     IconThemes
     Notifications
     XmlGui
     WindowSystem
 )
-
+find_package(KF5DocTools ${KF5_MIN_VERSION})
+set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
+    "Tools to generate documentation"
+    TYPE OPTIONAL
+)
 find_package(Phonon4Qt5 REQUIRED NO_MODULE)
 
 find_package(X11 REQUIRED)
@@ -51,9 +54,11 @@ add_definitions(
     -DKF_DEPRECATED_WARNINGS_SINCE=0x060000
 )
 
-add_subdirectory( doc )
 add_subdirectory( kmousetool )
 ki18n_install(po)
-kdoctools_install(po)
+if(KF5DocTools_FOUND)
+    kdoctools_install(po)
+    add_subdirectory(doc)
+endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
