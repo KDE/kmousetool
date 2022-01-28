@@ -12,3 +12,4 @@ Dependencies:
     'frameworks/knotifications': '@stable'
     'frameworks/kxmlgui': '@stable'
     'frameworks/kwindowsystem': '@stable'
+    'libraries/phonon': '@stable'
