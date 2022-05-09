@@ -21,9 +21,9 @@ target_link_libraries(kmousetool
     KF5::Notifications
     KF5::WindowSystem
     KF5::XmlGui
-    Qt::Widgets
-    Qt::Gui
-    Qt::Core
+    Qt${QT_MAJOR_VERSION}::Widgets
+    Qt${QT_MAJOR_VERSION}::Gui
+    Qt${QT_MAJOR_VERSION}::Core
     Phonon::phonon4qt5
     ${X11_XTest_LIB}
     ${X11_Xext_LIB}
