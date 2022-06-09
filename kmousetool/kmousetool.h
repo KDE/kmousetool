@@ -12,9 +12,9 @@
 #include <QTimerEvent>
 #include <QWidget>
 
-#include <KStatusNotifierItem>
 #include "mtstroke.h"
 #include "ui_kmousetoolui.h"
+#include <KStatusNotifierItem>
 
 class QLabel;
 class QAction;
@@ -24,7 +24,7 @@ class KMouseToolTray;
 
 namespace Phonon
 {
-    class MediaObject;
+class MediaObject;
 }
 
 /**
@@ -59,7 +59,7 @@ private:
     QString autostartdirname;
     QString rcfilename;
     QString appfilename;
-    QString	mSoundFileName;
+    QString mSoundFileName;
     Phonon::MediaObject *mplayer;
     KMouseToolTray *trayIcon;
 
@@ -127,7 +127,7 @@ private:
     bool applySettings();
 
     bool isAutostart();
-    void setAutostart (bool start);
+    void setAutostart(bool start);
 
 public Q_SLOTS:
     /**
@@ -158,7 +158,7 @@ public:
      * current mouse position to its previous position to see
      * whether to send a down click, and up click, or wait.
      */
-    void timerEvent (QTimerEvent *e) override;
+    void timerEvent(QTimerEvent *e) override;
 
     /**
      * This generates a normal click event --
@@ -169,26 +169,27 @@ public:
     /**
      *  construtor
      */
-    explicit KMouseTool(QWidget* parent=nullptr, const char *name=nullptr);
+    explicit KMouseTool(QWidget *parent = nullptr, const char *name = nullptr);
 
     /** destructor */
     ~KMouseTool() override;
 };
 
-class KMouseToolTray : public KStatusNotifierItem {
+class KMouseToolTray : public KStatusNotifierItem
+{
     Q_OBJECT
 public:
-    explicit KMouseToolTray (QWidget *parent=nullptr);
+    explicit KMouseToolTray(QWidget *parent = nullptr);
     ~KMouseToolTray() override;
 
-    void updateStartStopText (bool mousetool_is_running);
+    void updateStartStopText(bool mousetool_is_running);
 Q_SIGNALS:
     void startStopSelected();
     void configureSelected();
     void aboutSelected();
     void helpSelected();
-private:
-    QAction* startStopAct;
 
+private:
+    QAction *startStopAct;
 };
 #endif
