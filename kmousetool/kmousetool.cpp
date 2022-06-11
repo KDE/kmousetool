@@ -19,11 +19,11 @@
 
 #include <QAbstractEventDispatcher>
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QFile>
 #include <QFileInfo>
 #include <QIcon>
 #include <QMenu>
+#include <QScreen>
 #include <QStandardPaths>
 
 #include <KConfig>
@@ -78,9 +78,9 @@ void KMouseTool::init_vars()
     // find the user's autostart directory
     autostartdirname = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart-scripts/");
 
-    QDesktopWidget *d = QApplication::desktop();
-    int w = d->width();
-    int h = d->height();
+    auto screenSize = screen()->availableGeometry();
+    int w = screenSize.width();
+    int h = screenSize.height();
     MTStroke::setUpperLeft(0, 0);
     MTStroke::setUpperRight(w - 1, 0);
     MTStroke::setLowerLeft(0, h - 1);
