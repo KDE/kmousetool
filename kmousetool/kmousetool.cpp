@@ -68,7 +68,7 @@ void KMouseTool::init_vars()
     loadOptions();
 
     // If the ~/.mousetool directory doesn't exist, create it
-    mSoundFileName = QStandardPaths::locate(QStandardPaths::DataLocation, QStringLiteral("sounds/mousetool_tap.wav"));
+    mSoundFileName = QStandardPaths::locate(QStandardPaths::AppLocalDataLocation, QStringLiteral("sounds/mousetool_tap.wav"));
     mplayer = Phonon::createPlayer(Phonon::AccessibilityCategory);
     mplayer->setParent(this);
 
