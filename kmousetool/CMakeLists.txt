@@ -24,7 +24,7 @@ target_link_libraries(kmousetool
     Qt${QT_MAJOR_VERSION}::Widgets
     Qt${QT_MAJOR_VERSION}::Gui
     Qt${QT_MAJOR_VERSION}::Core
-    Phonon::phonon4qt5
+    Phonon::phonon4qt${QT_MAJOR_VERSION}
     ${X11_XTest_LIB}
     ${X11_Xext_LIB}
     ${X11_LIBRARIES}

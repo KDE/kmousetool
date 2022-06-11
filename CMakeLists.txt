@@ -41,7 +41,7 @@ set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )
-find_package(Phonon4Qt5 REQUIRED NO_MODULE)
+find_package(Phonon4Qt${QT_MAJOR_VERSION} REQUIRED NO_MODULE)
 
 find_package(X11 REQUIRED)
 if(NOT X11_Xt_FOUND)
