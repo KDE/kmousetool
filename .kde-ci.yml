@@ -13,3 +13,6 @@ Dependencies:
     'frameworks/kxmlgui': '@stable'
     'frameworks/kwindowsystem': '@stable'
     'libraries/phonon': '@stable'
+
+Options:
+    require-passing-tests-on: [ 'Linux', 'FreeBSD' ]
