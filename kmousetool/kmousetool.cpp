@@ -375,7 +375,7 @@ bool KMouseTool::applySettings()
 
     // The drag time must be less than the dwell time
     if (dwell < drag) {
-        KMessageBox::sorry(this, i18n("The drag time must be less than or equal to the dwell time."), i18n("Invalid Value"));
+        KMessageBox::error(this, i18n("The drag time must be less than or equal to the dwell time."), i18n("Invalid Value"));
         return false;
     }
 
