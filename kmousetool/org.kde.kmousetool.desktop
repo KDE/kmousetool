@@ -71,7 +71,6 @@ Comment[vi]=Bấm chuột giúp bạn, giảm tác động của RSI
 Comment[x-test]=xxClicks the mouse for you, reducing the effects of RSIxx
 Comment[zh_CN]=为您点击鼠标，减轻肢体重复性劳损 (RSI) 效应
 Comment[zh_TW]=為您點擊滑鼠, 減少重複施緊傷害(RSI)的影響
-Terminal=false
 Name=KMouseTool
 Name[ar]=أداة فأرة كي
 Name[be]=KMouseTool
