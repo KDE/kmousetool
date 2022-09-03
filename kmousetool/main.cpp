@@ -39,7 +39,6 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(i18n("Jeff Roush"), i18n("Original author"), QStringLiteral("jeff@mousetool.com"));
 
     aboutData.addCredit(i18n("Joe Betts"));
-    aboutData.setOrganizationDomain("kde.org");
     aboutData.setDesktopFileName(QStringLiteral("org.kde.kmousetool"));
 
     QCommandLineParser parser;
