@@ -1,0 +1,235 @@
+# translation of kmousetool.po to Greek
+#
+# Spiros Georgaras <sng@hellug.gr>, 2005, 2006, 2007.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2005, 2009.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Stelios <sstavra@gmail.com>, 2017, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmousetool\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"PO-Revision-Date: 2021-09-03 10:39+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Σπύρος Γεωργαράς,Τούσης Μανώλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sng@hellug.gr,manolis@koppermind.homelinux.org"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "The drag time must be less than or equal to the dwell time."
+msgstr ""
+"Ο χρόνος έλξης πρέπει να είναι μικρότερος ή ίσος με το χρόνο διακράτησης."
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "Invalid Value"
+msgstr "Μη έγκυρη τιμή"
+
+#: kmousetool.cpp:447 kmousetool.cpp:588
+#, kde-format
+msgid "&Stop"
+msgstr "&Διακοπή"
+
+#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#, kde-format
+msgctxt "Start tracking the mouse"
+msgid "&Start"
+msgstr "&Εκκίνηση"
+
+#: kmousetool.cpp:509
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before closing the configuration window or "
+"discard the changes?"
+msgstr ""
+"Υπάρχουν μη αποθηκευμένες αλλαγές στο ενεργό άρθρωμα.\n"
+"Θέλετε να εφαρμόσετε τις αλλαγές πριν το κλείσιμο του παραθύρου διαμόρφωσης "
+"ή να απορρίψετε τις αλλαγές;"
+
+#: kmousetool.cpp:511
+#, kde-format
+msgid "Closing Configuration Window"
+msgstr "Κλείσιμο παραθύρου διαμόρφωσης"
+
+#: kmousetool.cpp:532
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before quitting KMousetool or discard the "
+"changes?"
+msgstr ""
+"Υπάρχουν μη αποθηκευμένες αλλαγές στο ενεργό άρθρωμα.\n"
+"Θέλετε να εφαρμόσετε τις αλλαγές πριν το κλείσιμο του KMousetool ή να "
+"απορρίψετε τις αλλαγές;"
+
+#: kmousetool.cpp:533
+#, kde-format
+msgid "Quitting KMousetool"
+msgstr "Έξοδος από το KMousetool"
+
+#: kmousetool.cpp:570
+#, kde-format
+msgid "&Configure KMouseTool..."
+msgstr "&Διαμόρφωση KMousetool..."
+
+#: kmousetool.cpp:573
+#, kde-format
+msgid "KMousetool &Handbook"
+msgstr "Ε&γχειρίδιο του KMousetool"
+
+#: kmousetool.cpp:575
+#, kde-format
+msgid "&About KMouseTool"
+msgstr "&Σχετικά με το KMouseTool"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
+#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#, kde-format
+msgid "KMouseTool"
+msgstr "KMouseTool"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: kmousetoolui.ui:20
+#, kde-format
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
+#: kmousetoolui.ui:62
+#, kde-format
+msgid "&Drag time (1/10 sec):"
+msgstr "&Χρόνος έλξης (1/10 δευτ.):"
+
+#. i18n: ectx: property (text), widget (QLabel, movementLabel)
+#: kmousetoolui.ui:97
+#, kde-format
+msgid "&Minimum movement:"
+msgstr "&Ελάχιστη κίνηση:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStart)
+#: kmousetoolui.ui:107
+#, kde-format
+msgid "Start with &desktop session"
+msgstr "Εκκίνηση με συνε&δρία επιφάνειας εργασίας"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
+#: kmousetoolui.ui:114
+#, kde-format
+msgid "Smar&t drag"
+msgstr "Έ&ξυπνη έλξη"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
+#: kmousetoolui.ui:124
+#, kde-format
+msgid "&Enable strokes"
+msgstr "&Ενεργοποίηση γραφών"
+
+#. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
+#: kmousetoolui.ui:131
+#, kde-format
+msgid "Dwell &time (1/10 sec):"
+msgstr "Χρόνος διακρά&τησης (1/10 δευτ.):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbClick)
+#: kmousetoolui.ui:154
+#, kde-format
+msgid "A&udible click"
+msgstr "Η&χητικό κλικ"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kmousetoolui.ui:191
+#, kde-format
+msgid ""
+"KMouseTool will run as a background application after you close this dialog. "
+"To change the settings again, restart KMouseTool or use the system tray."
+msgstr ""
+"Το KMousetool θα εκτελείται ως εφαρμογή στο παρασκήνιο μόλις κλείσετε αυτόν "
+"το διάλογο. Για αλλαγή των ρυθμίσεων ξανά, επανεκκινήστε το KMousetool ή "
+"χρησιμοποιήστε το πλαίσιο συστήματος."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
+#: kmousetoolui.ui:223
+#, kde-format
+msgid "&Start"
+msgstr "Έναρ&ξη"
+
+#: main.cpp:32
+#, kde-format
+msgid ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+msgstr ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+
+#: main.cpp:37
+#, kde-format
+msgid "Gunnar Schmidt"
+msgstr "Gunnar Schmidt"
+
+#: main.cpp:37
+#, kde-format
+msgid "Current maintainer"
+msgstr "Τρέχων συντηρητής"
+
+#: main.cpp:38
+#, kde-format
+msgid "Olaf Schmidt"
+msgstr "Olaf Schmidt"
+
+#: main.cpp:38
+#, kde-format
+msgid "Usability improvements"
+msgstr "Βελτιώσεις χρηστικότητας"
+
+#: main.cpp:39
+#, kde-format
+msgid "Jeff Roush"
+msgstr "Jeff Roush"
+
+#: main.cpp:39
+#, kde-format
+msgid "Original author"
+msgstr "Αρχικός συγγραφέας"
+
+#: main.cpp:41
+#, kde-format
+msgid "Joe Betts"
+msgstr "Joe Betts"
+
+#~ msgid "&Defaults"
+#~ msgstr "&Προκαθορισμένα"
+
+#~ msgid "&Reset"
+#~ msgstr "&Επαναφορά"
+
+#~ msgid "&Apply"
+#~ msgstr "Ε&φαρμογή"
+
+#~ msgid "&Help"
+#~ msgstr "&Βοήθεια"
+
+#~ msgid "&Close"
+#~ msgstr "&Κλείσιμο"
+
+#~ msgid "&Quit"
+#~ msgstr "&Τερματισμός"
+
+#~ msgid "Start with &KDE"
+#~ msgstr "Εκκίνηση με το &KDE"

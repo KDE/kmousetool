@@ -1,0 +1,219 @@
+# translation of kmousetool.po to Cymraeg
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kmousetool\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"PO-Revision-Date: 2004-01-08 17:55+0000\n"
+"Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
+"Language-Team: Cymraeg <cy@li.org>\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KD wrth KGyfieithu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kyfieithu@dotmon.com"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "The drag time must be less than or equal to the dwell time."
+msgstr "Rhaid i'r amser llusgo fod yn llai na neu yn gyfartal i'r amser aros."
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "Invalid Value"
+msgstr "Gwerth Annilys"
+
+#: kmousetool.cpp:447 kmousetool.cpp:588
+#, kde-format
+msgid "&Stop"
+msgstr "&Aros"
+
+#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#, kde-format
+msgctxt "Start tracking the mouse"
+msgid "&Start"
+msgstr ""
+
+#: kmousetool.cpp:509
+#, fuzzy, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before closing the configuration window or "
+"discard the changes?"
+msgstr ""
+"Mae newidiadau na gedwyd yn y modiwl gweithredol.<br>Hoffech chi weithredu'r "
+"newidiadau cyn cau'r ffenestr ymgom, neu taflu'r newidiadau?"
+
+#: kmousetool.cpp:511
+#, kde-format
+msgid "Closing Configuration Window"
+msgstr "Cau'r Ffenestr Ffurfweddiad"
+
+#: kmousetool.cpp:532
+#, fuzzy, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before quitting KMousetool or discard the "
+"changes?"
+msgstr ""
+"Mae newidiadau na gedwyd yn y modiwl gweithredol.<br>Hoffech chi weithredu'r "
+"newidiadau cyn terfynu KErfynLlygoden, neu taflu'r newidiadau?"
+
+#: kmousetool.cpp:533
+#, kde-format
+msgid "Quitting KMousetool"
+msgstr "Terfynu KErfynLlygoden"
+
+#: kmousetool.cpp:570
+#, kde-format
+msgid "&Configure KMouseTool..."
+msgstr "&Ffurfweddu KErfynLlygoden..."
+
+#: kmousetool.cpp:573
+#, kde-format
+msgid "KMousetool &Handbook"
+msgstr "&Llawlyfr KErfynLlygoden"
+
+#: kmousetool.cpp:575
+#, kde-format
+msgid "&About KMouseTool"
+msgstr "&Ynglyn â KErfynLlygoden"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
+#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#, kde-format
+msgid "KMouseTool"
+msgstr "KErfynLlygoden"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: kmousetoolui.ui:20
+#, kde-format
+msgid "Settings"
+msgstr "Gosodiadau"
+
+#. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
+#: kmousetoolui.ui:62
+#, fuzzy, kde-format
+#| msgid "Drag t&ime (1/10 sec):"
+msgid "&Drag time (1/10 sec):"
+msgstr "Amser ll&usgo (1/10 eil):"
+
+#. i18n: ectx: property (text), widget (QLabel, movementLabel)
+#: kmousetoolui.ui:97
+#, kde-format
+msgid "&Minimum movement:"
+msgstr "&Symudiad lleiaf:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStart)
+#: kmousetoolui.ui:107
+#, kde-format
+msgid "Start with &desktop session"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
+#: kmousetoolui.ui:114
+#, kde-format
+msgid "Smar&t drag"
+msgstr "Llus&go deallus"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
+#: kmousetoolui.ui:124
+#, kde-format
+msgid "&Enable strokes"
+msgstr "&Galluogi trawiadau"
+
+#. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
+#: kmousetoolui.ui:131
+#, fuzzy, kde-format
+#| msgid "D&well time (1/10 sec):"
+msgid "Dwell &time (1/10 sec):"
+msgstr "A&mser aros (1/10 eil):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbClick)
+#: kmousetoolui.ui:154
+#, kde-format
+msgid "A&udible click"
+msgstr "Clic cl&ywadwy"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kmousetoolui.ui:191
+#, fuzzy, kde-format
+#| msgid ""
+#| "KMouseTool will run as a background application after you close this "
+#| "dialog. To change the settings again, restart KMouseTool or use the KDE "
+#| "system tray."
+msgid ""
+"KMouseTool will run as a background application after you close this dialog. "
+"To change the settings again, restart KMouseTool or use the system tray."
+msgstr ""
+"Bydd KErfynLlygoden yn rhedeg fel cymhwysiad cefndir ar ôl i chi gau'r ymgom "
+"yma.  I newid y gosodiadau eto, ail-gychwyn KErfynLlygoden neu ddefnyddiwch "
+"y cafn cysawd KDE."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
+#: kmousetoolui.ui:223
+#, kde-format
+msgid "&Start"
+msgstr ""
+
+#: main.cpp:32
+#, kde-format
+msgid ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+msgstr ""
+
+#: main.cpp:37
+#, kde-format
+msgid "Gunnar Schmidt"
+msgstr ""
+
+#: main.cpp:37
+#, kde-format
+msgid "Current maintainer"
+msgstr "Cynhaliwr cyfredol"
+
+#: main.cpp:38
+#, kde-format
+msgid "Olaf Schmidt"
+msgstr ""
+
+#: main.cpp:38
+#, kde-format
+msgid "Usability improvements"
+msgstr "Gwelliannau defnyddioldeb"
+
+#: main.cpp:39
+#, kde-format
+msgid "Jeff Roush"
+msgstr ""
+
+#: main.cpp:39
+#, kde-format
+msgid "Original author"
+msgstr "Awdur gwreiddiol"
+
+#: main.cpp:41
+#, kde-format
+msgid "Joe Betts"
+msgstr ""
+
+#~ msgid "&Reset"
+#~ msgstr "&Ailosod"
+
+#~ msgid "Start with &KDE"
+#~ msgstr "Dechrau efo &KDE"

@@ -1,0 +1,444 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>El manual de &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>6 de juliol de 2017</date>
+<releaseinfo
+>1.12 (Aplicacions 17.08)</releaseinfo>
+
+<abstract>
+<para
+>La tasca de &kmousetool; és generar els clics del ratolí, allí a on s'aturi el punter del ratolí. Fou dissenyat d'aquesta manera per ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>rsi</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonòmic</keyword>
+<keyword
+>tendinitis</keyword>
+<keyword
+>síndrome del canal carpià</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+
+<para
+>&kmousetool; generarà els clics a on s'aturi un moment el punter del ratolí. Fou dissenyat d'aquesta manera per ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. També és possible usar &kmousetool; per arrossegar elements d'un lloc a l'altre de la pantalla, tot i que això últim requereix una mica més de pràctica. </para>
+
+<para
+>&kmousetool; pot ajudar a combatre el dolor que algunes persones senten en prémer els botons del ratolí. Però malauradament, no es pot fer res per aquells que experimenten dolor en desplaçar el ratolí per sobre la taula. Si us plau, si esteu experimentant dolors relacionats amb l'ús de l'ordinador, i encara no heu consultat a un metge, feu-ho tan aviat com es pugui. </para>
+<para
+>Una vegada més, i perquè quedi ben clar: Encara que &kmousetool;, us pot ajudar a combatre el dolor causat per l'acció de fer <emphasis
+>clic</emphasis
+> en el ratolí, no pot fer res pel dolor que us pugui causar <emphasis
+>moure</emphasis
+> el ratolí per sobre la taula. I, el grau de rendiment d'aquesta eina ergonòmica pot variar per a cada cas en particular. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Usar &kmousetool;</title>
+<para
+>Usar &kmousetool; és simple: &kmousetool; vigila el moviment del ratolí, i s'encarregarà de generar els clics quan aquest s'aturi un moment. </para>
+
+<para
+>En el mode arrossegat intel·ligent de &kmousetool; també us permet arrossegar el ratolí. </para>
+
+<para
+>Quan el mode arrossegat intel·ligent es trobi habilitat, &kmousetool; farà una pausa després de cada clic; si moveu el cursor el ratolí no es farà el clic fins que l'atureu. D'aquesta manera, podreu usar ambdós clics i arrossegar amb el ratolí. Tingueu en compte que el mode arrossegat intel·ligent requereix una mica de pràctica, però resultarà natural una vegada que us hi acostumeu. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Referència d'ordres</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>La finestra principal de &kmousetool;</title>
+
+    <para
+>A les opcions de &kmousetool; s'hi accedeix mitjançant el ratolí.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Inicia</guibutton
+>/<guibutton
+>Atura</guibutton
+> </term>
+        <listitem>
+          <para
+>Inicia (o atura) &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Moviment mínim:</guilabel
+></term>
+<listitem>
+<para
+>El moviment mínim del ratolí en píxels abans que &kmousetool; intenti generar un clic.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Temps d'estancament (1/10 s):</guilabel>
+        </term>
+        <listitem>
+          <para
+>Determina quant temps esperarà &kmousetool; per a generar el clic una vegada s'hagi aturat el ratolí. Si us resulta difícil acostumar-vos a &kmousetool;, proveu d'incrementar el temps d'estancament </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Arrossegat intel·ligent</guilabel>
+        </term>
+        <listitem>
+          <para
+>Habilita o inhabilita el mode d'arrossegat intel·ligent. Inhabilitar-la resulta fàcil, per omissió ja ho està.</para
+><para
+>Quan habiliteu <guilabel
+>Arrossegat intel·ligent</guilabel
+> el camp <guilabel
+>Temps d'estancament (1/10 seg)</guilabel
+> estarà disponible. Aquest serà el temps que &kmousetool; esperarà per alliberar un clic, sempre que no moveu el punter del ratolí. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Habilita pulsacions</guilabel>
+        </term>
+        <listitem>
+          <para
+>&kmousetool; ara permet pulsacions. Quan estan habilitades, un lent moviment d'anada i tornada cap a la dreta generarà un clic <mousebutton
+>dret</mousebutton
+>. Un lent moviment d'anada i tornada cap a l'esquerra generarà un doble clic. (Les pulsacions estan definides en <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmouse_tool.txt</filename
+>. Aquest fitxer és automàticament generat per &kmousetool; la primera vegada que s'inicia, però es pot modificar en qualsevol moment). </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Clic audible</guilabel>
+        </term>
+        <listitem>
+          <para
+>Emet un so quan &kmousetool; genera un clic. Això resulta molt útil en el mode arrossegat intel·ligent. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Inicia amb la sessió d'escriptori</guilabel>
+        </term>
+        <listitem>
+          <para
+>Quan estigui habilitada, el &kmousetool; serà iniciat cada vegada que s'iniciï la sessió de l'escriptori.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Omissió</guibutton
+></term>
+<listitem>
+<para
+>Torna als valors per omissió.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Inicialitza</guibutton
+></term>
+<listitem>
+<para
+>Torna tots els valors a l'estat en què estaven al moment d'obrir el diàleg, o, si els canvis han estat desats amb el botó <guibutton
+>Aplica</guibutton
+>, torna als valors a l'estat en què estaven l'última vegada que es va prémer el botó <guibutton
+>Aplica</guibutton
+></para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Aplica</guibutton>
+        </term>
+        <listitem>
+          <para
+>Després de fer qualsevol canvi en la configuració, haureu de fer clic en aquest botó.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Ajuda</guibutton
+></term>
+<listitem>
+<para
+>Obre el manual d'usuari (aquest document).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Tanca</guibutton
+></term>
+<listitem>
+<para
+>Tanca el diàleg sense desar les opcions canviades.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Surt</guibutton
+></term>
+<listitem>
+<para
+>Surt de &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Pistes</title>
+
+<para
+>Els següents consells poden escurçar una mica la corba d'aprenentatge de &kmousetool;. <itemizedlist>
+<listitem
+><para
+>Podeu modificar el lapse de temps que &kmousetool; esperarà tant per a generar un clic com per a començar el procés d'arrossegat.</para>
+</listitem>
+<listitem
+><para
+>Primer, la millor pràctica per a fer clics amb &kmousetool; seria usant la seva configuració per omissió. En especial, hauríeu de deixar inhabilitada l'opció arrossegat intel·ligent. Després, una vegada que us sentiu confortable fent clic, podeu fer un pas endavant i començar a practicar amb el mode arrossegat intel·ligent.</para>
+</listitem>
+<listitem
+><para
+>Una vegada useu el mode arrossegat intel·ligent, el clic audible us serà de molta ajuda</para>
+</listitem>
+<listitem
+><para
+>Quan useu el clic audible, potser us caldrà accelerar la resposta d'àudio del &kde;.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Preguntes i respostes</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Ajuda! &kmousetool; continua emetent clics erronis per tota la pantalla!</para>
+</question>
+<answer>
+<para
+>Quan comenceu a usar &kmousetool;, haureu d'aprendre nous hàbits amb els quals moure el ratolí. </para>
+<para
+>Primer, és important tenir present quins són els llocs en els quals fer clic no generarà cap esdeveniment &mdash; fer clic sobre les parts grises de la pantalla, o en les àrees del navegador que no continguin enllaços a altres pàgines, no generarà cap acció. Aquestes són àrees idònies per a deixar el punter del ratolí fins que us calgui. </para>
+<para
+>També és important que abans de començar a desplaçar el ratolí, estigueu segur de quin és el lloc a on fareu clic. Mentre useu &kmousetool;, no és una bona idea estar movent el ratolí aleatòriament mentre decidiu quin és el lloc correcte per a fer clic. Fins i tot, és una bona idea no tocar el ratolí quan no l'estigueu usant. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>El meu ratolí es trava mentre l'estic movent. Encara puc seguir usant &kmousetool;?</para>
+</question>
+<answer>
+<para
+>Sí, és clar. Si el ratolí es trava, segurament us caldrà fer-li una neteja. La neteja de la part externa és, en general, una tasca fàcil. Pel que fa a la part interna, no tan sols és important netejar la bola, si no tots els cilindres pels quals es desplaça.</para>
+<para
+>Per a això últim, haureu d'eliminar la bola. Els mètodes per a fer-ho poden variar d'un a altre ratolí, però normalment és bastant clar com fer-ho mireu la part inferior del ratolí.</para>
+<para
+>Una vegada que heu eliminat la bola, segurament podreu veure els mencionats cilindres, als costats del forat que conté la bola. La brutícia adherida es pot eliminar mitjançant algun utensili pla que us permeti realitzar un raspat o si ho preferiu, ho podeu fer amb les ungles. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; genera un clic però mai l'allibera. Què està passant?</para>
+</question>
+<answer>
+<para
+>En algunes situacions, el sistema suspèn &kmousetool; quan comença una operació d'arrossegat. Si useu el mode d'arrossegat intel·ligent, això vol dir que &kmousetool; mai podrà finalitzar el procés d'arrossegat alliberant el clic.</para>
+<para
+>Aquest problema pot sorgir quan s'usa &kmousetool; sota un gestor de finestres no &kde; i s'intenta moure una finestra. </para>
+<para
+>La solució és fer un clic manualment. D'aquesta manera &kmousetool; es tornarà a iniciar, i tot tornarà a la normalitat.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; mou el cursor quan estic intentant escriure.</para>
+</question>
+<answer>
+<para
+>Problema: Quan esteu escrivint text, &kmousetool; continua generant clics i movent el cursor del lloc a on voleu escriure.</para>
+<para
+>Solució: Una vegada el cursor estigui en el lloc correcte, hauríeu de desplaçar el punter del ratolí cap a una àrea neutre de la pantalla. D'aquesta manera, algun cop accidental al ratolí o un petit desplaçament que provoquen l'emissió d'algun clic aleatori, no tindran efecte en el context. Els llocs segurs de la pantalla inclouen les àrees grises al voltant de les barres d'eines o menús, i les barres de títol de les finestres.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Estic mirant d'usar el mode arrossegat intel·ligent, però no trobo la manera d'usar-lo per editar text.</para>
+</question>
+<answer>
+<para
+>El mode arrossegat intel·ligent és una característica avançada de &kmousetool; i requereix cert temps acostumar-se al seu ús. És molt possible que l'useu per a seleccionar, retallar i enganxar text, o la simple tasca d'arrossegar el ratolí. Tot i que segurament no sereu capaç de fer-ho al principi. Heus aquí alguns consells: </para>
+<itemizedlist>
+<listitem
+><para
+>No useu l'arrossegat intel·ligent mentre apreneu a usar &kmousetool;. En comptes d'aquest, per a seleccionar text, feu clic a una part d'aquest, i manteniu premuda la tecla &Maj; mentre feu clic a l'altra banda. </para
+></listitem>
+<listitem
+><para
+>L'ús del clic audible. Aquest reproduirà un so de «clic» cada vegada que &kmousetool; en generi un, i al començament us dirà el retard amb l'arrossegat intel·ligent. Amb pràctica, podreu usar l'arrossegat intel·ligent sense el clic audible, però requereix molta pràctica. </para
+></listitem>
+<listitem
+><para
+>Abans de començar a moure el ratolí caldrà saber a on fer clic. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Crèdits i llicència</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Copyright del programa 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> i 2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Col·laboradors: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Copyright de la documentació 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

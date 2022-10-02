@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>&kmousetool;-Benutzerhandbuch</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2017-07-06</date>
+<releaseinfo
+>Anwendungen 17.08</releaseinfo>
+<productname
+>KDE-Anwendungen</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Zugangshilfe für die Betätigung der Maustasten</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschreibung</title>
+
+<para
+>&kmousetool; betätigt die Maustaste sobald der Mauszeiger kurz verharrt. Dieses Programm wurde für Menschen entwickelt, die am RSI-Syndrom leiden und denen das Betätigen der Maustasten Schmerzen bereitet. </para>
+
+<para
+>&kmousetool; kann außerdem so konfiguriert werden, dass es eine bestimmte Zeit darauf wartet, dass ein Ziehen-Vorgang beginnt, bevor die Maustaste losgelassen wird. Auf diese Weise kann auch das Ziehen und Ablegen mit der Maus durchgeführt werden.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+
+<simplelist>
+<member
+>Ausführlichere Benutzerdokumentation finden Sie mit <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (geben Sie entweder diese &URL; in die Adressleiste von &konqueror; ein oder starten Sie <userinput
+><command
+>khelpcenter</command
+><parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member>
+<member
+>qt5options(7)</member>
+<member
+>Weitere Informationen finden Sie außerdem auf der <ulink url="https://community.kde.org/Accessibility"
+>Homepage des Accessibility-Projekts von &kde;</ulink
+>.</member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>&kmousetool; wurde entwickelt von <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> and <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

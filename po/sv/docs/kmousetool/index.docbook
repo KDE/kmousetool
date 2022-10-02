@@ -1,0 +1,460 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>Handbok &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+><affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+><contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2017-07-06</date>
+<releaseinfo
+>1.12 (Program 17.08)</releaseinfo>
+
+<abstract>
+<para
+>&kmousetool; klickar musen så fort muspekaren stannar en kort stund. Det konstruerades som hjälp för de som har musarm, och får smärtor av att trycka på knapparna. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>rsi</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonomi</keyword>
+<keyword
+>seninflammation</keyword>
+<keyword
+>karpaltunnelsyndrom</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+
+<para
+>&kmousetool; klickar musen så fort muspekaren stannar en kort stund. Det konstruerades som hjälp för de som har musarm, och får smärtor av att trycka på knapparna. Det kan också dra med musen, även om det kräver lite mer övning. </para>
+
+<para
+>&kmousetool; kan eliminera smärta som orsakas av att klicka med musen, och hjälpa många att använda datorn utan smärta. Tyvärr kan en del smärta uppstå genom att bara flytta omkring musen på bordet. Om du upplever smärta orsakad av datorn, och ännu inte har besökt läkare, gör då det. </para>
+<para
+>För att vara fullständigt klar, även om &kmousetool; kan hjälpa till att reducera smärta orsakad av att <emphasis
+>klicka</emphasis
+> med musen, kan det inte hjälpa smärta orsakad av att <emphasis
+>flytta</emphasis
+> musen. Och som med alla ergonomiska verktyg, kan det fungera olika bra. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Att använda &kmousetool;</title>
+<para
+>Att använda &kmousetool; är enkelt. &kmousetool; tittar medan du flyttar musen, och när du stannar en kort stund, klickar det. </para>
+
+<para
+>&kmousetool;s smarta dragläge låter dig dra med musen. </para>
+
+<para
+>När smart drag är aktiverat, väntar &kmousetool; efter musens knapp har tryckts ner. Om du flyttar musen, väntar det till rörelsen avslutats innan knappen släpps upp. På så sätt kan du både klicka och dra musen. Smart drag kräver en del extra övning, men blir naturligt när du väl vant dig vid det. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Kommandoreferens</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>Huvudfönstret i &kmousetool;</title>
+
+    <para
+>&kmousetool;s alternativ kan i huvudsak kommas åt med musen.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Starta</guibutton
+>/<guibutton
+>Stoppa</guibutton
+> </term>
+        <listitem>
+          <para
+>Startar (eller stoppar) &kmousetool;</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Minimal rörelse:</guilabel
+></term>
+<listitem>
+<para
+>Minimal rörelse i bildpunkter innan &kmousetool; försöker klicka med musen.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Hålltid (1/10 sek):</guilabel>
+        </term>
+        <listitem>
+          <para
+>Tiden som musen måste stanna innan &kmousetool; klickar. Försök att öka den här tiden om du har svårt att vänja dig vid &kmousetool;. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Smart drag</guilabel>
+        </term>
+        <listitem>
+          <para
+>Aktiverar eller inaktiverar smart drag. Användning med det inaktiverat är enklare, så det är normalläget.</para
+><para
+>Om du aktiverar <guilabel
+>smart drag</guilabel
+> blir fältet <guilabel
+>Hålltid (1/10 sek):</guilabel
+> tillgängligt. Det är tiden som &kmousetool; väntar efter ett klick, innan knappen släpps upp igen om du inte flyttar musen. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Aktivera gester</guilabel>
+        </term>
+        <listitem>
+          <para
+>Nu stöder &kmousetool; musgester. När du aktiverar musgester, sker ett högerklick om du flyttar musen långsamt åt höger och tillbaka och sedan väntar. En långsam förflyttning åt vänster och tillbaka ger upphov till ett dubbelklick. (Musgester specificeras i <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+>. Filen skapas av &kmousetool; första gången det körs, men kan ändras efteråt.) </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Hörbart klick</guilabel>
+        </term>
+        <listitem>
+          <para
+>Spela ett ljud när &kmousetool; klickar. Det hjälper till, särskilt med smart drag. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Starta med skrivbordssession</guilabel>
+        </term>
+        <listitem>
+          <para
+>När det här är aktiverat startas &kmousetool; varje gång en skrivbordssession startas.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Förval</guibutton
+></term>
+<listitem>
+<para
+>Återställ alla inställningar till förvalda värden.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Återställ</guibutton
+></term>
+<listitem>
+<para
+>Återställ alla inställningar till tillståndet då du öppnade dialogrutan, eller om du redan har sparat en inställning med knappen <guibutton
+>Verkställ</guibutton
+>, återställ alla inställningar till tillståndet då du senast tryckte på <guibutton
+>Verkställ</guibutton
+>.</para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Verkställ</guibutton>
+        </term>
+        <listitem>
+          <para
+>Efter någon inställning har ändrats, måste du klicka den här knappen.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Hjälp</guibutton
+></term>
+<listitem>
+<para
+>Visar användarhandboken (det här dokumentet).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Stäng</guibutton
+></term>
+<listitem>
+<para
+>Stäng dialogrutan utan att spara några inställningar.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Avsluta</guibutton
+></term>
+<listitem>
+<para
+>Avsluta &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Tips</title>
+
+<para
+>Följande tips kan hjälpa till att snabba upp inlärningen av &kmousetool; en del. <itemizedlist>
+<listitem
+><para
+>Du kan ändra tidsfördröjningen som &kmousetool; väntar, både för klick och drag.</para>
+</listitem>
+<listitem
+><para
+>Det är bäst att först öva på att klicka med &kmousetool; med standardinställningar. Särskilt smart drag kan vara lämpligt att lämna avstängt från början. Därefter, när du tycker att det känns bekvämt att klicka, fortsätt med att öva med smart drag.</para>
+</listitem>
+<listitem
+><para
+>När du använder smart drag, kan det hjälpa att aktivera Hörbart klick</para>
+</listitem>
+<listitem
+><para
+>När du använder hörbart klick, kan du behöva snabba upp &kde;:s svarstid för ljud.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Vanliga frågor</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Hjälp! &kmousetool; håller på och klickar då och då över hela skärmen.</para>
+</question>
+<answer>
+<para
+>När du använder &kmousetool; måste du lära dig nya musvanor. </para>
+<para
+>Kom först ihåg var det är säkert att klicka. Att klicka på grå delar av fönster eller områden utan länkar i webbläsare gör ingen skada, så du kan säkert låta musen vila över sådana områden till du behöver den. </para>
+<para
+>För det andra måste du veta var du ska klicka innan du flyttar musen. Oftast, när man vet att musen ska användas, tar man oftast tag i den och börjar flytta den slumpmässigt till man har räknat ut var man ska klicka. Med &kmousetool; måste man veta var man ska klicka innan man överhuvudtaget börjar flytta musen. Det är också en bra idé att inte hålla handen på musen när den inte används. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Min mus klickar när jag flyttar den. Kan jag ändå använda &kmousetool;?</para>
+</question>
+<answer>
+<para
+>Ja, om musen fastnar betyder det att man behöver rengöra den. Det är ofta lätt att göra. Tricket är att inte bara musens kula behöver rengöras, utan också rullarna som kulan rör sig mot inne i musen.</para>
+<para
+>Först måste man ta bort kulan. Sättet att göra det varierar från mus till mus, men det är ofta ganska uppenbart hur det görs, om man tittar på musens undersida.</para>
+<para
+>När kulan väl har tagits bort, ska man kunna se rullarna vid kanten av hålet som innehöll kulan. Smuts och orenligheter på dem kan lätt skrapas av med ett platt blad eller en fingernagel. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; klickar men släpper aldrig upp knappen. Vad är det som sker?</para>
+</question>
+<answer>
+<para
+>Vid vissa sällsynta tillfällen, inaktiverar systemet &kmousetool; när ett drag startar. Om du använder smart drag, betyder det att &kmousetool; aldrig kan avsluta draget genom att släppa upp musknappen.</para>
+<para
+>Det här inträffar när du använder &kmousetool; med en annan fönsterhanterare än &kde;, och sedan använder det för att flytta ett fönster. </para>
+<para
+>Lösningen är att helt enkelt klicka för hand. Det återställer &kmousetool;, och därefter kan du fortsätta att arbeta som vanligt igen.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; flyttar markören när jag försöker skriva in tecken.</para>
+</question>
+<answer>
+<para
+>Problem: När du skriver in text, så håller &kmousetool; på att klicka och flytta bort markören från stället du vill skriva.</para>
+<para
+>Lösning: Använd musen för att placera markören där du vill ha den, men när du är klar att börja skriva, placera musen på ett neutralt ställe på skärmen. Om du därefter stöter till musen, eller den flyttas några få bildpunkter, så spelar slumpmässiga klick som skapas ingen roll. Säkra ställen att parkera musen omfattar gråa områden omkring verktygsrader och menyer, samt fönstrens namnlister.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Jag försöker använda smart drag, men jag lyckas inte få till det när jag redigerar text.</para>
+</question>
+<answer>
+<para
+>Smart drag är en avancerad funktion i &kmousetool;, och det kan ta tid att vänja sig vid den. Det är fullt möjligt att använda den för att markera text, klippa ut och klistra in, och använda den i nästan alla situationer där du normalt skulle vilja dra med musen, men du kommer nog inte att kunna göra det här från början. Här är några råd: </para>
+<itemizedlist>
+<listitem
+><para
+>Använd inte smart drag när du först lär dig använda &kmousetool;. För att markera text, klicka istället på ena ändan av texten, och håll nere skift-tangenten medan du klickar på andra ändan av texten. </para
+></listitem>
+<listitem
+><para
+>Använd hörbart klick. Det spelar ett <quote
+>klickljud</quote
+> när &kmousetool; trycker ner musknappen. Det talar om för dig när fördröjningen för smart drag börjar. Med övning kan du använda smart drag utan hörbart klick, men det kräver relativt långvarig övning. </para
+></listitem>
+<listitem
+><para
+>Räkna ut var du ska klicka med musen innan du börja flytta den. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Tack till och licens</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Program copyright 2002 Jeff Roush<email
+>jeff@mousetool.com</email
+> och 2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Bidragsgivare: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Dokumentation copyright 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

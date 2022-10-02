@@ -1,0 +1,239 @@
+# Translation for kmousetool.po to Euskara/Basque (eu).
+# Copyright (C) 2005-2017, Free Software Foundation, Inc.
+# Copyright (C) 2018-2021, This fili is copyright:
+# This file is distributed under the same license as the kmousetool package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Ion Gaztañaga <ion_g_m@hotmail.com>, 2005.
+# Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmousetool\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"PO-Revision-Date: 2021-08-16 20:56+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Ion Gaztañaga"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "igaztanaga@gmail.com"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "The drag time must be less than or equal to the dwell time."
+msgstr "Arrastatze-denbora atzerapen-denbora baina txikiagoa izan behar da."
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "Invalid Value"
+msgstr "Balio okerra"
+
+#: kmousetool.cpp:447 kmousetool.cpp:588
+#, kde-format
+msgid "&Stop"
+msgstr "&Gelditu"
+
+#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#, kde-format
+msgctxt "Start tracking the mouse"
+msgid "&Start"
+msgstr "&Hasi"
+
+#: kmousetool.cpp:509
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before closing the configuration window or "
+"discard the changes?"
+msgstr ""
+"Aldatu gabeko aldaketak daude modulu aktiboan.\n"
+"Konfigurazio lehioa itxi baina lehen aldaketak aplikatu edo bertan behera "
+"utzi nahi dituzu?"
+
+#: kmousetool.cpp:511
+#, kde-format
+msgid "Closing Configuration Window"
+msgstr "Konfigurazio-lehioa ixten"
+
+#: kmousetool.cpp:532
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before quitting KMousetool or discard the "
+"changes?"
+msgstr ""
+"Gorde gabeko aldaketak daude lehio aktiboan.\n"
+"KMousetool itxi aurretik aldaketak aplikatu edo bertan behera utzi nahi "
+"dituzu?"
+
+#: kmousetool.cpp:533
+#, kde-format
+msgid "Quitting KMousetool"
+msgstr "KMousetool ixten"
+
+#: kmousetool.cpp:570
+#, kde-format
+msgid "&Configure KMouseTool..."
+msgstr "KMouseTool &konfiguratzen..."
+
+#: kmousetool.cpp:573
+#, kde-format
+msgid "KMousetool &Handbook"
+msgstr "KMousetool-en &eskuliburua"
+
+#: kmousetool.cpp:575
+#, kde-format
+msgid "&About KMouseTool"
+msgstr "KMouseTool-i &buruz"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
+#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#, kde-format
+msgid "KMouseTool"
+msgstr "KMouseTool"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: kmousetoolui.ui:20
+#, kde-format
+msgid "Settings"
+msgstr "Ezarpenak"
+
+#. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
+#: kmousetoolui.ui:62
+#, kde-format
+msgid "&Drag time (1/10 sec):"
+msgstr "Arrastatze-&denbora (1/10 seg):"
+
+#. i18n: ectx: property (text), widget (QLabel, movementLabel)
+#: kmousetoolui.ui:97
+#, kde-format
+msgid "&Minimum movement:"
+msgstr "Mugimendu &minimoa:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStart)
+#: kmousetoolui.ui:107
+#, kde-format
+msgid "Start with &desktop session"
+msgstr "Abiatu mahai&gain saioarekin"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
+#: kmousetoolui.ui:114
+#, kde-format
+msgid "Smar&t drag"
+msgstr "Arrastatze &azkarra"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
+#: kmousetoolui.ui:124
+#, kde-format
+msgid "&Enable strokes"
+msgstr "&Gaitu traza"
+
+#. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
+#: kmousetoolui.ui:131
+#, kde-format
+msgid "Dwell &time (1/10 sec):"
+msgstr "I&txarote-denbora (1/10 seg):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbClick)
+#: kmousetoolui.ui:154
+#, kde-format
+msgid "A&udible click"
+msgstr "Klik &entzungarria"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kmousetoolui.ui:191
+#, kde-format
+msgid ""
+"KMouseTool will run as a background application after you close this dialog. "
+"To change the settings again, restart KMouseTool or use the system tray."
+msgstr ""
+"KMousetool atzeko planoko aplikazio bat bezala exekutatuko da elkarrizketa "
+"hau ixten duzunean. Ezarpenak berriz aldatzeko, berrabiarazi KMouseTool edo "
+"erabili sistemako erretilua."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
+#: kmousetoolui.ui:223
+#, kde-format
+msgid "&Start"
+msgstr "&Hasi"
+
+#: main.cpp:32
+#, kde-format
+msgid ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+msgstr ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+
+#: main.cpp:37
+#, kde-format
+msgid "Gunnar Schmidt"
+msgstr "Gunnar Schmidt"
+
+#: main.cpp:37
+#, kde-format
+msgid "Current maintainer"
+msgstr "Uneko mantentzailea"
+
+#: main.cpp:38
+#, kde-format
+msgid "Olaf Schmidt"
+msgstr "Olaf Schmidt"
+
+#: main.cpp:38
+#, kde-format
+msgid "Usability improvements"
+msgstr "Erabilerraztasun hobekuntzak"
+
+#: main.cpp:39
+#, kde-format
+msgid "Jeff Roush"
+msgstr "Jeff Roush"
+
+#: main.cpp:39
+#, kde-format
+msgid "Original author"
+msgstr "Jatorrizko egilea"
+
+#: main.cpp:41
+#, kde-format
+msgid "Joe Betts"
+msgstr "Joe Betts"
+
+#~ msgid "&Defaults"
+#~ msgstr "&Lehenetsiak"
+
+#~ msgid "&Reset"
+#~ msgstr "Be&rrezarri"
+
+#~ msgid "&Apply"
+#~ msgstr "&Aplikatu"
+
+#~ msgid "&Help"
+#~ msgstr "&Laguntza"
+
+#~ msgid "&Close"
+#~ msgstr "It&xi"
+
+#~ msgid "&Quit"
+#~ msgstr "Irte&n"
+
+#~ msgid "Start with &KDE"
+#~ msgstr "Hasi &KDE-rekin"

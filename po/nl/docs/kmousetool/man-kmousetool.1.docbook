@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Dutch "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Gebruikersgids van &kmousetool;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2017-07-06</date>
+<releaseinfo
+>Applications 17.08</releaseinfo>
+<productname
+>KDE Applications</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Toegangshulp bij het gebruik van de muistoetsen</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschrijving</title>
+
+<para
+>&kmousetool; klikt de muis als de muisaanwijzer even stilstaat. Het is ontwikkeld als hulp voor mensen met rsi, voor wie het pijnlijk is om de knoppen in te drukken. </para>
+
+<para
+>&kmousetool; kan ook ingesteld worden om een zekere tijd te wachten met het beginnen van een sleepactie voordat de muistoetsen losgelaten worden. Op deze manier kunt u het gebruiken voor het verslepen en neerzetten van de muis.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Zie ook</title>
+
+<simplelist>
+<member
+>Meer gedetailleerde gebruikers documentatie is verkrijgbaar van <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> ( geef deze &URL; in &konqueror;, of voer <userinput
+><command
+> khelpcenter</command
+> <parameter
+> help:/kmousetool</parameter
+></userinput
+> uit).</member>
+<member
+>kf5options(7)</member>
+<member
+>qt5options(7)</member>
+<member
+>Er is ook meer informatie verkrijgbaar van <ulink url="http://community.kde.org/"
+> De site van Accessibility van &kde;</ulink
+>. </member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>&kmousetool; is geschreven door <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> en <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

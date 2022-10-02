@@ -1,0 +1,462 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>Manuale di &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Federico</firstname
+> <surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>zenith@chemeng.ntnu.no</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2017-07-06</date>
+<releaseinfo
+>1.12 (Applications 17.08)</releaseinfo>
+
+<abstract>
+<para
+>&kmousetool; fa clic sul mouse ogni volta che il puntatore del mouse si ferma brevemente. È stato progettato per aiutare coloro che soffrono di dolori da sforzi ripetitivi, ai quali fa male premere i pulsanti. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>rsi</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonomia</keyword>
+<keyword
+>tendinite</keyword>
+<keyword
+>sindrome del tunnel carpale</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduzione</title>
+
+<para
+>&kmousetool; fa clic sul mouse ogni volta che il puntatore del mouse si ferma brevemente. È stato progettato per aiutare coloro che soffrono di dolori da sforzi ripetitivi, ai quali fa male premere i pulsanti. Può anche trascinare il mouse, sebbene per questo serva un po' più di pratica. </para>
+
+<para
+>&kmousetool; può eliminare il dolore causato dal fare clic sul mouse, e aiuta molte persone a usare il computer senza dolore. Sfortunatamente, un po' di dolore può essere causato solamente dal muovere il mouse sul tavolo. Se soffri di dolori associati al computer e non ti sei ancora fatto vedere da un dottore, per piacere fallo. </para>
+<para
+>Solo affinché sia assolutamente chiaro: mentre &kmousetool; può aiutare a ridurre il dolore causato dal <emphasis
+>fare clic</emphasis
+> col mouse, non può aiutare nessun dolore causato dal <emphasis
+>muovere</emphasis
+> il mouse. E, come tutti gli attrezzi ergonomici, l'effetto può variare. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Usare &kmousetool;</title>
+<para
+>Usare &kmousetool; è semplice: &kmousetool; guarda mentre muovi il mouse, e quando fai una breve pausa, fa clic. </para>
+
+<para
+>Il modo trascinamento intelligente di &kmousetool; ti permette di trascinare il mouse. </para>
+
+<para
+>Quando il trascinamento intelligente è attivato, &kmousetool; fa una pausa dopo aver premuto il pulsante; se muovi il mouse, aspetta finché smetti di muoverlo prima di rilasciare il pulsante.In questo modo, puoi sia fare clic che trascinare il mouse. Per trascinamento intelligente serve un po' più di pratica, ma diventa naturale una volta che ti ci abitui. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Guida ai comandi</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>La finestra principale di &kmousetool;</title>
+
+    <para
+>le opzioni di &kmousetool; sono accessibili per lo più attraverso il mouse.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Avvia</guibutton
+>/<guibutton
+>Ferma</guibutton
+> </term>
+        <listitem>
+          <para
+>Avvia (o ferma) &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Movimento minimo:</guilabel
+></term>
+<listitem>
+<para
+>Il movimento minimo in pixel prima che &kmousetool; tenti di fare clic sul mouse.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Tempo di fermata (1/10 sec):</guilabel>
+        </term>
+        <listitem>
+          <para
+>Il tempo durante il quale il mouse deve essere in pausa prima che &kmousetool; faccia clic. Prova ad aumentare questo tempo se ti è difficile abituarti a &kmousetool; </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Trascinamento intelligente</guilabel>
+        </term>
+        <listitem>
+          <para
+>Attiva o disattiva il trascinamento intelligente. L'uso senza è più facile, quindi questa è l'impostazione predefinita.</para
+><para
+>Se attivi il <guilabel
+>trascinamento intelligente</guilabel
+> il campo <guilabel
+>Tempo di fermata  (1/10 sec):</guilabel
+> viene reso disponibile. Questo è il tempo che &kmousetool; aspetta, dopo aver premuto il pulsante, prima di rilasciarlo se non muovi il mouse. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Attiva i gesti</guilabel>
+        </term>
+        <listitem>
+          <para
+>&kmousetool; ora supporta i gesti. Quando attivi i gesti, una lenta mossa alla destra e indietro, seguita da una pausa, genererà un clic<mousebutton
+>destro</mousebutton
+>. Una mossa lenta a sinistra e indietro genererà un doppio clic. (I gesti sono definiti in <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+>. Questo file è generato da &kmousetool; la prima volta che è avviato, ma può essere modificato successivamente.) </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Clic sonoro</guilabel>
+        </term>
+        <listitem>
+          <para
+>Fa un suono quando &kmousetool; preme il pulsante. Questo è d'aiuto, soprattutto con il trascinamento intelligente. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Avvia insieme alla sessione del desktop</guilabel>
+        </term>
+        <listitem>
+          <para
+>Quando questo è attivo, &kmousetool; sarà avviato ogni volta che la sessione del desktop sarà avviata.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Valori predefiniti</guibutton
+></term>
+<listitem>
+<para
+>Ripristina tutte le impostazioni ai loro valori predefiniti.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Ripristina</guibutton
+></term>
+<listitem>
+<para
+>Ripristina tutte le impostazioni al loro stato di quando hai aperto il dialogo, o, se hai già salvato un'impostazione con il pulsante <guibutton
+>Applica</guibutton
+>, ripristina tutte le impostazioni allo stato di quando hai premuto <guibutton
+>Applica</guibutton
+> l'ultima volta.</para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Applica</guibutton>
+        </term>
+        <listitem>
+          <para
+>Dopo aver cambiato una qualsiasi impostazione, devi fare clic su questo pulsante.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Aiuto</guibutton
+></term>
+<listitem>
+<para
+>Apre il manuale utente (questo documento).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Chiudi</guibutton
+></term>
+<listitem>
+<para
+>Chiude il dialogo senza salvare nessuna impostazione.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Esci</guibutton
+></term>
+<listitem>
+<para
+>Esci da &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Suggerimenti</title>
+
+<para
+>Questi suggerimenti possono aiutare ad abbreviare un po' la curva d'apprendimento di &kmousetool;. <itemizedlist>
+<listitem
+><para
+>Puoi modificare gli intervalli di tempo durante i quali &kmousetool; attende, sia per fare clic che per trascinare.</para>
+</listitem>
+<listitem
+><para
+>È meglio fare pratica a fare clic con &kmousetool; usando prima i suoi valori predefiniti. Potresti soprattutto voler lasciare il trascinamento intelligente disattivato all'inizio. Poi, una volta che sei a tuo agio a fare clic, può andare oltre e fare pratica con il trascinamento intelligente.</para>
+</listitem>
+<listitem
+><para
+>Quando usi il trascinamento intelligente, può essere utile attivare il clic sonoro</para>
+</listitem>
+<listitem
+><para
+>Quando usi il clic sonoro, potresti dover accelerare la risposta audio di &kde;.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Domande e risposte</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Aiuto! &kmousetool; continua a fare clic qua e là su tutto lo schermo!</para>
+</question>
+<answer>
+<para
+>Quando usi &kmousetool;, devi imparare delle nuove abitudini nell'uso del mouse. </para>
+<para
+>Innanzitutto, tieni a mente dove è sicuro fare clic &mdash; fare clic sulle parti grigie di finestre o parti che non siano collegamenti in un browser web non darà nessun problema, quindi puoi tranquillamente lasciare fermo il mouse in quelle aree finché ne avrai bisogno. </para>
+<para
+>In secondo luogo, devi sapere dove farai clic prima di muovere il mouse. La maggior parte delle volte, quando sappiamo che useremo il mouse, la maggior parte di noi prende il mouse e inizia a muoverlo a casaccio finché decide dove vuole fare clic. Con &kmousetool;, devi sapere dove farai clic prima di muovere il mouse. È una buona idea tenere le mani via dal mouse quando non lo stai usando. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Il mio mouse si blocca quando lo muovo. Posso usare &kmousetool; lo stesso?</para>
+</question>
+<answer>
+<para
+>Sì. Se il tuo mouse si blocca, vuol dire che devi pulire il tuo mouse. Ciò è normalmente facile; il trucco è che non devi pulire solo la pallina del mouse, ma anche le rotelline sulle quali la pallina rotola dentro il mouse.</para>
+<para
+>Per prima cosa rimuovi la pallina. Il metodo per farlo varia da mouse a mouse, ma è normalmente piuttosto chiaro se dai un'occhiata al fondo del mouse.</para>
+<para
+>Una volta che hai rimosso la pallina, dovresti poter vedere le rotelline sui lati del buco che conteneva la pallina. La sporcizia accumulata su di loro può essere grattata via facilmente con una lama piatta o un'unghia. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; fa clic ma non rilascia mai. Cosa succede?</para>
+</question>
+<answer>
+<para
+>In alcune rare situazioni, il sistema sospende &kmousetool; quando un trascinamento viene iniziato; se stai usando il trascinamento intelligente, ciò significa che &kmousetool; non potrà mai finire il trascinamento rilasciando il pulsante.</para>
+<para
+>Questo accade quando usi &kmousetool; in ambiente non &kde;, e lo usi per muovere una finestra. </para>
+<para
+>La soluzione è semplicemente fare clic manualmente; questo riavvia &kmousetool;, e puoi riprendere a lavorare normalmente.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; muove il puntatore quando cerco di scrivere.</para>
+</question>
+<answer>
+<para
+>Problema: Quando stai scrivendo del testo, &kmousetool; continua a fare clic e a spostare il puntatore lontano da dove vuoi scrivere.</para>
+<para
+>Soluzione: Usa il mouse per posizionare il puntatore dove lo vuoi, ma quando sei pronto a scrivere, parcheggia il mouse in un'area neutrale sullo schermo. Quindi, se urti il mouse, o se si muove di qualche pixel, qualsiasi clic casuale che fosse inviato non importerebbe. Posti sicuri per parcheggiare il mouse includono le aree grigie intorno alle barre degli strumenti e ai menu, e le barre del titolo della finestre.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Sto cercando di usare il trascinamento intelligente, ma non riesco a usarlo per modificare testi.</para>
+</question>
+<answer>
+<para
+>Il trascinamento intelligente è una funzionalità avanzata di &kmousetool;, e serve un po' di tempo per abituarcisi. È possibile usarlo per selezionare testo, per tagliare e incollare, e usarlo in quasi ogni situazione dove normalmente trascineresti il mouse. Ma probabilmente non riuscirai a farlo fin dall'inizio. Ecco qualche suggerimento: </para>
+<itemizedlist>
+<listitem
+><para
+>Non usare il trascinamento intelligente quando stai imparando a usare &kmousetool;. Invece, per selezionare del testo, fai clic a un estremo del testo, e mantieni premuto il tasto shift mentre fai clic all'altro estremo del testo. </para
+></listitem>
+<listitem
+><para
+>Usa il clic sonoro. Ciò suonerà un <quote
+>clic</quote
+> quando &kmousetool; farà clic, e questo ti dirà quando comincia il ritardo del trascinamento intelligente. Con la pratica, potrai usare il trascinamento intelligente senza il clic sonoro, ma servirà una buona dose di pratica. </para
+></listitem>
+<listitem
+><para
+>Fa' in modo di sapere dove hai intenzione di fare clic col mouse prima di cominciare a muoverlo. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Riconoscimenti e licenza</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Copyright del programma Jeff Roush, 2002 <email
+>jeff@mousetool.com</email
+> e 2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Sviluppatori: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Copyright della documentazione 2002 di Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Federico Zenith<email
+>federico.zenith@member.fsf.org</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

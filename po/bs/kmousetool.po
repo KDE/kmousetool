@@ -1,0 +1,244 @@
+# Bosnian translation of KMouseTool.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Vladimir Grubor <bosanac@sarajevo-irc.net>, 2004.
+# Vladimir Grubor <vlado@mobih.ba>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kmousetool\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"PO-Revision-Date: 2013-10-18 19:24+0000\n"
+"Last-Translator: Samir Ribić <Unknown>\n"
+"Language-Team: Bosnian <lokal@linux.org.ba>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-15 06:01+0000\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vladimir Grubor,Naida Alispahic,Samir Ribić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Vlado@mobih.ba,anaidana@gmail.com,samir.ribic@etf.unsa.ba"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "The drag time must be less than or equal to the dwell time."
+msgstr "Drag vrijeme mora biti manje ili jednako vremenu boravka."
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "Invalid Value"
+msgstr "Pogrešna vrijednost"
+
+#: kmousetool.cpp:447 kmousetool.cpp:588
+#, kde-format
+msgid "&Stop"
+msgstr "&Stati"
+
+#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#, kde-format
+msgctxt "Start tracking the mouse"
+msgid "&Start"
+msgstr "&Pokreni"
+
+#: kmousetool.cpp:509
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before closing the configuration window or "
+"discard the changes?"
+msgstr ""
+"Postoje nespašene promjene u aktivnom modulu.\n"
+"Želite li primjeniti promjene prije zatvaranja konfiguracijskog prozora ili "
+"otkazati promjene?"
+
+#: kmousetool.cpp:511
+#, kde-format
+msgid "Closing Configuration Window"
+msgstr "Zatvaranje konfiguracijskog prozora"
+
+#: kmousetool.cpp:532
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before quitting KMousetool or discard the "
+"changes?"
+msgstr ""
+"Postoje nespašene promjene u aktivnom modulu.\n"
+"Želite li primjeniti promjene prije zatvaranja KMouseTool ili otkazati "
+"promjene?"
+
+#: kmousetool.cpp:533
+#, kde-format
+msgid "Quitting KMousetool"
+msgstr "Izlaženje iz KMousetool"
+
+#: kmousetool.cpp:570
+#, kde-format
+msgid "&Configure KMouseTool..."
+msgstr "Konfigura&cija KmouseTool."
+
+#: kmousetool.cpp:573
+#, kde-format
+msgid "KMousetool &Handbook"
+msgstr "KMousetool &Priručnik"
+
+#: kmousetool.cpp:575
+#, kde-format
+msgid "&About KMouseTool"
+msgstr "&O KMouseTool"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
+#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#, kde-format
+msgid "KMouseTool"
+msgstr "KMouseTool"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: kmousetoolui.ui:20
+#, kde-format
+msgid "Settings"
+msgstr "Postavke"
+
+#. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
+#: kmousetoolui.ui:62
+#, fuzzy, kde-format
+#| msgid "Drag t&ime (1/10 sec):"
+msgid "&Drag time (1/10 sec):"
+msgstr "Drag v&rijeme (1/10 sec):"
+
+#. i18n: ectx: property (text), widget (QLabel, movementLabel)
+#: kmousetoolui.ui:97
+#, kde-format
+msgid "&Minimum movement:"
+msgstr "&Minimalno kretanje:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStart)
+#: kmousetoolui.ui:107
+#, kde-format
+msgid "Start with &desktop session"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
+#: kmousetoolui.ui:114
+#, kde-format
+msgid "Smar&t drag"
+msgstr "Pame&tna vuča"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
+#: kmousetoolui.ui:124
+#, kde-format
+msgid "&Enable strokes"
+msgstr "Dozvoli pot&eze"
+
+#. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
+#: kmousetoolui.ui:131
+#, fuzzy, kde-format
+#| msgid "D&well time (1/10 sec):"
+msgid "Dwell &time (1/10 sec):"
+msgstr "Vrijeme bo&ravka (1/10 sek):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbClick)
+#: kmousetoolui.ui:154
+#, kde-format
+msgid "A&udible click"
+msgstr "Č&ujan klik"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kmousetoolui.ui:191
+#, fuzzy, kde-format
+#| msgid ""
+#| "KMouseTool will run as a background application after you close this "
+#| "dialog. To change the settings again, restart KMouseTool or use the KDE "
+#| "system tray."
+msgid ""
+"KMouseTool will run as a background application after you close this dialog. "
+"To change the settings again, restart KMouseTool or use the system tray."
+msgstr ""
+"KMouseTool će se pokrenuti kao pozadinska aplikacija nakon što zatvorite "
+"ovaj prozor. Da bi opet promjenili  postavke, ponovo pokrenite KMouseTool "
+"ili koristite KDE sistem ikona."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
+#: kmousetoolui.ui:223
+#, kde-format
+msgid "&Start"
+msgstr "&Počni"
+
+#: main.cpp:32
+#, fuzzy, kde-format
+#| msgid ""
+#| "(c) 2002-2003, Jeff Roush\n"
+#| "(c) 2003, Gunnar Schmidt"
+msgid ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+msgstr ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003, Gunnar Schmidt"
+
+#: main.cpp:37
+#, kde-format
+msgid "Gunnar Schmidt"
+msgstr "Gunnar Schmidt"
+
+#: main.cpp:37
+#, kde-format
+msgid "Current maintainer"
+msgstr "Trenutni održavaoc"
+
+#: main.cpp:38
+#, kde-format
+msgid "Olaf Schmidt"
+msgstr "Olaf Schmidt"
+
+#: main.cpp:38
+#, kde-format
+msgid "Usability improvements"
+msgstr "Korisna poboljšanja"
+
+#: main.cpp:39
+#, kde-format
+msgid "Jeff Roush"
+msgstr "Jeff Roush"
+
+#: main.cpp:39
+#, kde-format
+msgid "Original author"
+msgstr "Orginalni autor"
+
+#: main.cpp:41
+#, kde-format
+msgid "Joe Betts"
+msgstr "Joe Betts"
+
+#~ msgid "&Defaults"
+#~ msgstr "&Podrazumijevano"
+
+#~ msgid "&Reset"
+#~ msgstr "&Restartanje"
+
+#~ msgid "&Apply"
+#~ msgstr "&Primijeni"
+
+#~ msgid "&Help"
+#~ msgstr "&Pomoć"
+
+#~ msgid "&Close"
+#~ msgstr "&Zatvori"
+
+#~ msgid "&Quit"
+#~ msgstr "&Izlaz"
+
+#~ msgid "Start with &KDE"
+#~ msgstr "Pokreni sa &KDE"

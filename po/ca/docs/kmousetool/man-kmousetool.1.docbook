@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Catalan  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual d'usuari del &kmousetool;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>6 de juliol de 2017</date>
+<releaseinfo
+>Aplicacions 17.08</releaseinfo>
+<productname
+>Aplicacions del KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Eina d'accessibilitat per ajudar a fer el clic del ratolí</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descripció</title>
+
+<para
+>La tasca de &kmousetool; és generar els clics del ratolí, allí a on s'aturi el punter del ratolí. Fou dissenyat d'aquesta manera per ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. </para>
+
+<para
+>&kmousetool; també es pot configurar per esperar un temps específic per arrossegar al començament, abans de deixar el ratolí. D'aquesta manera, també el podeu usar per a les operacions d'arrossegar i deixar anar.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Veure també</title>
+
+<simplelist>
+<member
+>Hi ha documentació d'usuari més detallada a <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (podeu emprar aquest &URL; al &konqueror; o bé executar <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member>
+<member
+>qt5options(7)</member>
+<member
+>Hi ha més informació disponible <ulink url="https://community.kde.org/Accessibility"
+>al lloc web de &kde;.</ulink
+></member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Autors</title>
+<para
+>&kmousetool; ha estat escrit per en <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> i <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,484 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>El manual de &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Rafael</firstname
+><surname
+>Beccar</surname
+><affiliation
+><address
+><email
+>rafael.beccar@kdemail.net</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+></firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>fmariluis@gmail.com</email
+></address
+></affiliation
+><contrib
+></contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2017-07-06</date>
+<releaseinfo
+>1.12 (Aplicaciones 17.08)</releaseinfo>
+
+<abstract>
+<para
+>La tarea de &kmousetool; es generar una pulsación, allí adonde el puntero del ratón se detenga. Fue diseñado de esta forma para ayudar a aquellos que, por padecer algún tipo de lesión ocasionada por un trabajo repetitivo, sienten dolor al pulsar los botones del ratón. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>rsi</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonómico</keyword>
+<keyword
+>tendinitis</keyword>
+<keyword
+>síndrome del canal carpiano</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducción</title>
+
+<para
+>&kmousetool; generará una pulsación allí adonde el puntero del ratón se detenga por algunos segundos. Fue diseñado así para ayudar a aquellos que, por padecer algún tipo de lesión ocasionada por un trabajo repetitivo, sienten dolor al pulsar los botones del ratón. También, es posible utilizar &kmousetool; para arrastrar elementos de un lugar a otro de la pantalla, aunque esto último requiere de algo más de práctica. </para>
+
+<para
+>&kmousetool; puede ayudar a combatir el dolor que algunas personas sienten al presionar los botones del ratón. Pero desafortunadamente, nada puede hacer por aquellos que experimentan dolor al desplazar el ratón por sobre la mesa. Por favor, si estás experimentando dolores relacionados con el uso de la computadora, y aún no has consultado a un médico, hazlo lo más pronto posible. </para>
+<para
+>Solo una vez más, y para que quede bien claro: Tenga en cuenta que &kmousetool;, puede ayudarle a combatir el dolor causado por la necesidad de <emphasis
+>pulsar</emphasis
+> el ratón, pero nada puede hacer por el dolor que pueda causarle el <emphasis
+>movimiento</emphasis
+> del ratón sobre la mesa. Y por supuesto, el grado de rendimiento de esta herramienta ergonómica variará para cada caso particular. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Usando &kmousetool;</title>
+<para
+>Entender el funcionamiento de &kmousetool; no es difícil: &kmousetool; monitorizará el movimiento del ratón, y se encargará de generar una pulsación cuando este último se detenga por algunos segundos. </para>
+
+<para
+>En el modo de arrastre inteligente, &kmousetool; también te permite arrastrar los elementos de un lugar a otro de la pantalla. </para>
+
+<para
+>Cuando el modo de arrastrado inteligente se encuentre habilitado, &kmousetool; hará una pausa después de cada pulsación. Si en el transcurso de dicha pausa, comienzas a mover el ratón, la pulsación no se liberará hasta que detengas el movimiento. De esta forma, podrás utilizar el ratón para agarrar y arrastrar los objetos que se encuentren en la pantalla. Ten en cuenta que el modo de arrastrado inteligente requiere cierta práctica, pero te resultará natural una vez que te acostumbres a él. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Referencia de órdenes</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>La ventana principal de &kmousetool;</title>
+
+    <para
+>Se accede a la mayoría de las opciones de &kmousetool; mediante el ratón.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Iniciar</guibutton
+>/<guibutton
+>Detener</guibutton
+> </term>
+        <listitem>
+          <para
+>Inicia o detiene &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Movimiento mínimo:</guilabel
+></term>
+<listitem>
+<para
+>El movimiento mínimo del ratón (medido en pixeles) antes de que &kmousetool; considere generar una pulsación.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Tiempo de demora (1/10 seg):</guilabel>
+        </term>
+        <listitem>
+          <para
+>Determina cuanto tiempo esperará &kmousetool; para generar la pulsación una vez que el ratón se haya detenido. Si le resulta difícil acostumbrarse a &kmousetool;, intente incrementar el tiempo de demora </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Arrastre inteligente</guilabel>
+        </term>
+        <listitem>
+          <para
+>Habilita o deshabilita el modo de arrastre inteligente. Debido a que se requiere bastante práctica para utilizar esta característica, se encuentra deshabilitada de forma predeterminada.</para
+><para
+>Cuando habilite el <guilabel
+>Arrastre inteligente</guilabel
+> el campo <guilabel
+>Tiempo de arrastre (1/10 seg)</guilabel
+> estará disponible. El tiempo de arrastre determina cuánto esperará &kmousetool; para liberar una pulsación, siempre y cuando el puntero del ratón no se haya desplazado. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Habilitar trazadas</guilabel>
+        </term>
+        <listitem>
+          <para
+>&kmousetool; ahora soporta trazadas. Cuando las trazadas están habilitadas , un lento movimiento de ida y vuelta a la derecha generará una pulsación con el botón <mousebutton
+>derecho</mousebutton
+>. Un lento movimiento de ida y vuelta a la izquierda generará una doble pulsación (las trazadas están definidas en <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmouse_tool.txt</filename
+>. Este archivo es generado automáticamente por &kmousetool; la primera vez que este se inicia, pero puede ser modificado en cualquier momento.) </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Pulsación audible</guilabel>
+        </term>
+        <listitem>
+          <para
+>Emite un sonido cuando &kmousetool; genera una pulsación. Esto resulta muy útil en el modo de arrastre inteligente. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Iniciar con la sesión del escritorio</guilabel>
+        </term>
+        <listitem>
+          <para
+>Cuando está activada, &kmousetool; se lanzará cada vez que inicie sesión en el escritorio.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Valores predeterminados</guibutton
+></term>
+<listitem>
+<para
+>Volver a los valores predeterminados.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Reinicio</guibutton
+></term>
+<listitem>
+<para
+>Volver todos los valores al estado en el que estaban al momento de abrir el dialogo o, si el los cambios ya han sido guardados con el botón <guibutton
+>Aplicar</guibutton
+>, reiniciar los valore al estado en el que estaban la última vez que se presionó el botón <guibutton
+>Aplicar</guibutton
+></para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Aplicar</guibutton>
+        </term>
+        <listitem>
+          <para
+>Una vez hechos cambios en la configuración, será necesario pulsar este botón para que dichos cambios se guarden.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Ayuda</guibutton
+></term>
+<listitem>
+<para
+>Abre el manual del usuario (este documento).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Cerrar</guibutton
+></term>
+<listitem>
+<para
+>Cierra el dialogo sin guardar los cambios.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Salir</guibutton
+></term>
+<listitem>
+<para
+>Salir de &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Consejos</title>
+
+<para
+>Los siguientes consejos pueden acortar considerablemente la curva de aprendizaje de &kmousetool;. <itemizedlist>
+<listitem
+><para
+>Es posible modificar el lapso de tiempo que &kmousetool; esperará tanto para generar una pulsación como para comenzar el proceso de arrastre.</para>
+</listitem>
+<listitem
+><para
+>Durante las primeras sesiones con &kmousetool;, no modifiques la configuración predeterminada. En especial, deberías dejar deshabilitada la opción de arrastrado inteligente durante estas primeras prácticas.Cuando, te sientas cómodo al pulsar el ratón, puedes dar un paso adelante y comenzar a practicar con el modo de arrastrado inteligente habilitado.</para>
+</listitem>
+<listitem
+><para
+>Una vez que comiences a utilizar el modo de arrastrado inteligente, la pulsación audible le será de mucha ayuda. Se recomienda, entonces, habilitar esta opción</para>
+</listitem>
+<listitem
+><para
+>Puede que tengas que acelerar la respuesta de audio de &kde; para obtener un mejor rendimiento de la pulsación audible.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Preguntas y respuestas</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>¡Ayudenme, &kmousetool; continúa emitiendo pulsaciones erroneas por toda la pantalla!</para>
+</question>
+<answer>
+<para
+>Al comenzar a usar &kmousetool;, tendrás que aprender nuevos hábitos sobre el uso del ratón. </para>
+<para
+>En primer lugar, es importante tener en mente cuales son los lugares, en los que hacer una pulsación no generará ningún evento &mdash; Por ejemplo, pulsar sobre las partes grises de tu pantalla, o en las áreas del navegador que no posean enlaces a otras páginas, no disparará ninguna acción. Entonces, podrás dejar el puntero del ratón sobre estas áreas, mientras no lo utilices, hasta que lo necesites nuevamente. </para>
+<para
+>También es importante que antes de comenzar a desplazar el ratón, estés seguro de cual es el lugar donde pulsará finalmente. Mientras uses &kmousetool;, no es una buena idea estar moviendo el ratón aleatoriamente mientras decides cual es el lugar correcto para pulsar. Incluso, es una buena idea no tocar el ratón cuando dejes de utilizarlo momentáneamente. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Mi ratón se detiene mientras lo estoy desplazando. ¿Puedo seguir utilizando &kmousetool;?</para>
+</question>
+<answer>
+<para
+>Sí, claro. Si tu ratón se detiene, seguramente necesitaras limpiarlo. Limpiar la parte exterior es, en general, una tarea fácil. En lo que respecta a la parte interna, es importante limpiar no solo la bola, sino todos los cilindros por los cuales esta se desplaza.</para>
+<para
+>Para esto último, deberás extraer la bola. Los métodos para hacer esto pueden variar dependiendo de la marca del ratón. Pero no debería darte mucho trabajo descubrir cómo se hace, mirando en la parte inferior del ratón.</para>
+<para
+>Una vez que hayas extraído la bola, seguramente podrás ver los mencionados cilindros, a los lados del agujero que contiene la bola. La suciedad adherida a ellos, puede ser eliminada mediante un utensilio plano que te permita realizar un raspado. Si lo prefieres, puedes utilizar las uñas. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; genera una pulsación pero nunca la libera. ¿Que está pasando?</para>
+</question>
+<answer>
+<para
+>En algunas situaciones, el sistema suspende &kmousetool; mientras una operación de arrastre esta en curso. Si está usando el arrastre inteligente, esto significa que &kmousetool; puede no terminar nunca el arrastre al finalizar la pulsación.</para>
+<para
+>Este problema puede surgir cuando se utiliza &kmousetool; bajo un administrador de ventanas distinto a &kde; y se intenta mover una ventana. </para>
+<para
+>La solución es pulsar manualmente. De esta forma &kmousetool; se reiniciará, y podrá seguir trabajando con normalidad.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; mueve el cursor cuando estoy intentando teclear.</para>
+</question>
+<answer>
+<para
+>Problema: Cuando estas introduciendo texto, &kmousetool; continúa realizando pulsaciones, desplazando al cursor del lugar correcto.</para>
+<para
+>Solución: Una vez que el cursor esta en el lugar correcto, deberías desplazar el puntero del ratón hacia un lugar seguro de la pantalla. De esta manera, cualquier pulsación accidental sobre ratón o un pequeño desplazamiento que provoquen la emisión de alguna pulsación aleatoria, no tendrán efecto en el contexto. Los lugares seguros de la pantalla incluyen las áreas grises alrededor de las barras de herramientas o menús, y las barras de título de las ventanas.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Estoy tratando de utilizar el modo de arrastre inteligente, pero no puedo acostumbrarme a él para editar texto.</para>
+</question>
+<answer>
+<para
+>El modo de arrastrado inteligente es una característica avanzada de &kmousetool; y toma algún tiempo acostumbrarse a su uso. Probablemente, actividades tales como seleccionar texto, cortar y pegar, o la simple tarea de arrastrar el ratón, te traerán problemas al principio. Pero no hay que desanimarse, con algo de práctica lograrás adquirir las habilidades necesarias para llevar a cabo estas tareas. He aquí algunas sugerencias: </para>
+<itemizedlist>
+<listitem
+><para
+>Durante las primeras sesiones con &kmousetool;, utiliza una alternativa al modo de arrastrado inteligente: para seleccionar texto, realiza una pulsación en uno de los extremos del texto y, a continuación, con la tecla shift presionada, realice otra pulsación en el extremo opuesto. </para
+></listitem>
+<listitem
+><para
+>Utilizar el modo de pulsación audible, es una buena idea. Con este modo habilitado, cada vez que &kmousetool; genere una pulsación, se escuchará un «clic» emitido por la tarjeta de sonido. Con práctica, serás capaz de utilizar el arrastre inteligente sin necesidad de habilitar el modo de pulsación audible. </para
+></listitem>
+<listitem
+><para
+>Antes de mover el ratón, es una buena idea conocer el lugar dónde se hará una pulsación. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos y Licencia</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Derechos de autor del programa. 2002. Jeff Roush <email
+>jeff@mousetool.com</email
+>. 2003. Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+>. </para>
+<para
+>Contribuciones: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Copyright de la documentación 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Traducido por Rafael Beccar <email
+>rafael.beccar@kdemail.net</email
+> y Santiago Fernández Sancho <email
+>santi@kde-es.org</email
+>.</para
+><para
+>Franco Mariluis<email
+>fmariluis@gmail.com</email
+></para
+><para
+>Adrián Martínez<email
+>sfxgt3@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

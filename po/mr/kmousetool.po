@@ -1,0 +1,218 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"PO-Revision-Date: 2013-03-09 14:48+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "चेतन खोना"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "chetan@kompkin.com"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "The drag time must be less than or equal to the dwell time."
+msgstr ""
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "Invalid Value"
+msgstr ""
+
+#: kmousetool.cpp:447 kmousetool.cpp:588
+#, kde-format
+msgid "&Stop"
+msgstr "थांबा (&S)"
+
+#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#, kde-format
+msgctxt "Start tracking the mouse"
+msgid "&Start"
+msgstr "सुरु करा (&S)"
+
+#: kmousetool.cpp:509
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before closing the configuration window or "
+"discard the changes?"
+msgstr ""
+
+#: kmousetool.cpp:511
+#, kde-format
+msgid "Closing Configuration Window"
+msgstr "ही संयोजना चौकट बंद करत आहे"
+
+#: kmousetool.cpp:532
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before quitting KMousetool or discard the "
+"changes?"
+msgstr ""
+
+#: kmousetool.cpp:533
+#, kde-format
+msgid "Quitting KMousetool"
+msgstr ""
+
+#: kmousetool.cpp:570
+#, kde-format
+msgid "&Configure KMouseTool..."
+msgstr "के-माउसटूल संयोजीत करा (&C)..."
+
+#: kmousetool.cpp:573
+#, kde-format
+msgid "KMousetool &Handbook"
+msgstr "के-माउसटूल पुस्तिका (&H)"
+
+#: kmousetool.cpp:575
+#, kde-format
+msgid "&About KMouseTool"
+msgstr "के-माउसटूल विषयी (&A)"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
+#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#, kde-format
+msgid "KMouseTool"
+msgstr "के-माउस-टूल"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: kmousetoolui.ui:20
+#, kde-format
+msgid "Settings"
+msgstr "संयोजना"
+
+#. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
+#: kmousetoolui.ui:62
+#, kde-format
+msgid "&Drag time (1/10 sec):"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, movementLabel)
+#: kmousetoolui.ui:97
+#, kde-format
+msgid "&Minimum movement:"
+msgstr "किमान चाल (&M):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStart)
+#: kmousetoolui.ui:107
+#, kde-format
+msgid "Start with &desktop session"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
+#: kmousetoolui.ui:114
+#, kde-format
+msgid "Smar&t drag"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
+#: kmousetoolui.ui:124
+#, kde-format
+msgid "&Enable strokes"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
+#: kmousetoolui.ui:131
+#, kde-format
+msgid "Dwell &time (1/10 sec):"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbClick)
+#: kmousetoolui.ui:154
+#, kde-format
+msgid "A&udible click"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kmousetoolui.ui:191
+#, kde-format
+msgid ""
+"KMouseTool will run as a background application after you close this dialog. "
+"To change the settings again, restart KMouseTool or use the system tray."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
+#: kmousetoolui.ui:223
+#, kde-format
+msgid "&Start"
+msgstr "सुरु करा (&S)"
+
+#: main.cpp:32
+#, kde-format
+msgid ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+msgstr ""
+
+#: main.cpp:37
+#, kde-format
+msgid "Gunnar Schmidt"
+msgstr ""
+
+#: main.cpp:37
+#, kde-format
+msgid "Current maintainer"
+msgstr "वर्तमान नियंत्रक"
+
+#: main.cpp:38
+#, kde-format
+msgid "Olaf Schmidt"
+msgstr "ओलफ स्मिट"
+
+#: main.cpp:38
+#, kde-format
+msgid "Usability improvements"
+msgstr "उपयोगिता सुधारणा"
+
+#: main.cpp:39
+#, kde-format
+msgid "Jeff Roush"
+msgstr "जेफ रोश"
+
+#: main.cpp:39
+#, kde-format
+msgid "Original author"
+msgstr "मूळ लेखक"
+
+#: main.cpp:41
+#, kde-format
+msgid "Joe Betts"
+msgstr "जो बेट्स"
+
+#~ msgid "&Defaults"
+#~ msgstr "मूलभूत (&D)"
+
+#~ msgid "&Reset"
+#~ msgstr "पुन्हस्थापित करा (&R)"
+
+#~ msgid "&Apply"
+#~ msgstr "लागू करा (&A)"
+
+#~ msgid "&Help"
+#~ msgstr "मदत (&H)"
+
+#~ msgid "&Close"
+#~ msgstr "बंद करा (&C)"
+
+#~ msgid "&Quit"
+#~ msgstr "बाहेर पडा (&Q)"

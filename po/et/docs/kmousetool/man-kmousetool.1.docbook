@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY kmousetool '<application
+>KMouseTool</application
+>'>
+<!ENTITY % Estonian  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>&kde; kasutaja käsiraamat</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2010-10-06</date>
+<productname
+>KDE töökeskkond</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Hõlbustustööriist hiire klõpsamiseks</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>kmousetool</command
+> <arg choice="opt"
+>&kde; üldised võtmed</arg
+> <arg choice="opt"
+>&Qt; üldised võtmed</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Kirjeldus</title>
+
+<para
+>&kmousetool; sooritab hiireklõpsu, kui hiirekursor jääb seisma. Rakendus loodi sihiga aidata inimesi, kel mitmesuguste lihasevalude tõttu esineb probleeme hiirenuppude vajutamisel. </para>
+
+<para
+>&kmousetool;i saab seadistada ka teatud aja ootama lohistamise alustamiseks, enne kui hiireklõps lõpetada. Nii saab rakenduse abil sooritada ka lohistamisoperatsioone.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vaata ka</title>
+
+<para
+>Põhjalikumat kasutaja dokumentatsiooni pakub <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (kirjuta see &URL; &konqueror;i või käivita käsuga <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</para>
+
+<para
+>Täiendavat infot leiab ka <ulink url="http://accessibility.kde.org/"
+>&kde; hõlbustusprojekti koduleheküljelt</ulink
+>.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autorid</title>
+<para
+>&kmousetool;i autorid on: <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> ja <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

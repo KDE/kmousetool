@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % French "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manuel utilisateur de &kmousetool;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>06-07-2017</date>
+<releaseinfo
+>Applications 17.08</releaseinfo>
+<productname
+>Applications de KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Outil d'accessibilité pour aider à cliquer avec la souris</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Description</title>
+
+<para
+>&kmousetool; simule un clic de souris lorsque le pointeur de la souris fait une courte pause. Elle a été conçue pour aider les personnes qui ont des lésions de contrainte répétitive, pour qui la pression sur un bouton pose problème. </para>
+
+<para
+>&kmousetool; peut également être configuré pour attendre une durée spécifiée pour initier un glissé, avant de décliquer la souris. De cette façon, vous pouvez également l'utiliser pour les opérations de glisser-déposer.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Voir aussi</title>
+
+<simplelist>
+<member
+>Une documentation plus détaillée est disponible avec <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (soit en saisissant &URL; dans &konqueror;, ou en exécutant <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member>
+<member
+>qt5options(7)</member>
+<member
+>Il y a également des informations supplémentaires sur <ulink url="https://community.kde.org/Accessibility"
+> le site Internet du projet d'accessibilité de &kde;</ulink
+>.</member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>&kmousetool; est écrit par <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> et <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

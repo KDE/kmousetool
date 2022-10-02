@@ -1,0 +1,256 @@
+# Translation of kmousetool.po into Russian
+# translation of kmousetool.po to Зайцев Виталий Николаевич
+# translation of kmousetool.po to Russian
+#
+# Copyright (C) 2003 KDE Russian translation team.
+#
+# Gregory Mokhin <mok@kde.ru>, 2003.
+# Albert R. Valiev <darkstar@altlinux.ru>, 2003.
+# Wizard580 <wizardkde@yandex.ru>, 2004.
+# Nickolai Shaforostoff <shafff@ukr.net>, 2004.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Artem Sereda <overmind88@gmail.com>, 2009.
+# Yuri Efremov <yur.arh@gmail.com>, 2012.
+# Alexander Potashev <aspotashev@gmail.com>, 2017.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmousetool\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"PO-Revision-Date: 2021-08-20 21:15+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Григорий Мохин,Виталий Зайцев,Олеся Герасименко"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mok@kde.ru,wizardkde@yandex.ru,gammaray@basealt.ru"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "The drag time must be less than or equal to the dwell time."
+msgstr "Длительность задержки не может быть меньше времени перетаскивания"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "Invalid Value"
+msgstr "Недопустимое значение"
+
+#: kmousetool.cpp:447 kmousetool.cpp:588
+#, kde-format
+msgid "&Stop"
+msgstr "&Остановить"
+
+#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#, kde-format
+msgctxt "Start tracking the mouse"
+msgid "&Start"
+msgstr "З&апуск"
+
+#: kmousetool.cpp:509
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before closing the configuration window or "
+"discard the changes?"
+msgstr ""
+"В активном модуле имеются несохранённые изменения.\n"
+"Применить эти изменения перед закрытием окна настройки или отклонить их?"
+
+#: kmousetool.cpp:511
+#, kde-format
+msgid "Closing Configuration Window"
+msgstr "Закрытие окна настройки"
+
+#: kmousetool.cpp:532
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before quitting KMousetool or discard the "
+"changes?"
+msgstr ""
+"В активном модуле имеются несохранённые изменения.\n"
+"Применить эти изменения перед выходом из KMouseTool или отклонить их?"
+
+#: kmousetool.cpp:533
+#, kde-format
+msgid "Quitting KMousetool"
+msgstr "Выход из KMouseTool"
+
+#: kmousetool.cpp:570
+#, kde-format
+msgid "&Configure KMouseTool..."
+msgstr "&Настроить KMouseTool..."
+
+#: kmousetool.cpp:573
+#, kde-format
+msgid "KMousetool &Handbook"
+msgstr "&Руководство пользователя KMouseTool"
+
+#: kmousetool.cpp:575
+#, kde-format
+msgid "&About KMouseTool"
+msgstr "&О программе KMouseTool"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
+#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#, kde-format
+msgid "KMouseTool"
+msgstr "KMouseTool"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: kmousetoolui.ui:20
+#, kde-format
+msgid "Settings"
+msgstr "Параметры"
+
+#. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
+#: kmousetoolui.ui:62
+#, kde-format
+msgid "&Drag time (1/10 sec):"
+msgstr "Время &перетаскивания (1/10 сек.):"
+
+#. i18n: ectx: property (text), widget (QLabel, movementLabel)
+#: kmousetoolui.ui:97
+#, kde-format
+msgid "&Minimum movement:"
+msgstr "&Минимальное движение:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStart)
+#: kmousetoolui.ui:107
+#, kde-format
+msgid "Start with &desktop session"
+msgstr "Запускать с сеансом рабочего стола"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
+#: kmousetoolui.ui:114
+#, kde-format
+msgid "Smar&t drag"
+msgstr "&Умное перетаскивание"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
+#: kmousetoolui.ui:124
+#, kde-format
+msgid "&Enable strokes"
+msgstr "Включить &биения"
+
+#. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
+#: kmousetoolui.ui:131
+#, kde-format
+msgid "Dwell &time (1/10 sec):"
+msgstr "&Задержка (1/10 сек.):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbClick)
+#: kmousetoolui.ui:154
+#, kde-format
+msgid "A&udible click"
+msgstr "&Озвучивание нажатия"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kmousetoolui.ui:191
+#, kde-format
+msgid ""
+"KMouseTool will run as a background application after you close this dialog. "
+"To change the settings again, restart KMouseTool or use the system tray."
+msgstr ""
+"После закрытия диалога программа KMouseTool будет работать в фоновом "
+"режиме.\n"
+"Для повторного изменения параметров перезапустите KMouseTool или используйте "
+"системный лоток."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
+#: kmousetoolui.ui:223
+#, kde-format
+msgid "&Start"
+msgstr "З&апуск"
+
+#: main.cpp:32
+#, kde-format
+msgid ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+msgstr ""
+"© Jeff Roush, 2002-2003\n"
+"© Gunnar Schmidt, 2003"
+
+#: main.cpp:37
+#, kde-format
+msgid "Gunnar Schmidt"
+msgstr "Gunnar Schmidt"
+
+#: main.cpp:37
+#, kde-format
+msgid "Current maintainer"
+msgstr "Текущий сопровождающий"
+
+#: main.cpp:38
+#, kde-format
+msgid "Olaf Schmidt"
+msgstr "Olaf Schmidt"
+
+#: main.cpp:38
+#, kde-format
+msgid "Usability improvements"
+msgstr "Повышение удобства использования"
+
+#: main.cpp:39
+#, kde-format
+msgid "Jeff Roush"
+msgstr "Jeff Roush"
+
+#: main.cpp:39
+#, kde-format
+msgid "Original author"
+msgstr "Автор первоначальной версии"
+
+#: main.cpp:41
+#, kde-format
+msgid "Joe Betts"
+msgstr "Joe Betts"
+
+#~ msgid "&Defaults"
+#~ msgstr "По &умолчанию"
+
+#~ msgid "&Reset"
+#~ msgstr "&Сброс"
+
+#~ msgid "&Apply"
+#~ msgstr "&Применить"
+
+#~ msgid "&Help"
+#~ msgstr "&Справка"
+
+#~ msgid "&Close"
+#~ msgstr "&Закрыть"
+
+#~ msgid "&Quit"
+#~ msgstr "В&ыйти"
+
+#~ msgid "Start with &KDE"
+#~ msgstr "Запускать при &старте KDE"
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Григорий Мохин,Виталий Зайцев"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "mok@kde.ru,wizardkde@yandex.ru"

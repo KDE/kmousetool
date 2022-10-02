@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Інструкція користувача &kmousetool;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>6 липня 2017 року</date>
+<releaseinfo
+>Програми 17.08</releaseinfo>
+<productname
+>Програми KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Інструмент доступності, який допомагає у клацанні кнопками миші</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Опис</title>
+
+<para
+>&kmousetool; надсилає сигнал про клацання кнопкою миші кожного разу, коли вказівник затримується на одному місці. Програму було створено для допомоги людям, які страждають на ушкодження, що призводять до болів під час натискання на кнопки. </para>
+
+<para
+>&kmousetool; можна також налаштувати так, щоб програма чекала вказаний час, перш ніж почати дію з перетягування, до того, як ви відпустите кнопку миші. У такий спосіб ви можете використати її для дій з перетягування і скидання.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Прочитайте також</title>
+
+<simplelist>
+<member
+>Докладнішу довідку можна прочитати за адресою <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (або введіть цю адресу &URL; у поле адреси &konqueror;, або виконайте за допомогою командного рядка команду <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member>
+<member
+>qt5options(7)</member>
+<member
+>Докладнішу інформацію ви можете знайти на <ulink url="https://community.kde.org/Accessibility"
+>сайті доступності у &kde;.</ulink
+></member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Автори</title>
+<para
+>Автором &kmousetool; є <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> і <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

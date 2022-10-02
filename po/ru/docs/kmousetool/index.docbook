@@ -1,0 +1,504 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kmousetool '<application
+>KMouseTool</application
+>'>
+  <!ENTITY kappname "&kmousetool;">
+  <!ENTITY package "kdeaccessibility">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book lang="&language;">
+
+<bookinfo>
+<title
+>Руководство &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Николай</firstname
+> <surname
+>Шафоростов</surname
+><affiliation
+><address
+><email
+>shaforostoff@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>15 сентября 2010 г.</date>
+<releaseinfo
+>&kde; 4.5</releaseinfo>
+
+<abstract>
+<para
+>&kmousetool; имитирует нажатие кнопки мыши при остановке курсора на объекте. Программа служит для того, чтобы помочь людям, которым трудно нажимать на кнопки мыши. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>эргономичность</keyword>
+<keyword
+>тендинит</keyword>
+<keyword
+>кистевой туннельный синдром</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Введение</title>
+
+<para
+>&kmousetool; имитирует нажатие кнопки мыши при остановке курсора на объекте. Программа служит тому, чтобы помочь людям, которым трудно нажимать на кнопки мыши. Также возможно выполнение перемещения мыши, что, в свою очередь, требует практики. </para>
+
+<para
+>&kmousetool; может устранить проблемы, связанные с болью при нажатии на кнопки мыши. К несчастью, боль может приносить даже и перемещение мыши. Если вы испытываете боли, связанные с работой за компьютером, пожалуйста, обратитесь к врачу. </para>
+<para
+>Итак, &kmousetool; может уменьшить боль только при <emphasis
+>нажатии</emphasis
+> кнопок мыши, но не при <emphasis
+>перемещении</emphasis
+>. Как со всеми эргономическими утилитами, степень эффекта может быть разной. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Использование &kmousetool;</title>
+<para
+>Использовать &kmousetool; очень просто: &kmousetool; следит за движениями курсора, и при его остановке имитирует нажатие. </para>
+
+<para
+>В режиме перетаскивания &kmousetool; позволяет вам передвигать курсор. </para>
+
+<para
+>При включённом режиме перетаскивания &kmousetool; "зажимает" кнопку мыши, и вы можете переместить объект. (т.н. Drag'n'Drop); а по окончанию перемещения "отпускает" кнопку мыши. Вам придётся немного потренироваться, чтобы освоить эти действия. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Список команд</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>Главное окно &kmousetool;</title>
+
+    <para
+>Опции &kmousetool; указываются преимущественно мышью.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Запуск</guibutton
+>/<guibutton
+>Остановить</guibutton
+> </term>
+        <listitem>
+          <para
+>Запускает или останавливает &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Минимальный пробег:</guilabel
+></term>
+<listitem>
+<para
+>Количество пикселов, которые должна пройти мышь до щелчка.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Задержка (в 1/10 с):</guilabel>
+        </term>
+        <listitem>
+          <para
+>Пауза перед нажатием кнопки. Увеличьте это значение, если &kmousetool; трудно использовать. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Умное перетаскивание</guilabel>
+        </term>
+        <listitem>
+          <para
+>Включает или выключает режим "умного перетаскивания".</para
+><para
+>При включенном режиме перетаскивания становится доступной опция <guilabel
+>Время перетаскивания (в 1/10 с)</guilabel
+>. Этот параметр отвечает за время, проходящее между регистрацией нажатия клавиши мыши и её программным отпусканием в случае, если мышь не перемещалась. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Включить росчерки</guilabel>
+        </term>
+        <listitem>
+          <para
+>&kmousetool; поддерживает "росчерки" (англ.: mouse gestures). Медленное перемещение вправо и возврат назад, за которым следует пауза, имитирует нажатие правой кнопки. Медленное перемещение влево и возврат назад - двойной щелчок. Эти параметры задаются и могут быть отредактированы в файле <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+>, который &kmousetool; создаст при первом запуске. </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Озвучивание нажатия</guilabel>
+        </term>
+        <listitem>
+          <para
+>Воспроизводит звук при нажатии кнопки. Это особенно полезно в режиме перетаскивания. </para>
+	  <!-- not in kde4
+	  <para>
+	 If the sound seems delayed, you can have &kde; speed it up.
+	 To do this open the &kcontrolcenter;, click on
+	 <guimenuitem
+>Sound &amp; Multimedia</guimenuitem
+>, then on <guimenuitem
+>Sound
+	 System</guimenuitem
+>, and then select the <guilabel
+>Sound
+	 I/O</guilabel
+> tab.  At the bottom
+	 of the tab, there is an <guilabel
+>Audio buffer size (response
+	 time)</guilabel
+> adjustment; 
+	 slide this towards the lower number to speed up the audio
+	 response time.</para>
+	 -->
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Автозапуск с KDE</guilabel>
+        </term>
+        <listitem>
+          <para
+>Запускать &kmousetool; при старте &kde;. Для автоматического запуска в GNOME или других диспетчерах окон, посмотрите соответствующую документацию по диспетчеру окон.</para
+> 
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>По умолчанию</guibutton
+></term>
+<listitem>
+<para
+>Восстановить первоначальные значения всех параметров.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Сброс</guibutton
+></term>
+<listitem>
+<para
+>Сбросить все настройки в то состояние, в котором они были в начале диалога, или на момент последнего нажатия кнопки "Применить".</para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Применить</guibutton>
+        </term>
+        <listitem>
+          <para
+>Нажмите для сохранения изменений настроек.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Справка</guibutton
+></term>
+<listitem>
+<para
+>Открывает данное руководство пользователя.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Закрыть</guibutton
+></term>
+<listitem>
+<para
+>Закрыть диалог без сохранения изменений.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Выход</guibutton
+></term>
+<listitem>
+<para
+>Выход из &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Советы</title>
+
+<para
+>Советы помогут изучить &kmousetool; быстрее. <itemizedlist>
+<listitem
+><para
+>Вы можете изменить величины пауз перед нажатием и перемещением.</para>
+</listitem>
+<listitem
+><para
+>Лучше сначала попрактиковаться с &kmousetool; используя значения по умолчанию. После приобретения навыков вы можете включить режим перетаскивания.</para>
+</listitem>
+<listitem
+><para
+>В режиме перетаскивания может помочь звуковой эффект.</para>
+</listitem>
+<listitem
+><para
+>При использовании звукового эффекта вам может понадобится изменить настройки звука &kde;.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Вопросы и ответы</title>
+&reporting.bugs; &updating.documentation; <qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Помогите! &kmousetool; постоянно создаёт ненужные щелчки!</para>
+</question>
+<answer>
+<para
+>Вы должны овладеть новыми навыками работы с мышью. </para>
+<para
+>Прежде всего, помните, что щелчок на серой части окна или пустом месте веб-страницы ни к чему плохому не приводит, так что упражняйтесь в этих частях окон. </para>
+<para
+>Далее, вы должны определиться, где нужно нажать перед перемещением мыши. Большинство людей беспорядочно двигают мышь, пока не попадут туда, куда надо - эта программа требует, чтобы вы четко осознавали, где вы хотите щёлкнуть мышью. Также рекомендуется убирать руки с мыши, если вы её не используете. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Моя мышь тормозит, когда я её перемещаю. Могу ли я использовать &kmousetool;?</para>
+</question>
+<answer>
+<para
+>Да. если вы почистите её (не только сам шарик, но и ролики внутри мыши).</para>
+<para
+>Сначала разберите мышь и выньте шарик. Мыши бывают разные, но обычно сразу ясно, как это сделать.</para>
+<para
+>Внутри будут видны ролики, и грязь, налипшую на них, легко можно отскоблить лезвием или ногтем. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; зажимает кнопку мыши и не отпускает её. Что случилось?</para>
+</question>
+<answer>
+<para
+>Иногда &kmousetool; зависает. Это может быть на некоторых системах. Отключите режим перетаскивания.</para>
+<para
+>Это может случиться, например, при использовании &kmousetool; с окнами приложений, не входящих в &kde;. </para>
+<para
+>Выход из этой ситуации - один раз щёлкнуть вручную. &kmousetool; переключится и будет работать снова.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; перемещает курсор, когда я пытаюсь печатать.</para>
+</question>
+<answer>
+<para
+>При вводе текста &kmousetool; продолжает щёлкать и отводит курсор от текста.</para>
+<para
+>Отведите курсор от текстового поля перед вводом в безопасные места - в серые зоны панели инструментов или на заголовки окон.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Я пытаюсь использовать режим перетаскивания, но не могу понять, как с его помощью редактировать текст.</para>
+</question>
+<answer>
+<para
+>Для овладения навыками работы с режимом перетаскивания требуется время. Вот несколько советов: </para>
+<itemizedlist>
+<listitem
+><para
+>Не используйте режим перетаскивания сразу. Вы можете выделять текст с помощью клавиатуры, зажав клавишу Shift и перемещая в сторону, или щёлкнув один раз в каком-то месте и потом второй раз с нажатой клавишей Shift в конце выделяемого блока. </para
+></listitem>
+<listitem
+><para
+>Используйте звуковой эффект. Это будет воспроизводить звук при нажатии кнопки мыши с помощью &kmousetool;. </para
+></listitem>
+<listitem
+><para
+>Вы должны знать, где хотите нажать перед началом перетаскивания. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Программа - &copy; 2002 Джеф Рош (Jeff Roush) <email
+>jeff@mousetool.com</email
+> и 2003 Гуннар Шми Дт (Gunnar Schmi Dt)  <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Участники: <itemizedlist>
+<listitem
+><para
+>Джеф Рош (Jeff Roush) <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Гуннар Шми Дт (Gunnar Schmi Dt) <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Олаф Шмидт (Olaf Schmidt) <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Документация - &copy; 2002 Джеф Рош (Jeff Roush) <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Перевод на русский - Николай Шафоростов <email
+>shaforostoff@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Установка</title>
+
+<sect1 id="getting-kmousetool">
+<title
+>Как получить &kmousetool;</title>
+&install.intro.documentation; </sect1>
+
+<sect1 id="requirements">
+<title
+>Системные требования</title>
+
+<para
+>Для использования &kappname;, вам понадобится расширение XTest, входящее в состав &X-Window;. Оно установлено практически на всех системах. </para>
+<para
+>Для использования звукового эффекта вы должны иметь настроенную звуковую карту. </para>
+</sect1>
+
+<sect1 id="compilation">
+<title
+>Сборка и установка</title>
+&install.compile.documentation; </sect1>
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

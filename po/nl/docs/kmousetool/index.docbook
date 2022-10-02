@@ -1,0 +1,446 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>Het handboek van &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+&Rob.Lalau;&Natalie.Koning;&Antoon.Tolboom; 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2017-07-06</date>
+<releaseinfo
+>1.12 (Applications 17.08)</releaseinfo>
+
+<abstract>
+<para
+>&kmousetool; klikt de muis als de muisaanwijzer even stilstaat. Het is ontwikkeld als hulp voor mensen met rsi, voor wie het pijnlijk is om de knoppen in te drukken. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>rsi</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonomisch</keyword>
+<keyword
+>tendinitis</keyword>
+<keyword
+>carpal-tunnelsyndroom</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+
+<para
+>&kmousetool; klikt de muis als de muisaanwijzer even stilstaat. Het is ontwikkeld als hulp voor mensen met rsi, voor wie het pijnlijk is om de knoppen in te drukken. Slepen met de muis is ook mogelijk, alhoewel hier iets meer oefening voor nodig is. </para>
+
+<para
+>&kmousetool; kan pijn bij het muisklikken voorkomen, en helpt veel mensen om pijnloos met een computer te werken. Helaas kan sommige pijn ook veroorzaakt worden door alleen maar te bewegen met de muis. Als u pijn hebt door het werken met de computer, en u bent nog niet bij een dokter geweest, doe dat dan eerst. </para>
+<para
+>Voor alle duidelijkheid: &kmousetool; kan wel helpen om de pijn te verminderen die ontstaat door <emphasis
+>klikken</emphasis
+> met de muis, maar het kan niets doen aan pijn die ontstaat door <emphasis
+>bewegen</emphasis
+> met de muis. En, zoals geldt voor elk ergonomisch gereedschap, er zijn geen garanties dat het helpt. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>&kmousetool; gebruiken</title>
+<para
+>Het gebruik van &kmousetool; is eenvoudig: &kmousetool; houdt de bewegingen van de muis in de gaten, en klikt als u even stopt. </para>
+
+<para
+>Met de "Intelligent slepen"-functie van &kmousetool; kunt u met de muis slepen. </para>
+
+<para
+>Als "Intelligent slepen" is ingeschakeld, wacht &kmousetool; nadat het omlaag geklikt heeft; als u de muis beweegt, wacht het met omhoog klikken tot u stopt. Op deze manier kunt u zowel klikken als slepen met de muis. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Commandoreferentie</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>Het hoofdvenster van &kmousetool;</title>
+
+    <para
+>De opties van &kmousetool; zijn voornamelijk toegankelijk via de muis.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Start</guibutton
+>/<guibutton
+>Stop</guibutton
+> </term>
+        <listitem>
+          <para
+>Start (of stopt) &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Minimumbeweging:</guilabel
+></term>
+<listitem>
+<para
+>De minimale beweging in pixels voordat &kmousetool; zal proberen de muis te klikken.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Verblijftijdsduur (1/10 sec):</guilabel>
+        </term>
+        <listitem>
+          <para
+>De tijd dat de muis moet stilstaan voordat &kmousetool; klikt. Probeer deze tijd te verlengen als u moeite hebt om aan &kmousetool; te wennen. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Intelligent slepen</guilabel>
+        </term>
+        <listitem>
+          <para
+>Schakelt "Intelligent slepen" in of uit. Het gebruik is eenvoudiger als dit is uitgeschakeld, dus dit is de standaardinstelling.</para
+><para
+>Als u <guilabel
+>Intelligent slepen</guilabel
+> inschakelt, schakelt u ook het veld <guilabel
+>Sleeptijdsduur (1/10 sec)</guilabel
+> in. Dit is de tijd die &kmousetool; wacht nadat het omlaag geklikt heeft, voordat het weer omhoog klikt als u de muis niet beweegt. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Gebaren inschakelen</guilabel>
+        </term>
+        <listitem>
+          <para
+>&kmousetool; ondersteunt nu ook gebaren. Als u gebaren inschakelt, kunt u <mousebutton
+>rechts</mousebutton
+>klikken simuleren door de muis langzaam naar rechts en terug te bewegen, gevolgd door een pauze. U kunt dubbelklikken door de muis langzaam naar links en terug te bewegen. (De gebaren worden gedefinieerd in <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+>. Dit bestand wordt gegenereerd door &kmousetool; als het voor het eerst gestart wordt, maar kan naderhand gewijzigd worden.) </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Hoorbare klik</guilabel>
+        </term>
+        <listitem>
+          <para
+>Laat een geluid horen als &kmousetool; omlaag klikt. Dit is vooral handig bij "Intelligent slepen". </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Start met de bureaubladsessie</guilabel>
+        </term>
+        <listitem>
+          <para
+>Wanneer dit is ingeschakeld zal &kmousetool; elke keer als de sessie van het bureaublad start ook starten.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Standaardwaarden</guibutton
+></term>
+<listitem>
+<para
+>Zet alle instellingen terug naar de standaardwaarden.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Ongedaan maken</guibutton
+></term>
+<listitem>
+<para
+>Zet alle instellingen terug naar hoe ze waren toen u het venster opende. Als u al een instelling opgeslagen hebt door op <guibutton
+>Toepassen</guibutton
+> te klikken, worden de instellingen teruggezet naar hoe ze waren toen u voor het laatst op <guibutton
+>Toepassen</guibutton
+> klikte.</para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Toepassen</guibutton>
+        </term>
+        <listitem>
+          <para
+>Nadat u instellingen gewijzigd hebt, klikt u op deze knop om ze op te slaan.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Help</guibutton
+></term>
+<listitem>
+<para
+>Opent de gebruikershandleiding (dit document).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Sluiten</guibutton
+></term>
+<listitem>
+<para
+>Sluit het venster zonder instellingen op te slaan.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Afsluiten</guibutton
+></term>
+<listitem>
+<para
+>&kmousetool; afsluiten.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Tips</title>
+
+<para
+>Met deze tips kunt u wat sneller leren met &kmousetool; om te gaan. <itemizedlist>
+<listitem
+><para
+>U kunt de wachttijd van &kmousetool; aanpassen, zowel voor klikken als voor slepen.</para>
+</listitem>
+<listitem
+><para
+>U kunt het beste beginnen te oefenen met &kmousetool; met de standaardinstellingen. Het is vooral een goed idee om in het begin "Intelligent slepen" uitgeschakeld te laten. Als u het klikken dan onder de knie hebt, kunt u gaan oefenen met "Intelligent slepen".</para>
+</listitem>
+<listitem
+><para
+>Als u "Intelligent slepen" gebruikt, kan het helpen om ook "Hoorbare klik" in te schakelen.</para>
+</listitem>
+<listitem
+><para
+>Als u "Hoorbare klik" gebruikt, kan het nodig zijn het geluidssysteem van &kde; te versnellen.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Vragen en antwoorden</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Help! &kmousetool; klikt op allemaal plaatsen waar ik dat helemaal niet wil!</para>
+</question>
+<answer>
+<para
+>Als u &kmousetool; gebruikt, zult u zich nieuwe muisgewoonten moeten aanleren. </para>
+<para
+>Houd ten eerste in de gaten waar het veilig is om te klikken &mdash; klikken op grijze gebieden van vensters of op plaatsen waar geen koppeling staat in een browser kan geen kwaad, dus daar kunt u de muis gerust laten rusten tot u hem nodig hebt. </para>
+<para
+>Ten tweede moet u al weten waar u wilt klikken voor u de muis beweegt. De meeste mensen pakken, als ze weten dat ze de muis gaan gebruiken, de muis alvast, en bewegen er willekeurig wat mee tot ze weten waar ze willen klikken. Met &kmousetool; moet u weten waar u gaat klikken voor u de muis beweegt. Ook is het een goed idee om de muis los te laten als u hem niet gebruikt. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Mijn muis blijft soms hangen als ik hem beweeg. Kan ik toch &kmousetool; gebruiken?</para>
+</question>
+<answer>
+<para
+>Ja. Als uw muis blijft hangen, betekent dat dat u hem schoon moet maken. Dit is over het algemeen vrij eenvoudig; zorg wel dat u niet alleen de bal schoonmaakt, maar ook de rollers in de muis waar de bal tegenaan rolt.</para>
+<para
+>Eerst haalt u de bal uit de muis. Hoe dit werkt, verschilt van muis tot muis, maar over het algemeen wijst het zich vanzelf als u naar de onderkant van de muis kijkt.</para>
+<para
+>Als u de bal uit de muis gehaald hebt, moet u de rollers kunnen zien aan de zijkanten van het gat waar de bal in gezeten heeft. Het vuil dat er op zit, kunt u er eenvoudig afhalen met een mesje of een nagel. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; klikt wel omlaag, maar niet omhoog. Wat gebeurt hier?</para>
+</question>
+<answer>
+<para
+>Het kan gebeuren dat &kmousetool; door het systeem onderbroken wordt als u begint te slepen. Als u "Intelligent slepen" gebruikt, betekent dat dat &kmousetool; het slepen niet af kan maken door het indrukken te beëindigen.</para>
+<para
+>Dit gebeurt als u &kmousetool; gebruikt onder een niet-&kde;-windowmanager en u een venster verplaatst. </para>
+<para
+>U kunt dit oplossen door een keer op een muisknop te klikken; zo reset u &kmousetool; en kunt u weer verder met uw werk.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; beweegt de muisaanwijzer als ik probeer te typen.</para>
+</question>
+<answer>
+<para
+>Probleem: Als u tekst typt blijft &kmousetool; klikken en de muisaanwijzer bewegen.</para>
+<para
+>Oplossing: Gebruik de muis om de muisaanwijzer te plaatsen waar u hem wilt, maar parkeer de muis op een neutraal vlak op het scherm als u wilt gaan typen. Als u dan tegen de muis stoot, of hij beweegt een paar pixels, maakt het niet uit als hij willekeurige klikken stuurt. Veilige plaatsen zijn bijvoorbeeld de grijze vlakken rond werkbalken en menu's, en titelbalken van vensters.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Ik probeer "Intelligent slepen" te gebruiken, maar het lukt me niet om het te gebruiken bij het bewerken van tekst.</para>
+</question>
+<answer>
+<para
+>"Intelligent slepen" is een geavanceerde functie van &kmousetool; die wat gewenningstijd nodig kan hebben. Het is goed mogelijk om hiermee tekst te selecteren om te knippen en plakken, en om het overal te gebruiken waar u normaal gesproken met de muis zou willen slepen. Waarschijnlijk zal dit in het begin echter nog niet lukken. Hieronder volgen wat tips: </para>
+<itemizedlist>
+<listitem
+><para
+>Gebruik "Intelligent slepen" niet als u &kmousetool; nog maar pas gebruikt. Als u tekst wilt selecteren, klik dan aan de ene kant van de tekst, en houd de shift-toets ingedrukt terwijl u aan de andere kant van de tekst klikt. </para
+></listitem>
+<listitem
+><para
+>Gebruik de "Hoorbare klik". U hoort dan een <quote
+>klik</quote
+>geluid wanneer &kmousetool; omlaag klikt, en u weet wanneer u kunt beginnen met slepen. Met wat oefening kunt u "Intelligent slepen" zonder "Hoorbare klik" gebruiken, maar hier gaat wat tijd overheen. </para
+></listitem>
+<listitem
+><para
+>Zorg dat u weet waar u gaat klikken voor u de muis beweegt. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Programma copyright 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> en 2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Met dank aan: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Documentatie copyright 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+&meld.fouten;&vertaling.rob;&nagelezen.natalie;<para
+>De vertaling werd nagelezen door Antoon Tolboom</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

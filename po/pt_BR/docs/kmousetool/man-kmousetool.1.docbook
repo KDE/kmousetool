@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual do usuário do &kmousetool;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>06/07/2017</date>
+<releaseinfo
+>Applications 17.08</releaseinfo>
+<productname
+>KDE Applications</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Uma ferramenta de acessibilidade para ajudar a clicar no mouse</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrição</title>
+
+<para
+>O &kmousetool; clica o mouse sempre que o cursor do mouse parar por alguns instantes. Esta ferramenta foi desenhado para ajudar as pessoas com problemas crônicos de feridas, para as quais clicar em botões é doloroso. </para>
+
+<para
+>O &kmousetool; poderá também ser configurado para esperar um determinado tempo para começar um arrastamento, antes de soltar o botão do mouse. Desta forma, você também poderá usá-lo nas operações de arrastar e soltar.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Veja também</title>
+
+<simplelist>
+<member
+>Está disponível um documentação do usuário mais detalhada em <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (você tanto poderá inserir este &URL; no &konqueror;, como executar <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member>
+<member
+>qt5options(7)</member>
+<member
+>Existe também mais alguma informação disponível no <ulink url="https://community.kde.org/Accessibility"
+>site de acessibilidade do &kde;.</ulink
+></member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+<para
+>O &kmousetool; foi criado por <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> e <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,464 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>Das Handbuch zu &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Stephan</firstname
+><surname
+>Johach</surname
+><affiliation
+><address
+><email
+>hunsum@gmx.de</email
+></address
+></affiliation
+><contrib
+>Übersetzer</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2017-07-06</date>
+<releaseinfo
+>1.12 (Anwendungen 17.08)</releaseinfo>
+
+<abstract>
+<para
+>&kmousetool; emuliert einen Mausklick, sobald der Mauszeiger eine Weile auf derselben Stelle verharrt. Es ist dazu gedacht, Menschen zu helfen, die am RSI-Syndrom (Repetitive-Strain-Injury-Syndrom) leiden und denen jeder Mausklick Schmerzen bereitet. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>RSI</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonomic</keyword>
+<keyword
+>tendonitis</keyword>
+<keyword
+>carpal tunnel syndrome</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Einleitung</title>
+
+<para
+>&kmousetool; emuliert einen Mausklick, sobald der Mauszeiger eine Weile auf derselben Stelle verharrt. Es ist dazu gedacht, Menschen zu helfen, die am Repetitive Strain Injury (RSI) Syndrom leiden und denen jeder Mausklick Schmerzen bereitet. Außerdem kann es das Ziehen mit der Maus emulieren. Dies erfordert allerdings ein wenig Übung. </para>
+
+<para
+>&kmousetool; kann den Schmerz umgehen, der beim Klicken der Maus entsteht und hilft so vielen Menschen, den Computer ohne Schmerzen zu nutzen. Unglücklicherweise können auch durch das bloße Bewegen der Maus Schmerzen verursacht werden. Leiden Sie an Schmerzen, die mit der Benutzung Ihres Computers zusammenhängen, sollten Sie einen Arzt aufsuchen, sofern dies noch nicht geschehen ist. </para>
+<para
+>Um es noch einmal klarzustellen: auch wenn &kmousetool; Schmerzen vermeiden hilft, die beim <emphasis
+>Klicken</emphasis
+> mit der Maus entstehen, ist es gegen Schmerzen, die durch das <emphasis
+>Bewegen</emphasis
+> der Maus verursacht werden, nutzlos. Und wie bei allen ergonomischen Hilfsmitteln gilt: das Ergebnis kann für jeden unterschiedlich ausfallen. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Arbeiten mit &kmousetool;</title>
+<para
+>Die Verwendung von &kmousetool; ist einfach: &kmousetool; überwacht Ihre Mausbewegungen und führt einen Mausklick aus, sobald Sie die Bewegung kurz unterbrechen. </para>
+
+<para
+>Der intelligente Verschiebemodus von &kmousetool; erlaubt Ihnen das Ziehen mit der Maus. </para>
+
+<para
+>Ist das intelligente Verschieben aktiviert, macht &kmousetool; eine Pause, nachdem es das Drücken der Maustaste emuliert hat. Bewegen Sie nun die Maus, wartet es bis zum Ende der Bewegung, ehe das Loslassen der Maustaste ausgeführt wird. Auf diese Weise können Sie das Ziehen bei gedrückter Maustaste ausführen. Das intelligente Verschieben erfordert ein wenig Übung, aber Sie gewöhnen sich schnell daran. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Befehlsreferenz</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>Das Hauptfenster von &kmousetool;</title>
+
+    <para
+>Die Einstellungen von &kmousetool; sind größtenteils über die Maus zugänglich.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Starten</guibutton
+>/<guibutton
+>Stopp</guibutton
+> </term>
+        <listitem>
+          <para
+>Startet oder (stoppt) &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Minimale Bewegung:</guilabel
+></term>
+<listitem>
+<para
+>Die minimale Bewegung in Pixeln, nach der &kmousetool; einen Mausklick versucht.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Verweilzeit (1/10 s):</guilabel>
+        </term>
+        <listitem>
+          <para
+>Diese Verweilzeit muss nach dem Ende der Mausbewegung verstreichen, bevor &kmousetool; einen Mausklick ausführt. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Intelligentes Verschieben</guilabel>
+        </term>
+        <listitem>
+          <para
+>Schaltet das intelligente Verschieben an oder aus. Die Handhabung ist leichter, wenn der Modus ausgeschaltet ist. Darum ist dies die Voreinstellung.</para
+><para
+>Ist <guilabel
+>Intelligentes Verschieben</guilabel
+> eingeschaltet, wird das Drehfeld <guilabel
+>Verschiebezeit (1/10 s)</guilabel
+> aktiv. Hier wird die Zeit eingestellt, die &kmousetool; nach dem Herunterdrücken der Maustaste wartet, bevor es die Maustaste wieder <quote
+>loslässt</quote
+>, wenn zwischenzeitlich kein Bewegen der Maus erfolgt. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Klick durch Mausverschiebung aktivieren</guilabel>
+        </term>
+        <listitem>
+          <para
+>&kmousetool; unterstützt jetzt das Klicken durch Mausverschiebung. Ist diese Funktion aktiviert, erzeugt ein langsames Bewegen nach rechts und zurück, gefolgt von einer Pause, einen Klick mit der <mousebutton
+>rechten</mousebutton
+> Maustaste. Ein langsames Bewegen nach links und zurück führt einen Doppelklick. Diese Bewegungen werden in der Datei <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+> gespeichert, wenn &kmousetool; das erste Mal gestartet wird, sie können aber später geändert werden. </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Hörbares Klicken</guilabel>
+        </term>
+        <listitem>
+          <para
+>Spielt einen Klang ab, wenn &kmousetool; einen Klick ausführt. Dies ist besonders im Zusammenhang mit dem intelligenten Verschieben hilfreich. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Mit Arbeitsflächen-Sitzung starten</guilabel>
+        </term>
+        <listitem>
+          <para
+>Ist die aktiviert, wird &kmousetool; mit der Sitzung der Arbeitsfläche gestartet.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Voreinstellungen</guibutton
+></term>
+<listitem>
+<para
+>Alle Einstellungen auf die Voreinstellung zurücksetzen.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Zurücksetzen</guibutton
+></term>
+<listitem>
+<para
+>Setzt alle Einstellungen auf die Werte zurück, die beim Öffnen des Dialogs eingestellt waren. Haben Sie bereits den Knopf <guibutton
+>Anwenden</guibutton
+> gedrückt, werden die Einstellungen auf den Stand nach dem letzten Drücken von <guibutton
+>Anwenden</guibutton
+> zurückgesetzt.</para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Anwenden</guibutton>
+        </term>
+        <listitem>
+          <para
+>Wenn Sie Einstellungen geändert haben, müssen Sie diesen Knopf betätigen damit die Änderungen wirksam werden.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Hilfe</guibutton
+></term>
+<listitem>
+<para
+>Öffnet das Benutzerhandbuch (die vorliegende Datei).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Schließen</guibutton
+></term>
+<listitem>
+<para
+>Schließt den Dialog, ohne dass Änderungen an den Einstellungen gespeichert werden.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Beenden</guibutton
+></term>
+<listitem>
+<para
+>Beendet &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Tipps</title>
+
+<para
+>Diese Tipps können dabei helfen, die Lernkurve beim Umgang mit &kmousetool; zu verbessern. <itemizedlist>
+<listitem
+><para
+>Sie können die Verzögerungszeiten von &kmousetool; beim Klicken und für das Verschieben ändern.</para>
+</listitem>
+<listitem
+><para
+>Am besten verwenden Sie &kmousetool; zunächst mit den Voreinstellungen. Insbesondere das intelligente Verschieben sollten Sie zunächst ausgeschaltet lassen. Wenn Sie sich dann an das automatische Mausklicken gewöhnt haben, können Sie später das intelligente Verschieben hinzunehmen.</para>
+</listitem>
+<listitem
+><para
+>Wenn Sie das intelligente Verschieben nutzen, kann es hilfreich sein den hörbaren Klick einzuschalten.</para>
+</listitem>
+<listitem
+><para
+>Wenn Sie den hörbaren Klick benutzen, ist es ggf. nötig die Antwortzeiten von &kde; bei Klängen zu verringern.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Fragen und Antworten</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>&kmousetool; führt überall auf dem Bildschirm Mausklicks aus.</para>
+</question>
+<answer>
+<para
+>Wenn Sie &kmousetool; verwenden, müssen Sie den Umgang mit der Maus neu lernen. </para>
+<para
+>Zunächst sollten Sie sich bewusst machen, an welchen Stellen ein Mausklick ohne Wirkung bleibt: Das Klicken auf die neutralen Bestandteile von Fenstern oder auf Stellen im Browserfenster, die keine Verknüpfung darstellen, führt nicht zu ungewollten Reaktionen. Sie können daher die Maus an solchen Stellen parken, bis Sie sie wieder benutzen möchten. </para>
+<para
+>Zweitens sollten Sie schon, bevor Sie die Maus bewegen, wissen, wo Sie einen Klick ausführen wollen. Wenn wir die Maus benutzen wollen, schieben wir sie eher zufällig herum, bis wir genau wissen, wo wir den Mausklick ausführen wollen. Wenn Sie &kmousetool; benutzen, müssen Sie schon vorher wissen, wo die Maustaste betätigt werden soll. Es ist außerdem ratsam die Maus erst in die Hand zu nehmen, wenn Sie sie tatsächlich benutzen wollen und sie ansonsten nicht anzufassen. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Meine Maus ruckelt, wenn ich sie bewege. Kann ich &kmousetool; trotzdem verwenden?</para>
+</question>
+<answer>
+<para
+>Wenn Ihre Maus ruckelt, sollten Sie Ihre Maus reinigen. Das ist normalerweise ziemlich einfach. Der Trick dabei ist, dass Sie nicht nur die Mauskugel reinigen, sondern auch die Rollen, die mit der Mauskugel in Berührung kommen.</para>
+<para
+>Zunächst müssen Sie dazu die Mauskugel herausnehmen. Wie das geschieht, ist von Maus zu Maus unterschiedlich. Es sollte aber schnell klar sein, wenn Sie sich die Unterseite der Maus ansehen.</para>
+<para
+>Wenn Sie die Kugel entfernt haben, müssten Sie die Rollen sehen können. Diese befinden sich an den Seiten des Loches, in das die Kugel eingesetzt war. Den Dreck und die Verschmutzungen können Sie leicht mit einer flachen Klinge oder dem Fingernagel abkratzen. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; drückt die Maustaste, lässt sie aber nicht mehr los. Was passiert da?</para>
+</question>
+<answer>
+<para
+>In sehr seltenen Situationen unterbricht das Betriebssystem die Ausführung von &kmousetool;, wenn gerade ein Verschiebevorgang begonnen wurde. Wenn Sie in diesem Fall das intelligente Verschieben benutzen, bedeutet das, dass &kmousetool; die Operation nicht mehr durch das Loslassen der Maustaste beenden kann.</para>
+<para
+>Dies geschieht, wenn Sie &kmousetool; unter einer anderen Fensterverwaltung verwenden und ein Fenster verschieben. </para>
+<para
+>Die Lösung für dieses Problem besteht darin, dass Sie selbst einen Mausklick ausführen. Hierdurch wird der Status von &kmousetool; zurückgesetzt und Sie können wie gewohnt weiterarbeiten.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; bewegt den Cursor, wenn ich etwas über die Tastatur eingeben will.</para>
+</question>
+<answer>
+<para
+>Problem: Wenn Sie Text eingeben, versucht &kmousetool; weiterhin Mausklicks auszuführen und setzt dabei den Cursor an eine andere Stelle.</para>
+<para
+>Lösung: Benutzen Sie die Maus dazu, den Cursor dorthin zu platzieren, wo Sie ihn haben wollen. Aber parken Sie die Maus auf einem neutralen Bereich der Arbeitsfläche, wenn Sie eine Tastatureingabe vornehmen wollen. So kann ein versehentliches Bewegen der Maus &eg; durch Anstoßen nicht mehr dazu führen, dass die hierdurch ausgelösten Mausklicks ungewollte Reaktionen hervorrufen. Sichere Zonen für den Mauszeiger sind &eg; die grauen Flächen um die Werkzeugleisten und Menüs und die Titelzeilen von Fenstern.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Ich versuche mit dem intelligenten Verschieben zu arbeiten, aber ich schaffe es nicht, damit Text zu editieren.</para>
+</question>
+<answer>
+<para
+>Das intelligente Verschieben ist eine fortgeschrittene Funktion von &kmousetool; und es braucht seine Zeit, ehe Sie damit umgehen können. Es ist sehr wohl möglich auf diese Weise Text zu markieren, ihn in die Zwischenablage zu kopieren und wieder einzufügen oder jede sonstige Aktion auszuführen, bei der Sie die Maus bei gedrückter Maustaste bewegen wollen. Aber es wird ihnen wahrscheinlich erst einmal Probleme bereiten. Hier sind einige Ratschläge dazu: </para>
+<itemizedlist>
+<listitem
+><para
+>Benutzen Sie das intelligente Verschieben nicht, wenn Sie gerade erst damit anfangen &kmousetool; zu verwenden. Markieren Sie Text stattdessen folgendermaßen: Führen Sie am einen Ende des Textbereichs einen Mausklick aus und halten Sie die Umschalt-Taste gedrückt, während Sie den Mauszeiger auf das andere Ende des Textes bewegen und dort erneut die Maustaste betätigen. </para
+></listitem>
+<listitem
+><para
+>Verwenden Sie den hörbaren Mausklick. Dadurch wird jedesmal, wenn &kmousetool; die Maustaste drückt ein Klang wie ein <quote
+>Mausklick</quote
+> abgespielt. So wissen Sie genau, wann beim intelligenten Verschieben die Verschiebezeit beginnt. Später können Sie das intelligente Verschieben auch ohne den hörbaren Mausklick benutzen. Aber dazu bedarf es einiger Übung. </para
+></listitem>
+<listitem
+><para
+>Sie sollten wissen, wo Sie einen Mausklick ausführen wollen, wenn Sie die Maus bewegen. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Danksagungen und Lizenz</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Copyright 2002 des Programms Jeff Roush <email
+>jeff@mousetool.com</email
+> und 2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Mitwirkende: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Copyright der Dokumentation 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Übersetzung Stephan Johach<email
+>hunsum@gmx.de</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

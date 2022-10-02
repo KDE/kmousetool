@@ -1,0 +1,494 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kmousetool '<application
+>KMouseTool</application
+>'>
+  <!ENTITY kappname "&kmousetool;">
+  <!ENTITY package "kdeaccessibility">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Portuguese "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>O Manual do &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Pedro</firstname
+><surname
+>Morais</surname
+><affiliation
+><address
+><email
+>morais@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2010-09-15</date>
+<releaseinfo
+>&kde; 4.5</releaseinfo>
+
+<abstract>
+<para
+>O &kmousetool; carrega o rato sempre que o cursor do rato parar por momentos. Foi desenhado para ajudar as pessoas com problemas crónicos de feridas, para os quais carregar em botões magoa. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonómico</keyword>
+<keyword
+>tendinites</keyword>
+<keyword
+>síndrome de canal cárpico</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introdução</title>
+
+<para
+>O &kmousetool; carrega o rato sempre que o cursor do rato parar por momentos. Foi desenhado para ajudar as pessoas com problemas crónicos de feridas, para os quais carregar em botões magoa. Também pode arrastar o rato, ainda que isto exija muito mais prática. </para>
+
+<para
+>O &kmousetool; pode eliminar a dor causa por carregar com o rato, e ajuda muitas pessoas a usar o computador sem dores. Infelizmente, também poderá ocorrer alguma dor simplesmente ao mover o rato na mesa. Se você estiver a sofrer de dores relacionadas com o computador e não tiver visto um médico ainda, faça-o por favor. </para>
+<para
+>Só para tornar tudo bastante claro: embora o &kmousetool; possa ajudar a reduzir a dor causada ao fazer <emphasis
+>carregar</emphasis
+> num botão do rato, não poderá evitar as dores causadas ao <emphasis
+>mover</emphasis
+> o rato. E, tal como em todas as ferramentas ergonómicas, a sua distância poderá variar. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Utilização do &kmousetool;</title>
+<para
+>Usar o &kmousetool; é simples: o &kmousetool; vigia-o à medida que você move o rato e, sempre que você parar por uns momento, ele carrega no botão por si. </para>
+
+<para
+>O modo de Arrastamento Inteligente do &kmousetool; permite-lhe arrastar o rato. </para>
+
+<para
+>Quando o Arrastamento Inteligente estiver activo, o &kmousetool; pára depois de ter carregado; se você mexer o rato, ele irá esperar até que você pare antes de terminar a selecção. Desta forma, você conseguirá carregar e arrastar o rato. O Arrastamento Inteligente exige um pouco mais de prática, mas torna-se natural logo que se habitue a ele. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Referência de Comandos</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>A Janela Principal do &kmousetool;</title>
+
+    <para
+>As opções do &kmousetool; são acedidas na sua maioria através do rato.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Iniciar</guibutton
+>/<guibutton
+>Parar</guibutton
+> </term>
+        <listitem>
+          <para
+>Inicia (ou pára) o &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Movimento mínimo:</guilabel
+></term>
+<listitem>
+<para
+>O movimento mínimo em pontos antes de o &kmousetool; tentar pressionar o rato.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Tempo de permanência (1/10 s):</guilabel>
+        </term>
+        <listitem>
+          <para
+>O tempo que o rato terá de parar antes de o &kmousetool; pressionar. Tente aumentar este tempo se lhe custar a habituar ao &kmousetool; </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Arrastamento inteligente</guilabel>
+        </term>
+        <listitem>
+          <para
+>Activa ou desactiva o Arrastamento Inteligente. A utilização desligada é mais simples, como tal é a opção por omissão.</para
+><para
+>Se você activar o <guilabel
+>Arrastar inteligente</guilabel
+>, o campo <guilabel
+>Tempo de arrastamento (1/10 s):</guilabel
+> fica disponível. Este é o tempo que o &kmousetool; irá esperar, depois de pressionar o botão, ante de voltar a pressionar se você não mexer o rato. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Activar os traços</guilabel>
+        </term>
+        <listitem>
+          <para
+>O &kmousetool; agora suporta os traços. Quando você activar os traços, um ligeiro movimento para a direita e para trás, seguido de uma pausa, irá carregar no botão <mousebutton
+>direito</mousebutton
+>. Um movimento lento para a esquerda e para trás irá carregar duas vezes. (Os traços são indicados no ficheiro <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+>. Este ficheiro é gerado pelo &kmousetool; da primeira vez que é executado, mas poderá ser modificado posteriormente.) </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Click audível</guilabel>
+        </term>
+        <listitem>
+          <para
+>Toca um som sempre que o &kmousetool; pressionar. Isto ajuda, principalmente com o Arrastamento Inteligente. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Iniciar com o KDE</guilabel>
+        </term>
+        <listitem>
+          <para
+>Quando isto estiver activo, o &kmousetool; irá iniciar de cada vez que o &kde; arrancar. De momento, isto só funciona no &kde;. No GNOME ou noutros gestores de janelas veja a documentação do gestor de janelas em si para saber como iniciar um programa automaticamente sempre que inicia o sistema de janelas.</para
+> 
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Predefinições</guibutton
+></term>
+<listitem>
+<para
+>Repõe todas as configurações com os seus valores por omissão.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Reiniciar</guibutton
+></term>
+<listitem>
+<para
+>Repõe todas as configurações no seu estado anterior quando você tiver aberto a janela ou, se já tiver gravado alguma configuração com o botão <guibutton
+>Aplicar</guibutton
+>, repõe a configuração para o estado em que se encontrava quando carregou no botão <guibutton
+>Aplicar</guibutton
+> da última vez</para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Aplicar</guibutton>
+        </term>
+        <listitem>
+          <para
+>Depois de alterar as opções, você precisa de carregar neste botão.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Ajuda</guibutton
+></term>
+<listitem>
+<para
+>Abre o manual do utilizador (este documento).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Fechar</guibutton
+></term>
+<listitem>
+<para
+>Fecha a janela sem gravar nenhumas configurações.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Sair</guibutton
+></term>
+<listitem>
+<para
+>Termina o &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Dicas</title>
+
+<para
+>Estas sugestões podem ajudar a reduzir a curva de aprendizagem do &kmousetool; um pouco. <itemizedlist>
+<listitem
+><para
+>Você poderá modificar os tempos de espera do &kmousetool;, tanto para o pressionar do rato como para o arrastamento.</para>
+</listitem>
+<listitem
+><para
+>É melhor praticar o pressionar com os valores predefinidos do &kmousetool;. Você poderá desejar especialmente deixar o Arrastamento Inteligente desactivado da primeira vez. Depois, quando se sentir à vontade com o pressionar do rato, passe então a praticar o Arrastamento Inteligente.</para>
+</listitem>
+<listitem
+><para
+>Ao usar o Arrastamento Inteligente, poderá ser ajudado se activar o Click Audível.</para>
+</listitem>
+<listitem
+><para
+>Ao usar o Click Audível, você poderá necessitar de aumentar a velocidade de resposta do &kde;.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Perguntas e Respostas</title>
+&reporting.bugs; &updating.documentation; <qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Ajudem! O &kmousetool; continua a carregar de forma indesejada por todo o ecrã!</para>
+</question>
+<answer>
+<para
+>Quando você estiver a usar o &kmousetool;, você terá de aprender novos hábitos com o rato. </para>
+<para
+>Primeiro, lembre-se que é mais seguro carregar nas partes a cinzento das janelas ou em áreas que não correspondam a ligações nos navegadores Web, como tal você poderá deixar o rato sossegado nessas zonas até que precise dele. </para>
+<para
+>Segundo, você precisa de saber onde vai carregar antes de mover o rato. A maior parte das vezes, quando sabe que vai usar o rato, a maioria das pessoas pegam no rato e começam a movê-lo aleatoriamente até que se decida onde quer carregar. Com o &kmousetool;, você precisa de saber onde vai carregar antes de mover o rato em primeiro lugar. Também é uma boa ideia manter as suas mãos fora do rato quando não o estiver a usar. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>O meu rato prende quando o mexo. Posso à mesma usar o &kmousetool;?</para>
+</question>
+<answer>
+<para
+>Sim. Se o seu rato prender, significa que você precisa de o limpar. Isto normalmente é fácil de fazer; o truque é limpar não só a bola do rato, como os rolos onde a bola roda dentro do rato.</para>
+<para
+>Primeiro, você tem de remover a bola. O método para fazer isto varia de rato para rato, mas normalmente é simples de fazer se você olhar para a parte de baixo do mesmo.</para>
+<para
+>Logo que você tenha removido a bola, você deverá ser capaz de ver os rolos  dos lados do buraco que contém a bola. O pó e a sujidade dos mesmo pode ser retirada com uma lâmina romba ou com uma unha. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>O &kmousetool; pressiona e nunca larga o botão. O que é que se está a passar?</para>
+</question>
+<answer>
+<para
+>Em algumas situações raras, o sistema suspende o &kmousetool; quando inicia um arrastamento; se você estiver a usar o Arrastamento Inteligente, isto significa que o &kmousetool; não poderá terminar nunca o arrastamento, "largando" para tal o botão.</para>
+<para
+>Isto acontece quando você usa o &kmousetool; com um gestor de janelas não-&kde; e o usa para mover uma janela. </para>
+<para
+>A solução será carregar manualmente com o rato; isto reinicia o &kmousetool; e você poderá então continuar a trabalhar normalmente.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>O &kmousetool; move o cursor quando eu estou a tentar escrever.</para>
+</question>
+<answer>
+<para
+>Problema: Quando você está a escrever texto, o &kmousetool; continua a carregar com o rato e a mover o cursor de onde você está a escrever.</para>
+<para
+>Solução: Use o rato para posicionar o cursor onde o deseja, mas se estiver pronto a escrever, coloque o cursor numa zona neutra do ecrã. Nesse caso, se o rato começar a carregar, ou se se mexer alguns pontos, quando ele carregar não terá importância. Os locais mais seguros para deixar o rato incluem as áreas a cinzento à volta das barras de ferramentas e dos menus ou nas barras de título das janelas.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Estou a tentar usar o Arrastamento Inteligente, mas não consigo usá-lo para editar texto.</para>
+</question>
+<answer>
+<para
+>O Arrastamento Inteligente é uma funcionalidade avançada do &kmousetool;, e leva algum tempo a habituar-se a ele. É bem possível usá-lo para seleccionar texto, para cortar e para colar, e usá-lo para quase todas as situações onde você desejaria arrastar o rato. Mas você poderá não conseguir fazer isso logo à primeira. Aqui estão algumas sugestões: </para>
+<itemizedlist>
+<listitem
+><para
+>Não use o Arrastamento Inteligente enquanto você está a aprender a usar o &kmousetool;. Em vez disso, para seleccionar o texto, carregue num extremo do texto e mantenha a tecla Shift pressionada enquanto carrega no outro extremo do texto. </para
+></listitem>
+<listitem
+><para
+>Use o Click Audível. Isto irá fazer um som de <quote
+>click</quote
+> sempre que o &kmousetool; pressionar o rato, e isso indicar-lhe-á quando é que o tempo de espera do Arrastamento Inteligente começa. Com alguma prática, você poderá usar o Arrastamento Inteligente sem o Click Audível, mas exige de facto alguma prática. </para
+></listitem>
+<listitem
+><para
+>Saiba onde vai carregar com o rato antes de o começar a mover. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos e Licença</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Programa copyright 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> e 2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Contribuições: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Documentação com 'copyright' 2002 de Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Tradução de José Nuno Pires <email
+>zepires@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Instalação</title>
+
+<sect1 id="getting-kmousetool">
+<title
+>Como obter o &kmousetool;</title>
+&install.intro.documentation; </sect1>
+
+<sect1 id="requirements">
+<title
+>Requisitos</title>
+
+<para
+>Para pode usar com sucesso o &kappname;, você irá necessitar da extensão XTest compilada como parte do seu &X-Window;. Esta deverá já estar instalada no seu sistema; são poucos os sistemas que não a terão. </para>
+<para
+>Para poder usar a funcionalidade do Click Audível, você terá de ter uma placa de som e algumas colunas, assim como deverá ter a placa de som configurada correctamente. </para>
+</sect1>
+
+<sect1 id="compilation">
+<title
+>Compilação e Instalação</title>
+&install.compile.documentation; </sect1>
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

@@ -1,0 +1,230 @@
+# translation of kmousetool.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmousetool\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"PO-Revision-Date: 2007-11-19 15:36+0530\n"
+"Last-Translator: Ravishankar Shrivastava <raviratlami@yahoo.com>\n"
+"Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
+"Language: hne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "रविसंकर सिरीवास्तव, जी. करूनाकर"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "raviratlami@aol.in,"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "The drag time must be less than or equal to the dwell time."
+msgstr "ड्रैग समय ल ड्वैल समय के बराबर या कम होना चाही."
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "Invalid Value"
+msgstr "अवैध मान"
+
+#: kmousetool.cpp:447 kmousetool.cpp:588
+#, kde-format
+msgid "&Stop"
+msgstr "रुकव (&S)"
+
+#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#, fuzzy, kde-format
+msgctxt "Start tracking the mouse"
+msgid "&Start"
+msgstr "सुरू (&S)"
+
+#: kmousetool.cpp:509
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before closing the configuration window or "
+"discard the changes?"
+msgstr ""
+
+#: kmousetool.cpp:511
+#, kde-format
+msgid "Closing Configuration Window"
+msgstr "कान्फिगरेसन विंडो बन्द करत हे"
+
+#: kmousetool.cpp:532
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before quitting KMousetool or discard the "
+"changes?"
+msgstr ""
+
+#: kmousetool.cpp:533
+#, kde-format
+msgid "Quitting KMousetool"
+msgstr "के-मुसुवाटूल से बाहिर होवत हे"
+
+#: kmousetool.cpp:570
+#, kde-format
+msgid "&Configure KMouseTool..."
+msgstr "के-मुसुवाटूल कान्फिगर करव... (&C)"
+
+#: kmousetool.cpp:573
+#, kde-format
+msgid "KMousetool &Handbook"
+msgstr "के-मुसुवाटूल हेंड-बुक (&H)"
+
+#: kmousetool.cpp:575
+#, kde-format
+msgid "&About KMouseTool"
+msgstr "के-मुसुवाटूल परिचय (&A)"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
+#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#, kde-format
+msgid "KMouseTool"
+msgstr "के-मुसुवा-टूल"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: kmousetoolui.ui:20
+#, kde-format
+msgid "Settings"
+msgstr "सेटिंग"
+
+#. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
+#: kmousetoolui.ui:62
+#, fuzzy, kde-format
+#| msgid "Drag t&ime (1/10 sec):"
+msgid "&Drag time (1/10 sec):"
+msgstr "ड्रैग समय (१/१० सेकन्ड) (&i):"
+
+#. i18n: ectx: property (text), widget (QLabel, movementLabel)
+#: kmousetoolui.ui:97
+#, kde-format
+msgid "&Minimum movement:"
+msgstr "सबसे कम चाल (&M):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStart)
+#: kmousetoolui.ui:107
+#, kde-format
+msgid "Start with &desktop session"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
+#: kmousetoolui.ui:114
+#, kde-format
+msgid "Smar&t drag"
+msgstr "स्मार्ट ड्रैग (&t)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
+#: kmousetoolui.ui:124
+#, kde-format
+msgid "&Enable strokes"
+msgstr "स्ट्रोक्स सक्छम करव (&E)"
+
+#. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
+#: kmousetoolui.ui:131
+#, fuzzy, kde-format
+#| msgid "D&well time (1/10 sec):"
+msgid "Dwell &time (1/10 sec):"
+msgstr "ड्वैल समय (१/१० सेकन्ड) (&w):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbClick)
+#: kmousetoolui.ui:154
+#, kde-format
+msgid "A&udible click"
+msgstr "सुनने जा सके किलिक (&u)"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kmousetoolui.ui:191
+#, kde-format
+msgid ""
+"KMouseTool will run as a background application after you close this dialog. "
+"To change the settings again, restart KMouseTool or use the system tray."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
+#: kmousetoolui.ui:223
+#, kde-format
+msgid "&Start"
+msgstr "सुरू (&S)"
+
+#: main.cpp:32
+#, fuzzy, kde-format
+#| msgid ""
+#| "(c) 2002-2003, Jeff Roush\n"
+#| "(c) 2003, Gunnar Schmi Dt"
+msgid ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+msgstr ""
+"(c) 2002-2003, जेफ रोस\n"
+"(c) 2003, गुन्नार स्मिट"
+
+#: main.cpp:37
+#, fuzzy, kde-format
+#| msgid "Gunnar Schmi Dt"
+msgid "Gunnar Schmidt"
+msgstr "गुन्नार स्मिट"
+
+#: main.cpp:37
+#, kde-format
+msgid "Current maintainer"
+msgstr "अभी हाल के मेंटेनर"
+
+#: main.cpp:38
+#, kde-format
+msgid "Olaf Schmidt"
+msgstr "ओलफ स्मिट"
+
+#: main.cpp:38
+#, kde-format
+msgid "Usability improvements"
+msgstr "उपयोगिता सुधार"
+
+#: main.cpp:39
+#, kde-format
+msgid "Jeff Roush"
+msgstr "जेफ रोस"
+
+#: main.cpp:39
+#, kde-format
+msgid "Original author"
+msgstr "मूल लेखक"
+
+#: main.cpp:41
+#, kde-format
+msgid "Joe Betts"
+msgstr "जो बेट्स"
+
+#~ msgid "&Defaults"
+#~ msgstr "डिफाल्ट्स (&D)"
+
+#~ msgid "&Reset"
+#~ msgstr "रीसेट (&R)"
+
+#~ msgid "&Apply"
+#~ msgstr "लगाव (&A)"
+
+#~ msgid "&Help"
+#~ msgstr "मदद (&H)"
+
+#~ msgid "&Close"
+#~ msgstr "बंद करव (&C)"
+
+#~ msgid "&Quit"
+#~ msgstr "बाहिर जाव (&Q)"
+
+#~ msgid "Start with &KDE"
+#~ msgstr "केडीई के साथ चालू करव (&K)"

@@ -1,0 +1,242 @@
+# translation of kmousetool.po to Thai
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2004.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2005, 2008, 2010.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmousetool\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"PO-Revision-Date: 2010-12-18 08:42+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ถนอมทรัพย์ นพบูรณ์"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "donga.nb@gmail.com"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "The drag time must be less than or equal to the dwell time."
+msgstr "เวลาลากต้องน้อยกว่าหรือเท่ากับค่าเวลาหน่วง"
+
+#: kmousetool.cpp:378
+#, kde-format
+msgid "Invalid Value"
+msgstr "ค่าไม่ถูกต้อง"
+
+#: kmousetool.cpp:447 kmousetool.cpp:588
+#, kde-format
+msgid "&Stop"
+msgstr "หยุด"
+
+#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#, kde-format
+msgctxt "Start tracking the mouse"
+msgid "&Start"
+msgstr "เ&ริ่ม"
+
+#: kmousetool.cpp:509
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before closing the configuration window or "
+"discard the changes?"
+msgstr ""
+"มีการเปลี่ยนแปลงที่ยังไม่ได้บันทึกในโมดูลที่ทำงานอยู่\n"
+"คุณต้องการจะบันทึกการเปลี่ยนแปลงและให้มีผลทันทีก่อนปิดหน้าต่างปรับแต่ง "
+"หรือต้องการยกเลิกการเปลี่ยนแปลง ?"
+
+#: kmousetool.cpp:511
+#, kde-format
+msgid "Closing Configuration Window"
+msgstr "กำลังปิดหน้าต่างการปรับแต่ง"
+
+#: kmousetool.cpp:532
+#, kde-format
+msgid ""
+"There are unsaved changes in the active module.\n"
+"Do you want to apply the changes before quitting KMousetool or discard the "
+"changes?"
+msgstr ""
+"มีการเปลี่ยนแปลงที่ยังไม่ได้บันทึกในมอดูลที่ทำงานอยู่\n"
+"คุณต้องการจะบันทึกการเปลี่ยนแปลงและให้มีผลทันทีก่อนออกจาก ปรับแต่งเม้าส์-K "
+"หรือต้องการยกเลิกการเปลี่ยนแปลง ?"
+
+#: kmousetool.cpp:533
+#, kde-format
+msgid "Quitting KMousetool"
+msgstr "ออกจาก ปรับแต่งเม้าส์-K"
+
+#: kmousetool.cpp:570
+#, kde-format
+msgid "&Configure KMouseTool..."
+msgstr "ปรับแต่ง ปรับแต่งเม้าส์-K..."
+
+#: kmousetool.cpp:573
+#, kde-format
+msgid "KMousetool &Handbook"
+msgstr "คู่มือ ปรับแต่งเม้าส์-K"
+
+#: kmousetool.cpp:575
+#, kde-format
+msgid "&About KMouseTool"
+msgstr "เกี่ยวกับ ปรับแต่งเม้าส์-K"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
+#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#, kde-format
+msgid "KMouseTool"
+msgstr "ปรับแต่งเม้าส์-K"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: kmousetoolui.ui:20
+#, kde-format
+msgid "Settings"
+msgstr "ตั้งค่า"
+
+#. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
+#: kmousetoolui.ui:62
+#, fuzzy, kde-format
+#| msgid "Drag t&ime (1/10 sec):"
+msgid "&Drag time (1/10 sec):"
+msgstr "เ&วลาลาก (1/10 วินาที):"
+
+#. i18n: ectx: property (text), widget (QLabel, movementLabel)
+#: kmousetoolui.ui:97
+#, kde-format
+msgid "&Minimum movement:"
+msgstr "การเคลื่อนที่&น้อยที่สุด:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStart)
+#: kmousetoolui.ui:107
+#, kde-format
+msgid "Start with &desktop session"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
+#: kmousetoolui.ui:114
+#, kde-format
+msgid "Smar&t drag"
+msgstr "ลากแบบฉ&ลาด"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
+#: kmousetoolui.ui:124
+#, kde-format
+msgid "&Enable strokes"
+msgstr "เปิดใช้&จังหวะ"
+
+#. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
+#: kmousetoolui.ui:131
+#, fuzzy, kde-format
+#| msgid "D&well time (1/10 sec):"
+msgid "Dwell &time (1/10 sec):"
+msgstr "เวลาหน่ว&ง (1/10 วินาที):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbClick)
+#: kmousetoolui.ui:154
+#, kde-format
+msgid "A&udible click"
+msgstr "เสี&ยงคลิก"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kmousetoolui.ui:191
+#, fuzzy, kde-format
+#| msgid ""
+#| "KMouseTool will run as a background application after you close this "
+#| "dialog. To change the settings again, restart KMouseTool or use the KDE "
+#| "system tray."
+msgid ""
+"KMouseTool will run as a background application after you close this dialog. "
+"To change the settings again, restart KMouseTool or use the system tray."
+msgstr ""
+"ปรับแต่งเม้าส์-K จะทำงานเป็นโปรแกรมเบื้องหลังหลังจากที่คุณปิดกล่องโต้ตอบนี้แล้ว "
+"หากต้องการแก้ไขการตั้งค่าอีกครั้ง ให้เริ่มการทำงานของปรับแต่งเม้าส์-K ใหม่ หรือใช้ถาดระบบของ "
+"KDE"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
+#: kmousetoolui.ui:223
+#, kde-format
+msgid "&Start"
+msgstr "เ&ริ่ม"
+
+#: main.cpp:32
+#, fuzzy, kde-format
+#| msgid ""
+#| "(c) 2002-2003, Jeff Roush\n"
+#| "(c) 2003, Gunnar Schmi Dt"
+msgid ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
+msgstr ""
+"สงวนลิขสิทธิ์ (c) 2002-2003, Jeff Roush\n"
+"สงวนลิขสิทธิ์ (c) 2003, Gunnar Schmi Dt"
+
+#: main.cpp:37
+#, fuzzy, kde-format
+#| msgid "Gunnar Schmi Dt"
+msgid "Gunnar Schmidt"
+msgstr "Gunnar Schmi Dt"
+
+#: main.cpp:37
+#, kde-format
+msgid "Current maintainer"
+msgstr "ผู้ดูแลปัจจุบัน"
+
+#: main.cpp:38
+#, kde-format
+msgid "Olaf Schmidt"
+msgstr "Olaf Schmidt"
+
+#: main.cpp:38
+#, kde-format
+msgid "Usability improvements"
+msgstr "ปรับความง่ายในการใช้"
+
+#: main.cpp:39
+#, kde-format
+msgid "Jeff Roush"
+msgstr "Jeff Roush"
+
+#: main.cpp:39
+#, kde-format
+msgid "Original author"
+msgstr "ผู้เขียนเดิม"
+
+#: main.cpp:41
+#, kde-format
+msgid "Joe Betts"
+msgstr "Joe Betts"
+
+#~ msgid "&Defaults"
+#~ msgstr "ค่า&ปริยาย"
+
+#~ msgid "&Reset"
+#~ msgstr "ตั้งค่าให&ม่"
+
+#~ msgid "&Apply"
+#~ msgstr "&ปรับใช้"
+
+#~ msgid "&Help"
+#~ msgstr "&ช่วยเหลือ"
+
+#~ msgid "&Close"
+#~ msgstr "ปิ&ด"
+
+#~ msgid "&Quit"
+#~ msgstr "&ออก"
+
+#~ msgid "Start with &KDE"
+#~ msgstr "เริ่มพร้อมกับ &KDE"

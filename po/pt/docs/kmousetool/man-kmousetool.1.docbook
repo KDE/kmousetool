@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY kmousetool '<application
+>KMouseTool</application
+>'>
+<!ENTITY % Portuguese "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual do Utilizador do &kde;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2010-10-06</date>
+<productname
+>Ambiente de Trabalho K</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Uma ferramenta de acessibilidade para ajudar a carregar no rato</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>kmousetool</command
+> <arg choice="opt"
+>Opções Genéricas do &kde;</arg
+> <arg choice="opt"
+>Opções Genéricas do &Qt;</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrição</title>
+
+<para
+>O &kmousetool; carrega o rato sempre que o cursor do rato parar por momentos. Foi desenhado para ajudar as pessoas com problemas crónicos de feridas, para os quais carregar em botões magoa. </para>
+
+<para
+>O &kmousetool; poderá também ser configurado para esperar um determinado tempo para começar um arrastamento, antes de largar o botão do rato. Desta forma, também poderá usá-lo nas operações de 'drag and drop'.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Veja Também</title>
+
+<para
+>Está disponível alguma documentação de utilizador mais detalhada em <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (tanto poderá indicar este &URL; no &konqueror;, como executar <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</para>
+
+<para
+>Existe também mais alguma informação disponível na <ulink url="http://accessibility.kde.org"
+>página de acessibilidade do &kde;.</ulink
+></para>
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+<para
+>O &kmousetool; foi criado por <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> e <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

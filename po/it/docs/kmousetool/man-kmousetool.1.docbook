@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Italian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manuale utente di &kmousetool;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2017-07-06</date>
+<releaseinfo
+>Applications 17.08</releaseinfo>
+<productname
+>KDE Applications</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Strumento di accessibilità per aiutare a fare clic con il mouse</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrizione</title>
+
+<para
+>&kmousetool; fa clic sul mouse ogni volta che il puntatore del mouse si ferma per poco. È stato progettato per aiutare le persone con dolori da sforzi ripetitivi, a cui fa male premere il pulsante. </para>
+
+<para
+>&kmousetool; può anche essere configurato per attendere l'inizio di un trascinamento per un certo periodo di tempo prima di rilasciare il mouse. In questo modo, puoi usarlo anche per le operazioni di trascinamento.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vedi anche</title>
+
+<simplelist>
+<member
+>Una documentazione più dettagliata è disponibile a <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (inserisci questo &URL; in &konqueror; o esegui <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member>
+<member
+>qt5options(7)</member>
+<member
+>Ci sono anche altre informazioni disponibili sulla <ulink url="https://community.kde.org/Accessibility"
+>pagina Web del progetto di accessibilità di &kde;</ulink
+>.</member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Autori</title>
+<para
+>&kmousetool; è stato scritto da <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> e <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>

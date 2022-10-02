@@ -1,0 +1,446 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>Manuel de &kmousetool;</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+&traducteurRobertJacolin; &relecteurLudovicGrossard; 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>06-07-2017</date>
+<releaseinfo
+>1.12 (Applications 17.08)</releaseinfo>
+
+<abstract>
+<para
+>&kmousetool; simule un clic de souris lorsque le pointeur de la souris fait une courte pause. Elle a été conçue pour aider les personnes qui ont des lésions de contrainte répétitive, pour qui la pression sur un bouton pose problème. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>rsi</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonomie</keyword>
+<keyword
+>tendinite</keyword>
+<keyword
+>syndrome du canal carpien</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduction</title>
+
+<para
+>&kmousetool; simule un clic de souris lorsque le pointeur de la souris fait une courte pause. Elle a été conçue pour aider les personnes qui ont des lésions de contrainte répétitive, pour qui la pression sur un bouton pose problème. Elle peut aussi déplacer la souris, bien que cela nécessite un peu plus de pratique. </para>
+
+<para
+>&kmousetool; peut supprimer les problèmes occasionnés par les clics de souris et aide énormément de personnes à utiliser leur ordinateur sans problème. Malheureusement, certains problèmes peuvent aussi être occasionnés par le simple fait de déplacer la souris sur la table. Si vous avez ressenti des problèmes avec un ordinateur et n'avez pas consulté un docteur, allez en voir un. </para>
+<para
+>Pour rendre tout cela plus clair : bien que &kmousetool; puisse aider à réduire les problèmes occasionnés par les <emphasis
+>clics</emphasis
+> de souris, il ne peut pas aider quand les problèmes viennent du <emphasis
+>déplacement</emphasis
+> de la souris. Et, comme tous les outils ergonomiques, vous vous améliorerez par la pratique. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Utiliser &kmousetool;</title>
+<para
+>L'utilisation de &kmousetool; est simple : &kmousetool; contrôle vos mouvements de souris, et lorsque vous faites une pause brièvement, clique sur le bouton. </para>
+
+<para
+>Le mode « glissement intelligent » de &kmousetool; vous permet de déplacer la souris. </para>
+
+<para
+>Lorsque le « glissement intelligent » est activé, &kmousetool; fait une pause après avoir appuyé sur le bouton ; si vous déplacez la souris, il attendra que vous arrêtiez de déplacer la souris pour relâcher le bouton. Ainsi, vous pouvez à la fois cliquer et déplacer la souris. Le « glissement intelligent » nécessite un peu plus de pratique, mais devient naturel une fois que vous avez pris l'habitude de l'utiliser. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Référence des commandes</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>La fenêtre principale de &kmousetool;</title>
+
+    <para
+>Les options de &kmousetool; sont, pour la plupart, accessibles par la souris.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Démarrer</guibutton
+> / <guibutton
+>Arrêter</guibutton
+> </term>
+        <listitem>
+          <para
+>Démarre (ou arrête) &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mouvement minimum :</guilabel
+></term>
+<listitem>
+<para
+>Le mouvement minimum en pixels avant que &kmousetool; ne clique avec la souris.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Délai de clic (1 / 10 sec) :</guilabel>
+        </term>
+        <listitem>
+          <para
+>Le délai pendant lequel la souris doit s'arrêter avant que &kmousetool; ne clique. Augmentez ce délai s'il vous est trop difficile d'utiliser &kmousetool; </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Glissement intelligent</guilabel>
+        </term>
+        <listitem>
+          <para
+>Active ou désactive le « glissement intelligent ». Il est plus facile en mode désactivé, c'est pourquoi c'est le mode par défaut.</para
+><para
+>Lorsque le <guilabel
+>glissement intelligent</guilabel
+> est activé, le champ <guilabel
+>Délai de clic (1 / 10 sec) :</guilabel
+> devient disponible. C'est la durée pendant laquelle &kmousetool; attend, après avoir appuyé sur le bouton, avant de le relâcher si vous ne bougez pas la souris. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Activer les secousses</guilabel>
+        </term>
+        <listitem>
+          <para
+>&kmousetool; gère les secousses. Quand vous activez les secousses, un lent mouvement vers la droite avant de revenir en arrière, suivi par une pause provoquera un clic <mousebutton
+>droit</mousebutton
+>. Un lent mouvement vers la gauche puis un retour provoquera un double clic - les secousses sont spécifiées dans le fichier <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+>. Ce fichier est généré par &kmousetool; la première fois qu'il est lancé, mais peut être modifié par la suite. </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Clics audibles</guilabel>
+        </term>
+        <listitem>
+          <para
+>Joue un son lorsque &kmousetool; effectue un clic. Particulièrement, utile avec le « glissement intelligent ». </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Démarrer avec une session de bureau</guilabel>
+        </term>
+        <listitem>
+          <para
+>Quand ceci est activé, &kmousetool; démarrera à chaque fois qu'une session de bureau démarrera.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Par défaut</guibutton
+></term>
+<listitem>
+<para
+>Réinitialise tous les réglages à leurs valeurs par défaut.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Réinitialiser</guibutton
+></term>
+<listitem>
+<para
+>Réinitialise tous les paramètres à leurs états lors de l'ouverture de la boîte de dialogue, ou, si vous avez déjà enregistré une configuration par le bouton <guibutton
+>Appliquer</guibutton
+>, réinitialise tous les paramètres à leurs états lorsque vous avez pressé <guibutton
+>Appliquer</guibutton
+> pour la dernière fois.</para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Appliquer</guibutton>
+        </term>
+        <listitem>
+          <para
+>Après avoir modifié un paramètre, vous devez appuyer sur ce bouton.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Aide</guibutton
+></term>
+<listitem>
+<para
+>Ouvre le manuel utilisateur (ce document).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Fermer</guibutton
+></term>
+<listitem>
+<para
+>Ferme la boîte de dialogue sans enregistrer la configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Quitter</guibutton
+></term>
+<listitem>
+<para
+>Quitter &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Conseils</title>
+
+<para
+>Ces conseils peuvent raccourcir un peu le temps d'apprentissage de &kmousetool;. <itemizedlist>
+<listitem
+><para
+>Vous pouvez modifier les délais d'attente de &kmousetool;, pour les clics et les glissements.</para>
+</listitem>
+<listitem
+><para
+>Il vaut mieux s'exercer à cliquer avec &kmousetool; en utilisant d'abord ses valeurs par défaut. Vous apprécierez tout particulièrement de laisser le « glissement intelligent » désactivé d'abord. Dans un second temps, une fois plus à l'aise avec les clics, activez-le pour vous exercer.</para>
+</listitem>
+<listitem
+><para
+>Pendant l'utilisation du « glissement intelligent », vous pouvez vous aider en activant le « clic audible »</para>
+</listitem>
+<listitem
+><para
+>Pendant l'utilisation du « clic audible », vous aurez peut-être besoin d'augmenter la réponse audio de &kde;.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Questions et réponses</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>À l'aide ! &kmousetool; n'arrête pas de faire des clics fallacieux un peu partout sur l'écran !</para>
+</question>
+<answer>
+<para
+>Quand vous utilisez &kmousetool;, vous devez changer vos habitudes d'utilisation de la souris. </para>
+<para
+>Tout d'abord, gardez en tête les endroits sûrs pour cliquer &mdash; un clic sur les parties grises des fenêtres ou des zones sans liens des navigateurs Web n'aura aucune conséquence, vous pouvez donc laisser la souris sur ces zones en toute sécurité tant qu'il vous est nécessaire. </para>
+<para
+>Ensuite, vous devez savoir où vous allez cliquer avant de déplacer la souris. La plupart du temps, quand nous savons que nous allons utiliser la souris, la plupart d'entre nous attrape la souris et commence à la déplacer au hasard jusqu'à ce que nous trouvons l'endroit où nous voulons cliquer. Avec &kmousetool;, vous devez savoir en premier lieu où vous allez cliquer avant de déplacer la souris. C'est une bonne idée de conserver vos mains à côté de la souris quand vous ne l'utilisez pas. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Ma souris se coince quand je la déplace. Puis-je utiliser &kmousetool; ?</para>
+</question>
+<answer>
+<para
+>Oui. Si votre souris se coince, cela signifie que vous avez besoin de la nettoyer. Habituellement facile à faire, la combine est que vous ne devez pas nettoyer que la bille de la souris, mais les molettes que la bille fait tourner à l'intérieur de la souris.</para>
+<para
+>D'abord, vous devez enlever la bille. La méthode pour ce faire, varie d'une souris à l'autre, mais, en général, cela est clairement précisé si vous regardez le dessous de la souris.</para>
+<para
+>Une fois que vous avez enlevé la bille, vous devrez voir les molettes sur le côté du trou qui contenait la bille. La saleté et la crasse dessus peuvent être facilement enlevées en grattant avec une lame plate ou un ongle. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; appuie sur le bouton mais ne le relâche jamais. Que se passe-t-il ?</para>
+</question>
+<answer>
+<para
+>Dans de rares situations, le système suspend &kmousetool; lorsqu'un déplacement commence, si vous utilisez le « glissement intelligent », ce qui signifie que &kmousetool; ne pourra jamais finir le déplacement en relâchant le bouton.</para>
+<para
+>Cela se passe quand vous utilisez &kmousetool; sous un gestionnaire de fenêtres autre que celui de &kde; alors que vous l'utilisez pour déplacer une fenêtre. </para>
+<para
+>La solution est de simplement cliquer manuellement, cela réinitialise &kmousetool;, et vous pouvez alors continuer à travailler normalement.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; déplace le curseur quand j'essaye de saisir du texte.</para>
+</question>
+<answer>
+<para
+>Problème : lorsque vous saisissez du texte, &kmousetool; n'arrête pas de cliquer et déplace le curseur à côté de l'endroit où vous voulez saisir votre texte.</para>
+<para
+>Solution : utilisez la souris pour placer le curseur là où vous le désirez, mais lorsque vous êtes prêt à saisir votre texte, positionnez votre souris sur une zone neutre de l'écran. Puis, si vous poussez votre souris ou si elle se déplace de quelques pixels, tous les clics qui seront envoyés n'auront aucune conséquence. Les endroits sûrs pour poser la souris comprennent les zones grises autour des barres d'outils et de menus et sur la barre de titre des fenêtres.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>J'essaye d'utiliser le « glissement intelligent », mais je n'arrive pas à comprendre comment modifier du texte.</para>
+</question>
+<answer>
+<para
+>Le « glissement intelligent » est une fonctionnalité avancée de &kmousetool; et nécessite du temps pour l'utiliser. Il est tout à fait possible de l'utiliser pour sélectionner du texte, pour faire des copies ou des collages, ou encore de l'utiliser dans la plupart des situations où vous voulez normalement déplacer la souris. Cependant, vous ne pourrez sans doute pas le faire dès le début. Voici quelques suggestions : </para>
+<itemizedlist>
+<listitem
+><para
+>N'utilisez pas le « glissement intelligent » pendant votre phase d'apprentissage de &kmousetool;. À la place, pour sélectionner du texte, cliquez à la fin du texte, et laissez enfoncé la touche majuscule pendant que vous cliquez à l'autre bout du texte. </para
+></listitem>
+<listitem
+><para
+>Utilisez le « clic audible ». Un son <quote
+>clic</quote
+> est joué quand &kmousetool; enfonce le bouton, et vous signale le début du « délai de glissement ». Avec de la pratique, vous pourrez utiliser le « glissement intelligent » sans le « clic audible », mais cela nécessite pas mal de pratique. </para
+></listitem>
+<listitem
+><para
+>Savoir où vous allez cliquer avec la souris avant de commencer à la déplacer. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Remerciements et licence</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Programme copyright 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> et 2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Contributeurs : <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Documentation copyright 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Traduction française par &RobertJacolin;. Relecture par &LudovicGrossard;.</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
