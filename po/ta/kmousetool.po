@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"POT-Creation-Date: 2022-10-19 00:40+0000\n"
 "PO-Revision-Date: 2007-05-23 07:06+0530\n"
 "Last-Translator: ஆமாச்சு <amachu@ubuntu.com>\n"
 "Language-Team: Tamil <ta@i18n.kde.org>\n"
@@ -28,30 +28,30 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "allenchistopher_2002@rediffmail.com"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:379
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "இழு நேரம், நீர்க்கும் நேரம் விடக்குறைவு  அல்லது சமனாக இருக்கும்."
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:379
 #, kde-format
 msgid "Invalid Value"
 msgstr "செல்லாது மதிப்பு"
 
-#: kmousetool.cpp:447 kmousetool.cpp:588
+#: kmousetool.cpp:448 kmousetool.cpp:610
 #, kde-format
 msgid "&Stop"
 msgstr "&நிறுத்து"
 
 # துவக்கம் அல்லது ஆரம்பம்!
-#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#: kmousetool.cpp:450 kmousetool.cpp:589 kmousetool.cpp:613
 #, fuzzy, kde-format
 #| msgid "&Start"
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "&துவக்கம்"
 
-#: kmousetool.cpp:509
+#: kmousetool.cpp:515
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -62,12 +62,12 @@ msgstr ""
 "Do you want to apply the changes before closing the configuration window or "
 "discard the changes?"
 
-#: kmousetool.cpp:511
+#: kmousetool.cpp:517
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "உள்ளமை சாளரம் மூடுகிறது"
 
-#: kmousetool.cpp:532
+#: kmousetool.cpp:550
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -78,22 +78,22 @@ msgstr ""
 "Do you want to apply the changes before quitting KMousetool or discard the "
 "changes?"
 
-#: kmousetool.cpp:533
+#: kmousetool.cpp:551
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "கேமவுஸ் டூல் வெளியேறுகிறது"
 
-#: kmousetool.cpp:570
+#: kmousetool.cpp:592
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "கேமவுஸ் டூல் &உள்ளமை..."
 
-#: kmousetool.cpp:573
+#: kmousetool.cpp:595
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "கேமவுஸ் டூல் &கையேடு"
 
-#: kmousetool.cpp:575
+#: kmousetool.cpp:597
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "கேமவுஸ் டூல் &குறித்து"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-12 00:38+0000\n"
+"POT-Creation-Date: 2022-10-19 00:40+0000\n"
 "PO-Revision-Date: 2021-07-10 10:57+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -29,29 +29,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raviratlami@aol.in,"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:379
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "ड्रैग समय को ड्वैल समय के बराबर या कम होना चाहिए."
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:379
 #, kde-format
 msgid "Invalid Value"
 msgstr "अवैध मान"
 
-#: kmousetool.cpp:447 kmousetool.cpp:588
+#: kmousetool.cpp:448 kmousetool.cpp:610
 #, kde-format
 msgid "&Stop"
 msgstr "रूकें (&S)"
 
-#: kmousetool.cpp:449 kmousetool.cpp:567 kmousetool.cpp:591
+#: kmousetool.cpp:450 kmousetool.cpp:589 kmousetool.cpp:613
 #, fuzzy, kde-format
 #| msgid "&Start"
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "प्रारंभ (&S)"
 
-#: kmousetool.cpp:509
+#: kmousetool.cpp:515
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -59,12 +59,12 @@ msgid ""
 "discard the changes?"
 msgstr ""
 
-#: kmousetool.cpp:511
+#: kmousetool.cpp:517
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "कॉन्फ़िगरेशन विंडो बन्द किया जा रहा है"
 
-#: kmousetool.cpp:532
+#: kmousetool.cpp:550
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -72,22 +72,22 @@ msgid ""
 "changes?"
 msgstr ""
 
-#: kmousetool.cpp:533
+#: kmousetool.cpp:551
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "के-माउसटूल से बाहर हो रहे हैं"
 
-#: kmousetool.cpp:570
+#: kmousetool.cpp:592
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "के-माउसटूल कॉन्फ़िगर करें... (&C)"
 
-#: kmousetool.cpp:573
+#: kmousetool.cpp:595
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "के-माउसटूल हैंड-बुक (&H)"
 
-#: kmousetool.cpp:575
+#: kmousetool.cpp:597
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "के-माउसटूल के बारे में (&A)"
