@@ -214,24 +214,3 @@ msgstr "Autor original"
 #, kde-format
 msgid "Joe Betts"
 msgstr "Joe Betts"
-
-#~ msgid "&Defaults"
-#~ msgstr "&Omissió"
-
-#~ msgid "&Reset"
-#~ msgstr "&Inicialitza"
-
-#~ msgid "&Apply"
-#~ msgstr "&Aplica"
-
-#~ msgid "&Help"
-#~ msgstr "A&juda"
-
-#~ msgid "&Close"
-#~ msgstr "&Tanca"
-
-#~ msgid "&Quit"
-#~ msgstr "&Surt"
-
-#~ msgid "Start with &KDE"
-#~ msgstr "Inicia amb el &KDE"
