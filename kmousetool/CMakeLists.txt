@@ -6,8 +6,8 @@ add_executable(kmousetool)
 target_include_directories(kmousetool PRIVATE ${X11_INCLUDE_DIR})
 
 target_sources(kmousetool PRIVATE
-    mtstroke.cpp
-    kmousetool.cpp
+    mtstroke.cpp mtstroke.h
+    kmousetool.cpp kmousetool.h
     main.cpp
 )
 
