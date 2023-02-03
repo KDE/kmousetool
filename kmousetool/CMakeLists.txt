@@ -15,12 +15,12 @@ ki18n_wrap_ui(kmousetool kmousetoolui.ui)
 
 target_compile_definitions(kmousetool PRIVATE -DKMOUSETOOL_VERSION="${kmousetool_VERSION}")
 target_link_libraries(kmousetool
-    KF5::DBusAddons
-    KF5::I18n
-    KF5::IconThemes
-    KF5::Notifications
-    KF5::WindowSystem
-    KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::DBusAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::IconThemes
+    KF${KF_MAJOR_VERSION}::Notifications
+    KF${KF_MAJOR_VERSION}::WindowSystem
+    KF${KF_MAJOR_VERSION}::XmlGui
     Qt${QT_MAJOR_VERSION}::Widgets
     Qt${QT_MAJOR_VERSION}::Gui
     Qt${QT_MAJOR_VERSION}::Core
