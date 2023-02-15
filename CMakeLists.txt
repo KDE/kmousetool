@@ -63,7 +63,7 @@ ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.101.0)
 
 add_subdirectory( kmousetool )
 ki18n_install(po)
-if(KF5DocTools_FOUND)
+if(KF${KF_MAJOR_VERSION}DocTools_FOUND)
     kdoctools_install(po)
     add_subdirectory(doc)
 endif()
