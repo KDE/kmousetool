@@ -1,12 +1,15 @@
 # translation of kmousetool.po to Esperanto
+# Copyright (C) 2004 Free Software Foundation, Inc.
 # David Anema <lassi_surinen@yahoo.ca>, 2004.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:40+0000\n"
-"PO-Revision-Date: 2004-06-30 21:06GMT\n"
-"Last-Translator: David Anema <lassi_surinen@yahoo.ca>\n"
+"PO-Revision-Date: 2023-03-22 19:14+01\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -18,12 +21,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "David Anema"
+msgstr "David Anema,Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "lassi_surinen@yahoo.ca"
+msgstr "lassi_surinen@yahoo.ca,okellogg@users.sourceforge.net"
 
 #: kmousetool.cpp:379
 #, kde-format
@@ -38,13 +41,13 @@ msgstr "Malvalida valoro"
 #: kmousetool.cpp:448 kmousetool.cpp:610
 #, kde-format
 msgid "&Stop"
-msgstr "&Ĉesigu"
+msgstr "Ĉe&sigi"
 
 #: kmousetool.cpp:450 kmousetool.cpp:589 kmousetool.cpp:613
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
-msgstr ""
+msgstr "&Startigi"
 
 #: kmousetool.cpp:515
 #, kde-format
@@ -53,7 +56,7 @@ msgid ""
 "Do you want to apply the changes before closing the configuration window or "
 "discard the changes?"
 msgstr ""
-"Estas nesekurigataj ŝanĝoj en la aktiva modulo.\n"
+"Estas nekonservataj ŝanĝoj en la aktiva modulo.\n"
 "Ĉu vi volas apliki la ŝanĝojn antaŭ fermo de la agordofenestron aŭ forĵeti "
 "la ŝanĝojn?"
 
@@ -80,7 +83,7 @@ msgstr "Finante KMouseTool"
 #: kmousetool.cpp:592
 #, kde-format
 msgid "&Configure KMouseTool..."
-msgstr "&Agordu KMousetool..."
+msgstr "&Agordi KMousetool..."
 
 #: kmousetool.cpp:595
 #, kde-format
@@ -106,10 +109,9 @@ msgstr "Agordoj"
 
 #. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
 #: kmousetoolui.ui:62
-#, fuzzy, kde-format
-#| msgid "Drag t&ime (1/10 sec):"
+#, kde-format
 msgid "&Drag time (1/10 sec):"
-msgstr "Trena &tempo (1/10 sek.):"
+msgstr "&Trena tempo (1/10 sek.):"
 
 #. i18n: ectx: property (text), widget (QLabel, movementLabel)
 #: kmousetoolui.ui:97
@@ -121,7 +123,7 @@ msgstr "&Minimuma movo:"
 #: kmousetoolui.ui:107
 #, kde-format
 msgid "Start with &desktop session"
-msgstr ""
+msgstr "Komenci &de labortabla seanco"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
 #: kmousetoolui.ui:114
@@ -133,14 +135,13 @@ msgstr "Inteligenta &treno"
 #: kmousetoolui.ui:124
 #, kde-format
 msgid "&Enable strokes"
-msgstr "Ŝaltu &strekojn"
+msgstr "Ŝalti str&ekojn"
 
 #. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
 #: kmousetoolui.ui:131
-#, fuzzy, kde-format
-#| msgid "D&well time (1/10 sec):"
+#, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr "&Loĝa tempo (1/10 sek.):"
+msgstr "&Tempo de restado (1/10 sek.):"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
@@ -150,17 +151,13 @@ msgstr "&Aŭdebla klako"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: kmousetoolui.ui:191
-#, fuzzy, kde-format
-#| msgid ""
-#| "KMouseTool will run as a background application after you close this "
-#| "dialog. To change the settings again, restart KMouseTool or use the KDE "
-#| "system tray."
+#, kde-format
 msgid ""
 "KMouseTool will run as a background application after you close this dialog. "
 "To change the settings again, restart KMouseTool or use the system tray."
 msgstr ""
-"KMouseTool daŭros kiel fona aplikaĵo kiam vi fermos tiun ĉi dialogon. Por "
-"reŝanĝi la agordojn, relanĉu KMouseTool aŭ uzu la KDE-an Sistempleton."
+"KMouseTool rulos kiel fona aplikaĵo post kiam vi fermos ĉi dialogon. Por "
+"reŝanĝi la agordon, restartigu KMouseTool aŭ uzu la sistempleton."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
 #: kmousetoolui.ui:223
@@ -174,12 +171,13 @@ msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
+"(k) 2002-2003, Jeff Roush\n"
+"(k) 2003 Gunnar Schmidt "
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid "Gunnar Schmi Dt"
+#, kde-format
 msgid "Gunnar Schmidt"
-msgstr "Gunnar Schmi Dt"
+msgstr "Gunnar Schmidt"
 
 #: main.cpp:37
 #, kde-format
@@ -204,30 +202,9 @@ msgstr "Jeff Roush"
 #: main.cpp:39
 #, kde-format
 msgid "Original author"
-msgstr "Originala aŭtoro"
+msgstr "Origina aŭtoro"
 
 #: main.cpp:41
 #, kde-format
 msgid "Joe Betts"
 msgstr "Joe Betts"
-
-#~ msgid "&Defaults"
-#~ msgstr "&Defaŭltoj"
-
-#~ msgid "&Reset"
-#~ msgstr "&Reagordu"
-
-#~ msgid "&Apply"
-#~ msgstr "&Apliki"
-
-#~ msgid "&Help"
-#~ msgstr "&Helpo"
-
-#~ msgid "&Close"
-#~ msgstr "F&ermi"
-
-#~ msgid "&Quit"
-#~ msgstr "&Ĉesi"
-
-#~ msgid "Start with &KDE"
-#~ msgstr "&Lanĉi kun KDE"
