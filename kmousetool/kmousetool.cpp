@@ -237,7 +237,6 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name)
     connect(trayIcon, &KMouseToolTray::configureSelected, this, &KMouseTool::configureSelected);
     connect(trayIcon, &KMouseToolTray::aboutSelected, this, &KMouseTool::aboutSelected);
     connect(trayIcon, &KMouseToolTray::helpSelected, this, &KMouseTool::helpSelected);
-    connect(trayIcon, SIGNAL(quitSelected()), this, SLOT(quitSelected()));
 }
 
 KMouseTool::~KMouseTool()
@@ -588,8 +587,7 @@ KMouseToolTray::KMouseToolTray(QWidget *parent)
     setStatus(KStatusNotifierItem::Active);
     startStopAct = contextMenu()->addAction(i18nc("Start tracking the mouse", "&Start"), this, &KMouseToolTray::startStopSelected);
     contextMenu()->addSeparator();
-    QAction *act;
-    act = contextMenu()->addAction(i18n("&Configure KMouseTool..."), this, &KMouseToolTray::configureSelected);
+    QAction *act = contextMenu()->addAction(i18n("&Configure KMouseTool..."), this, &KMouseToolTray::configureSelected);
     act->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
     contextMenu()->addSeparator();
     act = contextMenu()->addAction(i18n("KMousetool &Handbook"), this, &KMouseToolTray::helpSelected);
