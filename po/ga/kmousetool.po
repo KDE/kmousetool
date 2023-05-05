@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeaccessibility/kmousetool.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-19 00:40+0000\n"
+"POT-Creation-Date: 2023-05-05 00:40+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -27,30 +27,30 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
 
-#: kmousetool.cpp:379
+#: kmousetool.cpp:378
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr ""
 "Caithfidh an t-am tarraingthe a bheith níos lú ná nó cothrom leis an am "
 "moillithe."
 
-#: kmousetool.cpp:379
+#: kmousetool.cpp:378
 #, kde-format
 msgid "Invalid Value"
 msgstr "Luach Neamhbhailí"
 
-#: kmousetool.cpp:448 kmousetool.cpp:610
+#: kmousetool.cpp:447 kmousetool.cpp:608
 #, kde-format
 msgid "&Stop"
 msgstr "&Stad"
 
-#: kmousetool.cpp:450 kmousetool.cpp:589 kmousetool.cpp:613
+#: kmousetool.cpp:449 kmousetool.cpp:588 kmousetool.cpp:611
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "&Tosaigh"
 
-#: kmousetool.cpp:515
+#: kmousetool.cpp:514
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -61,12 +61,12 @@ msgstr ""
 "An bhfuil fonn ort na hathruithe a chur i bhfeidhm sula ndúnfaidh tú an "
 "fhuinneog chumraíochta, nó na hathruithe a chaitheamh i gcártaí?"
 
-#: kmousetool.cpp:517
+#: kmousetool.cpp:516
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "Fuinneog Chumraíochta á Dúnadh"
 
-#: kmousetool.cpp:550
+#: kmousetool.cpp:549
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -77,22 +77,22 @@ msgstr ""
 "An bhfuil fonn ort na hathruithe a chur i bhfeidhm sula n-éireoidh tú as "
 "KMousetool, nó na hathruithe a chaitheamh i gcártaí?"
 
-#: kmousetool.cpp:551
+#: kmousetool.cpp:550
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "KMousetool á scor"
 
-#: kmousetool.cpp:592
+#: kmousetool.cpp:590
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "&Cumraigh KMouseTool..."
 
-#: kmousetool.cpp:595
+#: kmousetool.cpp:593
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "Lámhleab&har KMousetool"
 
-#: kmousetool.cpp:597
+#: kmousetool.cpp:595
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "Eol&as faoi KMouseTool"

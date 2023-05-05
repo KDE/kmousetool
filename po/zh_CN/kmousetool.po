@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-19 00:40+0000\n"
+"POT-Creation-Date: 2023-05-05 00:40+0000\n"
 "PO-Revision-Date: 2023-04-29 08:34\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: kmousetool.cpp:379
+#: kmousetool.cpp:378
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "拖动时间必须小于或等于悬停时间"
 
-#: kmousetool.cpp:379
+#: kmousetool.cpp:378
 #, kde-format
 msgid "Invalid Value"
 msgstr "无效数值"
 
-#: kmousetool.cpp:448 kmousetool.cpp:610
+#: kmousetool.cpp:447 kmousetool.cpp:608
 #, kde-format
 msgid "&Stop"
 msgstr "停止(&S)"
 
-#: kmousetool.cpp:450 kmousetool.cpp:589 kmousetool.cpp:613
+#: kmousetool.cpp:449 kmousetool.cpp:588 kmousetool.cpp:611
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "开始(&S)"
 
-#: kmousetool.cpp:515
+#: kmousetool.cpp:514
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -58,12 +58,12 @@ msgstr ""
 "在激活的模块里有尚未保存的更改。\n"
 "您希望在关闭配置窗口之前应用或者放弃这些更改吗？"
 
-#: kmousetool.cpp:517
+#: kmousetool.cpp:516
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "正在关闭配置窗口"
 
-#: kmousetool.cpp:550
+#: kmousetool.cpp:549
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -73,22 +73,22 @@ msgstr ""
 "在激活的模块里有尚未保存的更改。\n"
 "您希望在退出 K 鼠标工具之前应用或者放弃这些更改吗？"
 
-#: kmousetool.cpp:551
+#: kmousetool.cpp:550
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "正在退出 K 鼠标工具"
 
-#: kmousetool.cpp:592
+#: kmousetool.cpp:590
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "配置 K 鼠标工具(&C)..."
 
-#: kmousetool.cpp:595
+#: kmousetool.cpp:593
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "K 鼠标工具手册(&H)"
 
-#: kmousetool.cpp:597
+#: kmousetool.cpp:595
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "关于 K 鼠标工具(&A)"
