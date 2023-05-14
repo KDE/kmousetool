@@ -112,7 +112,7 @@ msgstr "إعدادات"
 #: kmousetoolui.ui:62
 #, kde-format
 msgid "&Drag time (1/10 sec):"
-msgstr "مدة السّ&حب (١/١٠ ث):"
+msgstr "مدة السّ&حب (1/10 ث):"
 
 #. i18n: ectx: property (text), widget (QLabel, movementLabel)
 #: kmousetoolui.ui:97
@@ -142,7 +142,7 @@ msgstr "&تفعيل الضّرب على المفاتيح"
 #: kmousetoolui.ui:131
 #, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr "م&دة النَّقرة (١/١٠ ث):"
+msgstr "م&دة النَّقرة (1/10 ث):"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
