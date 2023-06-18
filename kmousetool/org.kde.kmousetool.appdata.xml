@@ -13,6 +13,7 @@
   <name xml:lang="de">KMouseTool</name>
   <name xml:lang="el">KMouseTool</name>
   <name xml:lang="en-GB">KMouseTool</name>
+  <name xml:lang="eo">KMouseTool</name>
   <name xml:lang="es">KMouseTool</name>
   <name xml:lang="et">KMouseTool</name>
   <name xml:lang="eu">KMouseTool</name>
@@ -50,6 +51,7 @@
   <summary xml:lang="de">Automatische Mausklicks zur Vorbeugung gegen das RSI-Syndrom</summary>
   <summary xml:lang="el">Αυτόματα κλικ για να μειωθούν οι συνέπειες των κακώσεων λόγω επαναλαμβανόμενης καταπόνησης</summary>
   <summary xml:lang="en-GB">Automatic clicks to reduce the effects of repetitive strain injury</summary>
+  <summary xml:lang="eo">Aŭtomataj klakoj por redukti la efikojn de vundiĝo pro ripeta streĉo</summary>
   <summary xml:lang="es">Clics automáticos para reducir el efecto de lesiones por esfuerzo repetitivo</summary>
   <summary xml:lang="et">Automaatne klõpsamine ülekoormuskahjustuse mõjude vähendamiseks</summary>
   <summary xml:lang="eu">Esfortzu errepikakorraren ondoriozko lesioaren efektuak murrizteko klik automatikoak</summary>
