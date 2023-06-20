@@ -162,7 +162,7 @@ msgid ""
 msgstr ""
 "KMouseTool executarase como unha aplicación en segundo plano cando peche "
 "este diálogo. Para cambiar de novo a configuración, volva iniciar KMouseTool "
-"ou empregue a área de notificación."
+"ou use a área de notificación."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
 #: kmousetoolui.ui:223
