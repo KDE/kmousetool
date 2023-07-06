@@ -613,3 +613,5 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
     }
     setIconByPixmap(icon);
 }
+
+#include "moc_kmousetool.cpp"
