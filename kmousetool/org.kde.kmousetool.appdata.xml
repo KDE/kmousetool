@@ -13,6 +13,7 @@
   <name xml:lang="de">KMouseTool</name>
   <name xml:lang="el">KMouseTool</name>
   <name xml:lang="en-GB">KMouseTool</name>
+  <name xml:lang="eo">KMouseTool</name>
   <name xml:lang="es">KMouseTool</name>
   <name xml:lang="et">KMouseTool</name>
   <name xml:lang="eu">KMouseTool</name>
@@ -21,6 +22,7 @@
   <name xml:lang="gl">KMouseTool</name>
   <name xml:lang="ia">KMouseTool</name>
   <name xml:lang="id">KMouseTool</name>
+  <name xml:lang="is">Um KMouseTool</name>
   <name xml:lang="it">KMouseTool</name>
   <name xml:lang="ka">KMouseTool</name>
   <name xml:lang="ko">KMouseTool</name>
@@ -49,6 +51,7 @@
   <summary xml:lang="de">Automatische Mausklicks zur Vorbeugung gegen das RSI-Syndrom</summary>
   <summary xml:lang="el">Αυτόματα κλικ για να μειωθούν οι συνέπειες των κακώσεων λόγω επαναλαμβανόμενης καταπόνησης</summary>
   <summary xml:lang="en-GB">Automatic clicks to reduce the effects of repetitive strain injury</summary>
+  <summary xml:lang="eo">Aŭtomataj klakoj por redukti la efikojn de vundiĝo pro ripeta streĉo</summary>
   <summary xml:lang="es">Clics automáticos para reducir el efecto de lesiones por esfuerzo repetitivo</summary>
   <summary xml:lang="et">Automaatne klõpsamine ülekoormuskahjustuse mõjude vähendamiseks</summary>
   <summary xml:lang="eu">Esfortzu errepikakorraren ondoriozko lesioaren efektuak murrizteko klik automatikoak</summary>
@@ -87,6 +90,7 @@
     <p xml:lang="de">KMouseTool drückt die Maustaste für Sie und funktioniert mit jeder Maus und jedem Zeigergerät.</p>
     <p xml:lang="el">Το KMouseTool κάνει κλικ το ποντίκι, έτσι εσείς δεν χρειάζεται να το κάνετε. Το KMouseTool λειτουργεί με κάθε ποντίκι ή συσκευή με δείκτη.</p>
     <p xml:lang="en-GB">KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.</p>
+    <p xml:lang="eo">KMouseTool alklakas la muson por vi, do vi ne devas. KMouseTool funkcias per ajna muso aŭ indika aparato.</p>
     <p xml:lang="es">KMouseTool pulsa los botones del ratón por usted. KMouseTool funciona con cualquier ratón o dispositivo apuntador.</p>
     <p xml:lang="et">KMouseTool teeb sinu eest hiireklõpsu, vabastades sind vaevast. KMouseTool töötab koos kõigi hiirte või osutusseadmetega.</p>
     <p xml:lang="eu">KMouseTool tresnak saguari klik egiten dio zure ordez, zuk egin behar ez dezazun. KMouseTool edozein sagu edo gailu erakuslerekin dabil.</p>
