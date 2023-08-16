@@ -45,6 +45,11 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED
     WindowSystem
     CoreAddons
 )
+
+if (QT_MAJOR_VERSION STREQUAL "6")
+    find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
+endif()
+
 find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION})
 set_package_properties(KF${KF_MAJOR_VERSION}DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"

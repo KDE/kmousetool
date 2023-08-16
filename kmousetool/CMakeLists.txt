@@ -31,6 +31,10 @@ target_link_libraries(kmousetool
     ${X11_LIBRARIES}
 )
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(kmousetool KF6::StatusNotifierItem)
+endif()
+
 install(TARGETS kmousetool  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install( PROGRAMS org.kde.kmousetool.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 install( FILES mousetool_tap.wav  DESTINATION  ${KDE_INSTALL_DATADIR}/kmousetool/sounds )
