@@ -34,7 +34,6 @@
 #include <KMessageBox>
 #include <KSharedConfig>
 #include <KStandardGuiItem>
-#include <kwidgetsaddons_version.h>
 
 int currentXPosition;
 int currentYPosition;
@@ -505,12 +504,8 @@ void KMouseTool::helpSelected()
 void KMouseTool::closeSelected()
 {
     if (newSettings()) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         int answer =
             KMessageBox::questionTwoActionsCancel(this,
-#else
-        int answer = KMessageBox::questionYesNoCancel(this,
-#endif
                                                   i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before closing "
                                                        "the configuration window or discard the changes?"),
                                                   i18n("Closing Configuration Window"),
@@ -518,17 +513,9 @@ void KMouseTool::closeSelected()
                                                   KStandardGuiItem::discard(),
                                                   KStandardGuiItem::cancel(),
                                                   QStringLiteral("AutomaticSave"));
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (answer == KMessageBox::PrimaryAction)
-#else
-        if (answer == KMessageBox::Yes)
-#endif
             applySettings();
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         else if (answer == KMessageBox::SecondaryAction)
-#else
-        else if (answer == KMessageBox::No)
-#endif
             resetSettings();
         if (answer != KMessageBox::Cancel)
             hide();
@@ -540,11 +527,7 @@ void KMouseTool::closeSelected()
 void KMouseTool::quitSelected()
 {
     if (newSettings()) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         int answer = KMessageBox::questionTwoActionsCancel(
-#else
-        int answer = KMessageBox::questionYesNoCancel(
-#endif
             this,
             i18n("There are unsaved changes in the active module.\nDo you want to apply the changes before quitting KMousetool or discard the changes?"),
             i18n("Quitting KMousetool"),
@@ -552,11 +535,7 @@ void KMouseTool::quitSelected()
             KStandardGuiItem::discard(),
             KStandardGuiItem::cancel(),
             QStringLiteral("AutomaticSave"));
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (answer == KMessageBox::PrimaryAction)
-#else
-        if (answer == KMessageBox::Yes)
-#endif
             applySettings();
         if (answer != KMessageBox::Cancel) {
             saveOptions();

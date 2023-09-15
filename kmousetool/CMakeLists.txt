@@ -15,25 +15,23 @@ ki18n_wrap_ui(kmousetool kmousetoolui.ui)
 
 target_compile_definitions(kmousetool PRIVATE -DKMOUSETOOL_VERSION="${kmousetool_VERSION}")
 target_link_libraries(kmousetool
-    KF${KF_MAJOR_VERSION}::DBusAddons
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::IconThemes
-    KF${KF_MAJOR_VERSION}::Notifications
-    KF${KF_MAJOR_VERSION}::WindowSystem
-    KF${KF_MAJOR_VERSION}::XmlGui
-    Qt${QT_MAJOR_VERSION}::Widgets
-    Qt${QT_MAJOR_VERSION}::Gui
-    Qt${QT_MAJOR_VERSION}::Core
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    Phonon::phonon4qt${QT_MAJOR_VERSION}
+    KF6::DBusAddons
+    KF6::I18n
+    KF6::IconThemes
+    KF6::Notifications
+    KF6::WindowSystem
+    KF6::XmlGui
+    Qt6::Widgets
+    Qt6::Gui
+    Qt6::Core
+    KF6::CoreAddons
+    Phonon::phonon4qt6
     ${X11_XTest_LIB}
     ${X11_Xext_LIB}
     ${X11_LIBRARIES}
 )
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    target_link_libraries(kmousetool KF6::StatusNotifierItem)
-endif()
+target_link_libraries(kmousetool KF6::StatusNotifierItem)
 
 install(TARGETS kmousetool  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install( PROGRAMS org.kde.kmousetool.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )

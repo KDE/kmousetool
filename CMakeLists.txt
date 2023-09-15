@@ -8,8 +8,8 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 
 project(kmousetool VERSION "${RELEASE_SERVICE_VERSION}")
 
-set(QT_MIN_VERSION "5.15.2")
-set(KF_MIN_VERSION "5.92.0")
+set(QT_MIN_VERSION "6.5.0")
+set(KF_MIN_VERSION "5.240.0")
 
 find_package (ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
@@ -24,19 +24,12 @@ include(FeatureSummary)
 include(KDEGitCommitHooks)
 include(KDEClangFormat)
 include(ECMDeprecationSettings)
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.c)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets)
 
-find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     DBusAddons
     I18n
     IconThemes
@@ -46,16 +39,14 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED
     CoreAddons
 )
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
-endif()
+find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
 
-find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION})
-set_package_properties(KF${KF_MAJOR_VERSION}DocTools PROPERTIES DESCRIPTION
+find_package(KF6DocTools ${KF_MIN_VERSION})
+set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )
-find_package(Phonon4Qt${QT_MAJOR_VERSION} REQUIRED NO_MODULE)
+find_package(Phonon4Qt6 REQUIRED NO_MODULE)
 
 find_package(X11 REQUIRED)
 if(NOT X11_Xt_FOUND)
@@ -65,11 +56,11 @@ if(NOT X11_XTest_FOUND)
     message(FATAL_ERROR "Cannot find X11 XTest component (libxcb-xtest header file X11/extensions/XTest.h)")
 endif(NOT X11_XTest_FOUND)
 
-ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.105.0)
+ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
 add_subdirectory( kmousetool )
 ki18n_install(po)
-if(KF${KF_MAJOR_VERSION}DocTools_FOUND)
+if(KF6DocTools_FOUND)
     kdoctools_install(po)
     add_subdirectory(doc)
 endif()

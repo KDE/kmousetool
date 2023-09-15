@@ -54,6 +54,18 @@
             ]
         },
         {
+            "name": "release-qt6",
+            "displayName": "Build as release mode.",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "BUILD_WITH_QT6": "ON",
+		"BUILD_TESTING": "OFF"
+            },
+            "inherits": [
+                "base-qt6"
+            ]
+        },	
+        {
             "name": "asan",
             "displayName": "Build with Asan support.",
             "cacheVariables": {
@@ -94,7 +106,8 @@
             "name": "release",
             "displayName": "Build as release mode.",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
+                "CMAKE_BUILD_TYPE": "Release",
+		"BUILD_TESTING": "OFF"
             },
             "inherits": [
                 "base"
@@ -161,6 +174,10 @@
         {
             "name": "dev-qt6",
             "configurePreset": "dev-qt6"
+        },
+        {       
+            "name": "release-qt6",
+            "configurePreset": "release-qt6"
         },
         {
             "name": "dev-clang",
