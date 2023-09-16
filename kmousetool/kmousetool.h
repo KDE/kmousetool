@@ -39,32 +39,31 @@ class KMouseTool : public QWidget, public Ui::KMouseToolUI
     Q_OBJECT
 
 private:
-    MTStroke stroke;
+    MTStroke mStroke;
 
     // boolean flags to keep track of program states
-    int mouse_is_down;
-    int continue_timer;
-    int tick_count;
-    int dwell_time;
-    int drag_time;
-    int max_ticks;
-    int min_movement;
-    bool smart_drag_on;
-    bool playSound;
-    bool mousetool_is_running;
-    bool mousetool_just_started;
-    bool moving;
-    bool strokesEnabled;
+    int mMouse_is_down;
+    int mContinue_timer;
+    int mTick_count;
+    int mDwell_time;
+    int mDrag_time;
+    int mMax_ticks;
+    int mMin_movement;
+    bool mSmart_drag_on;
+    bool mPlaySound;
+    bool mMousetool_is_running;
+    bool mMousetool_just_started;
+    bool mMoving;
+    bool mStrokesEnabled;
 
-    QString autostartdirname;
-    QString rcfilename;
-    QString appfilename;
+    QString mAutostartdirname;
+    QString mAppfilename;
     QString mSoundFileName;
-    Phonon::MediaObject *mplayer;
-    KMouseToolTray *trayIcon;
+    Phonon::MediaObject *mPlayer = nullptr;
+    KMouseToolTray *mTrayIcon = nullptr;
 
-    KHelpMenu *helpMenu;
-    QPushButton *buttonQuit;
+    KHelpMenu *mHelpMenu = nullptr;
+    QPushButton *mButtonQuit = nullptr;
 
     /**
      * Initialize all variables
@@ -190,6 +189,6 @@ Q_SIGNALS:
     void helpSelected();
 
 private:
-    QAction *startStopAct;
+    QAction *mStartStopAct = nullptr;
 };
 #endif
