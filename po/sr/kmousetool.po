@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-11-28 02:58+0100\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2017-07-16 22:55+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -33,28 +33,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net,pejakm@gmail.com"
 
-#: kmousetool.cpp:399
+#: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "Време превлачења мора бити мање или једнако времену пребивања."
 
-#: kmousetool.cpp:399
+#: kmousetool.cpp:377
 #, kde-format
 msgid "Invalid Value"
 msgstr "Лоша вредност"
 
-#: kmousetool.cpp:469 kmousetool.cpp:616
+#: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
 msgstr "Зау&стави"
 
-#: kmousetool.cpp:471 kmousetool.cpp:596 kmousetool.cpp:619
+#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "&Покрени"
 
-#: kmousetool.cpp:541
+#: kmousetool.cpp:509
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -65,12 +65,12 @@ msgstr ""
 "измене пре затварања прозора за подешавање, или да их одбаците?</p>"
 
 # >> @title:window
-#: kmousetool.cpp:542
+#: kmousetool.cpp:511
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "Затварање прозора за подешавање"
 
-#: kmousetool.cpp:561
+#: kmousetool.cpp:532
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -81,28 +81,28 @@ msgstr ""
 "измене пре напуштања К‑мишоклика, или да их одбаците?</p>"
 
 # >> @title:window
-#: kmousetool.cpp:562
+#: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "Напуштање К‑мишоклика"
 
-#: kmousetool.cpp:599
+#: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "&Подеси К‑мишоклик..."
 
-#: kmousetool.cpp:602
+#: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "&Приручник за К‑мишоклик"
 
-#: kmousetool.cpp:604
+#: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "&О К‑мишоклику"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
-#: kmousetoolui.ui:14 main.cpp:31 main.cpp:39
+#: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
 #, kde-format
 msgid "KMouseTool"
 msgstr "К‑мишоклик"
@@ -172,46 +172,49 @@ msgstr ""
 msgid "&Start"
 msgstr "&Покрени"
 
-#: main.cpp:43
-#, kde-format
+#: main.cpp:27
+#, fuzzy, kde-format
+#| msgid ""
+#| "(c) 2002-2003, Jeff Roush\n"
+#| "(c) 2003, Gunnar Schmidt"
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
-"(c) 2003, Gunnar Schmidt"
+"(c) 2003 Gunnar Schmidt "
 msgstr ""
 "© 2002–2003, Џеф Роуш\n"
 "© 2003, Гунар Шмит"
 
-#: main.cpp:48
+#: main.cpp:32
 #, kde-format
 msgid "Gunnar Schmidt"
 msgstr "Гунар Шмит"
 
-#: main.cpp:48
+#: main.cpp:32
 #, kde-format
 msgid "Current maintainer"
 msgstr "Тренутни одржавалац"
 
-#: main.cpp:49
+#: main.cpp:33
 #, kde-format
 msgid "Olaf Schmidt"
 msgstr "Олаф Јан Шмит"
 
-#: main.cpp:49
+#: main.cpp:33
 #, kde-format
 msgid "Usability improvements"
 msgstr "Побољшања употребљивости"
 
-#: main.cpp:50
+#: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
 msgstr "Џеф Роуш"
 
-#: main.cpp:50
+#: main.cpp:34
 #, kde-format
 msgid "Original author"
 msgstr "Првобитни аутор"
 
-#: main.cpp:52
+#: main.cpp:36
 #, kde-format
 msgid "Joe Betts"
 msgstr "Џо Бетс"

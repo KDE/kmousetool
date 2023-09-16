@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 00:40+0000\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2023-09-02 02:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "拖动时间必须小于或等于悬停时间"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "Invalid Value"
 msgstr "无效数值"
 
-#: kmousetool.cpp:447 kmousetool.cpp:608
+#: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
 msgstr "停止(&S)"
 
-#: kmousetool.cpp:449 kmousetool.cpp:588 kmousetool.cpp:611
+#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "开始(&S)"
 
-#: kmousetool.cpp:514
+#: kmousetool.cpp:509
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -58,12 +58,12 @@ msgstr ""
 "在激活的模块里有尚未保存的更改。\n"
 "您希望在关闭配置窗口之前应用或者放弃这些更改吗？"
 
-#: kmousetool.cpp:516
+#: kmousetool.cpp:511
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "正在关闭配置窗口"
 
-#: kmousetool.cpp:549
+#: kmousetool.cpp:532
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -73,28 +73,28 @@ msgstr ""
 "在激活的模块里有尚未保存的更改。\n"
 "您希望在退出 K 鼠标工具之前应用或者放弃这些更改吗？"
 
-#: kmousetool.cpp:550
+#: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "正在退出 K 鼠标工具"
 
-#: kmousetool.cpp:590
+#: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "配置 K 鼠标工具(&C)..."
 
-#: kmousetool.cpp:593
+#: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "K 鼠标工具手册(&H)"
 
-#: kmousetool.cpp:595
+#: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "关于 K 鼠标工具(&A)"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
-#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
 #, kde-format
 msgid "KMouseTool"
 msgstr "K 鼠标工具"
@@ -163,7 +163,7 @@ msgstr ""
 msgid "&Start"
 msgstr "开始(&S)"
 
-#: main.cpp:32
+#: main.cpp:27
 #, kde-format
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
@@ -172,37 +172,37 @@ msgstr ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Gunnar Schmidt"
 msgstr "Gunnar Schmidt"
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Current maintainer"
 msgstr "当前维护者"
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Olaf Schmidt"
 msgstr "Olaf Schmidt"
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Usability improvements"
 msgstr "可用性改进"
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
 msgstr "Jeff Roush"
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Original author"
 msgstr "原作者"
 
-#: main.cpp:41
+#: main.cpp:36
 #, kde-format
 msgid "Joe Betts"
 msgstr "Joe Betts"

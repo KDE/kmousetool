@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 00:40+0000\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2004-01-08 17:55+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kyfieithu@dotmon.com"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "Rhaid i'r amser llusgo fod yn llai na neu yn gyfartal i'r amser aros."
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "Invalid Value"
 msgstr "Gwerth Annilys"
 
-#: kmousetool.cpp:447 kmousetool.cpp:608
+#: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
 msgstr "&Aros"
 
-#: kmousetool.cpp:449 kmousetool.cpp:588 kmousetool.cpp:611
+#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr ""
 
-#: kmousetool.cpp:514
+#: kmousetool.cpp:509
 #, fuzzy, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -58,12 +58,12 @@ msgstr ""
 "Mae newidiadau na gedwyd yn y modiwl gweithredol.<br>Hoffech chi weithredu'r "
 "newidiadau cyn cau'r ffenestr ymgom, neu taflu'r newidiadau?"
 
-#: kmousetool.cpp:516
+#: kmousetool.cpp:511
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "Cau'r Ffenestr Ffurfweddiad"
 
-#: kmousetool.cpp:549
+#: kmousetool.cpp:532
 #, fuzzy, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -73,28 +73,28 @@ msgstr ""
 "Mae newidiadau na gedwyd yn y modiwl gweithredol.<br>Hoffech chi weithredu'r "
 "newidiadau cyn terfynu KErfynLlygoden, neu taflu'r newidiadau?"
 
-#: kmousetool.cpp:550
+#: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "Terfynu KErfynLlygoden"
 
-#: kmousetool.cpp:590
+#: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "&Ffurfweddu KErfynLlygoden..."
 
-#: kmousetool.cpp:593
+#: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "&Llawlyfr KErfynLlygoden"
 
-#: kmousetool.cpp:595
+#: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "&Ynglyn â KErfynLlygoden"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
-#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
 #, kde-format
 msgid "KMouseTool"
 msgstr "KErfynLlygoden"
@@ -170,44 +170,44 @@ msgstr ""
 msgid "&Start"
 msgstr ""
 
-#: main.cpp:32
+#: main.cpp:27
 #, kde-format
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Gunnar Schmidt"
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Current maintainer"
 msgstr "Cynhaliwr cyfredol"
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Olaf Schmidt"
 msgstr ""
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Usability improvements"
 msgstr "Gwelliannau defnyddioldeb"
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
 msgstr ""
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Original author"
 msgstr "Awdur gwreiddiol"
 
-#: main.cpp:41
+#: main.cpp:36
 #, kde-format
 msgid "Joe Betts"
 msgstr ""

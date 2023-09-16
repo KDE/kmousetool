@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 00:40+0000\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2013-03-09 14:48+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "chetan@kompkin.com"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr ""
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "Invalid Value"
 msgstr ""
 
-#: kmousetool.cpp:447 kmousetool.cpp:608
+#: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
 msgstr "थांबा (&S)"
 
-#: kmousetool.cpp:449 kmousetool.cpp:588 kmousetool.cpp:611
+#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "सुरु करा (&S)"
 
-#: kmousetool.cpp:514
+#: kmousetool.cpp:509
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -56,12 +56,12 @@ msgid ""
 "discard the changes?"
 msgstr ""
 
-#: kmousetool.cpp:516
+#: kmousetool.cpp:511
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "ही संयोजना चौकट बंद करत आहे"
 
-#: kmousetool.cpp:549
+#: kmousetool.cpp:532
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -69,28 +69,28 @@ msgid ""
 "changes?"
 msgstr ""
 
-#: kmousetool.cpp:550
+#: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr ""
 
-#: kmousetool.cpp:590
+#: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "के-माउसटूल संयोजीत करा (&C)..."
 
-#: kmousetool.cpp:593
+#: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "के-माउसटूल पुस्तिका (&H)"
 
-#: kmousetool.cpp:595
+#: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "के-माउसटूल विषयी (&A)"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
-#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
 #, kde-format
 msgid "KMouseTool"
 msgstr "के-माउस-टूल"
@@ -157,44 +157,44 @@ msgstr ""
 msgid "&Start"
 msgstr "सुरु करा (&S)"
 
-#: main.cpp:32
+#: main.cpp:27
 #, kde-format
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Gunnar Schmidt"
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Current maintainer"
 msgstr "वर्तमान नियंत्रक"
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Olaf Schmidt"
 msgstr "ओलफ स्मिट"
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Usability improvements"
 msgstr "उपयोगिता सुधारणा"
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
 msgstr "जेफ रोश"
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Original author"
 msgstr "मूळ लेखक"
 
-#: main.cpp:41
+#: main.cpp:36
 #, kde-format
 msgid "Joe Betts"
 msgstr "जो बेट्स"

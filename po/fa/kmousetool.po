@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 00:40+0000\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2007-06-10 15:29+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -30,29 +30,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "razavi@itland.ir"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "زمان کشیدن باید کمتر یا مساوی زمان سکون باشد."
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "Invalid Value"
 msgstr "مقدار نامعتبر"
 
-#: kmousetool.cpp:447 kmousetool.cpp:608
+#: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
 msgstr "&ایست‌"
 
-#: kmousetool.cpp:449 kmousetool.cpp:588 kmousetool.cpp:611
+#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, fuzzy, kde-format
 #| msgid "&Start"
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "&آغاز‌"
 
-#: kmousetool.cpp:514
+#: kmousetool.cpp:509
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -63,12 +63,12 @@ msgstr ""
 "می‌خواهید تغییرات را قبل از بستن پنجره پیکربندی اعمال کنید، یا تغییرات را دور "
 "می‌اندازید؟"
 
-#: kmousetool.cpp:516
+#: kmousetool.cpp:511
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "بستن پنجره پیکربندی"
 
-#: kmousetool.cpp:549
+#: kmousetool.cpp:532
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -79,28 +79,28 @@ msgstr ""
 "می‌خواهید تغییرات را پیش از خروج از KMousetool اعمال کنید، یا تغییرات را دور "
 "می‌اندازید؟"
 
-#: kmousetool.cpp:550
+#: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "خروج از KMousetool"
 
-#: kmousetool.cpp:590
+#: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "&پیکربندی KMouseTool...‌"
 
-#: kmousetool.cpp:593
+#: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "&کتاب مرجع KMousetool‌"
 
-#: kmousetool.cpp:595
+#: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "&درباره KMouseTool‌"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
-#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
 #, kde-format
 msgid "KMouseTool"
 msgstr ""
@@ -176,44 +176,44 @@ msgstr ""
 msgid "&Start"
 msgstr "&آغاز‌"
 
-#: main.cpp:32
+#: main.cpp:27
 #, kde-format
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Gunnar Schmidt"
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Current maintainer"
 msgstr "نگه‌دارنده جاری"
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Olaf Schmidt"
 msgstr ""
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Usability improvements"
 msgstr "بهبودهای قابلیت استفاده"
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
 msgstr ""
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Original author"
 msgstr "نویسنده اصلی"
 
-#: main.cpp:41
+#: main.cpp:36
 #, kde-format
 msgid "Joe Betts"
 msgstr ""

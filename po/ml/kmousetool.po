@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 00:40+0000\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2008-12-26 05:30-0800\n"
 "Last-Translator: SANKARANARAYANAN <snalledam@dataone.in>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -26,28 +26,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "snalledam@dataone.in"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "വലിച്ചുനീക്കുന്ന സമയം നിവാസസമയത്തിന് തുല്യ‌മോ അതില്‍ കുറവോ ആയിരിക്കണം."
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "Invalid Value"
 msgstr "അസാധുവായ മൂല്യം"
 
-#: kmousetool.cpp:447 kmousetool.cpp:608
+#: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
 msgstr "&നിര്‍ത്തുക"
 
-#: kmousetool.cpp:449 kmousetool.cpp:588 kmousetool.cpp:611
+#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "&തുടങ്ങുക"
 
-#: kmousetool.cpp:514
+#: kmousetool.cpp:509
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -58,12 +58,12 @@ msgstr ""
 "ക്രമീകരണ ജാലകം അടക്കുന്നതിന് മുമ്പായി മാറ്റങ്ങള്‍ പ്രയോഗിക്കേണ്ടതുണ്ടോ അതോ, മാറ്റങ്ങള്‍ "
 "ഉപേക്ഷിക്കണോ?"
 
-#: kmousetool.cpp:516
+#: kmousetool.cpp:511
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "ക്രമീകരണ ജാലകം അടക്കുന്നു"
 
-#: kmousetool.cpp:549
+#: kmousetool.cpp:532
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -72,28 +72,28 @@ msgid ""
 msgstr ""
 "കെമൌസ്‌ടൂള്‍ വിടുന്നതിന് മുമ്പേ മാറ്റങ്ങള്‍ പ്രയോഗിക്കണ്ട ആവശ്യ‌മുണ്ടോ അതോ, മാറ്റങ്ങള്‍ ഉപേക്ഷിക്കണോ?"
 
-#: kmousetool.cpp:550
+#: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "കെമൌസ്‌ടൂള്‍ വിടുന്നു"
 
-#: kmousetool.cpp:590
+#: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "&കെമൌസ്‌ടൂള്‍ ക്രമീകരിക്കുക..."
 
-#: kmousetool.cpp:593
+#: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "കെമൌസ്‌ടൂളിന്റെ &കൈപുസ്തകം"
 
-#: kmousetool.cpp:595
+#: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "&കെമൌസ്‌ടൂളിനെ പറ്റി"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
-#: kmousetoolui.ui:14 main.cpp:28 main.cpp:30
+#: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
 #, kde-format
 msgid "KMouseTool"
 msgstr "കെമൌസ്‌ടൂള്‍ "
@@ -169,7 +169,7 @@ msgstr ""
 msgid "&Start"
 msgstr "&തുടങ്ങുക"
 
-#: main.cpp:32
+#: main.cpp:27
 #, fuzzy, kde-format
 #| msgid ""
 #| "(c) 2002-2003, Jeff Roush\n"
@@ -181,38 +181,38 @@ msgstr ""
 "(c) 2002-2003, ജെഫ്  റൌഷ്\n"
 "(c) 2003, ഗുന്നാര്‍ ഷ്മി Dt"
 
-#: main.cpp:37
+#: main.cpp:32
 #, fuzzy, kde-format
 #| msgid "Gunnar Schmi Dt"
 msgid "Gunnar Schmidt"
 msgstr "ഗുന്നാര്‍ ഷ്മി Dt"
 
-#: main.cpp:37
+#: main.cpp:32
 #, kde-format
 msgid "Current maintainer"
 msgstr "നിലവിലുള്ള പരിപാലകന്‍"
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Olaf Schmidt"
 msgstr "ഒളാഫ് ഷ്മിത്"
 
-#: main.cpp:38
+#: main.cpp:33
 #, kde-format
 msgid "Usability improvements"
 msgstr "ഉപയോഗക്ഷമതയിലെ പരിഷ്കാരങ്ങള്‍"
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
 msgstr "ജെഫ് റൌഷ്"
 
-#: main.cpp:39
+#: main.cpp:34
 #, kde-format
 msgid "Original author"
 msgstr "ആദ്യത്തെ രചയിതാവ്"
 
-#: main.cpp:41
+#: main.cpp:36
 #, kde-format
 msgid "Joe Betts"
 msgstr "ജോ ബെട്സ്"
