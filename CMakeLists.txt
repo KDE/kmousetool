@@ -33,11 +33,12 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     DBusAddons
     I18n
     IconThemes
-    Notifications
     XmlGui
     WindowSystem
     CoreAddons
     StatusNotifierItem
+    Config
+    WidgetsAddons
 )
 
 find_package(KF6DocTools ${KF_MIN_VERSION})

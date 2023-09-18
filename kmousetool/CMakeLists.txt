@@ -18,7 +18,6 @@ target_link_libraries(kmousetool
     KF6::DBusAddons
     KF6::I18n
     KF6::IconThemes
-    KF6::Notifications
     KF6::WindowSystem
     KF6::XmlGui
     Qt6::Widgets
