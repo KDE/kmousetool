@@ -25,13 +25,12 @@ target_link_libraries(kmousetool
     Qt6::Gui
     Qt6::Core
     KF6::CoreAddons
+    KF6::StatusNotifierItem
     Phonon::phonon4qt6
     ${X11_XTest_LIB}
     ${X11_Xext_LIB}
     ${X11_LIBRARIES}
 )
-
-target_link_libraries(kmousetool KF6::StatusNotifierItem)
 
 install(TARGETS kmousetool  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install( PROGRAMS org.kde.kmousetool.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )

@@ -37,9 +37,8 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     XmlGui
     WindowSystem
     CoreAddons
+    StatusNotifierItem
 )
-
-find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
 
 find_package(KF6DocTools ${KF_MIN_VERSION})
 set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
