@@ -45,7 +45,7 @@
 
 <abstract>
 <para
->La tasca de &kmousetool; és generar els clics del ratolí, allí a on s'aturi el punter del ratolí. Fou dissenyat d'aquesta manera per ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. </para>
+>La tasca de &kmousetool; és generar els clics del ratolí, allí a on s'aturi el punter del ratolí. Fou dissenyat d'aquesta manera per a ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. </para>
 </abstract>
 
 <keywordset>
@@ -70,7 +70,7 @@
 >Introducció</title>
 
 <para
->&kmousetool; generarà els clics a on s'aturi un moment el punter del ratolí. Fou dissenyat d'aquesta manera per ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. També és possible usar &kmousetool; per arrossegar elements d'un lloc a l'altre de la pantalla, tot i que això últim requereix una mica més de pràctica. </para>
+>&kmousetool; generarà els clics a on s'aturi un moment el punter del ratolí. Fou dissenyat d'aquesta manera per a ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. També és possible usar &kmousetool; per a arrossegar elements d'un lloc a l'altre de la pantalla, tot i que això últim requereix una mica més de pràctica. </para>
 
 <para
 >&kmousetool; pot ajudar a combatre el dolor que algunes persones senten en prémer els botons del ratolí. Però malauradament, no es pot fer res per aquells que experimenten dolor en desplaçar el ratolí per sobre la taula. Si us plau, si esteu experimentant dolors relacionats amb l'ús de l'ordinador, i encara no heu consultat a un metge, feu-ho tan aviat com es pugui. </para>
@@ -157,8 +157,8 @@
 >Quan habiliteu <guilabel
 >Arrossegat intel·ligent</guilabel
 > el camp <guilabel
->Temps d'estancament (1/10 seg)</guilabel
-> estarà disponible. Aquest serà el temps que &kmousetool; esperarà per alliberar un clic, sempre que no moveu el punter del ratolí. </para>
+>Temps d'estancament (1/10 seg.)</guilabel
+> estarà disponible. Aquest serà el temps que &kmousetool; esperarà a alliberar un clic, sempre que no moveu el punter del ratolí. </para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -360,7 +360,7 @@
 <qandaentry>
 <question>
 <para
->Estic mirant d'usar el mode arrossegat intel·ligent, però no trobo la manera d'usar-lo per editar text.</para>
+>Estic mirant d'usar el mode arrossegat intel·ligent, però no trobo la manera d'usar-lo per a editar text.</para>
 </question>
 <answer>
 <para

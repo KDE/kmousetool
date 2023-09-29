@@ -32,7 +32,7 @@
 >kmousetool</command
 ></refname>
 <refpurpose
->Eina d'accessibilitat per ajudar a fer el clic del ratolí</refpurpose>
+>Eina d'accessibilitat per a ajudar a fer el clic del ratolí</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -47,10 +47,10 @@
 >Descripció</title>
 
 <para
->La tasca de &kmousetool; és generar els clics del ratolí, allí a on s'aturi el punter del ratolí. Fou dissenyat d'aquesta manera per ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. </para>
+>La tasca de &kmousetool; és generar els clics del ratolí, allí a on s'aturi el punter del ratolí. Fou dissenyat d'aquesta manera per a ajudar a aquells que, per patir algun tipus de lesió ocasionada per un treball repetitiu, senten dolor quan premen els botons del ratolí. </para>
 
 <para
->&kmousetool; també es pot configurar per esperar un temps específic per arrossegar al començament, abans de deixar el ratolí. D'aquesta manera, també el podeu usar per a les operacions d'arrossegar i deixar anar.</para>
+>&kmousetool; també es pot configurar per a esperar un temps específic per a arrossegar al començament, abans de deixar el ratolí. D'aquesta manera, també el podeu usar per a les operacions d'arrossegar i deixar anar.</para>
 
 </refsect1>
 
