@@ -5,13 +5,13 @@
 # Osman Yüksel <yuxel@sonsuzdongu.com>, 2005.
 # obsoleteman <tulliana@gmail.com>, 2007-2008,2012.
 # Serhat Demirkol <serhat_demirkol@yahoo.com>, 2009.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeaccessibility-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 00:40+0000\n"
-"PO-Revision-Date: 2022-12-10 18:38+0300\n"
+"PO-Revision-Date: 2023-10-05 12:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -82,7 +82,7 @@ msgstr ""
 #: kmousetool.cpp:550
 #, kde-format
 msgid "Quitting KMousetool"
-msgstr "KMousetool kapatılıyor"
+msgstr "Fare Aracı'dan çıkılıyor"
 
 #: kmousetool.cpp:590
 #, kde-format
@@ -161,8 +161,8 @@ msgid ""
 "To change the settings again, restart KMouseTool or use the system tray."
 msgstr ""
 "Fare Aracı bu pencere kapanana kadar arka plan uygulaması olarak çalışacak. "
-"Seçenekleri tekrar değiştirmek için, Fare aracını yeniden başlatın ve sistem "
-"çekmecesini kullanın."
+"Seçenekleri yeniden değiştirmek için Fare aracını yeniden başlatın ve sistem "
+"tepsisini kullanın."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
 #: kmousetoolui.ui:223
@@ -187,7 +187,7 @@ msgstr "Gunnar Schmidt"
 #: main.cpp:37
 #, kde-format
 msgid "Current maintainer"
-msgstr "Şimdi projeyi yürüten"
+msgstr "Şu anki bakımcı"
 
 #: main.cpp:38
 #, kde-format
