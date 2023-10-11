@@ -1,5 +1,5 @@
 
-add_subdirectory( pics ) 
+add_subdirectory( pics )
 
 add_executable(kmousetool)
 
@@ -20,12 +20,12 @@ target_link_libraries(kmousetool
     KF6::IconThemes
     KF6::WindowSystem
     KF6::XmlGui
+    Qt6::Multimedia
     Qt6::Widgets
     Qt6::Gui
     Qt6::Core
     KF6::CoreAddons
     KF6::StatusNotifierItem
-    Phonon::phonon4qt6
     ${X11_XTest_LIB}
     ${X11_Xext_LIB}
     ${X11_LIBRARIES}

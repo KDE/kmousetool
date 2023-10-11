@@ -7,9 +7,6 @@
 
 #include "kmousetool.h"
 
-// Needs to be be before X11/Intrinsic.h because of qtextstream.h
-#include <phonon/MediaObject>
-
 #include <X11/Intrinsic.h> /* Intrinsics Definitions*/
 #include <X11/StringDefs.h> /* Standard Name-String definitions*/
 #include <X11/Xmd.h>
@@ -19,9 +16,11 @@
 
 #include <QAbstractEventDispatcher>
 #include <QApplication>
+#include <QAudioOutput>
 #include <QFile>
 #include <QFileInfo>
 #include <QIcon>
+#include <QMediaPlayer>
 #include <QMenu>
 #include <QScreen>
 #include <QStandardPaths>
@@ -69,7 +68,9 @@ void KMouseTool::init_vars()
 
     // If the ~/.mousetool directory doesn't exist, create it
     mSoundFileName = QStandardPaths::locate(QStandardPaths::AppLocalDataLocation, QStringLiteral("sounds/mousetool_tap.wav"));
-    mPlayer = Phonon::createPlayer(Phonon::AccessibilityCategory);
+    mPlayer = new QMediaPlayer();
+    QAudioOutput *output = new QAudioOutput();
+    mPlayer->setAudioOutput(output);
     mPlayer->setParent(this);
 
     // find application file
@@ -195,7 +196,7 @@ void KMouseTool::playTickSound()
     if (!mPlaySound)
         return;
 
-    mPlayer->setCurrentSource(QUrl::fromLocalFile(mSoundFileName));
+    mPlayer->setSource(QUrl::fromLocalFile(mSoundFileName));
     mPlayer->play();
 }
 

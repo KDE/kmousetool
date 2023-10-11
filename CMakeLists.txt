@@ -27,7 +27,12 @@ include(ECMDeprecationSettings)
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.c)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+    Core
+    Gui
+    Multimedia
+    Widgets
+)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED
     DBusAddons
@@ -46,7 +51,6 @@ set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )
-find_package(Phonon4Qt6 REQUIRED NO_MODULE)
 
 find_package(X11 REQUIRED)
 if(NOT X11_Xt_FOUND)

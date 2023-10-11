@@ -18,14 +18,10 @@
 
 class QLabel;
 class QAction;
+class QMediaPlayer;
 class KAudioPlayer;
 class KHelpMenu;
 class KMouseToolTray;
-
-namespace Phonon
-{
-class MediaObject;
-}
 
 /**
  * KMouseTool is the base class of the project
@@ -59,7 +55,7 @@ private:
     QString mAutostartdirname;
     QString mAppfilename;
     QString mSoundFileName;
-    Phonon::MediaObject *mPlayer = nullptr;
+    QMediaPlayer *mPlayer = nullptr;
     KMouseToolTray *mTrayIcon = nullptr;
 
     KHelpMenu *mHelpMenu = nullptr;
