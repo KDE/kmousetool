@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:54+0000\n"
+"POT-Creation-Date: 2023-10-13 01:41+0000\n"
 "PO-Revision-Date: 2021-08-17 09:33+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -43,29 +43,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@macolu.org, kimael@gmail.com"
 
-#: kmousetool.cpp:377
+#: kmousetool.cpp:378
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr ""
 "Le délai de glissement doit être inférieur ou égal au délai de maintien."
 
-#: kmousetool.cpp:377
+#: kmousetool.cpp:378
 #, kde-format
 msgid "Invalid Value"
 msgstr "Valeur non valable"
 
-#: kmousetool.cpp:446 kmousetool.cpp:587
+#: kmousetool.cpp:447 kmousetool.cpp:588
 #, kde-format
 msgid "&Stop"
 msgstr "Arrête&r"
 
-#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
+#: kmousetool.cpp:449 kmousetool.cpp:568 kmousetool.cpp:591
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "&Démarrer"
 
-#: kmousetool.cpp:509
+#: kmousetool.cpp:510
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -77,12 +77,12 @@ msgstr ""
 "Voulez-vous appliquer ces changements avant de fermer la fenêtre de "
 "configuration ou les abandonner ?"
 
-#: kmousetool.cpp:511
+#: kmousetool.cpp:512
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "Fermeture de la fenêtre de configuration"
 
-#: kmousetool.cpp:532
+#: kmousetool.cpp:533
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -94,22 +94,22 @@ msgstr ""
 "Voulez-vous appliquer ces changements avant de fermer KMouseTool ou les "
 "abandonner ?"
 
-#: kmousetool.cpp:533
+#: kmousetool.cpp:534
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "Fermeture de KMouseTool"
 
-#: kmousetool.cpp:569
+#: kmousetool.cpp:570
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "&Configurer KMouseTool..."
 
-#: kmousetool.cpp:572
+#: kmousetool.cpp:573
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "&Manuel de KMouseTool"
 
-#: kmousetool.cpp:574
+#: kmousetool.cpp:575
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "&À propos de KMouseTool"
