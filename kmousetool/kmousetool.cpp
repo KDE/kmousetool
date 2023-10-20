@@ -28,7 +28,6 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KHelpMenu>
-#include <KIconLoader>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
@@ -586,10 +585,10 @@ void KMouseToolTray::updateStartStopText(bool mousetool_is_running)
 
     if (mousetool_is_running) {
         mStartStopAct->setText(i18n("&Stop"));
-        icon = KIconLoader::global()->loadIcon(QStringLiteral("kmousetool_on"), KIconLoader::Small);
+        icon = QIcon::fromTheme(QStringLiteral("kmousetool_on"));
     } else {
         mStartStopAct->setText(i18nc("Start tracking the mouse", "&Start"));
-        icon = KIconLoader::global()->loadIcon(QStringLiteral("kmousetool_off"), KIconLoader::Small);
+        icon = QIcon::fromTheme(QStringLiteral("kmousetool_off"));
     }
     setIconByPixmap(icon);
 }
