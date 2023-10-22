@@ -20,6 +20,7 @@
   <name xml:lang="fi">KMouseTool</name>
   <name xml:lang="fr">KMouseTool</name>
   <name xml:lang="gl">KMouseTool</name>
+  <name xml:lang="he">KMouseTool</name>
   <name xml:lang="ia">KMouseTool</name>
   <name xml:lang="id">KMouseTool</name>
   <name xml:lang="is">Um KMouseTool</name>
@@ -58,6 +59,7 @@
   <summary xml:lang="fi">Hiiren automaattinapsautukset rasitusvammojen vaikutusten vähentämiseksi</summary>
   <summary xml:lang="fr">Clics automatiques pour réduire les effets des troubles musculo-squelettiques</summary>
   <summary xml:lang="gl">Clics automáticos para reducir das lesións por esforzo repetitivo</summary>
+  <summary xml:lang="he">לחיצות עכבר אוטומטיות כדי להפיחת תופעות של פציעות מאמץ חוזרניות</summary>
   <summary xml:lang="ia">Clicar automatic per reducer le effectos de damnos sporadic repetitive</summary>
   <summary xml:lang="id">Klik otomatis untuk mengurangi efek cedera pegal</summary>
   <summary xml:lang="it">Clic automatici per ridurre gli effetti del disturbo degli arti superiori da lavoro</summary>
@@ -97,6 +99,7 @@
     <p xml:lang="fi">KMouseTool napsauttaa hiirtä puolestasi, jottei sinun tarvitse. KMouseTool toimii kaikilla hiirillä ja osoitinlaitteilla.</p>
     <p xml:lang="fr">KMouseTool clique sur la souris pour vous afin que vous n'ayez pas à le faire. KMouseTool fonctionne avec n'importe quelle souris ou dispositif de pointage.</p>
     <p xml:lang="gl">KMouseTool preme o rato por vostede. KMouseTool funciona con calquera rato ou dispositivo de punteiro.</p>
+    <p xml:lang="he">KMouseTool לוחץ על העכבר עבורך, כדי שלא לאלץ אותך לעשות זאת. KMouseTool עובד עם כל עכבר או התקן הצבעה.</p>
     <p xml:lang="ia">KMouseTool cicca le mus per te, assi que tu non debe facer lo. KMouseTool functiona con ulle mus o dispositivo de punctar.</p>
     <p xml:lang="id">KMouseTool mengeklik mouse untuk kamu, jadi kamu tidak perlu melakukannya. KMouseTool bekerja dengan mouse atau peranti penunjuk apa pun.</p>
     <p xml:lang="it">KMouseTool fa clic col mouse per te, cosicché tu non debba farlo. Funziona con qualsiasi mouse o strumento di puntamento.</p>
