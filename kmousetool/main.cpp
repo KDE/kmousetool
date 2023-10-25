@@ -17,7 +17,7 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("kmousetool");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("kmousetool"));
 
     KAboutData aboutData(QStringLiteral("kmousetool"),
                          i18n("KMouseTool"),
