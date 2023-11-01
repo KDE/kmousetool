@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeaccessibility-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:41+0000\n"
+"POT-Creation-Date: 2023-11-01 01:39+0000\n"
 "PO-Revision-Date: 2023-10-05 12:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -31,28 +31,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "turkishprogram@xposta.com"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "Taşıma zamanı yerleştirme zamanına eşit veya daha küçük olmalıdır."
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "Invalid Value"
 msgstr "Geçersiz Değer"
 
-#: kmousetool.cpp:447 kmousetool.cpp:588
+#: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
 msgstr "&Dur"
 
-#: kmousetool.cpp:449 kmousetool.cpp:568 kmousetool.cpp:591
+#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "&Başlat"
 
-#: kmousetool.cpp:510
+#: kmousetool.cpp:509
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -63,12 +63,12 @@ msgstr ""
 "Ayarlar penceresini kapatmadan önce değişikliklerin uygulanmasını mı yoksa "
 "iptal edilmelerini mi istiyorsunuz?"
 
-#: kmousetool.cpp:512
+#: kmousetool.cpp:511
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "Ayar Pencereci Kapatılıyor"
 
-#: kmousetool.cpp:533
+#: kmousetool.cpp:532
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -79,22 +79,22 @@ msgstr ""
 "KMousetool'dan çıkmadan önce değişikliklerin uygulanmasını mı yoksa iptal "
 "edilmelerini mi istiyorsunuz?"
 
-#: kmousetool.cpp:534
+#: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "Fare Aracı'dan çıkılıyor"
 
-#: kmousetool.cpp:570
+#: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "Fare Aracı A&yarları..."
 
-#: kmousetool.cpp:573
+#: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "Fare Aracı &El Kitabı"
 
-#: kmousetool.cpp:575
+#: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "&Fare Aracı Hakkında"

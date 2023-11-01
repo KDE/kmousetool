@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:41+0000\n"
+"POT-Creation-Date: 2023-11-01 01:39+0000\n"
 "PO-Revision-Date: 2008-12-26 05:30-0800\n"
 "Last-Translator: SANKARANARAYANAN <snalledam@dataone.in>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -26,28 +26,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "snalledam@dataone.in"
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr "വലിച്ചുനീക്കുന്ന സമയം നിവാസസമയത്തിന് തുല്യ‌മോ അതില്‍ കുറവോ ആയിരിക്കണം."
 
-#: kmousetool.cpp:378
+#: kmousetool.cpp:377
 #, kde-format
 msgid "Invalid Value"
 msgstr "അസാധുവായ മൂല്യം"
 
-#: kmousetool.cpp:447 kmousetool.cpp:588
+#: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
 msgstr "&നിര്‍ത്തുക"
 
-#: kmousetool.cpp:449 kmousetool.cpp:568 kmousetool.cpp:591
+#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "&തുടങ്ങുക"
 
-#: kmousetool.cpp:510
+#: kmousetool.cpp:509
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -58,12 +58,12 @@ msgstr ""
 "ക്രമീകരണ ജാലകം അടക്കുന്നതിന് മുമ്പായി മാറ്റങ്ങള്‍ പ്രയോഗിക്കേണ്ടതുണ്ടോ അതോ, മാറ്റങ്ങള്‍ "
 "ഉപേക്ഷിക്കണോ?"
 
-#: kmousetool.cpp:512
+#: kmousetool.cpp:511
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "ക്രമീകരണ ജാലകം അടക്കുന്നു"
 
-#: kmousetool.cpp:533
+#: kmousetool.cpp:532
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -72,22 +72,22 @@ msgid ""
 msgstr ""
 "കെമൌസ്‌ടൂള്‍ വിടുന്നതിന് മുമ്പേ മാറ്റങ്ങള്‍ പ്രയോഗിക്കണ്ട ആവശ്യ‌മുണ്ടോ അതോ, മാറ്റങ്ങള്‍ ഉപേക്ഷിക്കണോ?"
 
-#: kmousetool.cpp:534
+#: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr "കെമൌസ്‌ടൂള്‍ വിടുന്നു"
 
-#: kmousetool.cpp:570
+#: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "&കെമൌസ്‌ടൂള്‍ ക്രമീകരിക്കുക..."
 
-#: kmousetool.cpp:573
+#: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "കെമൌസ്‌ടൂളിന്റെ &കൈപുസ്തകം"
 
-#: kmousetool.cpp:575
+#: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "&കെമൌസ്‌ടൂളിനെ പറ്റി"
