@@ -397,7 +397,7 @@ bool KMouseTool::applySettings()
 // Save options to kmousetoolrc file
 void KMouseTool::loadOptions()
 {
-    KConfigGroup cfg = KSharedConfig::openConfig()->group("UserOptions");
+    KConfigGroup cfg = KSharedConfig::openConfig()->group(QStringLiteral("UserOptions"));
 
     mPlaySound = cfg.readEntry("AudibleClick", false);
     mSmart_drag_on = cfg.readEntry("SmartDrag", false);
@@ -425,8 +425,8 @@ void KMouseTool::saveOptions()
     int x = p.x();
     int y = p.y();
 
-    KConfigGroup cfg = KSharedConfig::openConfig()->group("ProgramOptions");
-    cfg = KSharedConfig::openConfig()->group("UserOptions");
+    KConfigGroup cfg = KSharedConfig::openConfig()->group(QStringLiteral("ProgramOptions"));
+    cfg = KSharedConfig::openConfig()->group(QStringLiteral("UserOptions"));
     cfg.writeEntry("x", x);
     cfg.writeEntry("y", y);
     cfg.writeEntry("strokesEnabled", mStrokesEnabled);

@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 
     KMouseTool *kmousetool = new KMouseTool();
 
-    if (!KSharedConfig::openConfig()->group("UserOptions").readEntry("IsMinimized", false))
+    if (!KSharedConfig::openConfig()->group(QStringLiteral("UserOptions")).readEntry("IsMinimized", false))
         kmousetool->show();
 
     return app.exec();
