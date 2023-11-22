@@ -2,16 +2,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 # Osman Yüksel <yuxel@sonsuzdongu.com>, 2005.
 # obsoleteman <tulliana@gmail.com>, 2007-2008,2012.
 # Serhat Demirkol <serhat_demirkol@yahoo.com>, 2009.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeaccessibility-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 00:40+0000\n"
-"PO-Revision-Date: 2023-10-05 12:53+0300\n"
+"PO-Revision-Date: 2023-11-21 19:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -168,7 +169,7 @@ msgstr ""
 #: kmousetoolui.ui:223
 #, kde-format
 msgid "&Start"
-msgstr "&Başla"
+msgstr "&Başlat"
 
 #: main.cpp:32
 #, kde-format
