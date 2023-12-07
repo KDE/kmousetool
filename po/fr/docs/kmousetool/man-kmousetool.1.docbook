@@ -50,7 +50,7 @@
 >&kmousetool; simule un clic de souris lorsque le pointeur de la souris fait une courte pause. Elle a été conçue pour aider les personnes qui ont des lésions de contrainte répétitive, pour qui la pression sur un bouton pose problème. </para>
 
 <para
->&kmousetool; peut également être configuré pour attendre une durée spécifiée pour initier un glissé, avant de décliquer la souris. De cette façon, vous pouvez également l'utiliser pour les opérations de glisser-déposer.</para>
+>&kmousetool; peut également être configuré pour attendre une durée spécifiée pour initier un glisser, avant de relâcher le clic de souris. De cette façon, vous pouvez également l'utiliser pour les opérations de glisser-déposer.</para>
 
 </refsect1>
 
