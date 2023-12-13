@@ -81,6 +81,7 @@
   <summary xml:lang="vi">Bấm tự động để giảm tác động của chấn thương do căng lặp lại</summary>
   <summary xml:lang="x-test">xxAutomatic clicks to reduce the effects of repetitive strain injuryxx</summary>
   <summary xml:lang="zh-CN">自动点击功能，有助于降低重复性操作带来的劳损</summary>
+  <summary xml:lang="zh-TW">自動點擊以降低 RSI（重複性勞損）的影響</summary>
   <description>
     <p>
      KMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.
