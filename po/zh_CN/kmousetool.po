@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-09 09:24\n"
+"PO-Revision-Date: 2023-12-17 11:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -109,7 +109,7 @@ msgstr "设置"
 #: kmousetoolui.ui:62
 #, kde-format
 msgid "&Drag time (1/10 sec):"
-msgstr "拖动时间(1/10 秒)(&D)："
+msgstr "拖动时间 (1/10 秒) (&D)："
 
 #. i18n: ectx: property (text), widget (QLabel, movementLabel)
 #: kmousetoolui.ui:97
@@ -139,7 +139,7 @@ msgstr "启用击键音(&E)"
 #: kmousetoolui.ui:131
 #, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr "悬停时间(1/10 秒)(&T)："
+msgstr "悬停时间 (1/10 秒) (&T)："
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
