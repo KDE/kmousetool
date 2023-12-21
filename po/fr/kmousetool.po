@@ -11,9 +11,9 @@
 # Anne-Marie Mahfouf <annma@kde.org>, 2012.
 # Sébastien Renard <renard@kde.org>, 2012.
 # Sebastien Renard <renard@kde.org>, 2013.
-# xavier <ktranslator31@yahoo.fr>, 2013.
+# Xavier Besnard <xavier.besnard@kde.org>, 2013.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2017.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2021.
+# Xavier Besnard <xavier.besnard@kde.org>, 2021.
 #
 msgid ""
 msgstr ""
