@@ -29,6 +29,7 @@
   <name xml:lang="it">KMouseTool</name>
   <name xml:lang="ka">KMouseTool</name>
   <name xml:lang="ko">KMouseTool</name>
+  <name xml:lang="lv">KMouseTool</name>
   <name xml:lang="nl">KMouseTool</name>
   <name xml:lang="nn">KMouseTool</name>
   <name xml:lang="pl">KMouseTool</name>
@@ -68,6 +69,7 @@
   <summary xml:lang="it">Clic automatici per ridurre gli effetti del disturbo degli arti superiori da lavoro</summary>
   <summary xml:lang="ka">ავტომატური წკაპები RSI-ის ეფექტების შესამცრებლად</summary>
   <summary xml:lang="ko">자동 클릭으로 반복성 긴장 장애 예방</summary>
+  <summary xml:lang="lv">Automātiski klikšķina, lai samazinātu RSI (statiskās pārslodzes izraisītus bojājumus)</summary>
   <summary xml:lang="nl">Automatische klik om het effect van RSI (repetitive strain injury) te voorkomen</summary>
   <summary xml:lang="nn">Automatiske klikk hjelper deg å unngå musesjuke</summary>
   <summary xml:lang="pl">Samoczynne kliknięcia, aby ograniczyć efekt kontuzji spowodowanych powtarzaną czynnością</summary>
@@ -110,6 +112,7 @@
     <p xml:lang="it">KMouseTool fa clic col mouse per te, cosicché tu non debba farlo. Funziona con qualsiasi mouse o strumento di puntamento.</p>
     <p xml:lang="ka">KMouseTool აწკაპუნებს თაგუნაზე თქვენთვის, ასე რომ თქვენ არ გჭირდებათ. KMouseTool მუშაობს ნებისმიერ თაგუნასთან ან საჩვენებელ მოწყობილობასთან.</p>
     <p xml:lang="ko">KMouseTool은 여러분을 대신하여 마우스 단추를 클릭해 줍니다. 마우스 및 포인팅 장치에 관계 없이 동작합니다.</p>
+    <p xml:lang="lv">„KMouseTool“ jūsu vietā klikšķina peli jūsu vietā. Šī programma darbojas ar jebkuru peli vai rādītājierīci.</p>
     <p xml:lang="nl">KMouseTool klikt voor u de muis, dus hoeft u dat niet te doen. KMouseTool werkt met elke muis of aanwijzer.</p>
     <p xml:lang="nn">KMouseTool trykkjer med musa for deg, slik at du slepp. Det fungerer med alle typar mus og peikeverktøy.</p>
     <p xml:lang="pl">KMouseTool klika myszą za ciebie, abyś sam nie musiał ego robić. KMouseTool działa z każdą myszą lub urządzeniem wskazującym.</p>
