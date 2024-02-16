@@ -4,36 +4,37 @@
 #
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-01 01:39+0000\n"
-"PO-Revision-Date: 2009-05-16 09:00+0300\n"
-"Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-02-13 16:18+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Viesturs Zariņš"
+msgstr "Viesturs Zariņš, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "viesturs.zarins@mi.lu.lv"
+msgstr "viesturs.zarins@mi.lu.lv, toms.trasuns@posteo.net"
 
 #: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
-msgstr "Vilkšanas laikam jābūt ne lielākam par uzturēšanās laiku."
+msgstr "Vilkšanas laiks nedrīkst pārsniegt uzturēšanās laiku."
 
 #: kmousetool.cpp:377
 #, kde-format
@@ -43,7 +44,7 @@ msgstr "Nederīga vērtība"
 #: kmousetool.cpp:446 kmousetool.cpp:587
 #, kde-format
 msgid "&Stop"
-msgstr "&Stop"
+msgstr "&Apturēt"
 
 #: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
 #, kde-format
@@ -59,7 +60,8 @@ msgid ""
 "discard the changes?"
 msgstr ""
 "Aktīvajā modulī ir nesaglabātas izmaiņas.\n"
-"Vai vēlaties tās pielietot pirms konfigurācijas loga aizvēršanas?"
+"Vai vēlaties tās pielietot pirms konfigurācijas loga aizvēršanas vai "
+"noraidīt?"
 
 #: kmousetool.cpp:511
 #, kde-format
@@ -74,27 +76,27 @@ msgid ""
 "changes?"
 msgstr ""
 "Aktīvajā modulī ir nesaglabātas izmaiņas.\n"
-"Vai vēlaties tās pielietot pirms iziet no KMousetool?"
+"Vai vēlaties tās pielietot pirms iziet no „KMousetool“?"
 
 #: kmousetool.cpp:533
 #, kde-format
 msgid "Quitting KMousetool"
-msgstr "Iziet no KMousetool"
+msgstr "Iziet no „KMousetool“"
 
 #: kmousetool.cpp:569
 #, kde-format
 msgid "&Configure KMouseTool..."
-msgstr "&Konfigurēt KMouseTool..."
+msgstr "&Konfigurēt „KMouseTool“..."
 
 #: kmousetool.cpp:572
 #, kde-format
 msgid "KMousetool &Handbook"
-msgstr "KMousetool &Rokasgrāmata"
+msgstr "„KMousetool“ &rokasgrāmata"
 
 #: kmousetool.cpp:574
 #, kde-format
 msgid "&About KMouseTool"
-msgstr "&Par KMouseTool"
+msgstr "&Par „KMouseTool“"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
 #: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
@@ -110,10 +112,9 @@ msgstr "Iestatījumi"
 
 #. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
 #: kmousetoolui.ui:62
-#, fuzzy, kde-format
-#| msgid "Drag t&ime (1/10 sec):"
+#, kde-format
 msgid "&Drag time (1/10 sec):"
-msgstr "Vilkšanas &laiks (1/10 sek):"
+msgstr "Vilkšanas &laiks (1/10 sek.):"
 
 #. i18n: ectx: property (text), widget (QLabel, movementLabel)
 #: kmousetoolui.ui:97
@@ -125,26 +126,25 @@ msgstr "&Minimālā kustība:"
 #: kmousetoolui.ui:107
 #, kde-format
 msgid "Start with &desktop session"
-msgstr ""
+msgstr "Sākt ar &darbvirsmas sesiju"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
 #: kmousetoolui.ui:114
 #, kde-format
 msgid "Smar&t drag"
-msgstr "&Gurdā vilkšana"
+msgstr "&Gudrā vilkšana"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
 #: kmousetoolui.ui:124
 #, kde-format
 msgid "&Enable strokes"
-msgstr "&Ieslēgt vilkšanu"
+msgstr "&Ieslēgt vēzienus"
 
 #. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
 #: kmousetoolui.ui:131
-#, fuzzy, kde-format
-#| msgid "D&well time (1/10 sec):"
+#, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr "&Uzturēšanās laiks (1/10 sek):"
+msgstr "&Uzturēšanās laiks (1/10 sek.):"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
@@ -154,17 +154,13 @@ msgstr "&Dzirdams klikšķis"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: kmousetoolui.ui:191
-#, fuzzy, kde-format
-#| msgid ""
-#| "KMouseTool will run as a background application after you close this "
-#| "dialog. To change the settings again, restart KMouseTool or use the KDE "
-#| "system tray."
+#, kde-format
 msgid ""
 "KMouseTool will run as a background application after you close this dialog. "
 "To change the settings again, restart KMouseTool or use the system tray."
 msgstr ""
-"Pēc šī loga aizvēršanas KMouseTool paliks strādāt fonā. Lai atkal izmainītu "
-"iestatījumus, palaidiet KMouseTool no jauna, vai izmantojiet KDE ikonu joslu."
+"„KMouseTool“ darbosies fonā arī pēc šī loga aizvēršanas. Lai mainītu "
+"iestatījumus, pārstarējiet „KMouseTool“ vai izmantojiet sistēmas ikonu joslu."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
 #: kmousetoolui.ui:223
@@ -173,22 +169,18 @@ msgid "&Start"
 msgstr "Palai&st"
 
 #: main.cpp:27
-#, fuzzy, kde-format
-#| msgid ""
-#| "(c) 2002-2003, Jeff Roush\n"
-#| "(c) 2003, Gunnar Schmi Dt"
+#, kde-format
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
-"(c) 2002-2003, Jeff Roush\n"
-"(c) 2003, Gunnar Schmi Dt"
+"(c) 2002–2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
 
 #: main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Gunnar Schmi Dt"
+#, kde-format
 msgid "Gunnar Schmidt"
-msgstr "Gunnar Schmi Dt"
+msgstr "Gunnar Schmidt"
 
 #: main.cpp:32
 #, kde-format
@@ -208,7 +200,7 @@ msgstr "Lietošanas uzlabojumi"
 #: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
-msgstr " Jeff Roush"
+msgstr "Jeff Roush"
 
 #: main.cpp:34
 #, kde-format
