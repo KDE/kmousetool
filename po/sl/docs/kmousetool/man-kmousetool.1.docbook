@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Slovenian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>&kmousetool; Uporabniški priročnik</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>06.07.2017</date>
+<releaseinfo
+>Aplikacije 17.08</releaseinfo>
+<productname
+>Aplikacije KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Orodje za ljudi s posebnimi potrebami za pomoč pri klikanju miške</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Opis</title>
+
+<para
+>&kmousetool; klikne miško vsakič, ko se kazalec miške za kratek čas ustavi. Zasnovan je bil za pomoč tistim s ponavljajočimi se poškodbami, ki jim pritiskanje na gumbe boli. </para>
+
+<para
+>&kmousetool; lahko tudi konfigurirate tako, da počaka določen čas, da se začne vlečenje, preden odkliknete miško. Na ta način ga lahko uporabite tudi za operacije povleci in spusti.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Poglej tudi</title>
+
+<simplelist>
+<member
+>Podrobnejša uporabniška dokumentacija je na voljo na <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (vnesite ta &URL; v &konqueror; ali zaženite <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member>
+<member
+>qt5options(7)</member>
+<member
+>Dodatne informacije so na voljo tudi na <ulink url="https://community.kde.org/Accessibility"
+>&kde; mesto za dostopnost.</ulink
+></member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Avtorji</title>
+<para
+>&kmousetool; je napisal <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> in <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname 
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>
