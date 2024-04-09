@@ -13,21 +13,22 @@
 # Sagiv Barhoom <sagivba@012.net.il>, 2003.
 # Diego Iastrubni <elcuco@kdemail.net>, 2004.
 #
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-01 01:39+0000\n"
-"PO-Revision-Date: 2023-10-21 21:56+0300\n"
-"Last-Translator: Diego Iastrubni <elcuco@kdemail.net>\n"
-"Language-Team: hebrew <kdeil@yahoogroups.com>\n"
+"PO-Revision-Date: 2024-04-08 18:44+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,7 +43,7 @@ msgstr "lev@israsrv.net.il, Sagiv.Barhoom@KDEmail.net,kde-l10n-he@kde.org"
 #: kmousetool.cpp:377
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
-msgstr "זמן הגרירה חייב להיות קטן או שווה לזמן ההשהייה."
+msgstr "זמן הגרירה חייב להיות קטן או שווה לזמן ההשהיה."
 
 #: kmousetool.cpp:377
 #, kde-format
@@ -151,7 +152,7 @@ msgstr "הפ&עלת משיכות עכבר"
 #: kmousetoolui.ui:131
 #, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr "זמן ה&שהייה (בעשיריות שנייה):"
+msgstr "זמן ה&שהיה (בעשיריות שנייה):"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
