@@ -1,7 +1,7 @@
 # translation of kmousetool.po to Esperanto
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # David Anema <lassi_surinen@yahoo.ca>, 2004.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-01 01:39+0000\n"
 "PO-Revision-Date: 2023-03-22 19:14+01\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "David Anema,Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "lassi_surinen@yahoo.ca,okellogg@users.sourceforge.net"
+msgstr "lassi_surinen@yahoo.ca,olivermkellogg@gmail.com"
 
 #: kmousetool.cpp:377
 #, kde-format
