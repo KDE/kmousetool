@@ -3,14 +3,14 @@
 # Copyright (C).
 #
 # Mattias Newzella <newzella@linux.nu>, 2003.
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2007, 2009, 2012, 2017, 2021.
+# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2004, 2005, 2007, 2009, 2012, 2017, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-01 01:39+0000\n"
 "PO-Revision-Date: 2021-08-17 17:48+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Stefan Asserhäll"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "stefan.asserhall@bredband.net"
+msgstr "stefan.asserhall@gmail.com"
 
 #: kmousetool.cpp:377
 #, kde-format
