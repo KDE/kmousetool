@@ -211,10 +211,27 @@ KMouseTool::KMouseTool(QWidget *parent, const char *name)
     connect(movementEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
     connect(dwellTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
     connect(dragTimeEdit, SIGNAL(valueChanged(int)), this, SLOT(settingsChanged()));
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
     connect(cbDrag, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
+#else
+    connect(cbDrag, &QCheckBox::checkStateChanged, this, &KMouseTool::settingsChanged);
+#endif
+#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
     connect(cbStroke, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
+#else
+    connect(cbStroke, &QCheckBox::checkStateChanged, this, &KMouseTool::settingsChanged);
+#endif
+#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
     connect(cbClick, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
+#else
+    connect(cbClick, &QCheckBox::checkStateChanged, this, &KMouseTool::settingsChanged);
+#endif
+#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
     connect(cbStart, &QCheckBox::stateChanged, this, &KMouseTool::settingsChanged);
+#else
+    connect(cbStart, &QCheckBox::checkStateChanged, this, &KMouseTool::settingsChanged);
+#endif
 
     connect(buttonStartStop, &QAbstractButton::clicked, this, &KMouseTool::startStopSelected);
     connect(buttonBoxSettings->button(QDialogButtonBox::RestoreDefaults), &QAbstractButton::clicked, this, &KMouseTool::defaultSelected);
