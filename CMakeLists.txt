@@ -8,8 +8,8 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 
 project(kmousetool VERSION "${RELEASE_SERVICE_VERSION}")
 
-set(QT_MIN_VERSION "6.5.0")
-set(KF_MIN_VERSION "5.240.0")
+set(QT_MIN_VERSION "6.7.0")
+set(KF_MIN_VERSION "6.3.0")
 
 find_package (ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
@@ -60,7 +60,7 @@ if(NOT X11_XTest_FOUND)
     message(FATAL_ERROR "Cannot find X11 XTest component (libxcb-xtest header file X11/extensions/XTest.h)")
 endif(NOT X11_XTest_FOUND)
 
-ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
+ecm_set_disabled_deprecation_versions(QT 6.7  KF 6.4.0)
 
 add_subdirectory( kmousetool )
 ki18n_install(po)
