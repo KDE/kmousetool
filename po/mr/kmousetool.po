@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-01 01:39+0000\n"
+"POT-Creation-Date: 2024-07-16 00:36+0000\n"
 "PO-Revision-Date: 2013-03-09 14:48+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "chetan@kompkin.com"
 
-#: kmousetool.cpp:377
+#: kmousetool.cpp:394
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr ""
 
-#: kmousetool.cpp:377
+#: kmousetool.cpp:394
 #, kde-format
 msgid "Invalid Value"
 msgstr ""
 
-#: kmousetool.cpp:446 kmousetool.cpp:587
+#: kmousetool.cpp:463 kmousetool.cpp:604
 #, kde-format
 msgid "&Stop"
 msgstr "थांबा (&S)"
 
-#: kmousetool.cpp:448 kmousetool.cpp:567 kmousetool.cpp:590
+#: kmousetool.cpp:465 kmousetool.cpp:584 kmousetool.cpp:607
 #, kde-format
 msgctxt "Start tracking the mouse"
 msgid "&Start"
 msgstr "सुरु करा (&S)"
 
-#: kmousetool.cpp:509
+#: kmousetool.cpp:526
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -56,12 +56,12 @@ msgid ""
 "discard the changes?"
 msgstr ""
 
-#: kmousetool.cpp:511
+#: kmousetool.cpp:528
 #, kde-format
 msgid "Closing Configuration Window"
 msgstr "ही संयोजना चौकट बंद करत आहे"
 
-#: kmousetool.cpp:532
+#: kmousetool.cpp:549
 #, kde-format
 msgid ""
 "There are unsaved changes in the active module.\n"
@@ -69,22 +69,22 @@ msgid ""
 "changes?"
 msgstr ""
 
-#: kmousetool.cpp:533
+#: kmousetool.cpp:550
 #, kde-format
 msgid "Quitting KMousetool"
 msgstr ""
 
-#: kmousetool.cpp:569
+#: kmousetool.cpp:586
 #, kde-format
 msgid "&Configure KMouseTool..."
 msgstr "के-माउसटूल संयोजीत करा (&C)..."
 
-#: kmousetool.cpp:572
+#: kmousetool.cpp:589
 #, kde-format
 msgid "KMousetool &Handbook"
 msgstr "के-माउसटूल पुस्तिका (&H)"
 
-#: kmousetool.cpp:574
+#: kmousetool.cpp:591
 #, kde-format
 msgid "&About KMouseTool"
 msgstr "के-माउसटूल विषयी (&A)"
