@@ -1,0 +1,462 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>&kmousetool; Priročnik</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Jan</firstname
+><surname
+>Napast</surname
+><affiliation
+><address
+><email
+>jan.napast153@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+>  
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>06.07.2017</date>
+<releaseinfo
+>1.12 (Aplikacije 17.08)</releaseinfo>
+
+<abstract>
+<para
+>&kmousetool; klikne miško vsakič, ko se kazalec miške za kratek čas ustavi. Zasnovan je bil za pomoč tistim s ponavljajočimi se poškodbami, ki jim pritiskanje na gumbe boli. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>rsi</keyword>
+<keyword
+>KMouseTool</keyword>
+<keyword
+>ergonomsko</keyword>
+<keyword
+>tendonitis</keyword>
+<keyword
+>sindrom karpalnega kanala</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<para
+>&kmousetool; klikne miško vsakič, ko se kazalec miške za kratek čas ustavi. Zasnovan je bil za pomoč tistim s ponavljajočimi se poškodbami, ki jim pritiskanje na gumbe boli. Lahko tudi vleče miško, čeprav to zahteva nekaj več vaje. </para>
+
+<para
+>&kmousetool; lahko odpravi bolečino, ki jo povzroči klikanje miške, in mnogim ljudem pomaga brez bolečin uporabljati računalnik. Na žalost lahko nekaj bolečine povzroči tudi preprosto premikanje miške po mizi. Če doživljate bolečine, povezane z računalnikom, in še niste obiskali zdravnika, to storite. </para>
+<para
+>Samo da bo popolnoma jasno: medtem ko &kmousetool; lahko pomaga zmanjšati bolečino, ki jo povzroči <emphasis
+>klikanje</emphasis
+> miške, ne more pomagati pri bolečini, ki jo povzroči <emphasis
+>premikanje</emphasis
+> miške. Kot vsa ergonomska orodja se lahko tudi vaša kilometrina razlikuje. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>Uporaba &kmousetool;</title>
+<para
+>Uporaba &kmousetool; je preprosto: &kmousetool; opazuje premikanje miške in ob kratkem premoru klikne. </para>
+
+<para
+>Način pametnega vlečenja &kmousetool; vam omogoča vlečenje miške. </para>
+
+<para
+>Ko je pametno vlečenje omogočeno, &kmousetool; se ustavi po kliku navzdol; če premaknete miško, počaka, da se nehate premikati, preden klikne navzgor. Na ta način lahko kliknete in povlečete miško. Smart Drag zahteva nekaj več vaje, vendar postane naraven, ko se ga navadite. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>Referenca ukazov</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>Glavno orodje &kmousetool; okno</title>
+
+    <para
+>Do možnosti &kmousetool; večinoma dostopate z miško.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>Začni</guibutton
+>/<guibutton
+>Ustavi</guibutton
+> </term>
+        <listitem>
+          <para
+>Zažene (ali ustavi) &kmousetool;.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Minimalno gibanje:</guilabel
+></term>
+<listitem>
+<para
+>Najmanjši premik v slikovnih pikah pred &kmousetool; bo poskušal klikniti miško.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>Čas zadrževanja (1/10 s):</guilabel>
+        </term>
+        <listitem>
+          <para
+>Čas, ki ga mora miška zaustaviti, preden &kmousetool; klikov. Poskusite povečati ta čas, če se težko navadite na &kmousetool; </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Pametno vlečenje</guilabel>
+        </term>
+        <listitem>
+          <para
+>Omogoči ali onemogoči Smart Drag. Uporaba za invalide je enostavnejša, zato je to privzeto.</para
+><para
+>Če omogočite <guilabel
+>Pametno vlečenje</guilabel
+>, postane na voljo polje <guilabel
+>Čas vlečenja (1/10 s):</guilabel
+>. To je čas, ko &kmousetool; počaka, potem ko klikne navzdol, preden klikne nazaj gor, če ne premaknete miške. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Omogoči poteze</guilabel>
+        </term>
+        <listitem>
+          <para
+>&kmousetool; zdaj podpira udarce. Ko omogočite poteze, bo počasen premik v desno in nazaj, ki mu sledi premor, ustvaril <mousebutton
+>desni</mousebutton
+> klik. Počasen premik levo in nazaj bo ustvaril dvojni klik. (Poteze so navedene v <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+>. To datoteko generira &kmousetool; ob prvem zagonu, vendar jo je mogoče pozneje spremeniti. ) </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>Slišen klik</guilabel>
+        </term>
+        <listitem>
+          <para
+>Predvaja zvok, ko &kmousetool; klikne navzdol. To pomaga, zlasti pri Smart Drag. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>Začnite s sejo namizja</guilabel>
+        </term>
+        <listitem>
+          <para
+>Ko je to omogočeno, &kmousetool; se bo začel vsakič, ko se začne seja namizja.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Privzete nastavitve</guibutton
+></term>
+<listitem>
+<para
+>Ponastavite vse nastavitve na privzete.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Ponastaviti</guibutton
+></term>
+<listitem>
+<para
+>Ponastavite vse nastavitve na njihovo stanje, ko ste odprli pogovorno okno ali, če ste že shranili nastavitev z gumbom <guibutton
+>Uporabi</guibutton
+>, ponastavite vse nastavitve na stanje, ko ste nazadnje pritisnili <guibutton
+>Uporabi</guibutton
+></para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>Uporabiti</guibutton>
+        </term>
+        <listitem>
+          <para
+>Ko spremenite kakršne koli nastavitve, morate klikniti ta gumb.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Pomoč</guibutton
+></term>
+<listitem>
+<para
+>Odpre uporabniški priročnik (ta dokument).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Zapri</guibutton
+></term>
+<listitem>
+<para
+>Zaprite pogovorno okno brez shranjevanja nastavitev.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Prenehati</guibutton
+></term>
+<listitem>
+<para
+>Zapri &kmousetool;</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>Nasveti</title>
+
+<para
+>Ti nasveti lahko pomagajo nekoliko skrajšati učno krivuljo &kmousetool;. <itemizedlist>
+<listitem
+><para
+>Časovne zakasnitve lahko spremenite &kmousetool; čaka tako na klik kot na vlečenje.</para>
+</listitem>
+<listitem
+><para
+>Najbolje je vaditi klikanje z &kmousetool; najprej uporabi privzete nastavitve. Morda boste najprej želeli pustiti Smart Drag onemogočeno. Potem, ko vam je klikanje udobno, nadaljujte z vadbo pametnega vlečenja.</para>
+</listitem>
+<listitem
+><para
+>Pri uporabi pametnega vlečenja vam lahko pomaga omogočiti zvočni klik</para>
+</listitem>
+<listitem
+><para
+>Ko uporabljate slišni klik, boste morda morali pospešiti zvočni odziv &kde;.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Vprašanja in odgovori</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Pomoč! &kmousetool; kar naprej spušča lažne klike po celem zaslonu!</para>
+</question>
+<answer>
+<para
+>Ko uporabljate &kmousetool;, se morate naučiti novih navad z miško. </para>
+<para
+>Najprej ne pozabite, kje je varno klikniti &mdash; klikanje na sive dele oken ali območij brez povezav v spletnih brskalnikih ne bo nič škodilo, zato lahko mirno držite miško nad temi območji, dokler je ne potrebujete. </para>
+<para
+>Drugič, preden premaknete miško, morate vedeti, kam boste kliknili. Večino časa, ko vemo, da bomo uporabili miško, večina od nas zgrabi miško in jo začne naključno premikati, dokler ne ugotovimo, kam želimo klikniti. Pri &kmousetool; morate vedeti, kam boste kliknili, preden sploh premaknete miško. Prav tako je dobro, da roke ne uporabljate miške, ko je ne uporabljate. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Moja miška se drži, ko jo premaknem. Ali lahko še vedno uporabljam &kmousetool;?</para>
+</question>
+<answer>
+<para
+>Da. Če se vaša miška zatakne, to pomeni, da morate miško očistiti. To je običajno enostavno narediti; Trik je v tem, da morate očistiti ne samo žogico miške, ampak tudi valje, ob katerih se žogica kotali znotraj miške.</para>
+<para
+>Najprej morate odstraniti žogo. Metoda za to se razlikuje od miške do miške, vendar je običajno precej jasno, kako to storiti, če pogledate spodnji del miške.</para>
+<para
+>Ko odstranite žogico, bi morali videti valje na straneh luknje, v kateri je bila žoga. Umazanijo in umazanijo na njih je mogoče zlahka postrgati z ravnim rezilom ali z nohtom. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; klikne navzdol in nikoli ne klikne gor. Kaj se dogaja?</para>
+</question>
+<answer>
+<para
+>V nekaterih redkih situacijah sistem prekine &kmousetool; ko se začne vlek; če uporabljate Smart Drag, to pomeni, da &kmousetool; nikoli ne more dokončati vlečenja s klikom navzgor.</para>
+<para
+>To se zgodi, ko uporabljate &kmousetool; pod ne &kde; upravitelja oken in ga nato uporabite za premikanje okna. </para>
+<para
+>Rešitev je preprosto ročno klikanje; to ponastavi &kmousetool; in lahko nadaljujete z normalnim delom.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&kmousetool; premakne kazalec, ko poskušam tipkati.</para>
+</question>
+<answer>
+<para
+>Težava: Ko tipkate besedilo, &kmousetool; nenehno izpušča klike in premika kazalec stran od mesta, kjer želite vnesti.</para>
+<para
+>Rešitev: z miško postavite kazalec, kamor želite, ko pa ste pripravljeni tipkati, postavite miško na nevtralno območje na zaslonu. Če potem udarite z miško ali če se premakne za nekaj slikovnih pik, vsi naključni kliki, ki jih pošlje, ne bodo pomembni. Varna mesta za parkiranje miške vključujejo siva območja okrog orodnih vrstic in menijev ter v naslovnih vrsticah oken.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Poskušam uporabiti Smart Drag, vendar se ne morem navaditi, da bi ga uporabljal za urejanje besedila.</para>
+</question>
+<answer>
+<para
+>Smart Drag je napredna funkcija &kmousetool;, na katero se je treba nekaj časa navaditi. Z njim je zelo mogoče izbrati besedilo, izrezati in prilepiti ter ga uporabiti v skoraj vsaki situaciji, kjer bi običajno želeli povleči miško. Toda sprva tega verjetno ne boste mogli storiti. Tukaj je nekaj predlogov: </para>
+<itemizedlist>
+<listitem
+><para
+>Ne uporabljajte Smart Drag, dokler se prvič učite uporabljati &kmousetool;. Namesto tega, če želite izbrati besedilo, kliknite na en konec besedila in pridržite tipko shift, medtem ko kliknete na drugi konec besedila. </para
+></listitem>
+<listitem
+><para
+>Uporabite zvočni klik. To bo predvajalo zvok <quote
+>klika</quote
+>, ko bo &kmousetool; klikne navzdol in to vam bo povedalo, kdaj se začne zakasnitev Smart Drag. Z vajo lahko uporabljate pametno vlečenje brez zvočnega klika, vendar zahteva kar nekaj vaje. </para
+></listitem>
+<listitem
+><para
+>Vedite, kam boste kliknili miško, preden jo začnete premikati. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Zasluge in licenca</title>
+
+<para
+>&kmousetool; </para>
+<para
+>Avtorske pravice za program 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> in 2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>Sodelovalci: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Avtorske pravice za dokumentacijo 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>Prevod: Jan Napast<email
+>jan.napast153@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
