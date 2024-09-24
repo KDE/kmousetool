@@ -6,20 +6,20 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007.
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2012.
 # Jeff Huang <s8321414@gmail.com>, 2017.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-16 00:36+0000\n"
-"PO-Revision-Date: 2023-12-13 04:59+0900\n"
+"PO-Revision-Date: 2024-09-23 21:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -45,7 +45,7 @@ msgstr "無效值"
 #: kmousetool.cpp:463 kmousetool.cpp:604
 #, kde-format
 msgid "&Stop"
-msgstr "停止（&S）"
+msgstr "停止(&S)"
 
 #: kmousetool.cpp:465 kmousetool.cpp:584 kmousetool.cpp:607
 #, kde-format
@@ -86,17 +86,17 @@ msgstr "正在離開 KMouseTool"
 #: kmousetool.cpp:586
 #, kde-format
 msgid "&Configure KMouseTool..."
-msgstr "設定 KMouseTool...（&C）"
+msgstr "設定 KMouseTool(&C)..."
 
 #: kmousetool.cpp:589
 #, kde-format
 msgid "KMousetool &Handbook"
-msgstr "KMouseTool 手冊（&H）"
+msgstr "KMouseTool 手冊(&H)"
 
 #: kmousetool.cpp:591
 #, kde-format
 msgid "&About KMouseTool"
-msgstr "關於 KMouseTool（&A）"
+msgstr "關於 KMouseTool(&A)"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
 #: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
@@ -114,13 +114,13 @@ msgstr "設定"
 #: kmousetoolui.ui:62
 #, kde-format
 msgid "&Drag time (1/10 sec):"
-msgstr "拖曳時間 (1/10 秒)（&D）："
+msgstr "拖曳時間 (1/10 秒)(&D)："
 
 #. i18n: ectx: property (text), widget (QLabel, movementLabel)
 #: kmousetoolui.ui:97
 #, kde-format
 msgid "&Minimum movement:"
-msgstr "最小移動距離（&M）："
+msgstr "最小移動距離(&M)："
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbStart)
 #: kmousetoolui.ui:107
@@ -132,25 +132,25 @@ msgstr "與桌面作業階段一同啟動(&D)"
 #: kmousetoolui.ui:114
 #, kde-format
 msgid "Smar&t drag"
-msgstr "聰明拖曳（&t）"
+msgstr "智慧拖曳(&t)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
 #: kmousetoolui.ui:124
 #, kde-format
 msgid "&Enable strokes"
-msgstr "啟用 strokes（&E）"
+msgstr "啟用筆畫(&E)"
 
 #. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
 #: kmousetoolui.ui:131
 #, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr "停留時間 (1/10 秒)（&T）："
+msgstr "停留時間 (1/10 秒)(&T)："
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
 #, kde-format
 msgid "A&udible click"
-msgstr "按鍵發聲（&u）"
+msgstr "按鍵發聲(&U)"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: kmousetoolui.ui:191
