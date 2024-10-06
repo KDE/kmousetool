@@ -39,6 +39,7 @@ parts:
     source-type: local
     build-packages:
       - libxt-dev
+      - libxcb-xtest0-dev
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
