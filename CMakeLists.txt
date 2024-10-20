@@ -60,7 +60,7 @@ if(NOT X11_XTest_FOUND)
     message(FATAL_ERROR "Cannot find X11 XTest component (libxcb-xtest header file X11/extensions/XTest.h)")
 endif(NOT X11_XTest_FOUND)
 
-ecm_set_disabled_deprecation_versions(QT 6.7  KF 6.5.0)
+ecm_set_disabled_deprecation_versions(QT 6.8.0  KF 6.5.0)
 
 add_subdirectory( kmousetool )
 ki18n_install(po)
