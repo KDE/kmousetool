@@ -40,6 +40,7 @@
   <name xml:lang="pt-BR">KMouseTool</name>
   <name xml:lang="ro">KMouseTool</name>
   <name xml:lang="ru">KMouseTool</name>
+  <name xml:lang="sa">KMouseTool इति</name>
   <name xml:lang="sk">KMouseTool</name>
   <name xml:lang="sl">KMouseTool</name>
   <name xml:lang="sv">Kmousetool</name>
@@ -81,6 +82,7 @@
   <summary xml:lang="pt-BR">Cliques automáticos para reduzir os efeitos das lesões por esforço repetitivo</summary>
   <summary xml:lang="ro">Face clicuri automate pentru a reduce efectele leziunilor de încordare repetitivă</summary>
   <summary xml:lang="ru">Автоматический щелчок мышью для предупреждения хронического растяжения сухожилий</summary>
+  <summary xml:lang="sa">पुनरावृत्ति-तनाव-क्षतस्य प्रभावं न्यूनीकर्तुं स्वचालित-क्लिक्-करणम्</summary>
   <summary xml:lang="sk">Automatické kliknutia na zníženie účinkov opakovaného zranenia</summary>
   <summary xml:lang="sl">Samodejni kliki za zmanjšanje učinkov ponavljajočih se poškodb zaradi obremenitve</summary>
   <summary xml:lang="sv">Automatiska klick för att reducera effekten av belastningsskador</summary>
@@ -125,6 +127,7 @@
     <p xml:lang="pt-BR">O KMouseTool clica o botão do mouse para você. Ele funciona com qualquer mouse ou dispositivo apontador.</p>
     <p xml:lang="ro">KMouseTool apasă butonul mausului pentru dumneavoastră, ca să nu o faceți singur. KMouseTool funcționează cu orice maus sau dispozitiv de indicare.</p>
     <p xml:lang="ru">Программа KMouseTool выполняет щелчки мышью за пользователя. KMouseTool работает с любой мышью или указывающим устройством.</p>
+    <p xml:lang="sa">KMouseTool भवतः कृते मूषकं क्लिक् करोति, अतः भवतः आवश्यकता नास्ति । KMouseTool कस्यापि मूषकस्य अथवा सूचकयन्त्रस्य सह कार्यं करोति ।</p>
     <p xml:lang="sk">KMouseTool za vás klikne myšou, takže vy nemusíte. KMouseTool spolupracuje s akoukoľvek myšou alebo ukazovacím zariadením.</p>
     <p xml:lang="sl">KMouseTool klikne miško namesto vas, da vam tega ni treba. KMouseTool deluje s katero koli miško ali kazalno napravo.</p>
     <p xml:lang="sv">Kmousetool klickar musen åt dig så att du inte behöver göra det. Kmousetool fungerar med vilken mus eller pekenhet som helst.</p>
