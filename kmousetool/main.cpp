@@ -38,6 +38,8 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kmousetool")));
+
 
     aboutData.setupCommandLine(&parser);
     parser.process(app);
