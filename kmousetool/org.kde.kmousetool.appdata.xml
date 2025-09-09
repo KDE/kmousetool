@@ -47,7 +47,6 @@
   <name xml:lang="tr">K Fareci</name>
   <name xml:lang="uk">KMouseTool</name>
   <name xml:lang="vi">KMouseTool</name>
-  <name xml:lang="x-test">xxKMouseToolxx</name>
   <name xml:lang="zh-CN">KMouseTool</name>
   <name xml:lang="zh-TW">KMouseTool</name>
   <summary>Automatic clicks to reduce the effects of repetitive strain injury</summary>
@@ -89,7 +88,6 @@
   <summary xml:lang="tr">Yinelemeli gerginlik hasarının etkilerini azaltmak için otomatik tıklar</summary>
   <summary xml:lang="uk">Автоматично клацає для запобігання шкоді вашому здоров'ю від постійного напруження</summary>
   <summary xml:lang="vi">Bấm tự động để giảm tác động của chấn thương do căng lặp lại</summary>
-  <summary xml:lang="x-test">xxAutomatic clicks to reduce the effects of repetitive strain injuryxx</summary>
   <summary xml:lang="zh-CN">自动点击功能，有助于降低重复性操作带来的劳损</summary>
   <summary xml:lang="zh-TW">自動點擊以降低 RSI（重複性勞損）的影響</summary>
   <description>
@@ -134,7 +132,6 @@
     <p xml:lang="tr">K Fareci, sizin tıklamanıza gerek kalmasın diye sizin yerinize fareye tıklar. Herhangi bir fare veya işaretleme aygıtı ile çalışır.</p>
     <p xml:lang="uk">KMouseTool «клацає» кнопками миші за вас. KMouseTool працює замість будь-якої миші або координатного пристрою.</p>
     <p xml:lang="vi">KMouseTool bấm chuột giúp bạn, để bạn không phải làm nữa. KMouseTool hoạt động với bất kì chuột hay thiết bị trỏ nào.</p>
-    <p xml:lang="x-test">xxKMouseTool clicks the mouse for you, so you don't have to. KMouseTool works with any mouse or pointing device.xx</p>
     <p xml:lang="zh-CN">KMouseTool 可以替您点击鼠标按钮，可用于任意鼠标或指针设备。</p>
     <p xml:lang="zh-TW">KMouseTool 代你點擊滑鼠，你只需要看著就行。KMouseTool 支援任何滑鼠或指向裝置。</p>
   </description>
