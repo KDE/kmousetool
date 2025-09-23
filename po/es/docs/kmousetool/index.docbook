@@ -25,33 +25,61 @@
 </affiliation>
 </author>
 <othercredit role="translator"
-><firstname
+> <firstname
 >Rafael</firstname
-><surname
+> <surname
 >Beccar</surname
-><affiliation
+> <affiliation
 ><address
 ><email
 >rafael.beccar@kdemail.net</email
 ></address
 ></affiliation
-><contrib
->Traductor</contrib
-></othercredit
+> <contrib
+>Traducción</contrib
+> </othercredit
 ><othercredit role="translator"
-><firstname
-></firstname
-><surname
-></surname
-><affiliation
+> <firstname
+>Franco</firstname
+> <surname
+>Mariluis</surname
+> <affiliation
 ><address
 ><email
 >fmariluis@gmail.com</email
 ></address
 ></affiliation
-><contrib
-></contrib
-></othercredit
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Adrián</firstname
+> <surname
+>Martínez</surname
+> <affiliation
+><address
+><email
+>sfxgt3@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Santiago</firstname
+> <surname
+>Fernández Sancho</surname
+> <affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
 > 
 </authorgroup>
 
@@ -456,19 +484,15 @@
 > </para>
 
 <para
->Traducido por Rafael Beccar <email
+>Documentación traducida por Rafael Beccar <email
 >rafael.beccar@kdemail.net</email
+>, Franco Mariluis <email
+>fmariluis@gmail.com</email
+>, Adrián Martínez <email
+>sfxgt3@gmail.com</email
 > y Santiago Fernández Sancho <email
 >santi@kde-es.org</email
 >.</para
-><para
->Franco Mariluis<email
->fmariluis@gmail.com</email
-></para
-><para
->Adrián Martínez<email
->sfxgt3@gmail.com</email
-></para
 > &underFDL; &underGPL; </chapter>
 
 &documentation.index;
