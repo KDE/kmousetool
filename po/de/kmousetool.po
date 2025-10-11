@@ -1,11 +1,11 @@
-# Thomas Diehl <thd@kde.org>, 2003, 2004.
-# Frank Schütte <F.Schuette@t-online.de>, 2003.
-# Uwe Neumann <un@logos-logistics.de>, 2003.
-# Stephan Johach <hunsum@gmx.de>, 2004, 2007.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2007.
-# Burkhard Lück <lueck@hube-lueck.de>, 2009, 2017, 2021.
-# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
-# Frederik Schwarzer <schwarzer@kde.org>, 2012.
+# SPDX-FileCopyrightText: 2003, 2004 Thomas Diehl <thd@kde.org>
+# SPDX-FileCopyrightText: 2003 Frank Schütte <F.Schuette@t-online.de>
+# SPDX-FileCopyrightText: 2003 Uwe Neumann <un@logos-logistics.de>
+# SPDX-FileCopyrightText: 2004, 2007 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2005, 2007 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2009, 2017, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
+# SPDX-FileCopyrightText: 2012 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
