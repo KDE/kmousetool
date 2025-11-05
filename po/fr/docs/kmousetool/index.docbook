@@ -215,7 +215,7 @@
 ></term>
 <listitem>
 <para
->Réinitialise tous les paramètres à leurs états lors de l'ouverture de la boîte de dialogue, ou, si vous avez déjà enregistré une configuration par le bouton <guibutton
+>Réinitialise tous les paramètres à leurs états lors de l'ouverture de la boite de dialogue, ou, si vous avez déjà enregistré une configuration par le bouton <guibutton
 >Appliquer</guibutton
 >, réinitialise tous les paramètres à leurs états lorsque vous avez pressé <guibutton
 >Appliquer</guibutton
@@ -249,7 +249,7 @@
 ></term>
 <listitem>
 <para
->Ferme la boîte de dialogue sans enregistrer la configuration.</para>
+>Ferme la boite de dialogue sans enregistrer la configuration.</para>
 </listitem>
 </varlistentry>
 <varlistentry>
