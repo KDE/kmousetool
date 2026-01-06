@@ -53,9 +53,6 @@ set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
 )
 
 find_package(X11 REQUIRED)
-if(NOT X11_Xt_FOUND)
-    message(FATAL_ERROR "Cannot find X11 Xt component (libxt header file X11/Intrinsic.h)")
-endif(NOT X11_Xt_FOUND)
 if(NOT X11_XTest_FOUND)
     message(FATAL_ERROR "Cannot find X11 XTest component (libxcb-xtest header file X11/extensions/XTest.h)")
 endif(NOT X11_XTest_FOUND)
