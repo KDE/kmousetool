@@ -2,20 +2,22 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kmousetool package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeaccessibility/kmousetool.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:38+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-28 22:56+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -111,10 +113,9 @@ msgstr "Socruithe"
 
 #. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
 #: kmousetoolui.ui:62
-#, fuzzy, kde-format
-#| msgid "Drag t&ime (1/10 sec):"
+#, kde-format
 msgid "&Drag time (1/10 sec):"
-msgstr "Am tarra&ingthe (1/10 soic):"
+msgstr "A&m tarraingthe (1/10 soic):"
 
 #. i18n: ectx: property (text), widget (QLabel, movementLabel)
 #: kmousetoolui.ui:97
@@ -126,7 +127,7 @@ msgstr "Íos&ghluaiseacht:"
 #: kmousetoolui.ui:107
 #, kde-format
 msgid "Start with &desktop session"
-msgstr ""
+msgstr "Tosaigh leis an seisiún &deisce"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
 #: kmousetoolui.ui:114
@@ -142,10 +143,9 @@ msgstr "&Cumasaigh stríoca"
 
 #. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
 #: kmousetoolui.ui:131
-#, fuzzy, kde-format
-#| msgid "D&well time (1/10 sec):"
+#, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr "A&m moillithe (1/10 soic):"
+msgstr "Am moilli&the (1/10 soic):"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
@@ -155,18 +155,14 @@ msgstr "Clic &inchloiste"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: kmousetoolui.ui:191
-#, fuzzy, kde-format
-#| msgid ""
-#| "KMouseTool will run as a background application after you close this "
-#| "dialog. To change the settings again, restart KMouseTool or use the KDE "
-#| "system tray."
+#, kde-format
 msgid ""
 "KMouseTool will run as a background application after you close this dialog. "
 "To change the settings again, restart KMouseTool or use the system tray."
 msgstr ""
 "Rithfidh KMouseTool sa chúlra tar éis duit an dialóg seo a dhúnadh. Chun na "
 "socruithe a athrú arís, tosaigh KMouseTool arís, nó bain úsáid as tráidire "
-"an chórais KDE."
+"an chórais."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
 #: kmousetoolui.ui:223
@@ -175,16 +171,13 @@ msgid "&Start"
 msgstr "&Tosaigh"
 
 #: main.cpp:27
-#, fuzzy, kde-format
-#| msgid ""
-#| "(c) 2002-2003, Jeff Roush\n"
-#| "(c) 2003, Gunnar Schmidt"
+#, kde-format
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
 "© 2002-2003, Jeff Roush\n"
-"© 2003, Gunnar Schmidt"
+"© 2003 Gunnar Schmidt "
 
 #: main.cpp:32
 #, kde-format
