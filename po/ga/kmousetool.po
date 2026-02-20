@@ -212,24 +212,3 @@ msgstr "An chéad údar"
 #, kde-format
 msgid "Joe Betts"
 msgstr "Joe Betts"
-
-#~ msgid "&Defaults"
-#~ msgstr "&Réamhshocruithe"
-
-#~ msgid "&Reset"
-#~ msgstr "Athshoc&raigh"
-
-#~ msgid "&Apply"
-#~ msgstr "&Cuir i bhFeidhm"
-
-#~ msgid "&Help"
-#~ msgstr "Cab&hair"
-
-#~ msgid "&Close"
-#~ msgstr "&Dún"
-
-#~ msgid "&Quit"
-#~ msgstr "&Scoir"
-
-#~ msgid "Start with &KDE"
-#~ msgstr "Tosaigh le &KDE"
