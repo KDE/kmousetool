@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:48+0000\n"
-"PO-Revision-Date: 2011-10-28 20:56+0300\n"
+"PO-Revision-Date: 2026-04-18 18:34+0300\n"
 "Last-Translator: Remigijus\n"
 "Language-Team: Lithuanian <kde-i18n-doc@kde.org>\n"
 "Language: lt\n"
@@ -16,32 +16,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Moo"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "<>"
 
 #: kmousetool.cpp:394
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
 msgstr ""
+"„Kiek laiko tempti“ reikšmė privalo būti mažesnė arba lygi stabtelėjimo "
+"laikui."
 
 #: kmousetool.cpp:394
 #, kde-format
 msgid "Invalid Value"
-msgstr ""
+msgstr "Neteisinga reikšmė"
 
 #: kmousetool.cpp:463 kmousetool.cpp:604
 #, kde-format
 msgid "&Stop"
-msgstr "&Sustabdyti"
+msgstr "&Stabdyti"
 
 #: kmousetool.cpp:465 kmousetool.cpp:584 kmousetool.cpp:607
 #, kde-format
@@ -56,11 +58,14 @@ msgid ""
 "Do you want to apply the changes before closing the configuration window or "
 "discard the changes?"
 msgstr ""
+"Aktyviame modulyje yra neįrašytų pakeitimų.\n"
+"Ar prieš užverdami konfigūracijos langą norėtumėte taikyti pakeitimus, ar "
+"juos atmesti?"
 
 #: kmousetool.cpp:528
 #, kde-format
 msgid "Closing Configuration Window"
-msgstr ""
+msgstr "Užveriamas konfigūracijos langas"
 
 #: kmousetool.cpp:549
 #, kde-format
@@ -69,32 +74,35 @@ msgid ""
 "Do you want to apply the changes before quitting KMousetool or discard the "
 "changes?"
 msgstr ""
+"Aktyviame modulyje yra neįrašytų pakeitimų.\n"
+"Ar prieš išjungdami KMousetool norėtumėte taikyti pakeitimus, ar juos "
+"atmesti?"
 
 #: kmousetool.cpp:550
 #, kde-format
 msgid "Quitting KMousetool"
-msgstr ""
+msgstr "Išjungiama KMousetool"
 
 #: kmousetool.cpp:586
 #, kde-format
 msgid "&Configure KMouseTool..."
-msgstr ""
+msgstr "&Konfigūruoti KMouseTool..."
 
 #: kmousetool.cpp:589
 #, kde-format
 msgid "KMousetool &Handbook"
-msgstr ""
+msgstr "KMousetool &vadovas"
 
 #: kmousetool.cpp:591
 #, kde-format
 msgid "&About KMouseTool"
-msgstr ""
+msgstr "&Apie KMouseTool"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
 #: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
 #, kde-format
 msgid "KMouseTool"
-msgstr ""
+msgstr "KMouseTool"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: kmousetoolui.ui:20
@@ -106,43 +114,43 @@ msgstr "Nuostatos"
 #: kmousetoolui.ui:62
 #, kde-format
 msgid "&Drag time (1/10 sec):"
-msgstr ""
+msgstr "&Kiek laiko tempti (1/10 sek.):"
 
 #. i18n: ectx: property (text), widget (QLabel, movementLabel)
 #: kmousetoolui.ui:97
 #, kde-format
 msgid "&Minimum movement:"
-msgstr ""
+msgstr "&Mažiausias judėjimas:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbStart)
 #: kmousetoolui.ui:107
 #, kde-format
 msgid "Start with &desktop session"
-msgstr ""
+msgstr "Paleisti kartu su &darbalaukio seansu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
 #: kmousetoolui.ui:114
 #, kde-format
 msgid "Smar&t drag"
-msgstr ""
+msgstr "Išmanusis &tempimas"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
 #: kmousetoolui.ui:124
 #, kde-format
 msgid "&Enable strokes"
-msgstr ""
+msgstr "Į&jungti brūkštelėjimus"
 
 #. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
 #: kmousetoolui.ui:131
 #, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr ""
+msgstr "Stabtelėjimo &laikas (1/10 sek.):"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
 #, kde-format
 msgid "A&udible click"
-msgstr ""
+msgstr "&Girdimas spustelėjimas"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: kmousetoolui.ui:191
@@ -151,6 +159,9 @@ msgid ""
 "KMouseTool will run as a background application after you close this dialog. "
 "To change the settings again, restart KMouseTool or use the system tray."
 msgstr ""
+"Užvėrus šį dialogą KMouseTool veiks kaip foninė programa. Norėdami vėl "
+"pakeisti nuostatas, paleiskite KMouseTool iš naujo arba naudokite sistemos "
+"dėklą."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
 #: kmousetoolui.ui:223
@@ -159,21 +170,18 @@ msgid "&Start"
 msgstr "&Pradėti"
 
 #: main.cpp:27
-#, fuzzy, kde-format
-#| msgid ""
-#| "(c) 2002-2003, Jeff Roush\n"
-#| "(c) 2003, Gunnar Schmi Dt"
+#, kde-format
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
-"(c) 2002-2003, Jeff Roush\n"
-"(c) 2003, Gunnar Schmi Dt"
+"(c) 2002–2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
 
 #: main.cpp:32
 #, kde-format
 msgid "Gunnar Schmidt"
-msgstr ""
+msgstr "Gunnar Schmidt"
 
 #: main.cpp:32
 #, kde-format
@@ -183,27 +191,27 @@ msgstr "Dabartinis prižiūrėtojas"
 #: main.cpp:33
 #, kde-format
 msgid "Olaf Schmidt"
-msgstr ""
+msgstr "Olaf Schmidt"
 
 #: main.cpp:33
 #, kde-format
 msgid "Usability improvements"
-msgstr ""
+msgstr "Tinkamumo patobulinimai"
 
 #: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
-msgstr ""
+msgstr "Jeff Roush"
 
 #: main.cpp:34
 #, kde-format
 msgid "Original author"
-msgstr "Originalo autorius"
+msgstr "Pradinis autorius"
 
 #: main.cpp:36
 #, kde-format
 msgid "Joe Betts"
-msgstr ""
+msgstr "Joe Betts"
 
 #~ msgid "&Defaults"
 #~ msgstr "&Numatyti"
