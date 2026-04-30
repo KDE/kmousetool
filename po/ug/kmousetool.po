@@ -8,34 +8,35 @@ msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:48+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-04-27 10:15-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: kmousetool.cpp:394
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
-msgstr "The drag time must be less than or equal to the dwell time."
+msgstr "سۆرەش ۋاقتى چوقۇم لەيلىتىش ۋاقتىدىن كىچىك ياكى تەڭ بولۇشى كېرەك."
 
 #: kmousetool.cpp:394
 #, kde-format
 msgid "Invalid Value"
-msgstr ""
+msgstr "ئىناۋەتسىز قىممەت"
 
 #: kmousetool.cpp:463 kmousetool.cpp:604
 #, kde-format
@@ -55,11 +56,13 @@ msgid ""
 "Do you want to apply the changes before closing the configuration window or "
 "discard the changes?"
 msgstr ""
+"ئاكتىپ بۆلەكتە تېخى ساقلىمىغان ئۆزگەرتىشىڭىز بار.\n"
+"سەپلىمە كۆزنەكنى يېپىشتىن ئىلگىرى ئۆزگىرىشنى قوللىنامسىز ياكى تاشلىۋېتەمسىز؟"
 
 #: kmousetool.cpp:528
 #, kde-format
 msgid "Closing Configuration Window"
-msgstr ""
+msgstr "سەپلىمە كۆزنىكىنى يېپىۋاتىدۇ"
 
 #: kmousetool.cpp:549
 #, kde-format
@@ -68,26 +71,29 @@ msgid ""
 "Do you want to apply the changes before quitting KMousetool or discard the "
 "changes?"
 msgstr ""
+"ئاكتىپ بۆلەكتە تېخى ساقلىمىغان ئۆزگەرتىشىڭىز بار.\n"
+"K چاشقىنەك قورالىنى يېپىشتىن ئىلگىرى ئۆزگىرىشنى قوللىنامسىز ياكى "
+"تاشلىۋېتەمسىز؟"
 
 #: kmousetool.cpp:550
 #, kde-format
 msgid "Quitting KMousetool"
-msgstr ""
+msgstr "K چاشقىنەك قورالىدىن چېكىنىۋاتىدۇ"
 
 #: kmousetool.cpp:586
 #, kde-format
 msgid "&Configure KMouseTool..."
-msgstr ""
+msgstr "K چاشقىنەك قورالى سەپلە(&C)…"
 
 #: kmousetool.cpp:589
 #, kde-format
 msgid "KMousetool &Handbook"
-msgstr ""
+msgstr "K چاشقىنەك قورالى قوللانمىسى(&H)"
 
 #: kmousetool.cpp:591
 #, kde-format
 msgid "&About KMouseTool"
-msgstr ""
+msgstr "K چاشقىنەك قورالى ھەققىدە(&A)"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KMouseToolUI)
 #: kmousetoolui.ui:14 main.cpp:23 main.cpp:25
@@ -99,49 +105,49 @@ msgstr "K چاشقىنەك قورالى"
 #: kmousetoolui.ui:20
 #, kde-format
 msgid "Settings"
-msgstr "تەڭشەكلەر"
+msgstr "تەڭشەك"
 
 #. i18n: ectx: property (text), widget (QLabel, dragTimeLabel)
 #: kmousetoolui.ui:62
 #, kde-format
 msgid "&Drag time (1/10 sec):"
-msgstr ""
+msgstr "سۆرەش ۋاقتى(1/10 سېكۇنت)(&D):"
 
 #. i18n: ectx: property (text), widget (QLabel, movementLabel)
 #: kmousetoolui.ui:97
 #, kde-format
 msgid "&Minimum movement:"
-msgstr ""
+msgstr "ئەڭ قىسقا يۆتكىلىش(&M):"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbStart)
 #: kmousetoolui.ui:107
 #, kde-format
 msgid "Start with &desktop session"
-msgstr ""
+msgstr "ئۈستەلئۈستى جەريانچاق بىلەن بىللە قوزغىلىدۇ(&D)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbDrag)
 #: kmousetoolui.ui:114
 #, kde-format
 msgid "Smar&t drag"
-msgstr ""
+msgstr "ئىدراكلىق سۆرەش(&T)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbStroke)
 #: kmousetoolui.ui:124
 #, kde-format
 msgid "&Enable strokes"
-msgstr ""
+msgstr "بېسىش ئاۋازىنى قوزغات(&E)"
 
 #. i18n: ectx: property (text), widget (QLabel, dwellTimeLabel)
 #: kmousetoolui.ui:131
 #, kde-format
 msgid "Dwell &time (1/10 sec):"
-msgstr ""
+msgstr "لەيلەش ۋاقتى(1/10 سېكۇنت)(&T):"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbClick)
 #: kmousetoolui.ui:154
 #, kde-format
 msgid "A&udible click"
-msgstr ""
+msgstr "ئاۋازلىق چېكىش(&U)"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: kmousetoolui.ui:191
@@ -150,6 +156,9 @@ msgid ""
 "KMouseTool will run as a background application after you close this dialog. "
 "To change the settings again, restart KMouseTool or use the system tray."
 msgstr ""
+"K چاشقىنەك قورالى بۇ سۆزلەشكۈنى ياپقاندىن كېيىن ئارقا سۇپا پىروگراممىسى "
+"سۈپىتىدە ئىجرا قىلىنىدۇ. ئەگەر تەڭشەكنى قايتا ئۆزگەرمەكچى بولغاندا، K "
+"چاشقىنەك قورالىنى قايتا قوزغىتىش ياكى سىستېما قونداقنى ئىشلىتىش كېرەك."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonStartStop)
 #: kmousetoolui.ui:223
@@ -163,16 +172,18 @@ msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
+"(c) 2002-2003, Jeff Roush\n"
+"(c) 2003 Gunnar Schmidt "
 
 #: main.cpp:32
 #, kde-format
 msgid "Gunnar Schmidt"
-msgstr ""
+msgstr "Gunnar Schmidt"
 
 #: main.cpp:32
 #, kde-format
 msgid "Current maintainer"
-msgstr "نۆۋەتتىكى مەسئۇلى"
+msgstr "نۆۋەتتىكى ئاسرىغۇچى"
 
 #: main.cpp:33
 #, kde-format
@@ -182,22 +193,22 @@ msgstr "Olaf Schmidt"
 #: main.cpp:33
 #, kde-format
 msgid "Usability improvements"
-msgstr ""
+msgstr "ئىشلىتىلىشچان ياخشىلاش"
 
 #: main.cpp:34
 #, kde-format
 msgid "Jeff Roush"
-msgstr ""
+msgstr "Jeff Roush"
 
 #: main.cpp:34
 #, kde-format
 msgid "Original author"
-msgstr "ئەسلى ئاپتور"
+msgstr "ئەسلى يازغۇچى"
 
 #: main.cpp:36
 #, kde-format
 msgid "Joe Betts"
-msgstr ""
+msgstr "Joe Betts"
 
 #~ msgid "&Defaults"
 #~ msgstr "كۆڭۈلدىكى(&D)"
