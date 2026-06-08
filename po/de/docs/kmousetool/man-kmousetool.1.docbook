@@ -70,9 +70,9 @@
 ></userinput
 >).</member>
 <member
->kf6options(7)</member>
+>kf5options(7)</member>
 <member
->qt6options(7)</member>
+>qt5options(7)</member>
 <member
 >Weitere Informationen finden Sie außerdem auf der <ulink url="https://community.kde.org/Accessibility"
 >Homepage des Accessibility-Projekts von &kde;</ulink
