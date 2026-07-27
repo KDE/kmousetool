@@ -1,6 +1,6 @@
-# SPDX-FileCopyrightText: 2003, 2004 Thomas Diehl <thd@kde.org>
 # SPDX-FileCopyrightText: 2003 Frank Schütte <F.Schuette@t-online.de>
 # SPDX-FileCopyrightText: 2003 Uwe Neumann <un@logos-logistics.de>
+# SPDX-FileCopyrightText: 2003-2004 Thomas Diehl <thd@kde.org>
 # SPDX-FileCopyrightText: 2004, 2007 Stephan Johach <hunsum@gmx.de>
 # SPDX-FileCopyrightText: 2005, 2007 Thomas Reitelbach <tr@erdfunkstelle.de>
 # SPDX-FileCopyrightText: 2009, 2017, 2021 Burkhard Lück <lueck@hube-lueck.de>
