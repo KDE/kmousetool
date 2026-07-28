@@ -56,6 +56,7 @@
   <summary xml:lang="bg">Извършва автоматични щраквания с мишката, намалявайки уврежданията от повтарящи се механични действия</summary>
   <summary xml:lang="ca">Els clics automàtics redueixen els efectes la síndrome del canal carpià</summary>
   <summary xml:lang="ca-valencia">Els clics automàtics reduïxen els efectes la síndrome del canal carpià</summary>
+  <summary xml:lang="cs">Automatické klikání ke snížení následků syndromu z opakovaného namáhání</summary>
   <summary xml:lang="da">Klikker automatisk for at reducere skadevirkningerne ved ensidigt gentaget arbejde</summary>
   <summary xml:lang="de">Automatische Mausklicks zur Vorbeugung gegen das RSI-Syndrom</summary>
   <summary xml:lang="el">Αυτόματα κλικ για να μειωθούν οι συνέπειες των κακώσεων λόγω επαναλαμβανόμενης καταπόνησης</summary>
@@ -101,6 +102,7 @@
     <p xml:lang="bg">Извършва действия с мишката вместо вас. KMouseTool работи с всякакви устройства за посочване и мишки.</p>
     <p xml:lang="ca">El KMouseTool fa el clic de ratolí per vós, així que no ho heu de fer. El KMouseTool funciona amb qualsevol ratolí o dispositiu apuntador.</p>
     <p xml:lang="ca-valencia">KMouseTool fa el clic de ratolí per tu, així que no ho heu de fer. KMouseTool funciona amb qualsevol ratolí o dispositiu apuntador.</p>
+    <p xml:lang="cs">KMouseTool za vás kliká myší, takže to nemusíte dělat sami. KMouseTool funguje s jakoukoli myší nebo polohovacím zařízením.</p>
     <p xml:lang="da">KMouseTool klikker med musen for dig, så du ikke behøver gøre det. KMouseTool virker med alle mus og pegeenheder.</p>
     <p xml:lang="de">KMouseTool drückt die Maustaste für Sie und funktioniert mit jeder Maus und jedem Zeigergerät.</p>
     <p xml:lang="el">Το KMouseTool κάνει κλικ το ποντίκι, έτσι εσείς δεν χρειάζεται να το κάνετε. Το KMouseTool λειτουργεί με κάθε ποντίκι ή συσκευή με δείκτη.</p>
