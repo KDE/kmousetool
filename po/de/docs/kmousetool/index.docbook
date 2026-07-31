@@ -303,7 +303,7 @@
 </listitem>
 <listitem
 ><para
->Wenn Sie den hörbaren Klick benutzen, ist es ggf. nötig die Antwortzeiten von &kde; bei Klängen zu verringern.</para>
+>Wenn Sie den hörbaren Klick verwenden, ist es ggf. nötig die Antwortzeiten von &kde; bei Klängen zu verringern.</para>
 </listitem>
 </itemizedlist>
 </para>
@@ -324,9 +324,9 @@
 <para
 >Wenn Sie &kmousetool; verwenden, müssen Sie den Umgang mit der Maus neu lernen. </para>
 <para
->Zunächst sollten Sie sich bewusst machen, an welchen Stellen ein Mausklick ohne Wirkung bleibt: Das Klicken auf die neutralen Bestandteile von Fenstern oder auf Stellen im Browserfenster, die keine Verknüpfung darstellen, führt nicht zu ungewollten Reaktionen. Sie können daher die Maus an solchen Stellen parken, bis Sie sie wieder benutzen möchten. </para>
+>Zunächst sollten Sie sich bewusst machen, an welchen Stellen ein Mausklick ohne Wirkung bleibt: Das Klicken auf die neutralen Bestandteile von Fenstern oder auf Stellen im Browserfenster, die keine Verknüpfung darstellen, führt nicht zu ungewollten Reaktionen. Sie können daher die Maus an solchen Stellen parken, bis Sie sie wieder verwenden möchten. </para>
 <para
->Zweitens sollten Sie schon, bevor Sie die Maus bewegen, wissen, wo Sie einen Klick ausführen wollen. Wenn wir die Maus benutzen wollen, schieben wir sie eher zufällig herum, bis wir genau wissen, wo wir den Mausklick ausführen wollen. Wenn Sie &kmousetool; benutzen, müssen Sie schon vorher wissen, wo die Maustaste betätigt werden soll. Es ist außerdem ratsam die Maus erst in die Hand zu nehmen, wenn Sie sie tatsächlich benutzen wollen und sie ansonsten nicht anzufassen. </para>
+>Zweitens sollten Sie schon, bevor Sie die Maus bewegen, wissen, wo Sie einen Klick ausführen möchten. Wenn wir die Maus verwenden möchten, schieben wir sie eher zufällig herum, bis wir genau wissen, wo wir den Mausklick ausführen möchten. Wenn Sie &kmousetool; verwenden, müssen Sie schon vorher wissen, wo die Maustaste betätigt werden soll. Es ist außerdem ratsam die Maus erst in die Hand zu nehmen, wenn Sie sie tatsächlich verwenden möchten und sie ansonsten nicht anzufassen. </para>
 </answer>
 </qandaentry>
 
@@ -352,7 +352,7 @@
 </question>
 <answer>
 <para
->In sehr seltenen Situationen unterbricht das Betriebssystem die Ausführung von &kmousetool;, wenn gerade ein Verschiebevorgang begonnen wurde. Wenn Sie in diesem Fall das intelligente Verschieben benutzen, bedeutet das, dass &kmousetool; die Operation nicht mehr durch das Loslassen der Maustaste beenden kann.</para>
+>In sehr seltenen Situationen unterbricht das Betriebssystem die Ausführung von &kmousetool;, wenn gerade ein Verschiebevorgang begonnen wurde. Wenn Sie in diesem Fall das intelligente Verschieben verwenden, bedeutet das, dass &kmousetool; die Operation nicht mehr durch das Loslassen der Maustaste beenden kann.</para>
 <para
 >Dies geschieht, wenn Sie &kmousetool; unter einer anderen Fensterverwaltung verwenden und ein Fenster verschieben. </para>
 <para
@@ -369,7 +369,7 @@
 <para
 >Problem: Wenn Sie Text eingeben, versucht &kmousetool; weiterhin Mausklicks auszuführen und setzt dabei den Cursor an eine andere Stelle.</para>
 <para
->Lösung: Benutzen Sie die Maus dazu, den Cursor dorthin zu platzieren, wo Sie ihn haben wollen. Aber parken Sie die Maus auf einem neutralen Bereich der Arbeitsfläche, wenn Sie eine Tastatureingabe vornehmen wollen. So kann ein versehentliches Bewegen der Maus &eg; durch Anstoßen nicht mehr dazu führen, dass die hierdurch ausgelösten Mausklicks ungewollte Reaktionen hervorrufen. Sichere Zonen für den Mauszeiger sind &eg; die grauen Flächen um die Werkzeugleisten und Menüs und die Titelzeilen von Fenstern.</para>
+>Lösung: Verwenden Sie die Maus dazu, den Cursor dorthin zu platzieren, wo Sie ihn haben möchten. Aber parken Sie die Maus auf einem neutralen Bereich der Arbeitsfläche, wenn Sie eine Tastatureingabe vornehmen möchten. So kann ein versehentliches Bewegen der Maus &eg; durch Anstoßen nicht mehr dazu führen, dass die hierdurch ausgelösten Mausklicks ungewollte Reaktionen hervorrufen. Sichere Zonen für den Mauszeiger sind &eg; die grauen Flächen um die Werkzeugleisten und Menüs und die Titelzeilen von Fenstern.</para>
 </answer>
 </qandaentry>
 
@@ -380,21 +380,21 @@
 </question>
 <answer>
 <para
->Das intelligente Verschieben ist eine fortgeschrittene Funktion von &kmousetool; und es braucht seine Zeit, ehe Sie damit umgehen können. Es ist sehr wohl möglich auf diese Weise Text zu markieren, ihn in die Zwischenablage zu kopieren und wieder einzufügen oder jede sonstige Aktion auszuführen, bei der Sie die Maus bei gedrückter Maustaste bewegen wollen. Aber es wird ihnen wahrscheinlich erst einmal Probleme bereiten. Hier sind einige Ratschläge dazu: </para>
+>Das intelligente Verschieben ist eine fortgeschrittene Funktion von &kmousetool; und es benötigt seine Zeit, ehe Sie damit umgehen können. Es ist sehr wohl möglich auf diese Weise Text zu markieren, ihn in die Zwischenablage zu kopieren und wieder einzufügen oder jede sonstige Aktion auszuführen, bei der Sie die Maus bei gedrückter Maustaste bewegen möchten. Aber es wird ihnen wahrscheinlich erst einmal Probleme bereiten. Hier sind einige Ratschläge dazu: </para>
 <itemizedlist>
 <listitem
 ><para
->Benutzen Sie das intelligente Verschieben nicht, wenn Sie gerade erst damit anfangen &kmousetool; zu verwenden. Markieren Sie Text stattdessen folgendermaßen: Führen Sie am einen Ende des Textbereichs einen Mausklick aus und halten Sie die Umschalt-Taste gedrückt, während Sie den Mauszeiger auf das andere Ende des Textes bewegen und dort erneut die Maustaste betätigen. </para
+>Verwenden Sie das intelligente Verschieben nicht, wenn Sie gerade erst damit anfangen &kmousetool; zu verwenden. Markieren Sie Text stattdessen folgendermaßen: Führen Sie am einen Ende des Textbereichs einen Mausklick aus und halten Sie die Umschalt-Taste gedrückt, während Sie den Mauszeiger auf das andere Ende des Textes bewegen und dort erneut die Maustaste betätigen. </para
 ></listitem>
 <listitem
 ><para
 >Verwenden Sie den hörbaren Mausklick. Dadurch wird jedesmal, wenn &kmousetool; die Maustaste drückt ein Klang wie ein <quote
 >Mausklick</quote
-> abgespielt. So wissen Sie genau, wann beim intelligenten Verschieben die Verschiebezeit beginnt. Später können Sie das intelligente Verschieben auch ohne den hörbaren Mausklick benutzen. Aber dazu bedarf es einiger Übung. </para
+> abgespielt. So wissen Sie genau, wann beim intelligenten Verschieben die Verschiebezeit beginnt. Später können Sie das intelligente Verschieben auch ohne den hörbaren Mausklick verwenden. Aber dazu bedarf es einiger Übung. </para
 ></listitem>
 <listitem
 ><para
->Sie sollten wissen, wo Sie einen Mausklick ausführen wollen, wenn Sie die Maus bewegen. </para
+>Sie sollten wissen, wo Sie einen Mausklick ausführen möchten, wenn Sie die Maus bewegen. </para
 ></listitem>
 </itemizedlist>
 
