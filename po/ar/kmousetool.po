@@ -32,7 +32,7 @@ msgstr "ghosn@php4arab.info"
 #: kmousetool.cpp:394
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
-msgstr "يجب على مدة السّحب أن يكون أقل أو مساويّاً لمدة النَّقرة."
+msgstr "يجب على مدة السّحب أن يكون أقل أو مساويًّا لمدة النَّقرة."
 
 #: kmousetool.cpp:394
 #, kde-format
