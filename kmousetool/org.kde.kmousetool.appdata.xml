@@ -145,6 +145,9 @@
   <url type="donation">https://www.kde.org/community/donations/?app=kmousetool&amp;source=appdata</url>
   <url type="help">https://docs.kde.org/?application=kmousetool</url>
   <url type="homepage">https://www.kde.org/applications/utilities/kmousetool/</url>
+  <custom>
+    <value key="KDE::mailinglist">kde-accessibility@kde.org</value>
+  </custom>
   <screenshots>
     <screenshot type="default">
       <image>https://www.kde.org/images/screenshots/kmousetool.png</image>
