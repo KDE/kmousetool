@@ -1,20 +1,15 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY kmousetool '<application
->KMouseTool</application
->'>
-  <!ENTITY kappname "&kmousetool;">
-  <!ENTITY package "kdeaccessibility">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Russian "INCLUDE"
 ><!-- change language only here -->
 ]>
 
-<book lang="&language;">
+<book id="kmousetool" lang="&language;">
 
 <bookinfo>
 <title
->Руководство &kmousetool;</title>
+>Руководство пользователя &kmousetool;</title>
 
 <authorgroup>
 <author
@@ -58,9 +53,9 @@
 >&FDLNotice;</legalnotice>
 
 <date
->15 сентября 2010 г.</date>
+>6 июля 2017 г.</date>
 <releaseinfo
->&kde; 4.5</releaseinfo>
+>1.12 (Приложения KDE 17.08)</releaseinfo>
 
 <abstract>
 <para
@@ -71,7 +66,7 @@
 <keyword
 >KDE</keyword>
 <keyword
->kdeutils</keyword>
+>rsi</keyword>
 <keyword
 >KMouseTool</keyword>
 <keyword
@@ -113,7 +108,9 @@
 >В режиме перетаскивания &kmousetool; позволяет вам передвигать курсор. </para>
 
 <para
->При включённом режиме перетаскивания &kmousetool; "зажимает" кнопку мыши, и вы можете переместить объект. (т.н. Drag'n'Drop); а по окончанию перемещения "отпускает" кнопку мыши. Вам придётся немного потренироваться, чтобы освоить эти действия. </para>
+>Если включено <guilabel
+>Умное перетаскивание</guilabel
+>, после нажатия кнопки &kmousetool; делает паузу; если переместить мышь, программа ждёт, пока движение прекратится, и только затем отпускает кнопку. Так можно и щёлкать, и перетаскивать объекты. К умному перетаскиванию нужно немного привыкнуть, но потом оно становится естественным. </para>
 
 </chapter>
 
@@ -171,7 +168,7 @@
         </term>
         <listitem>
           <para
->Включает или выключает режим "умного перетаскивания".</para
+>Включает или отключает умное перетаскивание. Без него работать проще, поэтому по умолчанию оно отключено.</para
 ><para
 >При включенном режиме перетаскивания становится доступной опция <guilabel
 >Время перетаскивания (в 1/10 с)</guilabel
@@ -185,11 +182,13 @@
         </term>
         <listitem>
           <para
->&kmousetool; поддерживает "росчерки" (англ.: mouse gestures). Медленное перемещение вправо и возврат назад, за которым следует пауза, имитирует нажатие правой кнопки. Медленное перемещение влево и возврат назад - двойной щелчок. Эти параметры задаются и могут быть отредактированы в файле <filename
+>&kmousetool; поддерживает росчерки. Если они включены, медленное перемещение вправо и обратно с последующей паузой выполняет щелчок <mousebutton
+>правой</mousebutton
+> кнопкой, а медленное перемещение влево и обратно — двойной щелчок. (Росчерки задаются в файле <filename
 >$<envar
 >KDEHOME</envar
 >/share/config/kmousetool_strokes.txt</filename
->, который &kmousetool; создаст при первом запуске. </para>
+>. &kmousetool; создаёт этот файл при первом запуске, после этого его можно изменять.) </para>
         </listitem>
       </varlistentry
 >      
@@ -201,37 +200,16 @@
         <listitem>
           <para
 >Воспроизводит звук при нажатии кнопки. Это особенно полезно в режиме перетаскивания. </para>
-	  <!-- not in kde4
-	  <para>
-	 If the sound seems delayed, you can have &kde; speed it up.
-	 To do this open the &kcontrolcenter;, click on
-	 <guimenuitem
->Sound &amp; Multimedia</guimenuitem
->, then on <guimenuitem
->Sound
-	 System</guimenuitem
->, and then select the <guilabel
->Sound
-	 I/O</guilabel
-> tab.  At the bottom
-	 of the tab, there is an <guilabel
->Audio buffer size (response
-	 time)</guilabel
-> adjustment; 
-	 slide this towards the lower number to speed up the audio
-	 response time.</para>
-	 -->
         </listitem>
       </varlistentry>
       <varlistentry>
         <term
 ><guilabel
->Автозапуск с KDE</guilabel>
+>Запускать с сеансом рабочего стола</guilabel>
         </term>
         <listitem>
           <para
->Запускать &kmousetool; при старте &kde;. Для автоматического запуска в GNOME или других диспетчерах окон, посмотрите соответствующую документацию по диспетчеру окон.</para
-> 
+>Если этот параметр включён, &kmousetool; будет запускаться при каждом запуске сеанса рабочего стола.</para>
         </listitem>
       </varlistentry>
 <varlistentry>
@@ -251,7 +229,11 @@
 ></term>
 <listitem>
 <para
->Сбросить все настройки в то состояние, в котором они были в начале диалога, или на момент последнего нажатия кнопки "Применить".</para>
+>Вернуть все параметры к состоянию на момент открытия диалога или, если параметры уже сохранялись кнопкой <guibutton
+>Применить</guibutton
+>, к состоянию на момент последнего нажатия <guibutton
+>Применить</guibutton
+>.</para>
 </listitem>
 </varlistentry>
      <varlistentry>
@@ -329,7 +311,8 @@
 <chapter id="faq">
 <title
 >Вопросы и ответы</title>
-&reporting.bugs; &updating.documentation; <qandaset id="faqlist">
+
+<qandaset id="faqlist">
 <qandaentry>
 <question>
 <para
@@ -425,11 +408,11 @@
 <para
 >&kmousetool; </para>
 <para
->Программа - &copy; 2002 Джеф Рош (Jeff Roush) <email
+>© Джеф Рош (Jeff Roush) <email
 >jeff@mousetool.com</email
-> и 2003 Гуннар Шми Дт (Gunnar Schmi Dt)  <email
+>, 2002; Гуннар Шми Дт (Gunnar Schmi Dt) <email
 >gunnar@schmi-dt.de</email
-> </para>
+>, 2003 (программа) </para>
 <para
 >Участники: <itemizedlist>
 <listitem
@@ -454,42 +437,15 @@
 </para>
 
 <para
->Документация - &copy; 2002 Джеф Рош (Jeff Roush) <email
+>© Джеф Рош (Jeff Roush) <email
 >jeff@mousetool.com</email
-> </para>
+>, 2002 (документация) </para>
 
 <para
 >Перевод на русский - Николай Шафоростов <email
 >shaforostoff@gmail.com</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
-
-<appendix id="installation">
-<title
->Установка</title>
-
-<sect1 id="getting-kmousetool">
-<title
->Как получить &kmousetool;</title>
-&install.intro.documentation; </sect1>
-
-<sect1 id="requirements">
-<title
->Системные требования</title>
-
-<para
->Для использования &kappname;, вам понадобится расширение XTest, входящее в состав &X-Window;. Оно установлено практически на всех системах. </para>
-<para
->Для использования звукового эффекта вы должны иметь настроенную звуковую карту. </para>
-</sect1>
-
-<sect1 id="compilation">
-<title
->Сборка и установка</title>
-&install.compile.documentation; </sect1>
-
-</appendix>
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>

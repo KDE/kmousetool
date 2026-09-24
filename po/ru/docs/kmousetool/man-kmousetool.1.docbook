@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Russian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Руководство пользователя &kmousetool;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>6 июля 2017 г.</date>
+<releaseinfo
+>Приложения KDE 17.08</releaseinfo>
+<productname
+>Приложения KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>Инструмент специальных возможностей, помогающий выполнять щелчки мышью</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Описание</title>
+
+<para
+>&kmousetool; выполняет щелчок мышью, когда курсор мыши ненадолго останавливается. Приложение создано в помощь людям с травмами от повторяющихся перенапряжений, которым нажатие кнопок причиняет боль. </para>
+
+<para
+>&kmousetool; можно также настроить так, чтобы он в течение заданного времени ожидал начала перетаскивания, прежде чем отпустить кнопку мыши. Благодаря этому его можно использовать и для перетаскивания объектов.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Смотрите также</title>
+
+<simplelist>
+<member
+>Более подробная документация для пользователя доступна по адресу <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (введите этот &URL; в &konqueror; или выполните команду <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf6options(7)</member>
+<member
+>qt6options(7)</member>
+<member
+>Дополнительные сведения также доступны на <ulink url="https://community.kde.org/Accessibility"
+>сайте &kde;, посвящённом доступности.</ulink
+></member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>Авторы</title>
+<para
+>&kmousetool; написали <personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>, <personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> и <personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>
