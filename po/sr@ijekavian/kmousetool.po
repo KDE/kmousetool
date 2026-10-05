@@ -4,13 +4,14 @@
 # Mladen Pejakovic <pejakm@gmail.com>, 2009.
 # Slobodan Simic <slsimic@gmail.com>, 2009.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmousetool\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:48+0000\n"
-"PO-Revision-Date: 2017-07-16 22:55+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-04 23:13+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -26,17 +27,17 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Часлав Илић,Младен Пејаковић"
+msgstr "Часлав Илић,Младен Пејаковић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net,pejakm@gmail.com"
+msgstr "caslav.ilic@gmx.net,pejakm@gmail.com,nemhirsl@gmail.com"
 
 #: kmousetool.cpp:394
 #, kde-format
 msgid "The drag time must be less than or equal to the dwell time."
-msgstr "Време превлачења мора бити мање или једнако времену пребивања."
+msgstr "Вријеме превлачења мора бити мање или једнако времену пребивања."
 
 #: kmousetool.cpp:394
 #, kde-format
@@ -174,16 +175,13 @@ msgid "&Start"
 msgstr "&Покрени"
 
 #: main.cpp:27
-#, fuzzy, kde-format
-#| msgid ""
-#| "(c) 2002-2003, Jeff Roush\n"
-#| "(c) 2003, Gunnar Schmidt"
+#, kde-format
 msgid ""
 "(c) 2002-2003, Jeff Roush\n"
 "(c) 2003 Gunnar Schmidt "
 msgstr ""
 "© 2002–2003, Џеф Роуш\n"
-"© 2003, Гунар Шмит"
+"© 2003, Гунар Шмит "
 
 #: main.cpp:32
 #, kde-format
