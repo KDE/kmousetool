@@ -1,0 +1,462 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Arabic "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kmousetool" lang="&language;">
+
+<bookinfo>
+<title
+>دليل أداة فأرة كي</title>
+
+<authorgroup>
+<author
+><firstname
+>Jeff</firstname
+> <surname
+>Roush</surname
+> <affiliation
+> <address
+><email
+>jeff@kmousetool.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2002</year>
+<holder
+>Jeff Roush</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2017-07-06</date>
+<releaseinfo
+>1.12 (تطبيقات 17.08)</releaseinfo>
+
+<abstract>
+<para
+>تنقر أداة فأرة كي الفأرة كلما توقف مؤشر الفأرة لفترة وجيزة. صُمم لمساعدة المصابين بإصابات الإجهاد المتكرر، الذين يؤلمهم الضغط على الأزرار. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>rsi</keyword>
+<keyword
+>أداة فأرة كي</keyword>
+<keyword
+>مريح</keyword>
+<keyword
+>التهاب الأوتار</keyword>
+<keyword
+>متلازمة النفق الرسغي</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+
+<para
+>تنقر أداة فأرة كي الفأرة كلما توقف مؤشر الفأرة لفترة وجيزة. صُمم لمساعدة المصابين بإصابات الإجهاد المتكرر، الذين يؤلمهم الضغط على الأزرار. يمكنه أيضًا سحب الفأرة، رغم أن هذا يتطلب مزيدًا من التدرب. </para>
+
+<para
+>يمكن لـ أداة فأرة كي إزالة الألم الناتج عن النقر بالفأرة، ويساعد الكثيرين على استخدام الحاسوب دون ألم. للأسف، قد يسبب مجرد تحريك الفأرة على الطاولة بعض الألم. إذا كنت تعاني من ألم مرتبط بالحاسوب ولم تستشر طبيبًا بعد، فافعل ذلك من فضلك. </para>
+<para
+>لتوضيح الأمر تمامًا: بينما يمكن لـ أداة فأرة كي المساعدة في تقليل الألم الناتج عن <emphasis
+>النقر</emphasis
+> بالفأرة، فإنه لا يساعد في أي ألم ناتج عن <emphasis
+>تحريك</emphasis
+> الفأرة. وكأي أداة مريحة، قد تختلف النتائج من شخص لآخر. </para>
+
+</chapter>
+
+
+<chapter id="using-kmousetool">
+<title
+>استخدام أداة فأرة كي</title>
+<para
+>استخدام أداة فأرة كي بسيط: يراقب أداة فأرة كي حركة الفأرة، وعندما تتوقف لفترة وجيزة، تنقر. </para>
+
+<para
+>يتيح وضع السحب الذكي لـ أداة فأرة كي سحب الفأرة. </para>
+
+<para
+>عند تمكين السحب الذكي، يتوقف أداة فأرة كي بعد النقرة السفلية؛ إذا حركت الفأرة، ينتظر حتى تتوقف عن الحركة قبل النقرة العلوية. بهذه الطريقة، يمكنك النقر والسحب بالفأرة. يتطلب السحب الذكي مزيدًا من التدرب، لكنه يصبح طبيعيًا بمجرد التعود عليه. </para>
+
+</chapter>
+
+
+<chapter id="commands">
+<title
+>مرجع الأوامر</title>
+
+<sect1 id="kmousetool-mainwindow">
+<title
+>نافذة أداة فأرة كي الرئيسة</title>
+
+    <para
+>تُوصل خيارات أداة فأرة كي غالبًا عبر الفأرة.</para>
+
+
+    <variablelist>
+      <varlistentry>
+	<term
+><guibutton
+>بدء</guibutton
+>/<guibutton
+>إيقاف</guibutton
+> </term>
+        <listitem>
+          <para
+>يبدأ (أو يوقف) أداة فأرة كي.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guilabel
+>الحركة الدُّنيا:</guilabel
+></term>
+<listitem>
+<para
+>الحد الأدنى للحركة بالبكسل قبل أن يحاول أداة فأرة كي النقر بالفأرة.</para>
+</listitem>
+</varlistentry>
+
+      <varlistentry>
+        <term
+><guilabel
+>مدة النَّقرة (1/10 ث):</guilabel>
+        </term>
+        <listitem>
+          <para
+>الوقت الذي يجب أن تتوقف فيه الفأرة قبل أن تنقر أداة فأرة كي. جرب زيادة هذا الوقت إذا كان من الصعب التعود على أداة فأرة كي </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>سحب ذكيّ</guilabel>
+        </term>
+        <listitem>
+          <para
+>يمكّن أو يعطّل السحب الذكي. الاستخدام المعطّل أسهل، لذا فهو المبدئي.</para
+><para
+>إذا مكّنت <guilabel
+>السحب الذكي</guilabel
+>، يصبح حقل <guilabel
+>وقت السحب (1/10 ثانية):</guilabel
+> متاحًا. هذا هو الوقت الذي ينتظره أداة فأرة كي بعد النقرة السفلية قبل النقرة العلوية إذا لم تحرك الفأرة. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>تفعيل الضّرب على المفاتيح</guilabel>
+        </term>
+        <listitem>
+          <para
+>يدعم أداة فأرة كي الآن الحركات. عند تمكين الحركات، ستُولد حركة بطيئة إلى اليمين والعودة، متبوعة بتوقف، نقرة <mousebutton
+>يمنى</mousebutton
+>. وستُولد حركة بطيئة إلى اليسار والعودة نقرة مزدوجة. (تُحدد الحركات في <filename
+>$<envar
+>KDEHOME</envar
+>/share/config/kmousetool_strokes.txt</filename
+>. يُنشأ هذا الملف بواسطة أداة فأرة كي عند أول تشغيل، لكن يمكن تعديله لاحقًا.) </para>
+        </listitem>
+      </varlistentry
+>      
+       <varlistentry>
+        <term
+><guilabel
+>نقرة مسموعة</guilabel>
+        </term>
+        <listitem>
+          <para
+>يشغل صوتًا عندما تنقر أداة فأرة كي نقرة سفلية. يساعد هذا، خاصة مع السحب الذكي. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><guilabel
+>ابدأ بجلسة سطح المكتب</guilabel>
+        </term>
+        <listitem>
+          <para
+>عند تمكين هذا، سيبدأ أداة فأرة كي كلما بدأت جلسة سطح المكتب.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>المبدئيات</guibutton
+></term>
+<listitem>
+<para
+>أعد ضبط كل الإعدادات إلى مبدئياتها.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>صفّر</guibutton
+></term>
+<listitem>
+<para
+>أعد ضبط كل الإعدادات إلى حالتها عند فتح الحوار، أو، إذا كنت قد حفظت إعدادًا بالفعل بزر <guibutton
+>تطبيق</guibutton
+>، أعد ضبط كل الإعدادات إلى الحالة عند آخر ضغطة على <guibutton
+>تطبيق</guibutton
+></para>
+</listitem>
+</varlistentry>
+     <varlistentry>
+        <term
+><guibutton
+>طبّق</guibutton>
+        </term>
+        <listitem>
+          <para
+>بعد تغيير أي إعدادات، يجب النقر على هذا الزر.</para>
+        </listitem>
+      </varlistentry>
+<varlistentry>
+<term
+><guibutton
+>مساعدة</guibutton
+></term>
+<listitem>
+<para
+>يفتح دليل المستخدم (هذه الوثيقة).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>أغلق</guibutton
+></term>
+<listitem>
+<para
+>أغلق الحوار دون حفظ أي إعدادات.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>أنهِ</guibutton
+></term>
+<listitem>
+<para
+>اخرج من أداة فأرة كي</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="Tips">
+<title
+>تلميحات</title>
+
+<para
+>يمكن لهذه النصائح المساعدة في تقصير منحنى تعلم أداة فأرة كي قليلًا. <itemizedlist>
+<listitem
+><para
+>يمكنك تعديل التأخيرات الزمنية التي ينتظرها أداة فأرة كي، لكل من النقر والسحب.</para>
+</listitem>
+<listitem
+><para
+>من الأفضل التدرب على النقر باستخدام أداة فأرة كي بمبدئياته أولًا. قد ترغب بشكل خاص في ترك السحب الذكي معطلًا في البداية. ثم، بمجرد أن تشعر بالراحة في النقر، انتقل إلى التدرب على السحب الذكي.</para>
+</listitem>
+<listitem
+><para
+>عند استخدام السحب الذكي، قد يساعد تفعيل النقرة المسموعة</para>
+</listitem>
+<listitem
+><para
+>عند استخدام النقرة المسموعة، قد تحتاج إلى تسريع استجابة &kde; الصوتية.</para>
+</listitem>
+</itemizedlist>
+</para>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>أسئلة وأجوبة</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>مساعدة! أداة فأرة كي يلقي نقرات زائفة في كل مكان على الشاشة!</para>
+</question>
+<answer>
+<para
+>عند استخدام أداة فأرة كي، عليك تعلم عادات جديدة في استخدام الفأرة. </para>
+<para
+>أولًا، ضع في اعتبارك أين من الآمن النقر — النقر على الأجزاء الرمادية من النوافذ أو مناطق غير الروابط في متصفحات الويب لن يسبب ضررًا، لذا يمكنك إراحة الفأرة بأمان فوق تلك المناطق حتى تحتاجها. </para>
+<para
+>ثانيًا، تحتاج إلى معرفة أين ستنقر قبل تحريك الفأرة. في معظم الأوقات، عندما نعلم أننا سنستخدم الفأرة، يمسك معظمنا بالفأرة ويبدأ بتحريكها عشوائيًا حتى نعرف أين نريد النقر. مع أداة فأرة كي، تحتاج إلى معرفة أين ستنقر قبل تحريك الفأرة من البداية. من الجيد أيضًا إبعاد يديك عن الفأرة عندما لا تستخدمها. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>فأرتي تلتصق عند تحريكها. هل يمكنني استخدام أداة فأرة كي؟</para>
+</question>
+<answer>
+<para
+>نعم. إذا كانت فأرتك تلتصق، فهذا يعني أنك بحاجة إلى تنظيفها. هذا عادةً سهل؛ الحيلة هي أنك تحتاج إلى تنظيف ليس فقط كرة الفأرة، بل البكرات التي تتدحرج عليها الكرة داخل الفأرة.</para>
+<para
+>أولًا، عليك إزالة الكرة. تختلف طريقة القيام بذلك من فأرة إلى أخرى، لكنها عادةً واضحة إذا نظرت إلى أسفل الفأرة.</para>
+<para
+>بمجرد إزالة الكرة، يجب أن تتمكن من رؤية البكرات على جانبي الفتحة التي كانت تحتوي على الكرة. يمكن كشط الأوساخ والغبار عنها بسهولة بشفرة مسطحة أو بظفر الإصبع. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>أداة فأرة كي تنقر للأسفل ولا تنقر للأعلى أبدًا. ماذا يحدث؟</para>
+</question>
+<answer>
+<para
+>في بعض الحالات النادرة، يعلق النظام أداة فأرة كي عند بدء السحب؛ إذا كنت تستخدم السحب الذكي، فهذا يعني أن أداة فأرة كي لا يمكنه إنهاء السحب بالنقر للأعلى.</para>
+<para
+>يحدث هذا عند استخدام أداة فأرة كي تحت مدير نوافذ غير &kde; ثم استخدامه لتحريك نافذة. </para>
+<para
+>الحل هو ببساطة النقر يدويًا؛ هذا يعيد ضبط أداة فأرة كي، ويمكنك بعد ذلك متابعة العمل بشكل طبيعي.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>أداة فأرة كي يحرك المؤشر عندما أحاول الكتابة.</para>
+</question>
+<answer>
+<para
+>المشكلة: عند كتابة النص، أداة فأرة كي يلقي نقرات باستمرار وينقل المؤشر بعيدًا عن المكان الذي تريد الكتابة فيه.</para>
+<para
+>الحل: استخدم الفأرة لوضع المؤشر حيث تريد، ولكن عندما تكون مستعدًا للكتابة، أركن الفأرة في منطقة محايدة على الشاشة. بعد ذلك، إذا اصطدمت بالفأرة، أو تحركت بضع بكسلات، فلن تؤثر أي نقرات عشوائية ترسلها. الأماكن الآمنة لإراحة الفأرة تشمل المناطق الرمادية حول أشرطة الأدوات والقوائم، وعلى أشرطة عناوين النوافذ.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>أحاول استخدام السحب الذكي، لكن لا أستطيع إتقان استخدامه لتحرير النص.</para>
+</question>
+<answer>
+<para
+>السحب الذكي هو ميزة متقدمة من أداة فأرة كي، ويحتاج بعض الوقت للتعود عليه. من الممكن جدًا استخدامه لتحديد النص، والقص واللصق، واستخدامه في أي موقف تقريبًا حيث ترغب عادةً في سحب الفأرة. لكنك ربما لن تتمكن من القيام بذلك في البداية. إليك بعض الاقتراحات: </para>
+<itemizedlist>
+<listitem
+><para
+>لا تستخدم السحب الذكي أثناء تعلمك الأولي لاستخدام أداة فأرة كي. بدلًا من ذلك، لتحديد النص، انقر في أحد طرفي النص، واضغط مع الاستمرار على مفتاح shift أثناء النقر في الطرف الآخر من النص. </para
+></listitem>
+<listitem
+><para
+>استخدم النقرة المسموعة. سيشغل هذا صوت <quote
+>نقرة</quote
+> عندما تنقر أداة فأرة كي للأسفل، وسيخبرك هذا عندما يبدأ تأخير السحب الذكي. مع الممارسة، يمكنك استخدام السحب الذكي بدون النقرة المسموعة، لكنه يتطلب قدرًا لا بأس به من الممارسة. </para
+></listitem>
+<listitem
+><para
+>اعرف أين ستنقر بالفأرة قبل البدء في تحريكها. </para
+></listitem>
+</itemizedlist>
+
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>الحقوق والترخيص</title>
+
+<para
+>أداة فأرة كي </para>
+<para
+>حقوق نشر البرنامج 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> و2003 Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+> </para>
+<para
+>المساهمون: <itemizedlist>
+<listitem
+><para
+>Jeff Roush <email
+>jeff@mousetool.com</email
+></para
+></listitem>
+<listitem
+><para
+>Gunnar Schmi Dt <email
+>gunnar@schmi-dt.de</email
+></para
+></listitem>
+<listitem
+><para
+>Olaf Schmidt <email
+>ojschmidt@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>حقوق نشر التوثيق 2002 Jeff Roush <email
+>jeff@mousetool.com</email
+> </para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
