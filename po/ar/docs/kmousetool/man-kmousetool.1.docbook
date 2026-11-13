@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Arabic "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>دليل مستخدم أداة فأرة كي</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2017-07-06</date>
+<releaseinfo
+>تطبيقات 17.08</releaseinfo>
+<productname
+>تطبيقات كِيدِي</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kmousetool</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kmousetool</command
+></refname>
+<refpurpose
+>أداة إمكانية وصول للمساعدة في النقر بالفأرة</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command
+>kmousetool</command>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>الوصف</title>
+
+<para
+>تنقر أداة الفأرة كي الفأرة كلما توقف مؤشر الفأرة لفترة وجيزة. صُممت هذه الأداة لمساعدة المصابين بإصابات الإجهاد المتكرر، الذين يؤلمهم الضغط على الأزرار. </para>
+
+<para
+>يمكن أيضًا ضبط أداة الفأرة كي لانتظار مدة زمنية محددة لبدء السحب، قبل رفع النقر عن الفأرة. بهذه الطريقة، يمكنك استخدامها لعمليات السحب والإفلات أيضًا.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>انظر أيضًا</title>
+
+<simplelist>
+<member
+>وثائق المستخدم الأكثر تفصيلًا متاحة من <ulink url="help:/kmousetool"
+>help:/kmousetool</ulink
+> (إما بإدخال هذا &URL; في &konqueror;، أو بتشغيل <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/kmousetool</parameter
+></userinput
+>).</member>
+<member
+>kf6options(7)</member>
+<member
+>qt6options(7)</member>
+<member
+>تتوفر أيضًا معلومات إضافية في <ulink url="https://community.kde.org/Accessibility"
+>موقع كيدي لإمكانية الوصول.</ulink
+></member>
+</simplelist>
+</refsect1>
+
+<refsect1>
+<title
+>المؤلفون</title>
+<para
+>كتب أداة الفأرة كي<personname
+><firstname
+>Gunnar</firstname
+><surname
+>Schmi Dt</surname
+></personname
+> <email
+>gunnar@schmi-dt.de</email
+>، و<personname
+><firstname
+>Olaf</firstname
+><surname
+>Schmidt</surname
+></personname
+> <email
+>ojschmidt@kde.org</email
+> و<personname
+><firstname
+>Jeff</firstname
+><surname
+>Roush</surname
+></personname
+> <email
+>jeff@mousetool.com</email
+>.</para>
+</refsect1>
+
+</refentry>
